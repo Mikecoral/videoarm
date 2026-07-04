@@ -81,5 +81,24 @@ FRAMES_PER_WINDOW = int(_env("LABARM_FRAMES_PER_WINDOW", "3"))
 VERIFY_ENABLED = _env("LABARM_VERIFY", "1") == "1"
 VERIFY_FRAMES = int(_env("LABARM_VERIFY_FRAMES", "3"))
 
+# One bounded repair pass, VideoHV-style: failed/low-confidence hypotheses are
+# regenerated locally and then verified again before the final writer gate.
+REPAIR_ENABLED = _env("LABARM_REPAIR", "1") == "1"
+REPAIR_CONFIDENCE_THRESHOLD = float(_env("LABARM_REPAIR_CONFIDENCE", "0.55"))
+REPAIR_FRAMES = int(_env("LABARM_REPAIR_FRAMES", "5"))
+REPAIR_CONTEXT_SECONDS = float(_env("LABARM_REPAIR_CONTEXT_SECONDS", "2"))
+
+# Output-only audit: flag suspiciously low temporal coverage or long gaps for
+# human review without forcing the model to fill waiting/static intervals.
+COVERAGE_AUDIT_ENABLED = _env("LABARM_COVERAGE_AUDIT", "1") == "1"
+COVERAGE_MIN_RATIO = float(_env("LABARM_COVERAGE_MIN_RATIO", "0.4"))
+COVERAGE_MAX_GAP_SECONDS = float(_env("LABARM_COVERAGE_MAX_GAP_SECONDS", "30"))
+COVERAGE_BACKTRACK_ENABLED = _env("LABARM_COVERAGE_BACKTRACK", "1") == "1"
+
+# If phase confidence is low, action segmentation receives broader ontology
+# context so one mistaken phase does not force all actions into the wrong menu.
+PHASE_FALLBACK_CONFIDENCE = float(_env("LABARM_PHASE_FALLBACK_CONFIDENCE", "0.65"))
+MAX_PHASE_CANDIDATES = int(_env("LABARM_MAX_PHASE_CANDIDATES", "3"))
+
 REQUEST_TIMEOUT = float(_env("LABARM_TIMEOUT", "120"))
 MAX_RETRIES = int(_env("LABARM_MAX_RETRIES", "4"))

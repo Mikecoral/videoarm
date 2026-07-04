@@ -4,8 +4,9 @@
     python -m agent_v2.run --split dev
     python -m agent_v2.run --video_id 0061
 
-Writes predictions.json and run_log.json incrementally so a crash mid-run
-still leaves valid partial output, and finished videos are skipped on resume.
+Each run auto-creates a timestamped subdirectory under outputs/ and writes a
+run_info.json alongside predictions.json and run_log.json so runs are easy
+to distinguish later.  Pass --out_dir to override the parent directory.
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ import argparse
 import json
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -32,32 +34,60 @@ def _write_json(path: Path, obj: Any) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def _make_run_dir(base: Path, tag: str) -> Path:
+    """Create a timestamped run subdirectory, e.g. outputs/20260704_153022_test_all15/"""
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_dir = base / f"{ts}_{tag}"
+    run_dir.mkdir(parents=True, exist_ok=True)
+    return run_dir
+
+
 def main(argv: List[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="LabARM-HV batch video parser")
     ap.add_argument("--split", choices=["dev", "test", "all"], default="test")
     ap.add_argument("--video_id", help="process a single video id (overrides --split)")
-    ap.add_argument("--out_dir", default=str(config.OUTPUT_DIR))
+    ap.add_argument("--out_dir", default=str(config.OUTPUT_DIR),
+                    help="parent output directory; a timestamped subdir is created inside")
     ap.add_argument("--resume", action="store_true", help="skip videos already in predictions.json")
     ap.add_argument("--limit", type=int, default=0, help="max videos (0 = all)")
     args = ap.parse_args(argv)
 
-    out_dir = Path(args.out_dir)
-    cache_root = out_dir / "frames_cache"
-    pred_path = out_dir / "predictions.json"
-    log_path = out_dir / "run_log.json"
-
     # resolve the video work list
     if args.video_id:
         videos = [{"video_id": args.video_id, "video_path": f"videos/{args.video_id}.mp4"}]
+        split_tag = f"single_{args.video_id}"
     elif args.split == "all":
         videos = _load_split("dev") + _load_split("test")
+        split_tag = "all"
     else:
         videos = _load_split(args.split)
+        split_tag = args.split
     if args.limit:
         videos = videos[: args.limit]
 
+    video_ids = [str(v["video_id"]) for v in videos]
+    tag = f"{split_tag}_{len(video_ids)}vids"
+    run_dir = _make_run_dir(Path(args.out_dir), tag)
+
+    pred_path = run_dir / "predictions.json"
+    log_path = run_dir / "run_log.json"
+    info_path = run_dir / "run_info.json"
+    cache_root = Path(args.out_dir) / "frames_cache"  # shared cache across runs
+
+    run_start = datetime.now().isoformat()
+    run_info: Dict[str, Any] = {
+        "started_at": run_start,
+        "split": split_tag,
+        "video_count": len(video_ids),
+        "video_ids": video_ids,
+        "model": config.DEFAULT_MODEL,
+        "finished_at": None,
+        "total_seconds": None,
+    }
+    _write_json(info_path, run_info)
+
     predictions: List[Dict[str, Any]] = []
-    done_ids = set()
+    done_ids: set = set()
     if args.resume and pred_path.exists():
         predictions = json.loads(pred_path.read_text(encoding="utf-8"))
         done_ids = {p["video_id"] for p in predictions}
@@ -70,8 +100,11 @@ def main(argv: List[str] | None = None) -> int:
             pass
 
     phases = ontology.load_ontology()
-    print(f"[labarm] loaded ontology: {len(phases)} phases")
+    print(f"[labarm] run dir : {run_dir}")
+    print(f"[labarm] split   : {split_tag}  videos: {len(video_ids)}  ids: {video_ids}")
+    print(f"[labarm] ontology: {len(phases)} phases")
 
+    wall_start = time.time()
     for i, entry in enumerate(videos, 1):
         vid = str(entry["video_id"])
         if vid in done_ids:
@@ -91,12 +124,19 @@ def main(argv: List[str] | None = None) -> int:
             pred = {"video_id": vid, "video_path": entry["video_path"],
                     "segments": [], "processing_note": f"error: {e}"}
         predictions.append(pred)
-        # incremental persist
         _write_json(pred_path, predictions)
         _write_json(log_path, run_log.as_list())
-        print(f"    done in {time.time() - t0:.1f}s, {len(pred.get('segments', []))} segments")
+        elapsed = time.time() - t0
+        segs = len(pred.get("segments", []))
+        print(f"    done in {elapsed:.1f}s, {segs} segments")
 
-    print(f"[labarm] wrote {pred_path} and {log_path}")
+    total = time.time() - wall_start
+    run_info["finished_at"] = datetime.now().isoformat()
+    run_info["total_seconds"] = round(total, 1)
+    _write_json(info_path, run_info)
+
+    print(f"[labarm] finished in {total:.0f}s")
+    print(f"[labarm] results  -> {run_dir}")
     return 0
 
 

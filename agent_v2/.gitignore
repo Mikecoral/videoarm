@@ -1,0 +1,17 @@
+# secrets
+.env
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# frame cache (large binary blobs, regenerated on demand)
+outputs/frames_cache/
+
+# intermediate / scratch runs
+outputs_v2/
+
+# root-level outputs (superseded by timestamped subdirs)
+outputs/predictions.json
+outputs/run_log.json
