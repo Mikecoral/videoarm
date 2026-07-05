@@ -1,0 +1,173 @@
+[
+  {
+    "video_id": "0061",
+    "video_info": {
+      "duration": 141.0,
+      "fps": 50.0,
+      "resolution": "2688x1512",
+      "pipeline": "omni",
+      "omni_fps": 1.0
+    },
+    "steps": [
+      {
+        "step": "omni_phase_hypothesis",
+        "output": {
+          "phase": "TLC_analysis",
+          "phase_zh": "薄层色谱分析",
+          "confidence": 0.95,
+          "alternative_phases": [
+            {
+              "phase": "analytical_sample_preparation",
+              "phase_zh": "分析样品制备",
+              "confidence": 0.3,
+              "reason": "视频中后半段涉及使用移液枪处理液体，但这是为了辅助点板或配制展开剂，核心操作仍围绕TLC板进行。"
+            },
+            {
+              "phase": "other_visible_lab_operation",
+              "phase_zh": "其他可见实验操作",
+              "confidence": 0.1,
+              "reason": "虽然包含多种基础操作，但整体流程具有明确的TLC分析特征，不属于无特定分类的杂项。"
+            }
+          ],
+          "evidence_timestamps": [
+            "00:08",
+            "00:20",
+            "00:54",
+            "01:03",
+            "02:10"
+          ],
+          "reason": "视频清晰展示了TLC分析的完整流程：首先用铅笔在TLC板上划线（00:08），随后使用紫外灯观察板上的荧光斑点（00:54），最后使用毛细管进行点样操作（02:10），符合TLC_analysis的视觉区分关键线索。"
+        },
+        "elapsed": 580.155
+      },
+      {
+        "step": "omni_action_segmentation",
+        "input": {
+          "phase": "TLC_analysis",
+          "phase_confidence": 0.95,
+          "catalog_phases": [
+            "TLC_analysis"
+          ]
+        },
+        "output": [
+          {
+            "start": "0.0",
+            "end": "32.0",
+            "action": "prepare_TLC_plate",
+            "action_zh": "准备 TLC 板",
+            "objects": [
+              "TLC 板",
+              "铅笔",
+              "尺子"
+            ],
+            "caption": "实验人员使用尺子和铅笔在 TLC 板上划线并标记点样位置。",
+            "evidence_timestamps": [
+              5,
+              10,
+              20
+            ]
+          },
+          {
+            "start": "32.0",
+            "end": "64.0",
+            "action": "observe_TLC_under_UV",
+            "action_zh": "紫外灯下观察 TLC",
+            "objects": [
+              "TLC 板",
+              "紫外灯"
+            ],
+            "caption": "实验人员将 TLC 板置于手持式紫外灯下观察荧光斑点。",
+            "evidence_timestamps": [
+              35,
+              53,
+              60
+            ]
+          },
+          {
+            "start": "74.0",
+            "end": "89.0",
+            "action": "prepare_TLC_developing_solvent",
+            "action_zh": "配置 TLC 展开剂",
+            "objects": [
+              "移液枪",
+              "试剂瓶",
+              "烧杯"
+            ],
+            "caption": "实验人员使用移液枪从试剂瓶中吸取液体并注入烧杯中，配置展开剂。",
+            "evidence_timestamps": [
+              78,
+              83,
+              87
+            ]
+          },
+          {
+            "start": "105.0",
+            "end": "118.0",
+            "action": "prepare_TLC_developing_solvent",
+            "action_zh": "配置 TLC 展开剂",
+            "objects": [
+              "移液枪",
+              "试剂瓶",
+              "烧杯"
+            ],
+            "caption": "实验人员再次使用移液枪吸取另一种液体加入烧杯中，继续配置展开剂。",
+            "evidence_timestamps": [
+              108,
+              112,
+              116
+            ]
+          },
+          {
+            "start": "127.0",
+            "end": "138.0",
+            "action": "spot_TLC_plate",
+            "action_zh": "点样 TLC 板",
+            "objects": [
+              "毛细管",
+              "TLC 板",
+              "样品溶液"
+            ],
+            "caption": "实验人员用毛细管蘸取样品溶液，并将其点样到 TLC 板的指定位置。",
+            "evidence_timestamps": [
+              130,
+              133,
+              136
+            ]
+          }
+        ],
+        "elapsed": 1177.724
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 5
+        },
+        "output": {
+          "accepted": 5,
+          "filtered": 0,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 141.0,
+          "covered_seconds": 103.0,
+          "coverage_ratio": 0.731,
+          "large_gaps": [],
+          "backtrack_findings": [],
+          "suspicious_gap_count": 0,
+          "needs_review": false
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 5,
+          "phase": "TLC_analysis",
+          "pipeline": "omni"
+        }
+      }
+    ]
+  }
+]

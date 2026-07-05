@@ -1,0 +1,502 @@
+[
+  {
+    "video_id": "8",
+    "video_path": "videos/8.mp4",
+    "phase": "extraction",
+    "phase_zh": "萃取",
+    "phase_confidence": 1.0,
+    "alternative_phases": [
+      {
+        "phase": "reaction_setup",
+        "phase_zh": "开反应",
+        "confidence": 0.1,
+        "reason": "虽然涉及液体转移，但核心操作是液液分离而非建立反应体系。"
+      },
+      {
+        "phase": "other_visible_lab_operation",
+        "phase_zh": "其他可见实验操作",
+        "confidence": 0.05,
+        "reason": "操作特征非常明确属于萃取，不属于未分类的其他操作。"
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "8_s001",
+        "start": 0.0,
+        "end": 15.0,
+        "action": "transfer_liquid_to_sep_funnel",
+        "action_zh": "转移液体至分液漏斗",
+        "objects": [
+          "分液漏斗",
+          "锥形瓶"
+        ],
+        "caption": "将锥形瓶中的反应液倒入分液漏斗中。",
+        "evidence_timestamps": [
+          3,
+          8,
+          12
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "锥形瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "锥形瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s002",
+        "start": 20.0,
+        "end": 27.0,
+        "action": "rinse_container",
+        "action_zh": "润洗容器",
+        "objects": [
+          "分液漏斗",
+          "锥形瓶",
+          "洗瓶"
+        ],
+        "caption": "使用洗瓶向空的锥形瓶中注入溶剂进行润洗，并将洗涤液倒入分液漏斗。",
+        "evidence_timestamps": [
+          22,
+          25
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "锥形瓶",
+            "洗瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "锥形瓶",
+            "present": true
+          },
+          {
+            "object": "洗瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s003",
+        "start": 30.0,
+        "end": 36.0,
+        "action": "rinse_container",
+        "action_zh": "润洗容器",
+        "objects": [
+          "分液漏斗",
+          "锥形瓶",
+          "洗瓶"
+        ],
+        "caption": "再次使用洗瓶润洗锥形瓶，并将洗涤液转移至分液漏斗。",
+        "evidence_timestamps": [
+          31,
+          34
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "锥形瓶",
+            "洗瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "锥形瓶",
+            "present": true
+          },
+          {
+            "object": "洗瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s004",
+        "start": 40.0,
+        "end": 49.0,
+        "action": "add_extraction_solvent",
+        "action_zh": "加入萃取/洗涤溶剂",
+        "objects": [
+          "分液漏斗",
+          "试剂瓶"
+        ],
+        "caption": "从贴有标签的试剂瓶中向分液漏斗内加入大量萃取溶剂（乙酸乙酯）。",
+        "evidence_timestamps": [
+          42,
+          46
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "试剂瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s005",
+        "start": 62.0,
+        "end": 80.0,
+        "action": "mix_and_vent_sep_funnel",
+        "action_zh": "振摇并放气",
+        "objects": [
+          "分液漏斗"
+        ],
+        "caption": "盖好分液漏斗塞子，倒置并进行振摇混合，期间打开活塞放气。",
+        "evidence_timestamps": [
+          65,
+          70,
+          75
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s006",
+        "start": 89.0,
+        "end": 99.0,
+        "action": "add_extraction_solvent",
+        "action_zh": "加入萃取/洗涤溶剂",
+        "objects": [
+          "分液漏斗",
+          "试剂瓶"
+        ],
+        "caption": "第二次向分液漏斗中加入萃取溶剂。",
+        "evidence_timestamps": [
+          91,
+          95
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "试剂瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s007",
+        "start": 101.0,
+        "end": 118.0,
+        "action": "mix_and_vent_sep_funnel",
+        "action_zh": "振摇并放气",
+        "objects": [
+          "分液漏斗"
+        ],
+        "caption": "再次对分液漏斗进行倒置振摇和放气操作。",
+        "evidence_timestamps": [
+          105,
+          110,
+          115
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s008",
+        "start": 130.0,
+        "end": 160.0,
+        "action": "allow_phase_separation",
+        "action_zh": "静置分层",
+        "objects": [
+          "分液漏斗",
+          "铁架台"
+        ],
+        "caption": "将分液漏斗固定在铁架台上，静置等待液体分层。",
+        "evidence_timestamps": [
+          140,
+          150,
+          158
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "铁架台"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "铁架台",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s009",
+        "start": 161.0,
+        "end": 195.0,
+        "action": "drain_lower_phase",
+        "action_zh": "放出下层液体",
+        "objects": [
+          "分液漏斗",
+          "烧杯"
+        ],
+        "caption": "打开分液漏斗活塞，将下层水相液体放入下方的烧杯中。",
+        "evidence_timestamps": [
+          165,
+          175,
+          185
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "烧杯"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "8_s010",
+        "start": 196.0,
+        "end": 210.0,
+        "action": "collect_upper_phase",
+        "action_zh": "收集上层液体",
+        "objects": [
+          "分液漏斗",
+          "锥形瓶"
+        ],
+        "caption": "将分液漏斗中的上层有机相从上口倒入锥形瓶中收集。",
+        "evidence_timestamps": [
+          200,
+          205
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "分液漏斗",
+            "锥形瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "锥形瓶",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [],
+    "processing_note": "omni pipeline: no frame extraction"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-07-05T09:44:40.662875",
+  "split": "single_7",
+  "pipeline": "omni",
+  "model": "qwen3.5-omni-plus",
+  "video_count": 1,
+  "video_ids": [
+    "7"
+  ],
+  "finished_at": "2026-07-05T09:45:58.633876",
+  "total_seconds": 78.0
+}

@@ -1,0 +1,169 @@
+[
+  {
+    "video_id": "3",
+    "video_info": {
+      "duration": 125.0,
+      "fps": 30.0,
+      "resolution": "960x544",
+      "pipeline": "omni",
+      "omni_fps": 1.0
+    },
+    "steps": [
+      {
+        "step": "omni_phase_hypothesis",
+        "output": {
+          "phase": "reaction_setup",
+          "phase_zh": "开反应",
+          "confidence": 0.95,
+          "alternative_phases": [
+            {
+              "phase": "analytical_sample_preparation",
+              "phase_zh": "分析样品制备",
+              "confidence": 0.3,
+              "reason": "虽然涉及液体转移，但操作容器为反应烧瓶而非微量分析管，且试剂用量较大。"
+            },
+            {
+              "phase": "other_visible_lab_operation",
+              "phase_zh": "其他可见实验操作",
+              "confidence": 0.2,
+              "reason": "若无法明确归类为具体合成步骤，可视为一般性加料操作。"
+            }
+          ],
+          "evidence_timestamps": [
+            "00:10",
+            "00:34",
+            "01:08",
+            "01:26"
+          ],
+          "reason": "视频展示了向装有白色固体的锥形瓶中依次加入多种液体试剂（包括使用注射器和大瓶试剂）的过程，属于典型的建立反应体系或配制反应液的操作，符合reaction_setup中“加入物料”的特征。"
+        },
+        "elapsed": 19.005
+      },
+      {
+        "step": "omni_action_segmentation",
+        "input": {
+          "phase": "reaction_setup",
+          "phase_confidence": 0.95,
+          "catalog_phases": [
+            "reaction_setup"
+          ]
+        },
+        "output": [
+          {
+            "start": "0.0",
+            "end": "20.0",
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "试剂瓶",
+              "注射器"
+            ],
+            "caption": "使用注射器从棕色试剂瓶中吸取无色液体。",
+            "evidence_timestamps": [
+              10,
+              15,
+              19
+            ]
+          },
+          {
+            "start": "20.0",
+            "end": "30.0",
+            "action": "add_liquid_to_reaction",
+            "action_zh": "向反应体系加入液体",
+            "objects": [
+              "注射器",
+              "锥形瓶",
+              "白色固体"
+            ],
+            "caption": "将注射器中的液体注入装有白色固体的锥形瓶中。",
+            "evidence_timestamps": [
+              24,
+              28
+            ]
+          },
+          {
+            "start": "30.0",
+            "end": "44.0",
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "试剂瓶",
+              "注射器"
+            ],
+            "caption": "再次使用注射器从同一棕色试剂瓶中吸取液体。",
+            "evidence_timestamps": [
+              34,
+              38,
+              43
+            ]
+          },
+          {
+            "start": "44.0",
+            "end": "53.0",
+            "action": "add_liquid_to_reaction",
+            "action_zh": "向反应体系加入液体",
+            "objects": [
+              "注射器",
+              "锥形瓶"
+            ],
+            "caption": "将第二次吸取的液体注入锥形瓶中。",
+            "evidence_timestamps": [
+              49,
+              52
+            ]
+          },
+          {
+            "start": "67.0",
+            "end": "125.0",
+            "action": "transfer_and_add_small_volume_liquid",
+            "action_zh": "小体积移取并加入液体",
+            "objects": [
+              "滴管",
+              "试剂瓶",
+              "锥形瓶"
+            ],
+            "caption": "使用滴管从蓝色盖子的试剂瓶中吸取液体并滴加到锥形瓶中。",
+            "evidence_timestamps": [
+              85,
+              95,
+              110,
+              120
+            ]
+          }
+        ],
+        "elapsed": 26.863
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 5
+        },
+        "output": {
+          "accepted": 5,
+          "filtered": 0,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 125.0,
+          "covered_seconds": 111.0,
+          "coverage_ratio": 0.888,
+          "large_gaps": [],
+          "backtrack_findings": [],
+          "suspicious_gap_count": 0,
+          "needs_review": false
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 5,
+          "phase": "reaction_setup",
+          "pipeline": "omni"
+        }
+      }
+    ]
+  }
+]

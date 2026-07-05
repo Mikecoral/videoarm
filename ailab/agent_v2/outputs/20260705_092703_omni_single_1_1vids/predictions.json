@@ -1,0 +1,26 @@
+[
+  {
+    "video_id": "1",
+    "video_path": "videos/1.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.95,
+    "alternative_phases": [
+      {
+        "phase": "other_visible_lab_operation",
+        "phase_zh": "其他可见实验操作",
+        "confidence": 0.3,
+        "reason": "若视频中包含非标准取样或特殊处理步骤，可能归为此类，但核心动作仍符合样品制备特征。"
+      },
+      {
+        "phase": "extraction",
+        "phase_zh": "萃取",
+        "confidence": 0.1,
+        "reason": "仅当出现分液漏斗及振摇放气动作时才成立，本视频主要使用移液枪和离心管。"
+      }
+    ],
+    "segments": [],
+    "clip_memory": [],
+    "processing_note": "coverage_audit: long gaps or low coverage, review recommended"
+  }
+]

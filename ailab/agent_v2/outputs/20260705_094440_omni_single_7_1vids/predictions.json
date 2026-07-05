@@ -1,0 +1,291 @@
+[
+  {
+    "video_id": "7",
+    "video_path": "videos/7.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.95,
+    "alternative_phases": [
+      {
+        "phase": "reaction_setup",
+        "phase_zh": "开反应",
+        "confidence": 0.3,
+        "reason": "虽然涉及向烧瓶加液，但核心操作集中在小体积样品的分装与封管，而非建立大规模反应体系。"
+      },
+      {
+        "phase": "labeling_storage",
+        "phase_zh": "标记与暂存",
+        "confidence": 0.2,
+        "reason": "视频末尾有盖盖动作，但主要过程是液体的转移和制备，不仅是简单的标记存储。"
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "7_s001",
+        "start": 10.0,
+        "end": 20.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "反应瓶",
+          "EP管"
+        ],
+        "caption": "使用移液枪从圆底烧瓶中吸取深色液体并转移至EP管中。",
+        "evidence_timestamps": [
+          13,
+          16,
+          18
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "移液枪",
+            "反应瓶",
+            "EP管"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "反应瓶",
+            "present": true
+          },
+          {
+            "object": "EP管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "7_s002",
+        "start": 34.0,
+        "end": 43.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "试剂瓶",
+          "EP管"
+        ],
+        "caption": "使用移液枪从棕色试剂瓶中吸取透明液体并注入到EP管中。",
+        "evidence_timestamps": [
+          36,
+          39,
+          42
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "移液枪",
+            "试剂瓶",
+            "EP管"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          },
+          {
+            "object": "EP管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "7_s003",
+        "start": 53.0,
+        "end": 60.0,
+        "action": "filter_sample_solution",
+        "action_zh": "过滤样品溶液",
+        "objects": [
+          "注射器",
+          "针头过滤器",
+          "EP管"
+        ],
+        "caption": "将装有样品的注射器连接针头过滤器，并将滤液推入EP管中。",
+        "evidence_timestamps": [
+          55,
+          57,
+          59
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "注射器",
+            "针头过滤器",
+            "EP管"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "注射器",
+            "present": true
+          },
+          {
+            "object": "针头过滤器",
+            "present": true
+          },
+          {
+            "object": "EP管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "7_s004",
+        "start": 66.0,
+        "end": 71.0,
+        "action": "transfer_to_sample_vial",
+        "action_zh": "转移至样品瓶",
+        "objects": [
+          "移液枪",
+          "EP管",
+          "样品瓶"
+        ],
+        "caption": "使用移液枪将EP管中的液体转移至带有红色盖子的小样品瓶中。",
+        "evidence_timestamps": [
+          67,
+          69,
+          71
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "移液枪",
+            "EP管",
+            "样品瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "EP管",
+            "present": true
+          },
+          {
+            "object": "样品瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "7_s005",
+        "start": 75.0,
+        "end": 80.0,
+        "action": "finish_sample_container",
+        "action_zh": "封闭并标记样品容器",
+        "objects": [
+          "样品瓶",
+          "瓶盖"
+        ],
+        "caption": "给装有样品的瓶子盖上蓝色盖子进行封闭。",
+        "evidence_timestamps": [
+          76,
+          78,
+          80
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "样品瓶",
+            "瓶盖"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "样品瓶",
+            "present": true
+          },
+          {
+            "object": "瓶盖",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [],
+    "processing_note": "omni pipeline: no frame extraction"
+  }
+]

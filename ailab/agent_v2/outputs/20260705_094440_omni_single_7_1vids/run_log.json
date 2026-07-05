@@ -1,0 +1,172 @@
+[
+  {
+    "video_id": "7",
+    "video_info": {
+      "duration": 81.4,
+      "fps": 30.0,
+      "resolution": "1280x720",
+      "pipeline": "omni",
+      "omni_fps": 1.0
+    },
+    "steps": [
+      {
+        "step": "omni_phase_hypothesis",
+        "output": {
+          "phase": "analytical_sample_preparation",
+          "phase_zh": "分析样品制备",
+          "confidence": 0.95,
+          "alternative_phases": [
+            {
+              "phase": "reaction_setup",
+              "phase_zh": "开反应",
+              "confidence": 0.3,
+              "reason": "虽然涉及向烧瓶加液，但核心操作集中在小体积样品的分装与封管，而非建立大规模反应体系。"
+            },
+            {
+              "phase": "labeling_storage",
+              "phase_zh": "标记与暂存",
+              "confidence": 0.2,
+              "reason": "视频末尾有盖盖动作，但主要过程是液体的转移和制备，不仅是简单的标记存储。"
+            }
+          ],
+          "evidence_timestamps": [
+            "00:10-00:20",
+            "00:35-00:45",
+            "00:52-01:00",
+            "01:05-01:10"
+          ],
+          "reason": "视频中实验人员主要使用移液枪将液体从试剂瓶或烧瓶中精确吸取并转移至多个小型EP管/离心管中（如00:52-01:10），随后进行加盖封存，符合分析样品制备中稀释、转移、分装的核心特征，且未出现TLC板、分液漏斗或柱层析仪器等排除性线索。"
+        },
+        "elapsed": 43.629
+      },
+      {
+        "step": "omni_action_segmentation",
+        "input": {
+          "phase": "analytical_sample_preparation",
+          "phase_confidence": 0.95,
+          "catalog_phases": [
+            "analytical_sample_preparation"
+          ]
+        },
+        "output": [
+          {
+            "start": "10",
+            "end": "20",
+            "action": "pipette_sample_solution",
+            "action_zh": "移取样品溶液",
+            "objects": [
+              "移液枪",
+              "反应瓶",
+              "EP管"
+            ],
+            "caption": "使用移液枪从圆底烧瓶中吸取深色液体并转移至EP管中。",
+            "evidence_timestamps": [
+              13,
+              16,
+              18
+            ]
+          },
+          {
+            "start": "34",
+            "end": "43",
+            "action": "add_solvent_to_sample_container",
+            "action_zh": "向样品容器加入溶剂",
+            "objects": [
+              "移液枪",
+              "试剂瓶",
+              "EP管"
+            ],
+            "caption": "使用移液枪从棕色试剂瓶中吸取透明液体并注入到EP管中。",
+            "evidence_timestamps": [
+              36,
+              39,
+              42
+            ]
+          },
+          {
+            "start": "53",
+            "end": "60",
+            "action": "filter_sample_solution",
+            "action_zh": "过滤样品溶液",
+            "objects": [
+              "注射器",
+              "针头过滤器",
+              "EP管"
+            ],
+            "caption": "将装有样品的注射器连接针头过滤器，并将滤液推入EP管中。",
+            "evidence_timestamps": [
+              55,
+              57,
+              59
+            ]
+          },
+          {
+            "start": "66",
+            "end": "71",
+            "action": "transfer_to_sample_vial",
+            "action_zh": "转移至样品瓶",
+            "objects": [
+              "移液枪",
+              "EP管",
+              "样品瓶"
+            ],
+            "caption": "使用移液枪将EP管中的液体转移至带有红色盖子的小样品瓶中。",
+            "evidence_timestamps": [
+              67,
+              69,
+              71
+            ]
+          },
+          {
+            "start": "75",
+            "end": "80",
+            "action": "finish_sample_container",
+            "action_zh": "封闭并标记样品容器",
+            "objects": [
+              "样品瓶",
+              "瓶盖"
+            ],
+            "caption": "给装有样品的瓶子盖上蓝色盖子进行封闭。",
+            "evidence_timestamps": [
+              76,
+              78,
+              80
+            ]
+          }
+        ],
+        "elapsed": 34.316
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 5
+        },
+        "output": {
+          "accepted": 5,
+          "filtered": 0,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 81.4,
+          "covered_seconds": 36.0,
+          "coverage_ratio": 0.442,
+          "large_gaps": [],
+          "backtrack_findings": [],
+          "suspicious_gap_count": 0,
+          "needs_review": false
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 5,
+          "phase": "analytical_sample_preparation",
+          "pipeline": "omni"
+        }
+      }
+    ]
+  }
+]

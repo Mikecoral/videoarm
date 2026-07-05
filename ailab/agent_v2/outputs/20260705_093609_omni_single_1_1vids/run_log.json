@@ -1,0 +1,273 @@
+[
+  {
+    "video_id": "1",
+    "video_info": {
+      "duration": 159.9,
+      "fps": 30.0,
+      "resolution": "960x544",
+      "pipeline": "omni",
+      "omni_fps": 1.0
+    },
+    "steps": [
+      {
+        "step": "omni_phase_hypothesis",
+        "output": {
+          "phase": "filtration",
+          "phase_zh": "过滤与抽滤",
+          "confidence": 0.98,
+          "alternative_phases": [
+            {
+              "phase": "reaction_setup",
+              "phase_zh": "开反应",
+              "confidence": 0.15,
+              "reason": "虽然涉及液体混合，但核心装置是用于固液分离的漏斗而非反应烧瓶。"
+            },
+            {
+              "phase": "analytical_sample_preparation",
+              "phase_zh": "分析样品制备",
+              "confidence": 0.1,
+              "reason": "操作规模较大且使用抽滤装置，不符合微量分析样品制备的典型特征。"
+            }
+          ],
+          "evidence_timestamps": [
+            "00:00",
+            "00:22",
+            "01:05",
+            "01:34",
+            "02:28"
+          ],
+          "reason": "视频清晰展示了搭建和使用的布氏漏斗（或砂芯漏斗）连接抽滤瓶的装置，实验者将白色固体悬浮液倒入漏斗，并多次加入溶剂进行洗涤，利用真空负压加速液体通过滤板，这是典型的过滤与抽滤操作。"
+        },
+        "elapsed": 25.078
+      },
+      {
+        "step": "omni_action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.98,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": "0",
+            "end": "12",
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "棕色试剂瓶",
+              "布氏漏斗",
+              "抽滤瓶"
+            ],
+            "caption": "将棕色试剂瓶中的液体倒入已装有白色固体的布氏漏斗中。",
+            "evidence_timestamps": [
+              5,
+              8,
+              10
+            ]
+          },
+          {
+            "start": "17",
+            "end": "43",
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "洗瓶",
+              "布氏漏斗",
+              "滤饼"
+            ],
+            "caption": "使用洗瓶向布氏漏斗中的固体加入洗涤液，并开启抽滤使液体通过。",
+            "evidence_timestamps": [
+              22,
+              28,
+              35
+            ]
+          },
+          {
+            "start": "46",
+            "end": "51",
+            "action": "rinse_container",
+            "action_zh": "润洗容器",
+            "objects": [
+              "棕色试剂瓶",
+              "锥形瓶"
+            ],
+            "caption": "向残留有固体的锥形瓶中倒入少量溶剂进行润洗。",
+            "evidence_timestamps": [
+              47,
+              49
+            ]
+          },
+          {
+            "start": "54",
+            "end": "60",
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "锥形瓶",
+              "布氏漏斗",
+              "滤饼"
+            ],
+            "caption": "将润洗后的悬浊液从锥形瓶倒入布氏漏斗中进行过滤。",
+            "evidence_timestamps": [
+              55,
+              58
+            ]
+          },
+          {
+            "start": "64",
+            "end": "71",
+            "action": "vacuum_dry_filter_cake",
+            "action_zh": "抽滤并抽干滤饼",
+            "objects": [
+              "橡胶管",
+              "抽滤瓶",
+              "布氏漏斗"
+            ],
+            "caption": "调整连接抽滤瓶的橡胶管，确保真空抽滤状态以干燥滤饼。",
+            "evidence_timestamps": [
+              66,
+              69
+            ]
+          },
+          {
+            "start": "72",
+            "end": "92",
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "棕色试剂瓶",
+              "药匙",
+              "布氏漏斗",
+              "滤饼"
+            ],
+            "caption": "直接向漏斗内的滤饼上加入溶剂，并用玻璃棒搅拌以辅助洗涤。",
+            "evidence_timestamps": [
+              75,
+              80,
+              85
+            ]
+          },
+          {
+            "start": "93",
+            "end": "104",
+            "action": "vacuum_dry_filter_cake",
+            "action_zh": "抽滤并抽干滤饼",
+            "objects": [
+              "橡胶管",
+              "抽滤瓶",
+              "布氏漏斗"
+            ],
+            "caption": "再次检查并调整真空管路，继续进行抽滤操作。",
+            "evidence_timestamps": [
+              95,
+              100
+            ]
+          },
+          {
+            "start": "105",
+            "end": "122",
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "棕色试剂瓶",
+              "药匙",
+              "布氏漏斗",
+              "滤饼"
+            ],
+            "caption": "重复向滤饼加入溶剂并使用玻璃棒搅拌的操作。",
+            "evidence_timestamps": [
+              108,
+              115,
+              120
+            ]
+          },
+          {
+            "start": "123",
+            "end": "132",
+            "action": "vacuum_dry_filter_cake",
+            "action_zh": "抽滤并抽干滤饼",
+            "objects": [
+              "橡胶管",
+              "抽滤瓶",
+              "布氏漏斗"
+            ],
+            "caption": "调整真空管路连接，保持抽滤状态。",
+            "evidence_timestamps": [
+              125,
+              129
+            ]
+          },
+          {
+            "start": "133",
+            "end": "146",
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "棕色试剂瓶",
+              "药匙",
+              "布氏漏斗",
+              "滤饼"
+            ],
+            "caption": "第三次向滤饼加入溶剂并使用玻璃棒搅拌。",
+            "evidence_timestamps": [
+              136,
+              140,
+              144
+            ]
+          },
+          {
+            "start": "147",
+            "end": "157",
+            "action": "vacuum_dry_filter_cake",
+            "action_zh": "抽滤并抽干滤饼",
+            "objects": [
+              "橡胶管",
+              "抽滤瓶",
+              "布氏漏斗"
+            ],
+            "caption": "最后一次调整真空管路，完成最终的抽滤干燥过程。",
+            "evidence_timestamps": [
+              149,
+              153,
+              156
+            ]
+          }
+        ],
+        "elapsed": 59.211
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 11
+        },
+        "output": {
+          "accepted": 11,
+          "filtered": 0,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 159.9,
+          "covered_seconds": 136.0,
+          "coverage_ratio": 0.851,
+          "large_gaps": [],
+          "backtrack_findings": [],
+          "suspicious_gap_count": 0,
+          "needs_review": false
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 11,
+          "phase": "filtration",
+          "pipeline": "omni"
+        }
+      }
+    ]
+  }
+]

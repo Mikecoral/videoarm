@@ -1,0 +1,5899 @@
+[
+  {
+    "video_id": "1",
+    "video_path": "videos/1.mp4",
+    "phase": "filtration",
+    "phase_zh": "过滤与抽滤",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "1_s001",
+        "start": 14.0,
+        "end": 29.0,
+        "action": "pour_mixture_to_filter",
+        "action_zh": "将混合物倒入过滤装置",
+        "objects": [
+          "分液漏斗",
+          "塑料瓶",
+          "白色液体"
+        ],
+        "caption": "实验人员将塑料瓶中的白色液体倒入分液漏斗中，液面明显上升。",
+        "evidence_timestamps": [
+          18,
+          22,
+          26
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "塑料瓶",
+            "present": true
+          },
+          {
+            "object": "白色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s002",
+        "start": 29.0,
+        "end": 44.0,
+        "action": "pour_mixture_to_filter",
+        "action_zh": "将混合物倒入过滤装置",
+        "objects": [
+          "布氏漏斗",
+          "抽滤瓶",
+          "烧杯",
+          "白色浑浊液体"
+        ],
+        "caption": "实验人员将烧杯中的白色浑浊液体倒入布氏漏斗进行过滤，随后放下空烧杯。",
+        "evidence_timestamps": [
+          32,
+          38,
+          42
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面清晰显示倾倒液体的动作，但并未出现描述中提到的“拿起玻璃棒”这一操作，且最后画面显示的是手持空烧杯而非玻璃棒。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "白色浑浊液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s003",
+        "start": 44.0,
+        "end": 58.0,
+        "action": "pour_mixture_to_filter",
+        "action_zh": "将混合物倒入过滤装置",
+        "objects": [
+          "抽滤瓶",
+          "玻璃烧瓶",
+          "透明液体",
+          "白色液体"
+        ],
+        "caption": "实验人员将玻璃烧瓶中的透明液体倒入装有白色液体的抽滤瓶中。",
+        "evidence_timestamps": [
+          48,
+          52,
+          56
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃烧瓶",
+            "present": true
+          },
+          {
+            "object": "透明液体",
+            "present": true
+          },
+          {
+            "object": "白色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s004",
+        "start": 58.0,
+        "end": 73.0,
+        "action": "prepare_filter_apparatus",
+        "action_zh": "准备过滤装置",
+        "objects": [
+          "布氏漏斗",
+          "抽滤瓶",
+          "真空泵",
+          "棕色试剂瓶",
+          "白色固体"
+        ],
+        "caption": "实验人员将白色固体倒入漏斗，调整管路并摇晃棕色瓶子，随后向漏斗中的固体加入液体。",
+        "evidence_timestamps": [
+          60,
+          65,
+          70
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面清晰显示操作者向漏斗中加入了液体（来自棕色瓶），而原描述称“使固体变为湿润糊状”未明确提及加液这一关键动作，且画面中并未展示摇晃瓶子导致固体变糊的过程，而是直接倒入了液体。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "真空泵",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "白色固体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s005",
+        "start": 73.0,
+        "end": 87.0,
+        "action": "wash_filter_cake",
+        "action_zh": "洗涤滤饼",
+        "objects": [
+          "布氏漏斗",
+          "棕色试剂瓶",
+          "玻璃棒",
+          "白色固体"
+        ],
+        "caption": "实验人员向漏斗内的白色固体倾倒液体，并用玻璃棒搅拌以润湿或溶解固体。",
+        "evidence_timestamps": [
+          76,
+          80,
+          84
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃棒",
+            "present": true
+          },
+          {
+            "object": "白色固体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s006",
+        "start": 87.0,
+        "end": 102.0,
+        "action": "prepare_filter_apparatus",
+        "action_zh": "准备过滤装置",
+        "objects": [
+          "布氏漏斗",
+          "试剂瓶"
+        ],
+        "caption": "实验人员将试剂瓶中的黄色液体倒入装有滤纸的布氏漏斗中。",
+        "evidence_timestamps": [
+          90,
+          95,
+          100
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面显示操作是将试剂瓶内的黄色液体直接倾倒进漏斗，而非使用刮刀转移白色固体；且画面中并未出现白色固体或刮刀。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s007",
+        "start": 102.0,
+        "end": 116.0,
+        "action": "rinse_container",
+        "action_zh": "润洗容器",
+        "objects": [
+          "烧杯",
+          "棕色试剂瓶",
+          "玻璃棒",
+          "白色粉末"
+        ],
+        "caption": "实验人员用玻璃棒搅拌烧杯内物质，并加入棕色试剂瓶中的液体进行混合。",
+        "evidence_timestamps": [
+          105,
+          110,
+          114
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃棒",
+            "present": true
+          },
+          {
+            "object": "白色粉末",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s008",
+        "start": 116.0,
+        "end": 131.0,
+        "action": "stir_mixture",
+        "action_zh": "搅拌混合物",
+        "objects": [
+          "烧杯",
+          "白色液体"
+        ],
+        "caption": "实验人员手持玻璃棒在烧杯内的白色液体中进行搅拌操作。",
+        "evidence_timestamps": [
+          120,
+          125,
+          129
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中使用的搅拌工具明显是金属或玻璃材质的硬质搅拌棒，而非标注中的“细管”（通常指塑料软管），且第一帧显示的是手动搅拌动作，后续帧为装置组装过程，并非持续搅拌。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "白色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s009",
+        "start": 131.0,
+        "end": 145.0,
+        "action": "stir_mixture",
+        "action_zh": "搅拌混合物",
+        "objects": [
+          "圆底烧瓶",
+          "搅拌棒",
+          "白色固体"
+        ],
+        "caption": "实验人员使用搅拌棒在圆底烧瓶内搅拌白色固体。",
+        "evidence_timestamps": [
+          135,
+          140,
+          143
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "搅拌棒",
+            "present": true
+          },
+          {
+            "object": "白色固体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s010",
+        "start": 145.0,
+        "end": 159.9,
+        "action": "prepare_filter_apparatus",
+        "action_zh": "准备过滤装置",
+        "objects": [
+          "布氏漏斗",
+          "玻璃容器",
+          "白色粉末"
+        ],
+        "caption": "实验人员将装有白色粉末的玻璃容器（烧杯）放置在布氏漏斗上方，并调整装置连接。",
+        "evidence_timestamps": [
+          148,
+          153,
+          158
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示的是将盛有粉末的烧杯直接置于漏斗上方进行组装或准备过滤，而非描述中的“倾斜转移”动作（倾倒）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "玻璃容器",
+            "present": true
+          },
+          {
+            "object": "白色粉末",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 14.5,
+        "frame_ts": [
+          0.0,
+          7.0,
+          14.0
+        ],
+        "summary": "画面中可见一台正在运行的低温冷却循环泵、一套带有白色固体的索氏提取装置以及一个棕色试剂瓶。实验人员右手拿起棕色试剂瓶，左手拿着一支注射器或移液管准备进行操作。此时尚未发生明显的液体倾倒或状态变化，处于操作前的准备阶段。"
+      },
+      {
+        "start": 14.5,
+        "end": 29.1,
+        "frame_ts": [
+          15.0,
+          22.0,
+          29.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、棕色试剂瓶、分液漏斗及一个盛有白色液体的塑料瓶。实验人员左手持有一把金属勺，右手正将塑料瓶中的白色液体倒入分液漏斗内。随着倾倒操作进行，分液漏斗内的白色液体液面明显上升。"
+      },
+      {
+        "start": 29.1,
+        "end": 43.6,
+        "frame_ts": [
+          30.0,
+          36.0,
+          43.0
+        ],
+        "summary": "画面中可见布氏漏斗、抽滤瓶、真空泵及白色浑浊液体。实验人员双手正将烧杯中的白色液体倒入漏斗，随后移开烧杯并拿起玻璃棒。液体被成功转移至过滤装置内，液面明显上升。"
+      },
+      {
+        "start": 43.6,
+        "end": 58.1,
+        "frame_ts": [
+          44.0,
+          51.0,
+          58.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、装有白色液体的抽滤瓶、棕色试剂瓶及一个盛有透明液体的玻璃烧瓶。实验人员双手先拿起棕色瓶和玻璃烧瓶，随后将烧瓶中的液体倒入右侧的抽滤瓶中。这一操作导致抽滤瓶内的白色液体液面明显上升。"
+      },
+      {
+        "start": 58.1,
+        "end": 72.7,
+        "frame_ts": [
+          59.0,
+          65.0,
+          72.0
+        ],
+        "summary": "画面中可见布氏漏斗、抽滤瓶、真空泵及棕色试剂瓶等实验器具。实验人员双手先是将白色固体倒入漏斗，随后调整了连接管路，最后拿起棕色瓶子进行摇晃操作。漏斗内的物料状态发生了明显变化，从初始的粉末状转变为湿润的糊状物。"
+      },
+      {
+        "start": 72.7,
+        "end": 87.2,
+        "frame_ts": [
+          73.0,
+          80.0,
+          87.0
+        ],
+        "summary": "画面中可见棕色试剂瓶、布氏漏斗（内含白色固体）、抽滤瓶及真空泵等装置。实验人员左手持棕色瓶向漏斗内倾倒液体，同时右手用玻璃棒在漏斗中进行搅拌或引流操作。随着液体的加入，漏斗内的白色固体正在被润湿或溶解。"
+      },
+      {
+        "start": 87.2,
+        "end": 101.8,
+        "frame_ts": [
+          88.0,
+          94.0,
+          101.0
+        ],
+        "summary": "画面中可见布氏漏斗、抽滤瓶、真空泵及盛有白色固体的试剂瓶。实验人员左手扶住漏斗，右手持刮刀将固体从瓶中转移至漏斗内。此过程发生了明显的物料转移（加样）操作。"
+      },
+      {
+        "start": 101.8,
+        "end": 116.3,
+        "frame_ts": [
+          102.0,
+          109.0,
+          116.0
+        ],
+        "summary": "画面中可见带有白色粉末的烧杯、棕色试剂瓶、玻璃棒以及下方的抽滤装置。实验人员左手持烧杯，右手先是用玻璃棒搅拌杯内物质，随后拿起棕色试剂瓶向烧杯中倾倒液体。这一操作导致烧杯内的固体与液体混合，发生了明显的状态变化。"
+      },
+      {
+        "start": 116.3,
+        "end": 130.8,
+        "frame_ts": [
+          117.0,
+          124.0,
+          130.0
+        ],
+        "summary": "画面中可见装有白色液体的玻璃烧杯、下方连接的接收瓶以及左侧的旋转蒸发仪。实验人员左手扶住烧杯，右手持一根细管（或移液管）在烧杯内的液体中进行搅拌操作。整个过程中未见明显的倒液或状态改变，仅观察到持续的搅拌动作。"
+      },
+      {
+        "start": 130.8,
+        "end": 145.4,
+        "frame_ts": [
+          131.0,
+          138.0,
+          145.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、装有白色固体的圆底烧瓶、接收瓶及搅拌棒等器具。实验人员左手扶住烧瓶，右手持搅拌棒在瓶内进行搅拌操作。烧瓶内的白色固体在搅拌过程中未见明显的溶解或颜色变化。"
+      },
+      {
+        "start": 145.4,
+        "end": 159.9,
+        "frame_ts": [
+          146.0,
+          153.0,
+          159.0
+        ],
+        "summary": "画面中可见布氏漏斗、抽滤瓶、真空泵及盛有白色固体的玻璃容器。实验人员双手正在将装有白色粉末的容器倾斜，向布氏漏斗中进行转移操作。随着操作进行，白色固体明显落入漏斗内，完成了加样过程。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "4",
+    "video_path": "videos/4.mp4",
+    "phase": "filtration",
+    "phase_zh": "过滤与抽滤",
+    "phase_confidence": 0.92,
+    "segments": [
+      {
+        "segment_id": "4_s001",
+        "start": 30.0,
+        "end": 45.0,
+        "action": "transfer_liquid_with_pipette",
+        "action_zh": "用移液管转移液体",
+        "objects": [
+          "棕色试剂瓶",
+          "移液管",
+          "冰浴反应容器"
+        ],
+        "caption": "实验人员使用移液管从棕色试剂瓶中吸取液体并滴加至冰浴中的反应容器内。",
+        "evidence_timestamps": [
+          32,
+          38,
+          42
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "移液管",
+            "present": true
+          },
+          {
+            "object": "冰浴反应容器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "4_s002",
+        "start": 90.0,
+        "end": 106.0,
+        "action": "pour_mixture_to_filter",
+        "action_zh": "将混合物倒入过滤装置",
+        "objects": [
+          "棕色试剂瓶",
+          "漏斗",
+          "锥形瓶"
+        ],
+        "caption": "实验人员将棕色试剂瓶中的液体倾倒入装有滤纸的漏斗中，液体流入下方的锥形瓶。",
+        "evidence_timestamps": [
+          92,
+          98,
+          104
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "漏斗",
+            "present": true
+          },
+          {
+            "object": "锥形瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "4_s003",
+        "start": 106.0,
+        "end": 121.0,
+        "action": "pour_mixture_to_filter",
+        "action_zh": "将混合物倒入过滤装置",
+        "objects": [
+          "棕色试剂瓶",
+          "漏斗",
+          "圆底烧瓶"
+        ],
+        "caption": "实验人员继续将棕色试剂瓶中的液体倾倒入置于圆底烧瓶上的漏斗中进行过滤。",
+        "evidence_timestamps": [
+          108,
+          114,
+          118
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "漏斗",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 15.1,
+        "frame_ts": [
+          0.0,
+          8.0,
+          15.0
+        ],
+        "summary": "画面中可见一个正在磁力搅拌器上剧烈搅拌的烧杯、一个装有深色液体的分液漏斗（上方架有漏斗）、以及一个棕色试剂瓶。实验人员的双手拿起并持握该棕色试剂瓶，似乎准备进行下一步操作。在此期间，烧杯内的液体持续搅拌，未观察到明显的倒液或状态改变。"
+      },
+      {
+        "start": 15.1,
+        "end": 30.1,
+        "frame_ts": [
+          16.0,
+          23.0,
+          30.0
+        ],
+        "summary": "画面中可见一个装有白色固体的漏斗、下方连接的棕色细口瓶，以及背景中的磁力搅拌器和试剂瓶。实验人员左手扶住棕色试剂瓶，右手正在拧开瓶盖。随着瓶盖被打开，瓶内液体准备进行倾倒操作。"
+      },
+      {
+        "start": 30.1,
+        "end": 45.2,
+        "frame_ts": [
+          31.0,
+          38.0,
+          45.0
+        ],
+        "summary": "画面中可见一个装有滤纸的漏斗、下方的锥形瓶、右侧冰浴中的反应容器以及手持的棕色试剂瓶。实验人员左手扶着棕色试剂瓶，右手持移液管正在向冰浴容器内滴加液体。此时未观察到明显的状态变化，操作处于持续滴加过程中。"
+      },
+      {
+        "start": 45.2,
+        "end": 60.3,
+        "frame_ts": [
+          46.0,
+          53.0,
+          60.0
+        ],
+        "summary": "画面中可见一个装有滤纸的漏斗、下方承接液体的锥形瓶、背景中的冰浴装置以及实验人员手持的一个棕色试剂瓶。实验人员双手正握持并倾斜该棕色试剂瓶，似乎准备向漏斗或烧瓶中倾倒液体。目前尚未观察到明显的液体流出或状态变化，操作处于准备阶段。"
+      },
+      {
+        "start": 60.3,
+        "end": 75.4,
+        "frame_ts": [
+          61.0,
+          68.0,
+          75.0
+        ],
+        "summary": "画面中可见一个置于锥形瓶上的玻璃漏斗、一瓶棕色试剂瓶以及背景中的冰浴反应装置。实验人员左手正握持并倾斜该棕色试剂瓶，似乎准备向漏斗内倾倒液体。目前尚未观察到明显的液体流出或状态变化。"
+      },
+      {
+        "start": 75.4,
+        "end": 90.4,
+        "frame_ts": [
+          76.0,
+          83.0,
+          90.0
+        ],
+        "summary": "画面中可见一个装有滤纸的漏斗、下方的锥形瓶以及一个盛有冰水浴的烧杯。实验人员左手扶着一个棕色试剂瓶，右手拿着一根滴管或移液管，正对着试剂瓶口进行操作。未见明显的液体倾倒或状态变化，主要是在准备吸取或转移液体。"
+      },
+      {
+        "start": 90.4,
+        "end": 105.5,
+        "frame_ts": [
+          91.0,
+          98.0,
+          105.0
+        ],
+        "summary": "画面中可见一个装有白色滤纸的漏斗、下方承接液体的锥形瓶，以及操作者手中的一瓶棕色试剂瓶。实验人员双手正持握该棕色试剂瓶，将其倾斜对准漏斗口进行倾倒操作。随着液体流出，锥形瓶内的液面明显上升，表明发生了倒液过程。"
+      },
+      {
+        "start": 105.5,
+        "end": 120.6,
+        "frame_ts": [
+          106.0,
+          113.0,
+          120.0
+        ],
+        "summary": "画面中可见一个装有白色固体的漏斗置于棕色圆底烧瓶上，旁边有一个正在磁力搅拌的冰水浴反应装置。实验人员双手正持握一个棕色试剂瓶，将其倾斜对准漏斗口进行倾倒操作。随着操作进行，液体从试剂瓶中流出并进入漏斗，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 120.6,
+        "end": 135.6,
+        "frame_ts": [
+          121.0,
+          128.0,
+          135.0
+        ],
+        "summary": "画面中可见一个装有白色固体的漏斗、下方盛有棕色液体的圆底烧瓶，以及右侧正在磁力搅拌器上搅拌的三口烧瓶。实验人员的一只手短暂出现在画面中，似乎刚放下或调整了旁边的棕色试剂瓶，随后离开视野。整个过程中，右侧烧瓶内的液体持续搅拌并伴有气泡产生，未见明显的倒液或状态突变操作。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "5",
+    "video_path": "videos/5.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "5_s001",
+        "start": 0.0,
+        "end": 11.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "棕色小瓶",
+          "移液枪头",
+          "液体"
+        ],
+        "caption": "实验人员使用移液枪头向棕色小瓶内滴加液体。",
+        "evidence_timestamps": [
+          2,
+          5,
+          8
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色小瓶",
+            "present": true
+          },
+          {
+            "object": "移液枪头",
+            "present": true
+          },
+          {
+            "object": "液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "5_s002",
+        "start": 11.0,
+        "end": 22.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "玻璃瓶",
+          "移液枪"
+        ],
+        "caption": "实验人员手持装有棕色液体的小玻璃瓶，另一只手操作移液枪准备进行移液操作。",
+        "evidence_timestamps": [
+          13,
+          16,
+          19
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中并未出现标注所述的“离心管”和“黄色液体”，且核心动作是手持瓶子而非直接从瓶中吸取（瓶子被拿在手中）。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "移液枪",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "5_s003",
+        "start": 22.0,
+        "end": 34.0,
+        "action": "finish_sample_container",
+        "action_zh": "封闭并标记样品容器",
+        "objects": [
+          "透明离心管",
+          "管盖"
+        ],
+        "caption": "实验人员双手持握透明离心管，进行旋开或旋紧管盖的操作。",
+        "evidence_timestamps": [
+          24,
+          28,
+          32
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "透明离心管",
+            "present": true
+          },
+          {
+            "object": "管盖",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "5_s004",
+        "start": 45.0,
+        "end": 56.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "金属针",
+          "移液枪"
+        ],
+        "caption": "实验人员左手持金属针，右手操作移液枪向针尖附近区域滴加液体（画面中未显示烧杯和黄色液体）。",
+        "evidence_timestamps": [
+          47,
+          50,
+          54
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "标注中的'烧杯'和'黄色液体'在提供的帧中并未出现（背景虽有含黄液的容器但非操作对象），且核心动作'滴加'仅在最后一帧有迹象，前几帧仅为准备状态。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "金属针",
+            "present": true
+          },
+          {
+            "object": "移液枪",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "5_s005",
+        "start": 56.0,
+        "end": 67.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "透明离心管",
+          "移液枪头"
+        ],
+        "caption": "实验人员使用白色移液枪头向开盖的透明离心管内吸取或滴加液体。",
+        "evidence_timestamps": [
+          58,
+          62,
+          65
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "透明离心管",
+            "present": true
+          },
+          {
+            "object": "移液枪头",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 11.2,
+        "frame_ts": [
+          0.0,
+          6.0,
+          11.0
+        ],
+        "summary": "画面中可见棕色小瓶、移液枪头、橙色试管架及红色离心管架等实验器具。实验人员左手持棕色小瓶，右手操作移液枪头向瓶内滴加液体。该过程发生了明显的“点样”或“加样”状态变化。"
+      },
+      {
+        "start": 11.2,
+        "end": 22.4,
+        "frame_ts": [
+          12.0,
+          17.0,
+          22.0
+        ],
+        "summary": "画面中可见左手持有一个装有黄色液体的小玻璃瓶和一个透明塑料离心管，桌面上放置有移液枪、红色试管架及金属针等器具。实验人员右手操作移液枪吸取液体，随后将玻璃瓶放置在桌面上。此过程中发生了从手持容器到桌面放置的状态变化，以及使用移液枪进行液体转移的操作。"
+      },
+      {
+        "start": 22.4,
+        "end": 33.6,
+        "frame_ts": [
+          23.0,
+          28.0,
+          33.0
+        ],
+        "summary": "画面中可见双手正持握一个透明小离心管（或PCR管），背景有木质试管架、装有黄色液体的锥形瓶及移液枪等器具。实验人员正在用右手拇指和食指捏住管盖，进行旋开或旋紧的操作。从连续帧看，该操作导致管盖与管身发生了明显的分离或闭合状态变化。"
+      },
+      {
+        "start": 33.6,
+        "end": 44.9,
+        "frame_ts": [
+          34.0,
+          39.0,
+          44.0
+        ],
+        "summary": "画面中可见双手正持握一个透明小离心管，背景有针头、木质支架、红色试管架及装有黄色液体的容器。实验人员似乎正在检查或准备该离心管，随后将其移出画面。未见明显的液体倾倒、盖盖或点样等状态变化操作。"
+      },
+      {
+        "start": 44.9,
+        "end": 56.1,
+        "frame_ts": [
+          45.0,
+          50.0,
+          56.0
+        ],
+        "summary": "画面中可见实验台、装有黄色液体的烧杯（置于木垫上）、红色试管架及若干试管、移液枪以及一根金属针。实验人员左手持握金属针，右手操作移液枪，似乎正在向针尖或附近区域滴加液体。未见明显的宏观状态变化，主要动作集中在精细的液体转移操作上。"
+      },
+      {
+        "start": 56.1,
+        "end": 67.3,
+        "frame_ts": [
+          57.0,
+          62.0,
+          67.0
+        ],
+        "summary": "画面中可见实验台、装有黄色液体的烧瓶、红色试管架及若干离心管。实验人员左手持开盖的透明离心管，右手使用白色移液枪头向管内吸取或滴加液体。操作过程中发生了明显的液体转移动作。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "9",
+    "video_path": "videos/9.mp4",
+    "phase": "weighing",
+    "phase_zh": "称量",
+    "phase_confidence": 0.98,
+    "segments": [
+      {
+        "segment_id": "9_s001",
+        "start": 0.0,
+        "end": 29.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "称量纸",
+          "药匙"
+        ],
+        "caption": "实验人员折叠白色称量纸，将其置于电子天平上并完成归零操作。",
+        "evidence_timestamps": [
+          5,
+          18,
+          25
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "称量纸",
+            "present": true
+          },
+          {
+            "object": "药匙",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s002",
+        "start": 29.0,
+        "end": 43.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙"
+        ],
+        "caption": "实验人员用药匙从棕色试剂瓶中取出白色粉末状固体，添加至天平上的称量容器中（画面显示为玻璃容器），读数增加至 0.1067g。",
+        "evidence_timestamps": [
+          32,
+          38,
+          41
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "核心操作和读数与标注一致，但画面中使用的称量容器明显是玻璃材质（如小烧杯或称量瓶），而非标注所述的'称量纸'。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s003",
+        "start": 43.0,
+        "end": 58.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶"
+        ],
+        "caption": "实验人员手持棕色试剂瓶，使用玻璃棒在瓶口进行搅拌或蘸取操作，随后将装有液体的透明小容器（非离心管）移至天平上方进行称量。",
+        "evidence_timestamps": [
+          46,
+          50,
+          55
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中未出现标注所述的“移液管”和“离心管”，且核心动作是手持瓶子配合玻璃棒操作，而非向瓶内注入液体。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s004",
+        "start": 72.0,
+        "end": 86.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙"
+        ],
+        "caption": "实验人员旋开瓶盖后，用药匙从棕色试剂瓶中取出黄色固体物质并转移至天平称量，读数从零增至 0.1118g。",
+        "evidence_timestamps": [
+          75,
+          80,
+          84
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s005",
+        "start": 86.0,
+        "end": 101.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶"
+        ],
+        "caption": "实验人员继续在天平上进行取样或倒出操作，导致天平读数从 0.1118g 下降至 0.1063g。",
+        "evidence_timestamps": [
+          88,
+          93,
+          98
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s006",
+        "start": 101.0,
+        "end": 115.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "称量纸",
+          "棕色试剂瓶",
+          "药勺"
+        ],
+        "caption": "实验人员重新放置称量纸并归零天平，随后手持试剂瓶准备再次取样。",
+        "evidence_timestamps": [
+          103,
+          108,
+          112
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "称量纸",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "药勺",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s007",
+        "start": 115.0,
+        "end": 130.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属工具"
+        ],
+        "caption": "实验人员手持盛有黄色固体的棕色试剂瓶，使用金属工具从瓶中取样并转移至天平上的称量纸中，天平读数持续增加。",
+        "evidence_timestamps": [
+          118,
+          124,
+          128
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示天平上放置的是白色称量纸（或袋），且读数随操作增加，证实是称量固体；原描述误将固体称为液体，且未提及样品被转移至天平这一关键动作。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属工具",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s008",
+        "start": 130.0,
+        "end": 144.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶"
+        ],
+        "caption": "实验人员手持装有黄色粉末的棕色试剂瓶在天平旁进行操作，天平读数从 0.0955g 逐渐增加至 0.1087g。",
+        "evidence_timestamps": [
+          133,
+          138,
+          142
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s009",
+        "start": 144.0,
+        "end": 158.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "透明离心管",
+          "胶带卷"
+        ],
+        "caption": "实验人员检查透明离心管后，将一卷胶带放置在天平托盘上进行称量（去皮）。",
+        "evidence_timestamps": [
+          148,
+          152,
+          156
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作者先拿着离心管，随后将胶带放在天平上，且天平读数变为负值（-0.2895g），表明进行了去皮/归零操作，原描述未体现这一关键步骤。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "透明离心管",
+            "present": true
+          },
+          {
+            "object": "胶带卷",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 14.4,
+        "frame_ts": [
+          0.0,
+          7.0,
+          14.0
+        ],
+        "summary": "画面中可见电子天平（显示读数-0.2987）、玻璃防风罩、白色称量纸以及戴蓝色手套的双手。实验人员双手正在折叠或整理一张白色的称量纸，准备进行称量操作。目前尚未发生倒液或添加样品的状态变化，仅处于称量前的准备工作阶段。"
+      },
+      {
+        "start": 14.4,
+        "end": 28.8,
+        "frame_ts": [
+          15.0,
+          22.0,
+          28.0
+        ],
+        "summary": "画面中可见电子天平、称量纸、药匙及背景中的棕色干燥器。实验人员戴蓝色手套，先折叠称量纸并置于天平上归零，随后用药匙向纸上添加固体样品。天平读数从0.0000g变为-0.0002g（或接近0），显示正在进行微量固体的称量操作。"
+      },
+      {
+        "start": 28.8,
+        "end": 43.2,
+        "frame_ts": [
+          29.0,
+          36.0,
+          43.0
+        ],
+        "summary": "画面中可见一台电子天平、一个棕色试剂瓶（带粉色封口）、一把金属药匙以及实验人员佩戴的蓝色手套。实验人员左手持瓶，右手用药匙从瓶中取用白色粉末状固体，并将其转移至天平上的称量容器中。随着操作进行，天平读数从接近零逐渐增加至0.1067g，显示发生了明显的加样状态变化。"
+      },
+      {
+        "start": 43.2,
+        "end": 57.6,
+        "frame_ts": [
+          44.0,
+          50.0,
+          57.0
+        ],
+        "summary": "画面中可见电子天平、棕色试剂瓶、移液管、离心管及蓝色手套。实验人员左手持棕色瓶，右手用移液管向瓶中吸取或添加液体，随后将装有液体的离心管移至天平上方准备称量。天平读数从0.1067g变化至0.1569g，表明发生了明显的加样和称量操作。"
+      },
+      {
+        "start": 57.6,
+        "end": 72.0,
+        "frame_ts": [
+          58.0,
+          65.0,
+          72.0
+        ],
+        "summary": "画面中可见电子天平、离心管、棕色试剂瓶及胶带等实验器具。戴蓝色手套的双手先是在天平旁手持并查看离心管，随后拿起棕色试剂瓶并旋开红色瓶盖。操作过程中发生了从观察容器到开启试剂瓶的状态变化，且天平读数在初始阶段有微小波动。"
+      },
+      {
+        "start": 72.0,
+        "end": 86.4,
+        "frame_ts": [
+          72.0,
+          79.0,
+          86.0
+        ],
+        "summary": "画面中可见一台电子天平、一个棕色试剂瓶（带红色瓶盖）、一根金属药匙以及一卷胶带。实验人员左手持瓶，右手使用金属药匙从瓶中取出了部分黄色固体物质。随着固体的取出，背景中的电子天平读数从零开始增加，显示为0.1118g。"
+      },
+      {
+        "start": 86.4,
+        "end": 100.8,
+        "frame_ts": [
+          87.0,
+          94.0,
+          100.0
+        ],
+        "summary": "画面中可见一台电子天平、一个棕色试剂瓶以及戴蓝色手套的双手。实验人员左手持瓶，右手使用工具（疑似药匙）向瓶中操作，同时天平读数从0.1118g逐渐下降至0.1063g。这表明正在进行称量过程中的取样或倒出操作，导致质量发生了明显减少。"
+      },
+      {
+        "start": 100.8,
+        "end": 115.2,
+        "frame_ts": [
+          101.0,
+          108.0,
+          115.0
+        ],
+        "summary": "画面中可见电子天平、称量纸、棕色试剂瓶及药勺等器具。实验人员戴蓝色手套，先在天平上放置称量纸并读数，随后将天平归零，接着手持试剂瓶并用药勺从瓶中取用固体粉末。整个过程涉及称量准备与取样操作，未观察到明显的状态变化（如液体倾倒或反应发生）。"
+      },
+      {
+        "start": 115.2,
+        "end": 129.5,
+        "frame_ts": [
+          116.0,
+          122.0,
+          129.0
+        ],
+        "summary": "画面中可见一台电子天平（显示读数从0.0000g变化至0.0955g）、一个盛有黄色液体的棕色试剂瓶以及戴蓝色手套的双手。实验人员左手持握试剂瓶，右手使用金属工具在瓶口处进行操作（疑似搅拌或取样）。随着操作进行，天平上的数值持续增加，表明正在向称量容器中添加物质或正在进行称量过程。"
+      },
+      {
+        "start": 129.5,
+        "end": 143.9,
+        "frame_ts": [
+          130.0,
+          137.0,
+          143.0
+        ],
+        "summary": "画面中可见一台电子天平、一个装有黄色粉末的棕色试剂瓶以及一卷胶带。戴蓝色手套的人员手持试剂瓶，将其置于天平旁进行观察或准备操作。天平读数从0.0955g逐渐增加至0.1087g，显示称量数值正在发生变化。"
+      },
+      {
+        "start": 143.9,
+        "end": 158.3,
+        "frame_ts": [
+          144.0,
+          151.0,
+          158.0
+        ],
+        "summary": "画面中可见电子天平、棕色试剂瓶、透明离心管、胶带卷及盛放工具的金属筒。实验人员戴蓝色手套，先手持棕色试剂瓶，随后拿起透明离心管观察，最后将一卷胶带放置在天平托盘上。操作过程中发生了明显的状态变化：从手持容器转为对离心管的检查，并最终进行称量胶带的动作（天平读数显示为负值）。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "12",
+    "video_path": "videos/12.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.85,
+    "segments": [
+      {
+        "segment_id": "12_s001",
+        "start": 117.0,
+        "end": 132.0,
+        "action": "filter_sample_solution",
+        "action_zh": "过滤样品溶液",
+        "objects": [
+          "玻璃烧杯",
+          "漏斗"
+        ],
+        "caption": "实验人员手持玻璃烧杯，将液体倾倒入置于容器上方的漏斗中进行过滤操作。",
+        "evidence_timestamps": [
+          120,
+          125,
+          130
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "玻璃烧杯",
+            "present": true
+          },
+          {
+            "object": "漏斗",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "12_s002",
+        "start": 147.0,
+        "end": 162.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "白色试剂瓶",
+          "透明容器"
+        ],
+        "caption": "实验人员右手持白色试剂瓶，将其中的液体倾倒至下方的透明容器中。",
+        "evidence_timestamps": [
+          150,
+          155,
+          160
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "透明容器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "12_s003",
+        "start": 162.0,
+        "end": 176.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "带红盖白色试剂瓶",
+          "玻璃烧杯"
+        ],
+        "caption": "实验人员单手握住带红色瓶盖的白色试剂瓶，将液体倾倒入下方的玻璃烧杯中并放置回桌面。",
+        "evidence_timestamps": [
+          165,
+          170,
+          174
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "带红盖白色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃烧杯",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 14.7,
+        "frame_ts": [
+          0.0,
+          7.0,
+          14.0
+        ],
+        "summary": "画面中可见一台带有触摸屏的黑色大型仪器（疑似液相色谱仪）、左侧的旋转蒸发仪、不锈钢水浴锅以及右侧的手持白色滤柱。实验人员右手握住该白色滤柱，将其插入或调整至黑色仪器的接口处。此操作涉及将耗材与仪器连接，属于实验准备阶段的组装动作。"
+      },
+      {
+        "start": 14.7,
+        "end": 29.4,
+        "frame_ts": [
+          15.0,
+          22.0,
+          29.0
+        ],
+        "summary": "画面中可见一台带有触摸屏的黑色分析仪器、连接的管路以及左侧的不锈钢容器。实验人员先是用手指操作仪器右侧的部件，随后在触摸屏上点击按钮进行设置或启动程序。屏幕界面从操作菜单切换为显示数据曲线的运行状态，表明实验已开始进行。"
+      },
+      {
+        "start": 29.4,
+        "end": 44.0,
+        "frame_ts": [
+          30.0,
+          37.0,
+          44.0
+        ],
+        "summary": "画面中可见一台带有触摸屏的精密仪器（疑似液相色谱仪）、不锈钢容器、以及实验台架上的棕色试剂瓶和黑色多孔板。实验人员的一只手出现在画面右侧，正在操作或调整白色仪器的侧面面板。视频片段内未观察到明显的液体倾倒或状态变化，主要呈现为设备运行及人员的微调动作。"
+      },
+      {
+        "start": 44.0,
+        "end": 58.7,
+        "frame_ts": [
+          44.0,
+          51.0,
+          58.0
+        ],
+        "summary": "画面中可见金属网篮、黑色多孔板架以及背景货架上的棕色试剂瓶。实验人员的双手正在操作，先是接触右侧设备面板，随后将左手伸入左侧的金属网篮中进行整理或取放物品。未见明显的液体倾倒或化学反应等状态变化。"
+      },
+      {
+        "start": 58.7,
+        "end": 73.4,
+        "frame_ts": [
+          59.0,
+          66.0,
+          73.0
+        ],
+        "summary": "画面中可见金属网篮、黑色多孔托盘以及背景架上的各类试剂瓶。实验人员先是将一个白色圆形培养皿放入左侧的金属网篮内，随后右手伸向右侧的黑色托盘区域进行操作。此过程中发生了将器皿从台面转移至清洗篮的明显动作。"
+      },
+      {
+        "start": 73.4,
+        "end": 88.1,
+        "frame_ts": [
+          74.0,
+          81.0,
+          88.0
+        ],
+        "summary": "画面中可见金属丝篮、黑色多孔板（疑似细胞培养板）以及背景中的各类试剂瓶。实验人员右手正在操作，将一个小物件（可能是试管或移液管吸头）放置到右侧的黑色多孔板上。该动作属于物品的转移与摆放，未观察到液体倾倒等状态变化。"
+      },
+      {
+        "start": 88.1,
+        "end": 102.8,
+        "frame_ts": [
+          89.0,
+          95.0,
+          102.0
+        ],
+        "summary": "画面中可见金属丝篮、黑色多孔板以及一台带有黄色旋钮的黑色仪器。实验人员的一只手正在操作或整理金属丝篮内的物品，随后镜头转向旁边的仪器台面。未见明显的液体倾倒或状态变化，主要动作集中在器具的摆放与调整上。"
+      },
+      {
+        "start": 102.8,
+        "end": 117.4,
+        "frame_ts": [
+          103.0,
+          110.0,
+          117.0
+        ],
+        "summary": "画面中可见实验台面上摆放着移液枪架、棕色试剂瓶、白色塑料瓶、锥形瓶、离心管盒及电子计时器等器具。由于视频片段为静止或无操作画面，未观察到实验人员的双手进行任何具体操作。因此，该时间段内没有发生倒液、盖盖或点样等明显的状态变化。"
+      },
+      {
+        "start": 117.4,
+        "end": 132.1,
+        "frame_ts": [
+          118.0,
+          125.0,
+          132.0
+        ],
+        "summary": "画面中可见实验台、棕色试剂瓶、白色塑料瓶、装有彩色盖试管的架子以及一个置于卷纸上的白色漏斗。实验人员右手持透明玻璃烧杯，正将液体倾倒入该漏斗中进行过滤操作。随着倾倒动作的进行，液体持续流入漏斗，发生了明显的液流状态变化。"
+      },
+      {
+        "start": 132.1,
+        "end": 146.8,
+        "frame_ts": [
+          133.0,
+          139.0,
+          146.0
+        ],
+        "summary": "画面中可见实验台、棕色试剂瓶、白色塑料瓶、滤纸卷以及一个被手持的透明玻璃漏斗。实验人员右手正握住漏斗，将其置于下方容器上方进行倾倒或过滤操作。随后镜头移动，显示该人员左手拿起一个装有液体的离心管并查看。"
+      },
+      {
+        "start": 146.8,
+        "end": 161.5,
+        "frame_ts": [
+          147.0,
+          154.0,
+          161.0
+        ],
+        "summary": "画面中可见实验台、试剂瓶（含白色大瓶与带蓝盖小瓶）、移液管架、记号笔及纸盒等器具。实验人员右手持白色试剂瓶，正将其中的液体倾倒至下方透明容器内；左手未在画面中清晰呈现操作。该过程发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 161.5,
+        "end": 176.2,
+        "frame_ts": [
+          162.0,
+          169.0,
+          176.0
+        ],
+        "summary": "画面中可见一个带有红色瓶盖的白色试剂瓶、一个透明玻璃烧杯以及桌面上的其他实验杂物。实验人员单手握住白色试剂瓶，将其中的液体倾倒入下方的玻璃烧杯中。倾倒动作完成后，试剂瓶被放置在桌面上，完成了液体的转移操作。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "18",
+    "video_path": "videos/18.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "18_s001",
+        "start": 0.0,
+        "end": 15.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "离心管",
+          "试管架",
+          "试剂瓶"
+        ],
+        "caption": "实验人员使用移液枪向粉色试管架中的小管内加入液体。",
+        "evidence_timestamps": [
+          5,
+          10,
+          12
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "试管架",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "18_s002",
+        "start": 15.0,
+        "end": 30.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "离心管"
+        ],
+        "caption": "实验人员使用移液枪对离心管内的液体进行吸取或注入操作。",
+        "evidence_timestamps": [
+          18,
+          22,
+          26
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "18_s003",
+        "start": 30.0,
+        "end": 45.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "透明小试管",
+          "试剂瓶"
+        ],
+        "caption": "实验人员手持透明小试管，使用移液枪向其内部转移液体。",
+        "evidence_timestamps": [
+          33,
+          38,
+          42
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "透明小试管",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "18_s004",
+        "start": 45.0,
+        "end": 60.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "透明小瓶"
+        ],
+        "caption": "实验人员观察小瓶后，手持小瓶并使用移液枪向其中加样。",
+        "evidence_timestamps": [
+          48,
+          52,
+          56
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作者手持小瓶进行加样，而非将小瓶放置在试管架上操作；且画面中未出现试管架。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "透明小瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "18_s005",
+        "start": 60.0,
+        "end": 74.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "透明小试管",
+          "试管架"
+        ],
+        "caption": "实验人员使用移液枪将蓝色液体转移至小试管内。",
+        "evidence_timestamps": [
+          63,
+          68,
+          71
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面清晰展示了移取液体的操作，但并未包含描述中提到的“观察”这一动作细节（如凑近查看或停顿检查）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "透明小试管",
+            "present": true
+          },
+          {
+            "object": "试管架",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "18_s006",
+        "start": 74.0,
+        "end": 89.0,
+        "action": "transfer_to_sample_vial",
+        "action_zh": "转移至样品瓶",
+        "objects": [
+          "注射器",
+          "小玻璃瓶"
+        ],
+        "caption": "实验人员使用注射器向小玻璃瓶内注入液体。",
+        "evidence_timestamps": [
+          77,
+          82,
+          86
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面清晰展示了用注射器向小玻璃瓶注液的过程，但并未展示描述中提到的“旋紧瓶盖”这一动作（且画面中未出现瓶盖）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "注射器",
+            "present": true
+          },
+          {
+            "object": "小玻璃瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "18_s007",
+        "start": 89.0,
+        "end": 104.0,
+        "action": "finish_sample_container",
+        "action_zh": "封闭并标记样品容器",
+        "objects": [
+          "记号笔",
+          "离心管",
+          "标签纸"
+        ],
+        "caption": "实验人员使用记号笔在贴有标签的离心管上书写编号“127”。",
+        "evidence_timestamps": [
+          92,
+          96,
+          100
+        ],
+        "confidence": 0.98,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "记号笔",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "标签纸",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 14.9,
+        "frame_ts": [
+          0.0,
+          7.0,
+          14.0
+        ],
+        "summary": "画面中可见橙色和粉色试管架、装有液体的离心管、移液枪以及标有“MeOH”的试剂瓶。实验人员戴蓝色手套，左手持离心管观察，随后右手使用移液枪向粉色试管架中的小管内加样。期间发生了明显的液体转移操作（点样/加样）。"
+      },
+      {
+        "start": 14.9,
+        "end": 29.7,
+        "frame_ts": [
+          15.0,
+          22.0,
+          29.0
+        ],
+        "summary": "画面中可见移液枪、粉色与橙色试管架、离心管、计时器及各类试剂瓶。实验人员戴蓝色手套，正使用移液枪向离心管内吸取或注入液体。操作过程中发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 29.7,
+        "end": 44.6,
+        "frame_ts": [
+          30.0,
+          37.0,
+          44.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、移液枪、透明小试管（或离心管）、橙色多孔架以及背景中的DCM试剂瓶和烧杯。实验人员正使用移液枪向手持的透明小管内吸取或注入液体。操作过程中发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 44.6,
+        "end": 59.5,
+        "frame_ts": [
+          45.0,
+          52.0,
+          59.0
+        ],
+        "summary": "画面中可见橙色试管架、装有液体的透明小瓶、移液枪及黄色胶带等实验器具。戴蓝色手套的实验人员先手持小瓶观察，随后使用移液枪向试管架上的小管进行加样操作。此过程发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 59.5,
+        "end": 74.4,
+        "frame_ts": [
+          60.0,
+          67.0,
+          74.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、装有蓝色液体的移液枪、透明小试管以及背景中的橙色和粉色试管架。实验人员正使用移液枪将蓝色液体转移至小试管内，随后拔出移液枪并手持试管进行观察。该过程发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 74.4,
+        "end": 89.2,
+        "frame_ts": [
+          75.0,
+          82.0,
+          89.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、装有透明液体的小玻璃瓶（vial）、注射器以及背景中的橙色试管架。实验人员正手持小瓶，并使用注射器向瓶内注入液体。操作过程中发生了明显的加液动作，随后将瓶盖旋紧。"
+      },
+      {
+        "start": 89.2,
+        "end": 104.1,
+        "frame_ts": [
+          90.0,
+          97.0,
+          104.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、一支黑色记号笔、一个贴有白色标签的透明小离心管，以及背景中的试剂瓶和装有蓝红盖子的容器。实验人员左手持管，右手用记号笔在标签上书写数字“127”。该操作属于明显的标记行为，未发生液体倾倒或状态改变。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "22",
+    "video_path": "videos/22.mp4",
+    "phase": "extraction",
+    "phase_zh": "萃取",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "22_s001",
+        "start": 20.0,
+        "end": 40.0,
+        "action": "add_extraction_solvent",
+        "action_zh": "加入萃取/洗涤溶剂",
+        "objects": [
+          "分液漏斗",
+          "烧杯"
+        ],
+        "caption": "实验人员使用烧杯向分液漏斗中添加液体试剂。",
+        "evidence_timestamps": [
+          25,
+          30,
+          35
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面中清晰显示操作者手持的是透明玻璃烧杯进行倾倒，而非标注中描述的洗瓶（通常为塑料挤压瓶）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s002",
+        "start": 40.0,
+        "end": 61.0,
+        "action": "drain_lower_phase",
+        "action_zh": "放出下层液体",
+        "objects": [
+          "分液漏斗",
+          "活塞"
+        ],
+        "caption": "实验人员取下分液漏斗，手持漏斗并操作活塞，将内部液体排放至下方的容器中。",
+        "evidence_timestamps": [
+          45,
+          50,
+          55
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面显示实验人员是手持分液漏斗进行放液操作，而非将其固定在铁架台上；且画面中并未出现标注提到的“接收烧瓶”，而是使用了其他容器（如量筒或锥形瓶）接液。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "活塞",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s003",
+        "start": 61.0,
+        "end": 81.0,
+        "action": "allow_phase_separation",
+        "action_zh": "静置分层",
+        "objects": [
+          "分液漏斗",
+          "铁架台",
+          "铁圈"
+        ],
+        "caption": "实验人员将分液漏斗重新固定在铁架台上，准备进行静置分层。",
+        "evidence_timestamps": [
+          65,
+          70,
+          75
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "铁架台",
+            "present": true
+          },
+          {
+            "object": "铁圈",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s004",
+        "start": 142.0,
+        "end": 162.0,
+        "action": "drain_lower_phase",
+        "action_zh": "放出下层液体",
+        "objects": [
+          "分液漏斗",
+          "烧杯",
+          "活塞"
+        ],
+        "caption": "实验人员调节分液漏斗活塞，控制白色液体持续滴入下方的烧杯中。",
+        "evidence_timestamps": [
+          145,
+          150,
+          155
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "活塞",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s005",
+        "start": 162.0,
+        "end": 182.0,
+        "action": "transfer_solid_to_filter",
+        "action_zh": "转移固体至过滤器",
+        "objects": [
+          "布氏漏斗",
+          "抽滤瓶",
+          "玻璃容器"
+        ],
+        "caption": "实验人员将盛有液体的玻璃容器中的液体倒入布氏漏斗中进行过滤。",
+        "evidence_timestamps": [
+          165,
+          170,
+          175
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面中明显显示正在倾倒的是透明液体，而非标注所述的白色固体。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃容器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s006",
+        "start": 182.0,
+        "end": 202.0,
+        "action": "drain_lower_phase",
+        "action_zh": "放出下层液体",
+        "objects": [
+          "分液漏斗",
+          "接收容器",
+          "活塞"
+        ],
+        "caption": "实验人员操作分液漏斗活塞，将液体滴入下方的接收容器中。",
+        "evidence_timestamps": [
+          185,
+          190,
+          195
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "接收容器",
+            "present": true
+          },
+          {
+            "object": "活塞",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s007",
+        "start": 243.0,
+        "end": 263.0,
+        "action": "collect_upper_phase",
+        "action_zh": "收集上层液体",
+        "objects": [
+          "分液漏斗",
+          "烧杯",
+          "白色固体"
+        ],
+        "caption": "实验人员取下分液漏斗，将其中的液体倾倒至含有白色物质的烧杯中。",
+        "evidence_timestamps": [
+          248,
+          253,
+          258
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "白色固体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s008",
+        "start": 263.0,
+        "end": 283.0,
+        "action": "collect_upper_phase",
+        "action_zh": "收集上层液体",
+        "objects": [
+          "分液漏斗",
+          "烧杯"
+        ],
+        "caption": "实验人员继续操作分液漏斗，将剩余液体转移至下方的烧杯中。",
+        "evidence_timestamps": [
+          268,
+          273,
+          278
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s009",
+        "start": 283.0,
+        "end": 304.0,
+        "action": "vacuum_filtration",
+        "action_zh": "真空抽滤",
+        "objects": [
+          "烧杯",
+          "旋塞阀门"
+        ],
+        "caption": "实验人员手持装有白色浑浊液体的烧杯，正在向一个带有旋塞阀门的梨形分液漏斗中倾倒液体。",
+        "evidence_timestamps": [
+          288,
+          293,
+          298
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面显示的是将液体倒入分液漏斗的操作，而非标注所述的真空抽滤（缺少布氏漏斗和抽滤瓶，且操作动作为倾倒）。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "旋塞阀门",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "22_s010",
+        "start": 304.0,
+        "end": 323.9,
+        "action": "transfer_liquid_to_sep_funnel",
+        "action_zh": "转移液体至反应容器",
+        "objects": [
+          "分液漏斗",
+          "圆底烧瓶"
+        ],
+        "caption": "实验人员通过导管将分液漏斗中的白色液体转移至下方的圆底烧瓶中。",
+        "evidence_timestamps": [
+          308,
+          313,
+          318
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "分液漏斗",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 20.2,
+        "frame_ts": [
+          0.0,
+          10.0,
+          20.0
+        ],
+        "summary": "画面中可见铁架台、玻璃层析柱（内含白色固体）、烧杯及洗瓶等实验器具。实验人员先是用右手扶住或调整层析柱上部的玻璃仪器，随后左手拿起一个盛有透明液体的烧杯置于下方。整个过程中未见明显的液体倾倒或状态变化操作。"
+      },
+      {
+        "start": 20.2,
+        "end": 40.5,
+        "frame_ts": [
+          21.0,
+          30.0,
+          40.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗（内含白色浑浊液体）、烧杯及洗瓶等实验器具。实验人员左手扶住分液漏斗，右手持洗瓶向漏斗内添加液体，随后将空烧杯移开。此过程为向分液漏斗中添加试剂的操作，未见明显的分层或放液状态变化。"
+      },
+      {
+        "start": 40.5,
+        "end": 60.7,
+        "frame_ts": [
+          41.0,
+          51.0,
+          60.0
+        ],
+        "summary": "画面中可见铁架台、装有白色液体的分液漏斗、接收用的烧瓶以及连接管路。实验人员双手操作，将分液漏斗从铁架台上取下并倾斜，随后打开活塞进行放液。液体正从分液漏斗流入下方的接收容器中，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 60.7,
+        "end": 81.0,
+        "frame_ts": [
+          61.0,
+          71.0,
+          81.0
+        ],
+        "summary": "画面中可见装有白色浑浊液体的分液漏斗、铁架台及下方的接收烧杯。实验人员双手将分液漏斗从手持状态转移并固定在铁架台的铁圈上，随后松开手离开。此过程完成了仪器的固定操作，液体尚未开始滴落或发生分层变化。"
+      },
+      {
+        "start": 81.0,
+        "end": 101.2,
+        "frame_ts": [
+          81.0,
+          91.0,
+          101.0
+        ],
+        "summary": "画面中可见铁架台、装有白色浑浊液体的布氏漏斗（或抽滤瓶）、接收用的烧杯以及连接的真空管路。实验人员的双手未出现在画面中，装置处于静止状态。在此期间没有观察到明显的操作动作或液体流动等状态变化。"
+      },
+      {
+        "start": 101.2,
+        "end": 121.5,
+        "frame_ts": [
+          102.0,
+          111.0,
+          121.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗（内含白色浑浊液体）、烧杯及连接管路等实验器具。视频窗口内未出现实验人员的双手，也未观察到任何操作动作。装置处于静置状态，未见明显的倒液或状态变化。"
+      },
+      {
+        "start": 121.5,
+        "end": 141.7,
+        "frame_ts": [
+          122.0,
+          132.0,
+          141.0
+        ],
+        "summary": "画面中可见铁架台、布氏漏斗（内含白色固体）、抽滤瓶及连接管路。实验人员双手正在操作，左手扶住抽滤瓶，右手旋紧或调整漏斗下方的活塞/接口。未见明显的液体倾倒或状态变化，主要动作是固定装置。"
+      },
+      {
+        "start": 141.7,
+        "end": 162.0,
+        "frame_ts": [
+          142.0,
+          152.0,
+          162.0
+        ],
+        "summary": "画面中可见固定在铁架台上的分液漏斗（内含白色液体）、下方的接收烧杯以及实验人员的双手。双手正握住烧杯并配合调节分液漏斗的活塞，控制液体滴落。随着操作进行，分液漏斗中的白色液体持续流入烧杯，导致烧杯内液面明显上升。"
+      },
+      {
+        "start": 162.0,
+        "end": 182.2,
+        "frame_ts": [
+          162.0,
+          172.0,
+          182.0
+        ],
+        "summary": "画面中可见铁架台、抽滤瓶、布氏漏斗以及一个装有白色固体的玻璃容器。实验人员双手正在操作，将玻璃容器中的白色固体倒入下方的布氏漏斗中进行过滤。随着倾倒动作的进行，可以看到固体正从容器中转移至漏斗内。"
+      },
+      {
+        "start": 182.2,
+        "end": 202.4,
+        "frame_ts": [
+          183.0,
+          192.0,
+          202.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗、烧杯以及装有白色液体的洗瓶。实验人员左手扶住下方的接收容器，右手操作分液漏斗的活塞或旋塞进行放液。液体正从分液漏斗滴入下方的容器中，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 202.4,
+        "end": 222.7,
+        "frame_ts": [
+          203.0,
+          213.0,
+          222.0
+        ],
+        "summary": "画面中可见一套固定在铁架台上的玻璃仪器，包括上方的圆底烧瓶、中间的干燥管（或冷凝管）以及下方的接收装置。实验人员的一只手正伸向并操作最顶端的圆底烧瓶，似乎在调整其位置或进行加料。整个过程中未见明显的液体倾倒或状态突变，主要是在对装置顶部进行操作。"
+      },
+      {
+        "start": 222.7,
+        "end": 242.9,
+        "frame_ts": [
+          223.0,
+          233.0,
+          242.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗（内含白色浑浊液体）、烧瓶及连接管路。实验人员左手握住分液漏斗顶部的塞子或盖子，保持其固定位置。未见明显的倒液或状态变化操作，处于静置或准备阶段。"
+      },
+      {
+        "start": 242.9,
+        "end": 263.2,
+        "frame_ts": [
+          243.0,
+          253.0,
+          263.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗、烧杯（内有白色固体）、锥形瓶（内有黄色液体）及洗瓶等器具。实验人员双手握住分液漏斗，将其从铁架台上取下并倾斜，随后将漏斗内的液体倒入下方的烧杯中。此过程发生了明显的倒液操作，且烧杯内已有白色物质。"
+      },
+      {
+        "start": 263.2,
+        "end": 283.4,
+        "frame_ts": [
+          264.0,
+          273.0,
+          283.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗、装有白色液体的烧杯、电子天平及盛有黄色液体的锥形瓶等器具。实验人员双手正操作分液漏斗，将其中的液体转移至下方的烧杯中。此过程发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 283.4,
+        "end": 303.7,
+        "frame_ts": [
+          284.0,
+          294.0,
+          303.0
+        ],
+        "summary": "画面中可见铁架台、布氏漏斗、抽滤瓶以及一个盛有白色浑浊液体的烧杯。实验人员左手扶住烧杯，右手正在操作连接在漏斗下方的旋塞阀门。随着操作进行，烧杯中的液体正被吸入下方的抽滤瓶中，发生了明显的固液分离状态变化。"
+      },
+      {
+        "start": 303.7,
+        "end": 323.9,
+        "frame_ts": [
+          304.0,
+          314.0,
+          323.0
+        ],
+        "summary": "画面中可见铁架台、分液漏斗、圆底烧瓶以及盛有白色液体的容器。实验人员双手正在操作，将分液漏斗中的白色液体通过导管转移至下方的圆底烧瓶中。随着操作进行，下方烧瓶内的液位明显上升，发生了明显的倒液状态变化。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "27",
+    "video_path": "videos/27.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "27_s001",
+        "start": 0.0,
+        "end": 21.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "小管",
+          "EP 管"
+        ],
+        "caption": "实验人员手持装有液体的透明离心管（EP管），将其中的液体倒入另一个放置在粉色架上的小管中。",
+        "evidence_timestamps": [
+          5,
+          12,
+          18
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面显示操作者直接倾倒大管中的液体到小管，并未使用标注中提到的移液枪和吸头进行加样。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "小管",
+            "present": true
+          },
+          {
+            "object": "EP 管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s002",
+        "start": 43.0,
+        "end": 64.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "离心管",
+          "试剂瓶"
+        ],
+        "caption": "实验人员手持离心管，使用试剂瓶向管内倾倒液体，并展示多支处理后的样品管。",
+        "evidence_timestamps": [
+          48,
+          55,
+          60
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面中明确显示操作者使用试剂瓶直接倾倒液体（pouring），而非标注中描述的“使用移液器滴加”（pipetting），且画面中未出现移液器。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s003",
+        "start": 107.0,
+        "end": 128.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "离心管",
+          "玻璃瓶"
+        ],
+        "caption": "实验人员使用移液枪在离心管和玻璃瓶之间进行液体的转移操作。",
+        "evidence_timestamps": [
+          112,
+          118,
+          124
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s004",
+        "start": 128.0,
+        "end": 150.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "离心管",
+          "玻璃瓶"
+        ],
+        "caption": "实验人员从玻璃瓶中吸取液体或向其中滴加液体，完成样品溶液的转移。",
+        "evidence_timestamps": [
+          135,
+          142,
+          148
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s005",
+        "start": 150.0,
+        "end": 171.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "离心管"
+        ],
+        "caption": "实验人员操作移液枪将液体注入或吸出离心管，导致管内液面高度发生明显变化。",
+        "evidence_timestamps": [
+          155,
+          162,
+          168
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s006",
+        "start": 171.0,
+        "end": 192.0,
+        "action": "transfer_to_sample_vial",
+        "action_zh": "转移至样品瓶",
+        "objects": [
+          "移液枪",
+          "离心管",
+          "玻璃瓶",
+          "试管架"
+        ],
+        "caption": "实验人员使用移液枪将液体从离心管转移至右侧支架上的红色液体瓶中。",
+        "evidence_timestamps": [
+          176,
+          183,
+          189
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "试管架",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s007",
+        "start": 192.0,
+        "end": 214.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "玻璃瓶",
+          "磁力搅拌器"
+        ],
+        "caption": "实验人员向装有红色液体的玻璃瓶中滴加液体，导致瓶内液体颜色由红变黄。",
+        "evidence_timestamps": [
+          198,
+          205,
+          210
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "磁力搅拌器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s008",
+        "start": 214.0,
+        "end": 235.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "离心管"
+        ],
+        "caption": "实验人员使用移液枪将液体注入透明离心管中。",
+        "evidence_timestamps": [
+          220,
+          227,
+          232
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s009",
+        "start": 235.0,
+        "end": 256.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "离心管"
+        ],
+        "caption": "实验人员使用移液枪将液体转移至离心管内（画面中未显示从玻璃瓶中吸取液体的过程）。",
+        "evidence_timestamps": [
+          240,
+          247,
+          253
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面仅展示了向离心管滴加液体的动作，并未展示标注描述中的“从装有黄色液体的玻璃瓶中吸取”这一关键步骤。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s010",
+        "start": 256.0,
+        "end": 278.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "离心管",
+          "玻璃瓶",
+          "瓶盖"
+        ],
+        "caption": "实验人员从试剂瓶中取样转移至离心管，随后盖回瓶盖。",
+        "evidence_timestamps": [
+          262,
+          270,
+          275
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "瓶盖",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s011",
+        "start": 278.0,
+        "end": 299.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "玻璃瓶",
+          "加热磁力搅拌器"
+        ],
+        "caption": "实验人员向透明试剂瓶中滴加液体，使瓶内物质颜色由淡黄变为橙红色。",
+        "evidence_timestamps": [
+          284,
+          290,
+          295
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "加热磁力搅拌器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s012",
+        "start": 299.0,
+        "end": 321.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液管",
+          "玻璃瓶"
+        ],
+        "caption": "实验人员使用移液管向玻璃瓶内滴加液体。",
+        "evidence_timestamps": [
+          305,
+          312,
+          318
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液管",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "27_s013",
+        "start": 321.0,
+        "end": 341.9,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液管",
+          "玻璃瓶",
+          "试管架"
+        ],
+        "caption": "实验人员使用移液管向装有红色液体的玻璃瓶内进行点样或加样操作。",
+        "evidence_timestamps": [
+          326,
+          333,
+          339
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液管",
+            "present": true
+          },
+          {
+            "object": "玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "试管架",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 21.4,
+        "frame_ts": [
+          0.0,
+          11.0,
+          21.0
+        ],
+        "summary": "画面中可见装有粉色吸头的盒子、橙色试管架、多个试剂瓶及计时器等实验器具。戴蓝色手套的双手先是用移液枪向一个小管中加样，随后将小管放入粉色吸头盒中。操作过程中发生了明显的液体转移（加样）和容器放置动作。"
+      },
+      {
+        "start": 21.4,
+        "end": 42.7,
+        "frame_ts": [
+          22.0,
+          32.0,
+          42.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、装有粉色吸头的透明盒、黄色胶带、深色试剂瓶及若干离心管。实验人员先是在桌面上操作，随后双手拿起一个透明小玻璃瓶和一个带盖的离心管进行查看或准备。最后，左手举起一支内含少量液体的离心管对着镜头展示，管内液体状态未见明显变化。"
+      },
+      {
+        "start": 42.7,
+        "end": 64.1,
+        "frame_ts": [
+          43.0,
+          53.0,
+          64.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、透明离心管（部分带有手写标记）、移液器吸头以及背景中的试剂瓶和计时器。实验人员左手持握离心管，右手使用移液器向管内滴加液体，随后将多个离心管并排拿在手中。这一过程发生了明显的液体转移操作，且最后展示了多支已处理或待处理的样品管。"
+      },
+      {
+        "start": 64.1,
+        "end": 85.5,
+        "frame_ts": [
+          65.0,
+          75.0,
+          85.0
+        ],
+        "summary": "画面中出现戴蓝色手套的双手、三支装有透明液体的离心管以及一个盛水的金属清洗槽。实验人员将手中的三支离心管放入水槽中，随后又将其提起并悬于水面之上。此过程中液体未发生倾倒或混合等明显状态变化。"
+      },
+      {
+        "start": 85.5,
+        "end": 106.9,
+        "frame_ts": [
+          86.0,
+          96.0,
+          106.0
+        ],
+        "summary": "画面中可见一个不锈钢超声波清洗槽（内有水和金属网篮）、实验台、黑色升降凳以及若干试剂瓶和仪器。戴蓝色手套的人员左手拿着白色抹布，右手持有一个透明塑料容器（疑似量杯或烧杯）。未见明显的倒液或状态变化操作，人员似乎正在准备清洗或整理台面。"
+      },
+      {
+        "start": 106.9,
+        "end": 128.2,
+        "frame_ts": [
+          107.0,
+          118.0,
+          128.0
+        ],
+        "summary": "画面中可见装有粉色液体的小玻璃瓶、透明离心管、金属加热台及移液枪。实验人员左手持离心管，右手使用移液枪向其中转移液体。发生了明显的液体转移操作。"
+      },
+      {
+        "start": 128.2,
+        "end": 149.6,
+        "frame_ts": [
+          129.0,
+          139.0,
+          149.0
+        ],
+        "summary": "画面中可见金属加热台、试管架、装有黄色和粉色液体的玻璃瓶以及一个透明塑料离心管。实验人员戴蓝色手套，左手持离心管，右手操作移液枪向右侧玻璃瓶中吸取或滴加液体。在128s至150s期间，主要发生了从玻璃瓶中转移液体的操作，未见明显的颜色变化或沉淀生成。"
+      },
+      {
+        "start": 149.6,
+        "end": 171.0,
+        "frame_ts": [
+          150.0,
+          160.0,
+          171.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、移液枪、透明离心管以及粉色试管架上的试剂瓶。实验人员左手持离心管，右手操作移液枪将液体从管内吸出或注入。随着液体的转移，离心管内液面高度发生了明显变化。"
+      },
+      {
+        "start": 171.0,
+        "end": 192.3,
+        "frame_ts": [
+          171.0,
+          182.0,
+          192.0
+        ],
+        "summary": "画面中可见金属加热台、试管架、装有红色液体的小玻璃瓶及移液枪。实验人员左手持透明离心管，右手操作移液枪将液体转移至右侧粉色支架上的红色液体瓶中。发生了明显的液体转移（加样）状态变化。"
+      },
+      {
+        "start": 192.3,
+        "end": 213.7,
+        "frame_ts": [
+          193.0,
+          203.0,
+          213.0
+        ],
+        "summary": "画面中可见磁力搅拌器、金属与粉色试管架、装有红色及黄色液体的玻璃瓶以及移液枪。实验人员左手扶住试管架，右手持移液枪向右侧粉色架上的玻璃瓶内滴加液体。随着操作进行，瓶中液体颜色由红色明显变为黄色。"
+      },
+      {
+        "start": 213.7,
+        "end": 235.1,
+        "frame_ts": [
+          214.0,
+          224.0,
+          235.0
+        ],
+        "summary": "画面中可见金属加热台、试管架、装有黄色液体的小瓶以及一支移液枪。实验人员左手持握一支透明离心管，右手操作移液枪将液体注入管内。此过程发生了明显的向离心管内加液的转移操作。"
+      },
+      {
+        "start": 235.1,
+        "end": 256.5,
+        "frame_ts": [
+          236.0,
+          246.0,
+          256.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、移液枪、装有黄色液体的小瓶（置于粉色支架上）以及一个透明离心管。实验人员左手持离心管，右手操作移液枪将液体从瓶中吸取并转移至该离心管内。此过程发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 256.5,
+        "end": 277.8,
+        "frame_ts": [
+          257.0,
+          267.0,
+          277.0
+        ],
+        "summary": "画面中可见金属加热台、试管架、装有红色液体的小瓶（置于粉色支架上）以及移液枪。实验人员左手持透明离心管，右手操作移液枪向管内转移液体，随后将瓶盖盖回小瓶。整个过程清晰展示了从试剂瓶中取样并转移至离心管的加样操作。"
+      },
+      {
+        "start": 277.8,
+        "end": 299.2,
+        "frame_ts": [
+          278.0,
+          288.0,
+          299.0
+        ],
+        "summary": "画面中可见两个加热磁力搅拌器、一个金属试管架以及一个粉色支架上的三个小试剂瓶（其中一瓶为透明玻璃材质）。实验人员戴着蓝色手套，手持移液枪向右侧透明试剂瓶中滴加液体。随着液体的加入，瓶内物质颜色由淡黄色逐渐变为鲜艳的橙红色。"
+      },
+      {
+        "start": 299.2,
+        "end": 320.6,
+        "frame_ts": [
+          300.0,
+          310.0,
+          320.0
+        ],
+        "summary": "画面中可见两个加热磁力搅拌器、一个金属试管架以及粉色塑料架上放置的装有黄色和红色液体的玻璃瓶。实验人员戴蓝色手套，左手扶住其中一个玻璃瓶，右手持移液管向瓶内滴加液体。操作过程中瓶内液体状态未发生明显变化。"
+      },
+      {
+        "start": 320.6,
+        "end": 341.9,
+        "frame_ts": [
+          321.0,
+          331.0,
+          341.0
+        ],
+        "summary": "画面中可见加热磁力搅拌器、金属试管架、粉色塑料试管架以及盛有红色液体的玻璃瓶。戴蓝色手套的左手持移液管，正在向右侧粉色架上的玻璃瓶内滴加液体。操作过程中发生了明显的液体转移（点样/加样）状态变化。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "29",
+    "video_path": "videos/29.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.92,
+    "segments": [
+      {
+        "segment_id": "29_s001",
+        "start": 0.0,
+        "end": 13.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "试剂瓶",
+          "离心管",
+          "深色液体"
+        ],
+        "caption": "操作者将试剂瓶中的深色液体倾倒至透明刻度离心管内。",
+        "evidence_timestamps": [
+          2,
+          7,
+          10
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "试剂瓶",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "深色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "29_s002",
+        "start": 13.0,
+        "end": 25.0,
+        "action": "transfer_to_sample_vial",
+        "action_zh": "转移至样品瓶",
+        "objects": [
+          "离心管",
+          "小玻璃瓶"
+        ],
+        "caption": "操作者将离心管内的液体转移至一个小玻璃瓶中。",
+        "evidence_timestamps": [
+          16,
+          20,
+          23
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "小玻璃瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "29_s003",
+        "start": 25.0,
+        "end": 38.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "试剂瓶",
+          "离心管",
+          "深色液体"
+        ],
+        "caption": "操作者再次将试剂瓶内的液体倒入离心管中，增加管内液体体积。",
+        "evidence_timestamps": [
+          28,
+          32,
+          36
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "试剂瓶",
+            "present": true
+          },
+          {
+            "object": "离心管",
+            "present": true
+          },
+          {
+            "object": "深色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "29_s004",
+        "start": 38.0,
+        "end": 50.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "试剂瓶",
+          "试管"
+        ],
+        "caption": "操作者使用移液枪从试剂瓶中吸取液体并转移至试管内。",
+        "evidence_timestamps": [
+          40,
+          44,
+          48
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          },
+          {
+            "object": "试管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "29_s005",
+        "start": 50.0,
+        "end": 63.0,
+        "action": "prepare_reagent_bottle",
+        "action_zh": "准备试剂瓶（开盖）",
+        "objects": [
+          "试剂瓶",
+          "瓶盖"
+        ],
+        "caption": "操作者旋开装有深色液体的试剂瓶瓶盖，准备进行后续操作。",
+        "evidence_timestamps": [
+          52,
+          56,
+          60
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "试剂瓶",
+            "present": true
+          },
+          {
+            "object": "瓶盖",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "29_s006",
+        "start": 63.0,
+        "end": 75.7,
+        "action": "dissolve_sample_by_shaking",
+        "action_zh": "振荡溶解样品",
+        "objects": [
+          "磁力搅拌器",
+          "试管",
+          "紫色液体"
+        ],
+        "caption": "操作者调节磁力搅拌器旋钮以启动或调整转速，对试管内的紫色液体进行搅拌混合。",
+        "evidence_timestamps": [
+          65,
+          69,
+          73
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "磁力搅拌器",
+            "present": true
+          },
+          {
+            "object": "试管",
+            "present": true
+          },
+          {
+            "object": "紫色液体",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 12.6,
+        "frame_ts": [
+          0.0,
+          6.0,
+          12.0
+        ],
+        "summary": "画面中可见戴蓝色手套的手持一支透明刻度离心管，旁边有试剂瓶、移液枪头盒及黄色胶带等实验耗材。操作者将一瓶深色液体（瓶盖为红色）倾斜，向离心管内倾倒液体。随着倾倒动作进行，离心管内明显出现了深色液体的液面。"
+      },
+      {
+        "start": 12.6,
+        "end": 25.2,
+        "frame_ts": [
+          13.0,
+          19.0,
+          25.0
+        ],
+        "summary": "画面中可见棕色试剂瓶、透明塑料离心管、小玻璃瓶以及橙色试管架等实验器具。实验人员戴蓝色手套，左手持离心管从瓶中吸取液体，随后将管内液体转移至一个小玻璃瓶中。这一过程发生了明显的液体倾倒和转移状态变化。"
+      },
+      {
+        "start": 25.2,
+        "end": 37.9,
+        "frame_ts": [
+          26.0,
+          32.0,
+          37.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、透明离心管、装有深色液体的试剂瓶以及背景中的试管架和计时器。实验人员左手持离心管，右手拿试剂瓶，将瓶内液体倒入离心管中。此过程发生了明显的倒液操作，导致离心管内液体体积增加。"
+      },
+      {
+        "start": 37.9,
+        "end": 50.5,
+        "frame_ts": [
+          38.0,
+          44.0,
+          50.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、移液枪、装有深色液体的试剂瓶以及盛放蓝色瓶盖的容器。实验人员正手持移液枪，从试剂瓶中吸取液体并转移至试管内。此过程发生了明显的液体转移操作。"
+      },
+      {
+        "start": 50.5,
+        "end": 63.1,
+        "frame_ts": [
+          51.0,
+          57.0,
+          63.0
+        ],
+        "summary": "画面中可见戴蓝色手套的双手、透明离心管、装有深色液体的试剂瓶（红盖）、黄色胶带卷以及背景中的试管架和计时器。实验人员左手持离心管，右手操作试剂瓶，先是将瓶盖旋开，随后似乎准备进行液体转移或混合操作。从第一帧到第三帧，试剂瓶的盖子被打开，表明发生了明显的状态变化（开盖）。"
+      },
+      {
+        "start": 63.1,
+        "end": 75.7,
+        "frame_ts": [
+          64.0,
+          69.0,
+          75.0
+        ],
+        "summary": "画面中可见两台磁力搅拌器、装有紫色液体的试管（置于粉色架中）、黄色胶带及试剂瓶等实验器具。戴蓝色手套的实验人员右手正在调节右侧搅拌器的旋钮，随后移开双手。状态变化为：右侧搅拌器被启动或调整转速，左侧搅拌器保持运行状态。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "0065",
+    "video_path": "videos/0065.mp4",
+    "phase": "rotary_evaporation",
+    "phase_zh": "旋转蒸发",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "0065_s001",
+        "start": 0.0,
+        "end": 15.0,
+        "action": "collect_solution_for_rotary_evaporation",
+        "action_zh": "收集待旋蒸溶液",
+        "objects": [
+          "白色塑料瓶",
+          "透明小玻璃瓶",
+          "手套箱"
+        ],
+        "caption": "实验人员在手套箱内将白色大塑料瓶中的液体倒入透明小玻璃瓶中，进行初步的溶液收集或分装。",
+        "evidence_timestamps": [
+          5,
+          10,
+          12
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色塑料瓶",
+            "present": true
+          },
+          {
+            "object": "透明小玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "手套箱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0065_s002",
+        "start": 15.0,
+        "end": 30.0,
+        "action": "rinse_and_transfer_solution_to_evaporation_flask",
+        "action_zh": "润洗并转移溶液至旋蒸瓶",
+        "objects": [
+          "透明塑料洗瓶",
+          "玻璃容器"
+        ],
+        "caption": "实验人员手持透明塑料洗瓶向玻璃容器内倾倒液体，导致接收容器液面上升，疑似进行润洗或转移操作。",
+        "evidence_timestamps": [
+          18,
+          22,
+          26
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "透明塑料洗瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃容器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0065_s003",
+        "start": 30.0,
+        "end": 45.0,
+        "action": "rinse_and_transfer_solution_to_evaporation_flask",
+        "action_zh": "润洗并转移溶液至旋蒸瓶",
+        "objects": [
+          "烧杯",
+          "透明塑料瓶"
+        ],
+        "caption": "实验人员将烧杯中的液体倒入透明塑料瓶中，完成液体的转移。",
+        "evidence_timestamps": [
+          33,
+          38,
+          42
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作方向与标注描述相反：实际是将烧杯内的液体倒入塑料瓶（可能是旋蒸瓶），而非从塑料瓶倒入烧杯。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "透明塑料瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0065_s004",
+        "start": 45.0,
+        "end": 60.0,
+        "action": "rinse_and_transfer_solution_to_evaporation_flask",
+        "action_zh": "润洗并转移溶液至旋蒸瓶",
+        "objects": [
+          "玻璃烧杯",
+          "透明塑料瓶"
+        ],
+        "caption": "实验人员将左手持有的玻璃烧杯中的液体倒入右手持有的透明塑料瓶中。",
+        "evidence_timestamps": [
+          48,
+          52,
+          56
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作方向与标注相反，是将烧杯内的液体转移至塑料瓶中，而非从塑料瓶倒入烧杯。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "玻璃烧杯",
+            "present": true
+          },
+          {
+            "object": "透明塑料瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0065_s005",
+        "start": 75.0,
+        "end": 90.0,
+        "action": "remove_evaporation_flask_from_rotary_evaporator",
+        "action_zh": "取下旋蒸瓶",
+        "objects": [
+          "旋转蒸发仪",
+          "圆底烧瓶",
+          "金属水浴锅"
+        ],
+        "caption": "实验人员从旋转蒸发仪上取下一个装有液体的圆底烧瓶，并将其放入旁边的金属水浴锅中。",
+        "evidence_timestamps": [
+          78,
+          82,
+          86
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "旋转蒸发仪",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "金属水浴锅",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0065_s006",
+        "start": 120.0,
+        "end": 135.0,
+        "action": "rinse_and_transfer_solution_to_evaporation_flask",
+        "action_zh": "润洗并转移溶液至旋蒸瓶",
+        "objects": [
+          "圆底烧瓶",
+          "不锈钢盆",
+          "电子天平"
+        ],
+        "caption": "实验人员手持圆底烧瓶，将其中的液体倒入置于电子天平上的不锈钢盆中，完成液体的转移。",
+        "evidence_timestamps": [
+          123,
+          128,
+          132
+        ],
+        "confidence": 1.0,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "不锈钢盆",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 15.0,
+        "frame_ts": [
+          0.0,
+          7.0,
+          15.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放有蓝色磁力搅拌器、圆底烧瓶、白色试剂瓶及各类管路。实验人员双手佩戴蓝色丁腈手套，先是在操作台面上整理物品，随后拿起一个白色大塑料瓶和一个透明小玻璃瓶。最后，实验人员将白色瓶中的液体倒入透明小瓶中，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 15.0,
+        "end": 29.9,
+        "frame_ts": [
+          15.0,
+          22.0,
+          29.0
+        ],
+        "summary": "画面中可见手套箱内的旋转蒸发仪、多个圆底烧瓶、量筒及试剂瓶等器具。实验人员双手戴着蓝色丁腈手套，正手持一个透明塑料洗瓶向玻璃容器内倾倒液体。该操作导致接收容器内的液面明显上升。"
+      },
+      {
+        "start": 29.9,
+        "end": 44.9,
+        "frame_ts": [
+          30.0,
+          37.0,
+          44.0
+        ],
+        "summary": "画面中可见实验台、烧杯、试剂瓶及各类管路设备。实验人员双手戴蓝色手套，正手持一个装有白色液体的烧杯和一个透明塑料瓶进行倾倒操作。液体从塑料瓶被倒入烧杯中，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 44.9,
+        "end": 59.9,
+        "frame_ts": [
+          45.0,
+          52.0,
+          59.0
+        ],
+        "summary": "画面中可见实验人员双手戴着蓝色手套，左手持一个装有液体的玻璃烧杯，右手持一个透明塑料瓶。操作者正将塑料瓶中的液体倒入烧杯中。此过程发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 59.9,
+        "end": 74.9,
+        "frame_ts": [
+          60.0,
+          67.0,
+          74.0
+        ],
+        "summary": "画面中可见实验台上有旋转蒸发仪、圆底烧瓶、量杯及各类玻璃器皿，操作者佩戴蓝色手套。双手正持握一个装有透明液体的量杯进行观察或准备转移液体。未见明显的倾倒、盖盖或书写等状态变化动作。"
+      },
+      {
+        "start": 74.9,
+        "end": 89.8,
+        "frame_ts": [
+          75.0,
+          82.0,
+          89.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、圆底烧瓶、金属水浴锅及实验人员佩戴的蓝色手套。实验人员双手先将一个装有液体的圆底烧瓶从仪器上取下，随后将其放入旁边的金属水浴锅中。这一过程涉及了仪器的拆卸和容器的转移操作。"
+      },
+      {
+        "start": 89.8,
+        "end": 104.8,
+        "frame_ts": [
+          90.0,
+          97.0,
+          104.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、不锈钢盆、电子秤及各类试剂瓶。实验人员左手正在操作电子秤的屏幕，右手持玻璃仪器置于不锈钢盆上方。未见明显的液体倾倒或状态变化，主要动作集中在设备参数设置上。"
+      },
+      {
+        "start": 104.8,
+        "end": 119.8,
+        "frame_ts": [
+          105.0,
+          112.0,
+          119.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、电子天平、不锈钢水浴锅以及多个玻璃烧瓶和试剂瓶。实验人员左手正在操作电子天平的按键，右手则拿持一个装有液体的小烧杯置于天平上方。未见明显的液体倾倒或状态变化，主要动作集中在仪器设置与称量准备上。"
+      },
+      {
+        "start": 119.8,
+        "end": 134.7,
+        "frame_ts": [
+          120.0,
+          127.0,
+          134.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、电子天平、不锈钢盆以及一个盛有液体的圆底烧瓶。实验人员左手扶着电子天平，右手持烧瓶将液体倒入不锈钢盆中。随着倾倒动作进行，烧瓶内的液体明显减少并转移至盆内。"
+      },
+      {
+        "start": 134.7,
+        "end": 149.7,
+        "frame_ts": [
+          135.0,
+          142.0,
+          149.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、不锈钢水浴锅、电子天平及各类玻璃仪器。实验人员双手先扶住水浴锅，随后左手操作旁边蓝色仪器的控制面板。未见明显的液体倾倒或状态变化，主要是在进行设备参数的调节。"
+      },
+      {
+        "start": 149.7,
+        "end": 164.7,
+        "frame_ts": [
+          150.0,
+          157.0,
+          164.0
+        ],
+        "summary": "画面中可见大型白色仪器、带有数字显示屏的蓝色泵装置以及右侧的玻璃旋转蒸发仪。实验人员身穿白大褂并佩戴蓝色手套，正在用左手操作蓝色泵上的屏幕或按键，随后将手移向旁边的电子秤区域。整个过程中未见明显的液体倾倒或状态变化，主要是在进行仪器的参数设置或监控。"
+      },
+      {
+        "start": 164.7,
+        "end": 179.6,
+        "frame_ts": [
+          165.0,
+          172.0,
+          179.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、不锈钢水浴锅、接收瓶及各类试剂瓶。实验人员戴蓝色手套，左手正在操作旋转蒸发仪控制面板上的旋钮进行调节，右手自然下垂。该时间段内未观察到明显的液体倾倒或状态变化。"
+      },
+      {
+        "start": 179.6,
+        "end": 194.6,
+        "frame_ts": [
+          180.0,
+          187.0,
+          194.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、冷凝管、接收瓶及左侧的真空泵设备。实验人员双手戴蓝色手套，正在操作台面上整理或调整一个小型物品（疑似标签纸）。未见明显的液体倾倒或状态变化，整体处于仪器运行中的准备或微调阶段。"
+      },
+      {
+        "start": 194.6,
+        "end": 209.6,
+        "frame_ts": [
+          195.0,
+          202.0,
+          209.0
+        ],
+        "summary": "画面中可见旋转蒸发仪（含冷凝管、圆底烧瓶）、不锈钢水浴锅及电子秤等实验器具。实验人员佩戴蓝色手套的双手正在操作电子秤，似乎在调整或读取数据。未见明显的液体倾倒或状态变化，主要动作集中在仪器面板的调节上。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "0067",
+    "video_path": "videos/0067.mp4",
+    "phase": "reaction_setup",
+    "phase_zh": "开反应",
+    "phase_confidence": 0.85,
+    "segments": [
+      {
+        "segment_id": "0067_s001",
+        "start": 0.0,
+        "end": 15.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "白色塑料瓶",
+          "玻璃容器",
+          "手套箱"
+        ],
+        "caption": "实验人员在手套箱内手持白色塑料瓶，向玻璃容器中倾倒液体。",
+        "evidence_timestamps": [
+          2,
+          8,
+          12
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色塑料瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃容器",
+            "present": true
+          },
+          {
+            "object": "手套箱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s002",
+        "start": 15.0,
+        "end": 31.0,
+        "action": "prepare_reaction_vessel",
+        "action_zh": "准备反应容器",
+        "objects": [
+          "圆底烧瓶",
+          "磁力搅拌器"
+        ],
+        "caption": "实验人员双手拿着装有白色固体的圆底烧瓶，正在摇晃或检查瓶内固体。",
+        "evidence_timestamps": [
+          18,
+          24,
+          29
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面中实验人员并未将烧瓶置于磁力搅拌器上调整位置，而是双手持握烧瓶进行摇晃操作；且未看到拿起白色小瓶的动作。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "磁力搅拌器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s003",
+        "start": 31.0,
+        "end": 46.0,
+        "action": "swirl_or_mix_container",
+        "action_zh": "摇晃或混合容器（清洗）",
+        "objects": [
+          "圆底烧瓶",
+          "超声波清洗机"
+        ],
+        "caption": "实验人员将圆底烧瓶从实验台移至水槽中的超声波清洗机内进行清洗操作。",
+        "evidence_timestamps": [
+          35,
+          40,
+          44
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "超声波清洗机",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s004",
+        "start": 62.0,
+        "end": 77.0,
+        "action": "control_temperature_with_bath",
+        "action_zh": "使用浴槽控温（移出）",
+        "objects": [
+          "大圆底烧瓶",
+          "水槽"
+        ],
+        "caption": "实验人员从水槽中取出盛有液体的大圆底烧瓶并将其举起观察。",
+        "evidence_timestamps": [
+          65,
+          70,
+          75
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "大圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "水槽",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s005",
+        "start": 92.0,
+        "end": 108.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "玻璃容器",
+          "手套箱"
+        ],
+        "caption": "在手套箱内，实验人员将一个玻璃容器中的透明液体倒入另一个容器中。",
+        "evidence_timestamps": [
+          95,
+          100,
+          105
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "玻璃容器",
+            "present": true
+          },
+          {
+            "object": "手套箱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s006",
+        "start": 108.0,
+        "end": 123.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "圆底烧瓶",
+          "通风橱",
+          "接收容器"
+        ],
+        "caption": "在通风橱内，实验人员倾斜圆底烧瓶，将液体倒入另一个容器中。",
+        "evidence_timestamps": [
+          110,
+          115,
+          120
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "通风橱",
+            "present": true
+          },
+          {
+            "object": "接收容器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s007",
+        "start": 123.0,
+        "end": 138.0,
+        "action": "reaction_condition_setup",
+        "action_zh": "反应体系状态建立",
+        "objects": [
+          "圆底烧瓶",
+          "手套箱"
+        ],
+        "caption": "实验人员在手套箱内操作装有液体的圆底烧瓶，手持烧瓶进行摇晃或检查。",
+        "evidence_timestamps": [
+          126,
+          130,
+          135
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面中虽然背景有磁力搅拌器（加热/搅拌装置），但核心动作是双手持握并摇晃烧瓶，并未发生将其放置于或从装置上取下的操作。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "手套箱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s008",
+        "start": 138.0,
+        "end": 154.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "转移液体（环境切换）",
+        "objects": [
+          "圆底烧瓶",
+          "手套箱",
+          "开放空间"
+        ],
+        "caption": "实验人员将装有液体的圆底烧瓶从封闭的手套箱环境中移出至开放空间进行观察。",
+        "evidence_timestamps": [
+          142,
+          148,
+          152
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "手套箱",
+            "present": true
+          },
+          {
+            "object": "开放空间",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s009",
+        "start": 154.0,
+        "end": 169.0,
+        "action": "control_temperature_with_bath",
+        "action_zh": "使用浴槽控温",
+        "objects": [
+          "圆底烧瓶",
+          "水浴锅",
+          "小烧杯"
+        ],
+        "caption": "实验人员将装有白色固体的小烧杯放入水浴锅中，同时从旋转蒸发仪上取下圆底烧瓶。",
+        "evidence_timestamps": [
+          158,
+          163,
+          167
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作顺序与标注相反：实验人员是将小烧杯放入水浴锅，并将圆底烧瓶从旋转蒸发仪取下（而非放入水浴锅）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "水浴锅",
+            "present": true
+          },
+          {
+            "object": "小烧杯",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s010",
+        "start": 169.0,
+        "end": 185.0,
+        "action": "control_temperature_with_bath",
+        "action_zh": "使用浴槽控温",
+        "objects": [
+          "电子天平",
+          "水浴锅"
+        ],
+        "caption": "实验人员将玻璃容器（烧瓶）在天平上称量后，移入水浴锅中进行加热处理。",
+        "evidence_timestamps": [
+          172,
+          178,
+          182
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中操作对象明显为透明玻璃仪器（圆底烧瓶），而非标注中的“金属小罐”。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "水浴锅",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s011",
+        "start": 185.0,
+        "end": 200.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体（废弃/转移）",
+        "objects": [
+          "小烧杯",
+          "不锈钢盆",
+          "电子天平"
+        ],
+        "caption": "实验人员按住天平按键，将小烧杯中的透明液体倒入下方的不锈钢盆中。",
+        "evidence_timestamps": [
+          188,
+          193,
+          198
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "小烧杯",
+            "present": true
+          },
+          {
+            "object": "不锈钢盆",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s012",
+        "start": 200.0,
+        "end": 215.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体（废弃/转移）",
+        "objects": [
+          "圆底烧瓶",
+          "不锈钢盆",
+          "电子天平"
+        ],
+        "caption": "实验人员扶住天平，将圆底烧瓶中的液体倾倒入不锈钢盆内。",
+        "evidence_timestamps": [
+          203,
+          208,
+          212
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "不锈钢盆",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s013",
+        "start": 215.0,
+        "end": 231.0,
+        "action": "reaction_condition_setup",
+        "action_zh": "反应体系状态建立",
+        "objects": [
+          "蓝色小型仪器",
+          "控制面板",
+          "水浴锅"
+        ],
+        "caption": "实验人员操作蓝色仪器的控制面板调节参数，随后整理台面物品。",
+        "evidence_timestamps": [
+          218,
+          224,
+          228
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "蓝色小型仪器",
+            "present": true
+          },
+          {
+            "object": "控制面板",
+            "present": true
+          },
+          {
+            "object": "水浴锅",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0067_s014",
+        "start": 231.0,
+        "end": 246.0,
+        "action": "measure_liquid_for_addition",
+        "action_zh": "量取液体（称量）",
+        "objects": [
+          "电子天平",
+          "圆底烧瓶",
+          "水浴锅"
+        ],
+        "caption": "实验人员在电子天平上进行精细操作，疑似对容器或样品进行称量。",
+        "evidence_timestamps": [
+          234,
+          240,
+          244
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "水浴锅",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 15.4,
+        "frame_ts": [
+          0.0,
+          8.0,
+          15.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放有电子天平、烧杯、试剂瓶及各类管路等实验器具。实验人员双手戴蓝色丁腈手套，正手持一个白色塑料瓶向玻璃容器内倾倒液体。该操作导致了明显的液体转移状态变化。"
+      },
+      {
+        "start": 15.4,
+        "end": 30.8,
+        "frame_ts": [
+          16.0,
+          23.0,
+          30.0
+        ],
+        "summary": "画面中可见手套箱内的磁力搅拌器、圆底烧瓶及试剂瓶等器具。实验人员双手正操作一个装有白色固体的圆底烧瓶，将其置于蓝色磁力搅拌器上并调整位置。随后，右手拿起一个白色小瓶，似乎准备向烧瓶中倾倒液体或添加固体。"
+      },
+      {
+        "start": 30.8,
+        "end": 46.2,
+        "frame_ts": [
+          31.0,
+          38.0,
+          46.0
+        ],
+        "summary": "画面中出现了圆底烧瓶、超声波清洗机以及实验台等器具。实验人员双手戴着蓝色手套，正拿着一个圆底烧瓶进行移动和清洗操作。视频记录了从实验台拿起烧瓶并将其放入水槽中的超声波清洗机里的过程。"
+      },
+      {
+        "start": 46.2,
+        "end": 61.5,
+        "frame_ts": [
+          47.0,
+          54.0,
+          61.0
+        ],
+        "summary": "画面中可见不锈钢水槽、超声波清洗机（或水浴锅）、烧杯、绿色抹布及实验手套。实验人员戴蓝色手套，右手持烧杯置于水槽上方，左手在水槽内操作并接触绿色抹布。未见明显的液体倾倒或状态变化，主要动作是手持容器和整理台面。"
+      },
+      {
+        "start": 61.5,
+        "end": 76.9,
+        "frame_ts": [
+          62.0,
+          69.0,
+          76.0
+        ],
+        "summary": "画面中可见不锈钢水槽、玻璃烧瓶、蓝色丁腈手套及绿色抹布。实验人员戴着手套，从水槽中取出一个盛有液体的大圆底烧瓶，并将其举起进行观察。此过程中发生了明显的状态变化：烧瓶被从水中移出并离开水面。"
+      },
+      {
+        "start": 76.9,
+        "end": 92.3,
+        "frame_ts": [
+          77.0,
+          85.0,
+          92.0
+        ],
+        "summary": "画面中可见实验人员双手戴着蓝色手套，正在操作一个装有透明液体的玻璃烧瓶。在第一个场景中，该烧瓶被置于通风橱内的台面上；随后场景切换至实验室过道，人员手持烧瓶移动；最后进入手套箱内部进行操作。期间未观察到明显的倒液、盖盖或状态变化等动作。"
+      },
+      {
+        "start": 92.3,
+        "end": 107.7,
+        "frame_ts": [
+          93.0,
+          100.0,
+          107.0
+        ],
+        "summary": "画面中可见手套箱内的旋转蒸发仪、烧瓶、称量纸及各类试剂瓶。实验人员双手戴着蓝色丁腈手套，正拿起两个装有透明液体的玻璃容器（看似为圆底烧瓶或锥形瓶）。操作者将其中一个容器的液体倒入另一个容器中，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 107.7,
+        "end": 123.1,
+        "frame_ts": [
+          108.0,
+          115.0,
+          123.0
+        ],
+        "summary": "画面中可见通风橱内的旋转蒸发仪、烧瓶及各类玻璃器皿。实验人员双手正持握一个装有液体的圆底烧瓶，将其倾斜并靠近另一个容器进行倾倒操作。液体正在从烧瓶中流出，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 123.1,
+        "end": 138.5,
+        "frame_ts": [
+          124.0,
+          131.0,
+          138.0
+        ],
+        "summary": "画面中可见手套箱内的旋转蒸发仪、多个圆底烧瓶及磁力搅拌器。实验人员双手戴着蓝色丁腈手套，正在操作一个装有液体的圆底烧瓶，将其置于或从加热/搅拌装置上取下。液体状态未见明显变化（如沸腾或颜色改变），但烧瓶位置发生了移动。"
+      },
+      {
+        "start": 138.5,
+        "end": 153.9,
+        "frame_ts": [
+          139.0,
+          146.0,
+          153.0
+        ],
+        "summary": "画面中可见手套箱内的旋转蒸发仪、烧瓶及实验室台面上的玻璃器皿。实验人员先是在手套箱内双手持握一个圆底烧瓶，随后将其移出并拿在手中观察。期间发生了明显的移动操作，即从封闭的手套箱环境将容器转移到了开放空间。"
+      },
+      {
+        "start": 153.9,
+        "end": 169.2,
+        "frame_ts": [
+          154.0,
+          162.0,
+          169.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、金属水浴锅、烧杯及试剂瓶等实验器具。实验人员双手戴着蓝色手套，正将一个玻璃容器（看似圆底烧瓶）从旋转蒸发仪上取下并移向旁边的水浴锅。随后，该人员将容器放入水浴锅中，同时左手拿起一个装有白色固体的小烧杯。"
+      },
+      {
+        "start": 169.2,
+        "end": 184.6,
+        "frame_ts": [
+          170.0,
+          177.0,
+          184.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、电子天平、不锈钢水浴锅及一个金属小罐。实验人员先是将金属小罐放在天平上称量，随后将其移入水浴锅中进行加热处理。此过程中发生了明显的操作状态变化，即从称量步骤切换到了水浴加热步骤。"
+      },
+      {
+        "start": 184.6,
+        "end": 200.0,
+        "frame_ts": [
+          185.0,
+          192.0,
+          200.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、电子天平、不锈钢盆以及一个盛有透明液体的小烧杯。实验人员左手按住天平上的按键，右手持烧杯将液体倒入下方的不锈钢盆中。这一操作导致了明显的倒液状态变化。"
+      },
+      {
+        "start": 200.0,
+        "end": 215.4,
+        "frame_ts": [
+          200.0,
+          208.0,
+          215.0
+        ],
+        "summary": "画面中可见电子天平、不锈钢盆、圆底烧瓶及实验台背景。实验人员戴蓝色手套，左手扶住天平，右手持圆底烧瓶在不锈钢盆上方进行倾倒操作。液体从烧瓶中流出进入盆内，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 215.4,
+        "end": 230.8,
+        "frame_ts": [
+          216.0,
+          223.0,
+          230.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、盛有液体的金属水浴锅以及一个带有数字显示屏的蓝色小型仪器。实验人员戴着手套的双手正在操作该蓝色仪器的控制面板，随后双手离开仪器并在台面上整理或拿取物品。未见明显的液体倾倒或容器状态变化，主要动作集中在仪器参数的调节上。"
+      },
+      {
+        "start": 230.8,
+        "end": 246.2,
+        "frame_ts": [
+          231.0,
+          238.0,
+          246.0
+        ],
+        "summary": "画面中可见旋转蒸发仪、电子天平、圆底烧瓶及盛有液体的金属水浴锅。实验人员佩戴蓝色手套，双手正在操作电子天平上的物品（疑似称量或放置容器）。未见明显的液体倾倒或剧烈状态变化，主要进行的是称量相关的精细操作。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "0070",
+    "video_path": "videos/0070.mp4",
+    "phase": "reaction_setup",
+    "phase_zh": "开反应",
+    "phase_confidence": 0.92,
+    "segments": [
+      {
+        "segment_id": "0070_s001",
+        "start": 0.0,
+        "end": 11.0,
+        "action": "prepare_reaction_vessel",
+        "action_zh": "准备反应容器",
+        "objects": [
+          "真空泵",
+          "管路",
+          "玻璃仪器"
+        ],
+        "caption": "实验人员正在连接并调整真空泵与玻璃仪器的管路，为后续操作做准备。",
+        "evidence_timestamps": [
+          2,
+          6,
+          9
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "真空泵",
+            "present": true
+          },
+          {
+            "object": "管路",
+            "present": true
+          },
+          {
+            "object": "玻璃仪器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0070_s002",
+        "start": 11.0,
+        "end": 22.0,
+        "action": "add_solid_to_reaction",
+        "action_zh": "向反应体系加入固体",
+        "objects": [
+          "小玻璃瓶",
+          "烧杯",
+          "蓝色支架"
+        ],
+        "caption": "实验人员手持装有透明液体的小玻璃瓶，将其中的液体倒入放置在蓝色支架上的烧杯中。",
+        "evidence_timestamps": [
+          13,
+          17,
+          20
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中明显显示操作对象为透明液体（倾倒时有液流），而非标注所述的白色固体；且未见明显的倾倒动作发生，更多是持握状态。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "小玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "蓝色支架",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0070_s003",
+        "start": 22.0,
+        "end": 34.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "洗瓶",
+          "玻璃容器",
+          "烧杯",
+          "电子天平"
+        ],
+        "caption": "实验人员先用洗瓶向玻璃容器注液，随后将该液体倒入置于天平上的烧杯中。",
+        "evidence_timestamps": [
+          25,
+          29,
+          32
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "洗瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃容器",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0070_s004",
+        "start": 34.0,
+        "end": 45.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "锥形瓶",
+          "烧杯",
+          "电子天平",
+          "蓝色支架"
+        ],
+        "caption": "实验人员手持锥形瓶，将其中的液体持续倒入放置在支架上烧杯中，天平读数随之增加。",
+        "evidence_timestamps": [
+          36,
+          40,
+          43
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "锥形瓶",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "蓝色支架",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0070_s005",
+        "start": 45.0,
+        "end": 56.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "抽滤瓶",
+          "试剂瓶",
+          "电子天平"
+        ],
+        "caption": "实验人员手持疑似抽滤瓶的容器进行液体转移或倾倒，随后拿起白色塑料试剂瓶准备下一步操作。",
+        "evidence_timestamps": [
+          47,
+          51,
+          54
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示实验人员是双手持握并倾斜容器进行倒液，而非描述中的“倒置”（通常指完全翻转180度）；此外，标注中提到的“烧杯”在画面中并未清晰出现（仅见漏斗和锥形瓶）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0070_s006",
+        "start": 56.0,
+        "end": 67.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "白色塑料瓶",
+          "烧杯",
+          "电子天平"
+        ],
+        "caption": "实验人员手持白色塑料瓶，将其中的液体倒入放置在电子天平上的烧杯中。",
+        "evidence_timestamps": [
+          58,
+          62,
+          65
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色塑料瓶",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          },
+          {
+            "object": "电子天平",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 11.2,
+        "frame_ts": [
+          0.0,
+          6.0,
+          11.0
+        ],
+        "summary": "画面中可见电子天平、真空泵（带压力表）、烧杯、锥形瓶及连接管路等实验器具。实验人员双手戴着蓝色手套，正在操作连接在真空泵上的管路和玻璃仪器。从视频帧来看，似乎正在进行抽滤或减压蒸馏相关的管路连接与调整操作，未见明显的液体倾倒或状态突变。"
+      },
+      {
+        "start": 11.2,
+        "end": 22.4,
+        "frame_ts": [
+          12.0,
+          17.0,
+          22.0
+        ],
+        "summary": "画面中可见手套箱内的电子天平、真空泵、烧杯及滤纸等实验器具。实验人员双手正将一个装有白色固体的小玻璃瓶倾斜，向放置在蓝色支架上的烧杯内倾倒物质。该操作导致了明显的状态变化，即固体从瓶中转移到了烧杯中。"
+      },
+      {
+        "start": 22.4,
+        "end": 33.6,
+        "frame_ts": [
+          23.0,
+          28.0,
+          33.0
+        ],
+        "summary": "画面中可见手套箱内的电子天平、真空泵、烧杯及塑料洗瓶等器具。实验人员双手戴蓝色丁腈手套，先是用洗瓶向一个玻璃容器内注液，随后将其中的液体倒入置于天平上的烧杯中。这一过程发生了明显的倒液操作，且天平读数随之发生变化。"
+      },
+      {
+        "start": 33.6,
+        "end": 44.8,
+        "frame_ts": [
+          34.0,
+          39.0,
+          44.0
+        ],
+        "summary": "画面中可见手套箱内部，包含真空泵、电子天平、烧杯及锥形瓶等器具。实验人员右手持锥形瓶，正将其中的液体倒入放置在蓝色支架上的烧杯中。此过程发生了明显的倒液操作，且天平读数随液体加入而持续增加。"
+      },
+      {
+        "start": 44.8,
+        "end": 56.1,
+        "frame_ts": [
+          45.0,
+          50.0,
+          56.0
+        ],
+        "summary": "画面中可见电子天平、真空泵、烧杯、锥形瓶及各类试剂瓶。实验人员双手先是将一个装有液体的玻璃容器（疑似抽滤瓶）倒置，随后将其移开并拿起左侧的一个白色塑料试剂瓶。此过程中发生了明显的液体倾倒或转移操作，以及手持容器的状态变化。"
+      },
+      {
+        "start": 56.1,
+        "end": 67.3,
+        "frame_ts": [
+          57.0,
+          62.0,
+          67.0
+        ],
+        "summary": "画面中可见电子天平、白色塑料瓶、烧杯及真空泵等实验器具。实验人员双手持白色塑料瓶，将其中的液体倒入放置在电子天平上的烧杯中。此过程发生了明显的倒液操作，且天平读数随之变化。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "0072",
+    "video_path": "videos/0072.mp4",
+    "phase": "reaction_setup",
+    "phase_zh": "开反应",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "0072_s001",
+        "start": 15.0,
+        "end": 30.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "注射器",
+          "圆底烧瓶",
+          "棕色液体"
+        ],
+        "caption": "实验人员使用注射器向装有棕色液体的圆底烧瓶中注入液体。",
+        "evidence_timestamps": [
+          18,
+          22,
+          26
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "注射器",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "棕色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0072_s002",
+        "start": 30.0,
+        "end": 45.0,
+        "action": "prepare_reaction_vessel",
+        "action_zh": "准备反应容器",
+        "objects": [
+          "锥形瓶",
+          "玻璃管",
+          "绿色软管",
+          "铁架台"
+        ],
+        "caption": "实验人员将连接软管的玻璃管插入装有棕色液体的锥形瓶中，搭建反应管路。",
+        "evidence_timestamps": [
+          33,
+          38,
+          42
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "锥形瓶",
+            "present": true
+          },
+          {
+            "object": "玻璃管",
+            "present": true
+          },
+          {
+            "object": "绿色软管",
+            "present": true
+          },
+          {
+            "object": "铁架台",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0072_s003",
+        "start": 45.0,
+        "end": 60.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "棕色小瓶",
+          "磁力搅拌器",
+          "试剂瓶"
+        ],
+        "caption": "实验人员在手套箱内操作棕色小瓶，进行液体的转移或混合处理。",
+        "evidence_timestamps": [
+          48,
+          52,
+          56
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色小瓶",
+            "present": true
+          },
+          {
+            "object": "磁力搅拌器",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0072_s004",
+        "start": 60.0,
+        "end": 75.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "白色塑料洗瓶",
+          "烧杯"
+        ],
+        "caption": "实验人员使用白色塑料洗瓶向下方容器倾倒液体进行冲洗或添加。",
+        "evidence_timestamps": [
+          63,
+          68,
+          72
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色塑料洗瓶",
+            "present": true
+          },
+          {
+            "object": "烧杯",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0072_s005",
+        "start": 75.0,
+        "end": 90.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "移液枪",
+          "棕色锥形瓶",
+          "蓝色实验垫"
+        ],
+        "caption": "实验人员手持棕色锥形瓶，使用移液枪向瓶内精确添加液体。",
+        "evidence_timestamps": [
+          78,
+          83,
+          87
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "棕色锥形瓶",
+            "present": true
+          },
+          {
+            "object": "蓝色实验垫",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0072_s006",
+        "start": 90.0,
+        "end": 106.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "试管架",
+          "小试管"
+        ],
+        "caption": "实验人员对试管架上的小试管进行精细的液体转移或加样操作。",
+        "evidence_timestamps": [
+          93,
+          98,
+          103
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "试管架",
+            "present": true
+          },
+          {
+            "object": "小试管",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0072_s007",
+        "start": 106.0,
+        "end": 120.6,
+        "action": "seal_and_start_reaction",
+        "action_zh": "封闭并开始反应",
+        "objects": [
+          "圆底烧瓶",
+          "红褐色液体",
+          "管路",
+          "塞子"
+        ],
+        "caption": "实验人员旋紧连接在装有红褐色液体的圆底烧瓶上的管路或塞子，完成反应体系的封闭。",
+        "evidence_timestamps": [
+          109,
+          114,
+          118
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "红褐色液体",
+            "present": true
+          },
+          {
+            "object": "管路",
+            "present": true
+          },
+          {
+            "object": "塞子",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 15.1,
+        "frame_ts": [
+          0.0,
+          8.0,
+          15.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放有电子天平、蓝色试管架、棕色试剂瓶及各类玻璃器皿。实验人员双手戴蓝色丁腈手套，左手持一个白色小瓶，右手在操作台面上移动并调整物品位置。未见明显的液体倾倒或剧烈状态变化，主要是物品的整理与拿取动作。"
+      },
+      {
+        "start": 15.1,
+        "end": 30.1,
+        "frame_ts": [
+          16.0,
+          23.0,
+          30.0
+        ],
+        "summary": "在手套箱内，实验人员双手操作一个装有棕色液体的圆底烧瓶。右手持注射器向烧瓶内注入液体，左手扶住烧瓶以保持稳定。画面中可见明显的加液操作，但未见其他状态变化。"
+      },
+      {
+        "start": 30.1,
+        "end": 45.2,
+        "frame_ts": [
+          31.0,
+          38.0,
+          45.0
+        ],
+        "summary": "画面中可见一个装有棕色液体的锥形瓶、一根连接着绿色软管的玻璃管以及背景中的铁架台和管路系统。实验人员双手戴着蓝色手套，左手扶住锥形瓶，右手持握玻璃管将其插入瓶中。操作过程中，玻璃管被持续推入液体内部，未见明显的倾倒或盖盖动作。"
+      },
+      {
+        "start": 45.2,
+        "end": 60.3,
+        "frame_ts": [
+          46.0,
+          53.0,
+          60.0
+        ],
+        "summary": "画面中可见手套箱内的磁力搅拌器、烧瓶、试剂瓶及蓝色托盘等实验器具。实验人员双手正在操作一个棕色小瓶，似乎在进行液体的转移或混合。未见明显的剧烈状态变化（如沸腾或沉淀），主要动作集中在对棕色瓶的处理上。"
+      },
+      {
+        "start": 60.3,
+        "end": 75.3,
+        "frame_ts": [
+          61.0,
+          68.0,
+          75.0
+        ],
+        "summary": "画面中可见手套箱内的蓝色实验垫、多个玻璃瓶（含棕色试剂瓶）、烧杯及连接管路。实验人员双手佩戴蓝色丁腈手套，正在操作一个白色塑料洗瓶，将其对准下方容器进行倾倒或冲洗动作。此过程中发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 75.3,
+        "end": 90.4,
+        "frame_ts": [
+          76.0,
+          83.0,
+          90.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放有棕色锥形瓶、移液枪、蓝色实验垫及各类管线和试剂瓶。实验人员双手佩戴蓝色丁腈手套，左手持棕色锥形瓶，右手使用移液枪向瓶内添加液体。操作过程中发生了明显的加液动作，但未见其他剧烈状态变化。"
+      },
+      {
+        "start": 90.4,
+        "end": 105.5,
+        "frame_ts": [
+          91.0,
+          98.0,
+          105.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放着蓝色试管架、棕色试剂瓶、烧杯及各类管路。实验人员双手戴蓝色丁腈手套，正在操作试管架上的小试管，似乎在进行液体的转移或混合。未见明显的宏观状态变化（如剧烈反应或颜色突变），主要是在进行精细的加样或处理操作。"
+      },
+      {
+        "start": 105.5,
+        "end": 120.6,
+        "frame_ts": [
+          106.0,
+          113.0,
+          120.0
+        ],
+        "summary": "画面中可见手套箱内的蓝色支架、装有红褐色液体的圆底烧瓶以及各类玻璃仪器。实验人员双手正在操作，将连接在烧瓶上的管路或塞子进行旋紧固定。随后，实验人员松开双手并离开操作区域，未观察到明显的液体倾倒或状态变化。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "0073",
+    "video_path": "videos/0073.mp4",
+    "phase": "reaction_setup",
+    "phase_zh": "开反应",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "0073_s001",
+        "start": 0.0,
+        "end": 17.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "圆底烧瓶",
+          "小容器",
+          "红褐色液体"
+        ],
+        "caption": "实验人员将小容器中的红褐色液体倾倒转移至下方的圆底烧瓶中。",
+        "evidence_timestamps": [
+          5,
+          10,
+          14
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作方向与标注相反：是将小容器（试剂瓶）中的液体倒入圆底烧瓶，而非从烧瓶倒出。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "小容器",
+            "present": true
+          },
+          {
+            "object": "红褐色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s002",
+        "start": 33.0,
+        "end": 50.0,
+        "action": "prepare_reaction_vessel",
+        "action_zh": "准备反应容器",
+        "objects": [
+          "玻璃反应装置",
+          "洗瓶"
+        ],
+        "caption": "实验人员使用洗瓶向连接管路的玻璃反应装置接口处倾倒液体进行清洗或润洗，并检查连接状态。",
+        "evidence_timestamps": [
+          38,
+          42,
+          46
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "玻璃反应装置",
+            "present": true
+          },
+          {
+            "object": "洗瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s003",
+        "start": 66.0,
+        "end": 83.0,
+        "action": "add_solid_to_reaction",
+        "action_zh": "向反应体系加入固体",
+        "objects": [
+          "瓶盖"
+        ],
+        "caption": "实验人员手持一个白色塑料瓶，将其中的液体倒入一个玻璃容器中。",
+        "evidence_timestamps": [
+          70,
+          75,
+          80
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面显示的是倾倒液体的操作（使用白色塑料瓶），而非标注中描述的“用镊子夹取固体放入棕色瓶”。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "瓶盖",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s004",
+        "start": 83.0,
+        "end": 100.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "棕色小瓶",
+          "液体"
+        ],
+        "caption": "实验人员在手套箱内操作棕色小瓶，将液体从一个容器倒入另一个容器中。",
+        "evidence_timestamps": [
+          88,
+          92,
+          96
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色小瓶",
+            "present": true
+          },
+          {
+            "object": "液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s005",
+        "start": 100.0,
+        "end": 116.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "注射器",
+          "圆底烧瓶",
+          "液体"
+        ],
+        "caption": "实验人员操作连接在烧瓶上的注射器，完成液体的抽取或注入加样操作。",
+        "evidence_timestamps": [
+          105,
+          110,
+          114
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "注射器",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s006",
+        "start": 133.0,
+        "end": 150.0,
+        "action": "swirl_or_mix_container",
+        "action_zh": "摇晃或混合容器",
+        "objects": [
+          "锥形瓶",
+          "深褐色液体"
+        ],
+        "caption": "实验人员手持盛有深褐色液体的锥形瓶进行摇晃或旋动，以混合内部液体。",
+        "evidence_timestamps": [
+          138,
+          142,
+          146
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "锥形瓶",
+            "present": true
+          },
+          {
+            "object": "深褐色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s007",
+        "start": 150.0,
+        "end": 166.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "白色小管",
+          "棕色瓶"
+        ],
+        "caption": "实验人员手持白色小管，将其内容物转移至左侧的棕色瓶中。",
+        "evidence_timestamps": [
+          155,
+          160,
+          164
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作者直接手持白色小管进行倾倒或转移操作，并未出现从盒子中取出的动作，且画面中未见移液枪头盒。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色小管",
+            "present": true
+          },
+          {
+            "object": "棕色瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s008",
+        "start": 166.0,
+        "end": 183.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "移液管",
+          "小瓶",
+          "液体"
+        ],
+        "caption": "实验人员使用移液管向小瓶中转移液体，并进行相关容器的查看与准备。",
+        "evidence_timestamps": [
+          170,
+          175,
+          180
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液管",
+            "present": true
+          },
+          {
+            "object": "小瓶",
+            "present": true
+          },
+          {
+            "object": "液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s009",
+        "start": 183.0,
+        "end": 200.0,
+        "action": "add_liquid_to_reaction",
+        "action_zh": "向反应体系加入液体",
+        "objects": [
+          "透明塑料瓶",
+          "棕色玻璃瓶",
+          "液体"
+        ],
+        "caption": "实验人员将透明塑料瓶中的液体倾倒转移至右手所持的棕色玻璃瓶中。",
+        "evidence_timestamps": [
+          188,
+          192,
+          196
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面显示操作者用左手持透明瓶，右手持棕色瓶进行倾倒，原描述中“左手所持的棕色玻璃瓶”与画面不符（左右手弄反）。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "透明塑料瓶",
+            "present": true
+          },
+          {
+            "object": "棕色玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s010",
+        "start": 200.0,
+        "end": 216.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "注射器",
+          "棕色小瓶",
+          "液体"
+        ],
+        "caption": "实验人员操作注射器插入棕色小瓶中，进行液体的吸取或注入操作。",
+        "evidence_timestamps": [
+          205,
+          210,
+          214
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "注射器",
+            "present": true
+          },
+          {
+            "object": "棕色小瓶",
+            "present": true
+          },
+          {
+            "object": "液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s011",
+        "start": 216.0,
+        "end": 233.0,
+        "action": "prepare_reaction_vessel",
+        "action_zh": "准备反应容器",
+        "objects": [
+          "棕色小试剂瓶",
+          "瓶盖"
+        ],
+        "caption": "实验人员拿起棕色小试剂瓶并旋开瓶盖，为后续操作做准备。",
+        "evidence_timestamps": [
+          220,
+          225,
+          230
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "棕色小试剂瓶",
+            "present": true
+          },
+          {
+            "object": "瓶盖",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s012",
+        "start": 233.0,
+        "end": 249.0,
+        "action": "transfer_and_add_small_volume_liquid",
+        "action_zh": "小体积移取并加入液体",
+        "objects": [
+          "注射器",
+          "棕色小瓶",
+          "圆底烧瓶",
+          "蓝色液体"
+        ],
+        "caption": "实验人员先用注射器向棕色小瓶注入液体，随后拿起装有蓝色液体的圆底烧瓶，将液体转移至棕色小瓶中。",
+        "evidence_timestamps": [
+          238,
+          242,
+          246
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面清晰显示操作者先使用注射器处理棕色小瓶，随后将圆底烧瓶中的蓝色液体倒入该小瓶，原描述中“准备转移”未准确表达实际发生的倾倒动作。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "注射器",
+            "present": true
+          },
+          {
+            "object": "棕色小瓶",
+            "present": true
+          },
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "蓝色液体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0073_s013",
+        "start": 249.0,
+        "end": 266.0,
+        "action": "reaction_condition_setup",
+        "action_zh": "反应体系状态建立",
+        "objects": [
+          "圆底烧瓶",
+          "磁力搅拌器",
+          "深色液体"
+        ],
+        "caption": "实验人员用注射器向烧瓶添加物质后，将烧瓶放置于磁力搅拌器上开始混合或反应。",
+        "evidence_timestamps": [
+          254,
+          260,
+          264
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面中操作者使用的是注射器（syringe）而非标注中的玻璃管（glass tube），且确实执行了加样和放置到搅拌器上的动作。",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "圆底烧瓶",
+            "present": true
+          },
+          {
+            "object": "磁力搅拌器",
+            "present": true
+          },
+          {
+            "object": "深色液体",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 16.6,
+        "frame_ts": [
+          0.0,
+          8.0,
+          16.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放着烧瓶、试剂瓶、蓝色多孔板及各类管路等实验器具。实验人员双手戴蓝色丁腈手套，右手持一个盛有红褐色液体的圆底烧瓶，左手扶住下方的小容器或瓶盖。操作过程中发生了明显的液体倾倒动作，将烧瓶内的红褐色液体转移至小容器中。"
+      },
+      {
+        "start": 16.6,
+        "end": 33.3,
+        "frame_ts": [
+          17.0,
+          25.0,
+          33.0
+        ],
+        "summary": "画面中可见手套箱内的电子天平、棕色试剂瓶、烧杯及各类管路等实验器具。实验人员双手佩戴蓝色丁腈手套，正在操作一个装有液体的玻璃圆底烧瓶，将其从天平上拿起并倾斜。液体在烧瓶内晃动，表明正在进行转移或混合操作。"
+      },
+      {
+        "start": 33.3,
+        "end": 49.9,
+        "frame_ts": [
+          34.0,
+          42.0,
+          49.0
+        ],
+        "summary": "在手套箱内，实验人员双手戴着蓝色丁腈手套，正在操作一个连接着多根管路和阀门的玻璃反应装置。随后，他拿起一个白色塑料洗瓶向该玻璃装置的接口处倾倒液体进行清洗或润洗。最后，他将洗瓶放下，并继续调整或检查该玻璃装置的连接状态。"
+      },
+      {
+        "start": 49.9,
+        "end": 66.5,
+        "frame_ts": [
+          50.0,
+          58.0,
+          66.0
+        ],
+        "summary": "画面中可见手套箱内的烧瓶、洗瓶、磁力搅拌器及各类试剂瓶。实验人员双手戴蓝色丁腈手套，先持一个装有液体的圆底烧瓶进行观察或摇晃，随后放下烧瓶并拿起一个白色大洗瓶。操作过程中未见明显的液体倾倒或状态变化，主要是对容器的拿取与检查动作。"
+      },
+      {
+        "start": 66.5,
+        "end": 83.1,
+        "frame_ts": [
+          67.0,
+          75.0,
+          83.0
+        ],
+        "summary": "画面中可见手套箱内摆放着多个棕色试剂瓶、烧杯、电子天平及蓝色操作垫。实验人员双手佩戴蓝色丁腈手套，正在使用镊子夹取物品并放入一个棕色瓶中。随后，该人员拿起瓶盖准备对棕色瓶进行密封盖盖操作。"
+      },
+      {
+        "start": 83.1,
+        "end": 99.8,
+        "frame_ts": [
+          84.0,
+          91.0,
+          99.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放着多个棕色试剂瓶、烧杯、蓝色托盘及连接管路等实验器具。实验人员双手戴蓝色丁腈手套，正在操作一个棕色小瓶，似乎在进行液体的转移或取样。从第一帧到第三帧，可以看到其手部动作连贯，将液体从一个容器倒入另一个容器中，发生了明显的倒液状态变化。"
+      },
+      {
+        "start": 99.8,
+        "end": 116.4,
+        "frame_ts": [
+          100.0,
+          108.0,
+          116.0
+        ],
+        "summary": "画面中可见手套箱内的磁力搅拌器、圆底烧瓶、注射器及各类试剂瓶。实验人员双手正在操作连接在烧瓶上的注射器，进行液体的抽取或注入。随后将注射器移开并放置于台面上，完成了加样操作。"
+      },
+      {
+        "start": 116.4,
+        "end": 133.0,
+        "frame_ts": [
+          117.0,
+          125.0,
+          133.0
+        ],
+        "summary": "画面中可见超净工作台、多个培养皿（部分含粉色菌落）、棕色试剂瓶及蓝色手套。实验人员先是用右手拿起一个白色大洗瓶，随后双手拿起一个装有红褐色液体的锥形瓶进行观察或摇晃。操作过程中未见明显的液体倾倒或状态变化。"
+      },
+      {
+        "start": 133.0,
+        "end": 149.7,
+        "frame_ts": [
+          133.0,
+          141.0,
+          149.0
+        ],
+        "summary": "画面中可见手套箱内摆放着多个圆底烧瓶、磁力搅拌器及连接管路，操作者双手正持握一个盛有深褐色液体的锥形瓶。操作者正在对锥形瓶进行摇晃或旋动操作，似乎在混合内部液体。随着动作进行，瓶内液体状态未发生明显颜色或相态变化。"
+      },
+      {
+        "start": 149.7,
+        "end": 166.3,
+        "frame_ts": [
+          150.0,
+          158.0,
+          166.0
+        ],
+        "summary": "画面中可见手套、移液枪头盒、棕色试剂瓶及多个玻璃容器。实验人员双手正在操作，先是用右手从蓝色盒子中取出一个白色小管，随后将其内容物转移至左侧的棕色瓶中。这一过程涉及明显的液体或固体转移状态变化。"
+      },
+      {
+        "start": 166.3,
+        "end": 182.9,
+        "frame_ts": [
+          167.0,
+          175.0,
+          182.0
+        ],
+        "summary": "画面中可见手套箱内的电子天平、烧瓶、试剂瓶及蓝色试管架等实验器具。实验人员双手戴着蓝色手套，先是用移液管向小瓶中转移液体，随后拿起一个透明塑料盒和一个白色广口瓶进行查看或准备操作。期间发生了明显的液体转移动作以及手持容器的状态变化。"
+      },
+      {
+        "start": 182.9,
+        "end": 199.6,
+        "frame_ts": [
+          183.0,
+          191.0,
+          199.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放着多个棕色试剂瓶、白色塑料瓶、蓝色加热台及各类管路。实验人员双手戴蓝色丁腈手套，右手持一个透明塑料瓶向左手所持的棕色玻璃瓶中倾倒液体。操作过程中发生了明显的倒液动作，液体从塑料瓶转移至棕色瓶中。"
+      },
+      {
+        "start": 199.6,
+        "end": 216.2,
+        "frame_ts": [
+          200.0,
+          208.0,
+          216.0
+        ],
+        "summary": "画面中可见手套箱内的烧瓶、注射器及各类管路等实验器具。实验人员双手正操作一支注射器，将其插入一个棕色小瓶中吸取或注入液体。随后，人员将双手平放在手套箱前端的玻璃观察窗上，停止了之前的操作。"
+      },
+      {
+        "start": 216.2,
+        "end": 232.8,
+        "frame_ts": [
+          217.0,
+          224.0,
+          232.0
+        ],
+        "summary": "画面中可见手套箱内摆放着烧瓶、蓝色多孔板、电子秤及各类管路等实验器具。实验人员双手佩戴蓝色丁腈手套，右手拿起一个棕色小试剂瓶并旋开瓶盖，左手在旁辅助或准备承接。操作过程中发生了明显的“开启容器”这一状态变化。"
+      },
+      {
+        "start": 232.8,
+        "end": 249.4,
+        "frame_ts": [
+          233.0,
+          241.0,
+          249.0
+        ],
+        "summary": "画面中可见手套箱内部，摆放有圆底烧瓶、注射器、蓝色多孔板及各类管路等实验器具。实验人员双手佩戴蓝色丁腈手套，先是用注射器向一个棕色小瓶中注入液体，随后拿起一个装有蓝色液体的圆底烧瓶进行观察或准备转移。操作过程中发生了明显的液体转移（注射）和容器拿取动作。"
+      },
+      {
+        "start": 249.4,
+        "end": 266.1,
+        "frame_ts": [
+          250.0,
+          258.0,
+          266.0
+        ],
+        "summary": "画面中可见手套箱内部，包含烧瓶、磁力搅拌器、连接管路及各类试剂瓶。实验人员双手佩戴蓝色丁腈手套，左手持一个装有深色液体的圆底烧瓶，右手操作一根细长的玻璃管（或移液管）向烧瓶内添加物质。在最后一帧中，该烧瓶已被放置在蓝色的磁力搅拌器上，表明正在进行混合或反应操作。"
+      }
+    ],
+    "processing_note": ""
+  },
+  {
+    "video_id": "0075",
+    "video_path": "videos/0075.mp4",
+    "phase": "analytical_sample_preparation",
+    "phase_zh": "分析样品制备",
+    "phase_confidence": 0.95,
+    "segments": [
+      {
+        "segment_id": "0075_s001",
+        "start": 0.0,
+        "end": 15.0,
+        "action": "finish_sample_container",
+        "action_zh": "封闭并标记样品容器",
+        "objects": [
+          "白色小容器",
+          "记号笔"
+        ],
+        "caption": "实验人员使用绿色记号笔在白色小容器侧面进行书写标记。",
+        "evidence_timestamps": [
+          5,
+          10
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色小容器",
+            "present": true
+          },
+          {
+            "object": "记号笔",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0075_s002",
+        "start": 15.0,
+        "end": 30.0,
+        "action": "finish_sample_container",
+        "action_zh": "封闭并标记样品容器",
+        "objects": [
+          "白色方块",
+          "记号笔"
+        ],
+        "caption": "实验人员在白色方块表面进行书写标记操作。",
+        "evidence_timestamps": [
+          20,
+          25
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "白色方块",
+            "present": true
+          },
+          {
+            "object": "记号笔",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0075_s003",
+        "start": 45.0,
+        "end": 60.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "透明小容器"
+        ],
+        "caption": "实验人员使用移液枪向透明小容器内吸取或转移液体。",
+        "evidence_timestamps": [
+          50,
+          55
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "透明小容器",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0075_s004",
+        "start": 60.0,
+        "end": 75.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "离心管（红色盖子）"
+        ],
+        "caption": "实验人员双手拿着带红色盖子的离心管，正在拧开或检查瓶盖。",
+        "evidence_timestamps": [
+          65,
+          70
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中实验人员仅用双手操作离心管（如拧盖），并未出现标注中提到的“使用移液枪”这一关键动作和物体。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "离心管（红色盖子）",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0075_s005",
+        "start": 75.0,
+        "end": 90.0,
+        "action": "add_solvent_to_sample_container",
+        "action_zh": "向样品容器加入溶剂",
+        "objects": [
+          "移液枪",
+          "离心管（红色盖子）"
+        ],
+        "caption": "实验人员继续向离心管内加样，随后旋紧管盖完成密封。",
+        "evidence_timestamps": [
+          80,
+          85
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "离心管（红色盖子）",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0075_s006",
+        "start": 105.0,
+        "end": 120.0,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "透明小瓶"
+        ],
+        "caption": "实验人员双手拿取并操作一个透明小瓶（如旋开瓶盖或检查），未使用移液枪。",
+        "evidence_timestamps": [
+          110,
+          115
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "画面中实验人员仅用双手直接操作小瓶，并未出现标注中提到的“移液枪”这一关键工具，也未进行移液动作。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "透明小瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0075_s007",
+        "start": 135.0,
+        "end": 149.8,
+        "action": "pipette_sample_solution",
+        "action_zh": "移取样品溶液",
+        "objects": [
+          "移液枪",
+          "透明小容器"
+        ],
+        "caption": "实验人员使用移液枪向透明小容器中滴加液体，随后放下移液枪。画面中未出现拿起剪刀的动作。",
+        "evidence_timestamps": [
+          140,
+          145
+        ],
+        "confidence": 0.4,
+        "verification_status": "rejected",
+        "uncertainty_reason": "虽然前段操作（移液）与描述一致，但标注声称的“拿起剪刀”动作在提供的画面序列中并未发生，且剪刀在画面中始终静置在桌面上未被触碰。",
+        "needs_human_review": true,
+        "object_evidence": [
+          {
+            "object": "移液枪",
+            "present": true
+          },
+          {
+            "object": "透明小容器",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 15.0,
+        "frame_ts": [
+          0.0,
+          7.0,
+          15.0
+        ],
+        "summary": "画面中可见实验台、移液枪架、橙色试管架、烧杯及一个白色小容器。实验人员戴蓝色手套，左手按住白色容器，右手持绿色记号笔在容器侧面进行书写标记。操作过程中未观察到液体倾倒或状态改变，仅发生了标记动作。"
+      },
+      {
+        "start": 15.0,
+        "end": 30.0,
+        "frame_ts": [
+          15.0,
+          22.0,
+          30.0
+        ],
+        "summary": "画面中可见实验台、移液枪、橙色试管架及一个白色小方块（疑似滤纸或试纸）。实验人员戴蓝色手套，左手按住该白色物体，右手持笔在其表面进行书写标记。操作过程中未观察到液体倾倒或状态改变，仅发生了书写动作。"
+      },
+      {
+        "start": 30.0,
+        "end": 44.9,
+        "frame_ts": [
+          30.0,
+          37.0,
+          44.0
+        ],
+        "summary": "画面中可见实验台、试剂瓶架、移液枪、橙色试管架及透明塑料盒等器具。实验人员双手戴蓝色手套，先是在桌面上操作白色小卡片或标签，随后拿起一个透明塑料袋进行整理或分装。未见明显的液体倾倒或剧烈状态变化，主要动作集中在物品的拿取与整理上。"
+      },
+      {
+        "start": 44.9,
+        "end": 59.9,
+        "frame_ts": [
+          45.0,
+          52.0,
+          59.0
+        ],
+        "summary": "画面中可见实验台、移液枪、离心管、橙色多孔板及各类试剂瓶。实验人员双手佩戴蓝色手套，正使用移液枪向一个透明小容器内吸取或转移液体。操作过程中发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 59.9,
+        "end": 74.9,
+        "frame_ts": [
+          60.0,
+          67.0,
+          74.0
+        ],
+        "summary": "画面中可见实验台、试剂架、移液枪、离心管及各类试剂瓶。实验人员双手佩戴蓝色手套，左手持红色盖子的离心管，右手使用移液枪向管内进行加样操作。此过程发生了明显的液体转移状态变化。"
+      },
+      {
+        "start": 74.9,
+        "end": 89.9,
+        "frame_ts": [
+          75.0,
+          82.0,
+          89.0
+        ],
+        "summary": "画面中可见实验台、移液枪、离心管（带红色盖子）、试管架及各类试剂瓶。实验人员左手持离心管，右手使用移液枪向管内吸取或加入液体，随后旋紧管盖。这一过程涉及明显的液体转移和容器密封操作。"
+      },
+      {
+        "start": 89.9,
+        "end": 104.8,
+        "frame_ts": [
+          90.0,
+          97.0,
+          104.0
+        ],
+        "summary": "画面中可见实验台、试剂架、移液枪、离心管及各类试剂瓶。实验人员戴蓝色手套，双手正在操作一个透明小容器（疑似离心管或样品盒），似乎在进行开盖或准备加样动作。未见明显液体倾倒或状态突变，但手部动作显示正在进行精细的样品处理步骤。"
+      },
+      {
+        "start": 104.8,
+        "end": 119.8,
+        "frame_ts": [
+          105.0,
+          112.0,
+          119.0
+        ],
+        "summary": "画面中可见实验台、移液枪、试管架、离心管及各类试剂瓶等器具。实验人员双手戴蓝色手套，先是用右手持移液枪向左手所持的透明小瓶中吸取或注入液体，随后将移液枪放回台面并调整手部姿势。期间发生了明显的液体转移操作（疑似加样或取样）。"
+      },
+      {
+        "start": 119.8,
+        "end": 134.8,
+        "frame_ts": [
+          120.0,
+          127.0,
+          134.0
+        ],
+        "summary": "画面中可见实验台、移液枪架、黄色废液桶、计算器及各类试剂瓶。实验人员双手戴蓝色手套，先是在操作一个小型物体（疑似标签或样品），随后左手拿起一个米色仪器盒，右手伸向架子上的黄色容器。期间发生了明显的动作转换，从桌面精细操作变为拿取仪器和接触上方容器。"
+      },
+      {
+        "start": 134.8,
+        "end": 149.8,
+        "frame_ts": [
+          135.0,
+          142.0,
+          149.0
+        ],
+        "summary": "画面中可见实验台、移液枪、黄色生物危害垃圾桶、试管架、剪刀及各类试剂瓶。实验人员双手佩戴蓝色手套，左手持透明小容器，右手使用移液枪向其中吸取或滴加液体。随后将移液枪放回支架，并拿起一把绿色手柄的剪刀准备进行下一步操作。"
+      }
+    ],
+    "processing_note": ""
+  }
+]

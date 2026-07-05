@@ -1,0 +1,628 @@
+[
+  {
+    "video_id": "1",
+    "video_path": "videos/1.mp4",
+    "phase": "filtration",
+    "phase_zh": "过滤与抽滤",
+    "phase_confidence": 0.98,
+    "alternative_phases": [
+      {
+        "phase": "reaction_setup",
+        "phase_zh": "开反应",
+        "confidence": 0.15,
+        "reason": "虽然涉及液体混合，但核心装置是用于固液分离的漏斗而非反应烧瓶。"
+      },
+      {
+        "phase": "analytical_sample_preparation",
+        "phase_zh": "分析样品制备",
+        "confidence": 0.1,
+        "reason": "操作规模较大且使用抽滤装置，不符合微量分析样品制备的典型特征。"
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "1_s001",
+        "start": 0.0,
+        "end": 12.0,
+        "action": "pour_mixture_to_filter",
+        "action_zh": "将混合物倒入过滤装置",
+        "objects": [
+          "棕色试剂瓶",
+          "布氏漏斗",
+          "抽滤瓶"
+        ],
+        "caption": "将棕色试剂瓶中的液体倒入已装有白色固体的布氏漏斗中。",
+        "evidence_timestamps": [
+          5,
+          8,
+          10
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "棕色试剂瓶",
+            "布氏漏斗",
+            "抽滤瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s002",
+        "start": 17.0,
+        "end": 43.0,
+        "action": "wash_filter_cake",
+        "action_zh": "洗涤滤饼",
+        "objects": [
+          "洗瓶",
+          "布氏漏斗",
+          "滤饼"
+        ],
+        "caption": "使用洗瓶向布氏漏斗中的固体加入洗涤液，并开启抽滤使液体通过。",
+        "evidence_timestamps": [
+          22,
+          28,
+          35
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "洗瓶",
+            "布氏漏斗",
+            "滤饼"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "洗瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "滤饼",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s003",
+        "start": 46.0,
+        "end": 51.0,
+        "action": "rinse_container",
+        "action_zh": "润洗容器",
+        "objects": [
+          "棕色试剂瓶",
+          "锥形瓶"
+        ],
+        "caption": "向残留有固体的锥形瓶中倒入少量溶剂进行润洗。",
+        "evidence_timestamps": [
+          47,
+          49
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "棕色试剂瓶",
+            "锥形瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "锥形瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s004",
+        "start": 54.0,
+        "end": 60.0,
+        "action": "wash_filter_cake",
+        "action_zh": "洗涤滤饼",
+        "objects": [
+          "锥形瓶",
+          "布氏漏斗",
+          "滤饼"
+        ],
+        "caption": "将润洗后的悬浊液从锥形瓶倒入布氏漏斗中进行过滤。",
+        "evidence_timestamps": [
+          55,
+          58
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "锥形瓶",
+            "布氏漏斗",
+            "滤饼"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "锥形瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "滤饼",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s005",
+        "start": 64.0,
+        "end": 71.0,
+        "action": "vacuum_dry_filter_cake",
+        "action_zh": "抽滤并抽干滤饼",
+        "objects": [
+          "橡胶管",
+          "抽滤瓶",
+          "布氏漏斗"
+        ],
+        "caption": "调整连接抽滤瓶的橡胶管，确保真空抽滤状态以干燥滤饼。",
+        "evidence_timestamps": [
+          66,
+          69
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "橡胶管",
+            "抽滤瓶",
+            "布氏漏斗"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "橡胶管",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s006",
+        "start": 72.0,
+        "end": 92.0,
+        "action": "wash_filter_cake",
+        "action_zh": "洗涤滤饼",
+        "objects": [
+          "棕色试剂瓶",
+          "药匙",
+          "布氏漏斗",
+          "滤饼"
+        ],
+        "caption": "直接向漏斗内的滤饼上加入溶剂，并用玻璃棒搅拌以辅助洗涤。",
+        "evidence_timestamps": [
+          75,
+          80,
+          85
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "棕色试剂瓶",
+            "药匙",
+            "布氏漏斗",
+            "滤饼"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "药匙",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "滤饼",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s007",
+        "start": 93.0,
+        "end": 104.0,
+        "action": "vacuum_dry_filter_cake",
+        "action_zh": "抽滤并抽干滤饼",
+        "objects": [
+          "橡胶管",
+          "抽滤瓶",
+          "布氏漏斗"
+        ],
+        "caption": "再次检查并调整真空管路，继续进行抽滤操作。",
+        "evidence_timestamps": [
+          95,
+          100
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "橡胶管",
+            "抽滤瓶",
+            "布氏漏斗"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "橡胶管",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s008",
+        "start": 105.0,
+        "end": 122.0,
+        "action": "wash_filter_cake",
+        "action_zh": "洗涤滤饼",
+        "objects": [
+          "棕色试剂瓶",
+          "药匙",
+          "布氏漏斗",
+          "滤饼"
+        ],
+        "caption": "重复向滤饼加入溶剂并使用玻璃棒搅拌的操作。",
+        "evidence_timestamps": [
+          108,
+          115,
+          120
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "棕色试剂瓶",
+            "药匙",
+            "布氏漏斗",
+            "滤饼"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "药匙",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "滤饼",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s009",
+        "start": 123.0,
+        "end": 132.0,
+        "action": "vacuum_dry_filter_cake",
+        "action_zh": "抽滤并抽干滤饼",
+        "objects": [
+          "橡胶管",
+          "抽滤瓶",
+          "布氏漏斗"
+        ],
+        "caption": "调整真空管路连接，保持抽滤状态。",
+        "evidence_timestamps": [
+          125,
+          129
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "橡胶管",
+            "抽滤瓶",
+            "布氏漏斗"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "橡胶管",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s010",
+        "start": 133.0,
+        "end": 146.0,
+        "action": "wash_filter_cake",
+        "action_zh": "洗涤滤饼",
+        "objects": [
+          "棕色试剂瓶",
+          "药匙",
+          "布氏漏斗",
+          "滤饼"
+        ],
+        "caption": "第三次向滤饼加入溶剂并使用玻璃棒搅拌。",
+        "evidence_timestamps": [
+          136,
+          140,
+          144
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "棕色试剂瓶",
+            "药匙",
+            "布氏漏斗",
+            "滤饼"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "药匙",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          },
+          {
+            "object": "滤饼",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "1_s011",
+        "start": 147.0,
+        "end": 157.0,
+        "action": "vacuum_dry_filter_cake",
+        "action_zh": "抽滤并抽干滤饼",
+        "objects": [
+          "橡胶管",
+          "抽滤瓶",
+          "布氏漏斗"
+        ],
+        "caption": "最后一次调整真空管路，完成最终的抽滤干燥过程。",
+        "evidence_timestamps": [
+          149,
+          153,
+          156
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "橡胶管",
+            "抽滤瓶",
+            "布氏漏斗"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "橡胶管",
+            "present": true
+          },
+          {
+            "object": "抽滤瓶",
+            "present": true
+          },
+          {
+            "object": "布氏漏斗",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [],
+    "processing_note": "omni pipeline: no frame extraction"
+  }
+]

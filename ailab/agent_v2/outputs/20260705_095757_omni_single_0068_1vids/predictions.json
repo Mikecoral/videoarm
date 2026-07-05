@@ -1,0 +1,472 @@
+[
+  {
+    "video_id": "0068",
+    "video_path": "videos/0068.mp4",
+    "phase": "column_chromatography_setup",
+    "phase_zh": "柱层析准备",
+    "phase_confidence": 0.95,
+    "alternative_phases": [
+      {
+        "phase": "reaction_setup",
+        "phase_zh": "开反应",
+        "confidence": 0.1,
+        "reason": "虽然涉及液体转移，但核心设备是自动过柱机而非普通反应烧瓶。"
+      },
+      {
+        "phase": "other_visible_lab_operation",
+        "phase_zh": "其他可见实验操作",
+        "confidence": 0.05,
+        "reason": "操作特征明显指向特定仪器（过柱机），不属于无分类的杂项操作。"
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "0068_s001",
+        "start": 0.0,
+        "end": 23.0,
+        "action": "load_dry_loaded_sample_into_sample_cartridge",
+        "action_zh": "将干法上样样品装入装样柱",
+        "objects": [
+          "硅胶",
+          "装样柱",
+          "试剂瓶"
+        ],
+        "caption": "实验人员向装样柱中加入白色粉末状硅胶，并倒入少量液体润湿固定。",
+        "evidence_timestamps": [
+          5,
+          12,
+          18
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "硅胶",
+            "装样柱",
+            "试剂瓶"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "硅胶",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s002",
+        "start": 27.0,
+        "end": 46.0,
+        "action": "set_automated_column_chromatography_parameters",
+        "action_zh": "设置过柱机分离参数",
+        "objects": [
+          "过柱机",
+          "触摸屏"
+        ],
+        "caption": "实验人员在过柱机的触摸屏上进行操作，设置分离程序参数。",
+        "evidence_timestamps": [
+          33,
+          39,
+          44
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "过柱机",
+            "触摸屏"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "过柱机",
+            "present": true
+          },
+          {
+            "object": "触摸屏",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s003",
+        "start": 47.0,
+        "end": 55.0,
+        "action": "install_sample_cartridge_on_chromatography_system",
+        "action_zh": "安装装样柱",
+        "objects": [
+          "过柱机",
+          "装样柱"
+        ],
+        "caption": "实验人员将准备好的装样柱安装到过柱机的指定接口上。",
+        "evidence_timestamps": [
+          49,
+          53
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "过柱机",
+            "装样柱"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "过柱机",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s004",
+        "start": 56.0,
+        "end": 63.0,
+        "action": "measure_liquid_for_addition",
+        "action_zh": "量取待加入液体",
+        "objects": [
+          "溶剂瓶",
+          "装样柱"
+        ],
+        "caption": "实验人员从标有Hex的溶剂瓶中倒出液体至装样柱中。",
+        "evidence_timestamps": [
+          58,
+          61
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "溶剂瓶",
+            "装样柱"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "溶剂瓶",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s005",
+        "start": 64.0,
+        "end": 85.0,
+        "action": "wet_and_equilibrate_column",
+        "action_zh": "润柱并平衡",
+        "objects": [
+          "过柱机",
+          "装样柱",
+          "管路"
+        ],
+        "caption": "实验人员将装有液体的装样柱连接到过柱机管路上，启动泵进行润柱平衡。",
+        "evidence_timestamps": [
+          67,
+          75,
+          82
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "过柱机",
+            "装样柱",
+            "管路"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "过柱机",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          },
+          {
+            "object": "管路",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s006",
+        "start": 86.0,
+        "end": 91.0,
+        "action": "measure_liquid_for_addition",
+        "action_zh": "量取待加入液体",
+        "objects": [
+          "溶剂瓶",
+          "装样柱"
+        ],
+        "caption": "实验人员再次从溶剂瓶中倒出液体补充到装样柱中。",
+        "evidence_timestamps": [
+          88,
+          90
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "溶剂瓶",
+            "装样柱"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "溶剂瓶",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s007",
+        "start": 92.0,
+        "end": 101.0,
+        "action": "wet_and_equilibrate_column",
+        "action_zh": "润柱并平衡",
+        "objects": [
+          "过柱机",
+          "装样柱"
+        ],
+        "caption": "实验人员继续观察装样柱内的液体流动情况以完成平衡。",
+        "evidence_timestamps": [
+          95,
+          99
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "过柱机",
+            "装样柱"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "过柱机",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s008",
+        "start": 102.0,
+        "end": 115.0,
+        "action": "install_sample_cartridge_on_chromatography_system",
+        "action_zh": "安装装样柱",
+        "objects": [
+          "过柱机",
+          "装样柱",
+          "接头"
+        ],
+        "caption": "实验人员调整并紧固装样柱与过柱机系统的连接接头。",
+        "evidence_timestamps": [
+          105,
+          110,
+          113
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "过柱机",
+            "装样柱",
+            "接头"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "过柱机",
+            "present": true
+          },
+          {
+            "object": "装样柱",
+            "present": true
+          },
+          {
+            "object": "接头",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "0068_s009",
+        "start": 116.0,
+        "end": 122.0,
+        "action": "set_automated_column_chromatography_parameters",
+        "action_zh": "设置过柱机分离参数",
+        "objects": [
+          "过柱机",
+          "触摸屏"
+        ],
+        "caption": "实验人员再次在过柱机屏幕上点击确认，准备开始运行程序。",
+        "evidence_timestamps": [
+          118,
+          121
+        ],
+        "confidence": 0.5,
+        "verification_status": "partial",
+        "uncertainty_reason": "整视频直接理解，未做逐帧视觉核验",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "人工复核该片段的动作类别、物体和边界是否与画面一致",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "caption_ok": false,
+          "objects_present": [],
+          "objects_missing": [
+            "过柱机",
+            "触摸屏"
+          ],
+          "missing_evidence": [
+            "整视频直接理解，未做逐帧核验"
+          ],
+          "note": "omni pipeline，无帧级验证"
+        },
+        "object_evidence": [
+          {
+            "object": "过柱机",
+            "present": true
+          },
+          {
+            "object": "触摸屏",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [],
+    "processing_note": "omni pipeline: no frame extraction"
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "video_id": "5",
+    "video_info": {
+      "duration": 67.3,
+      "fps": 30.0,
+      "resolution": "1280x720",
+      "pipeline": "omni",
+      "omni_fps": 1.0
+    },
+    "steps": [
+      {
+        "step": "omni_phase_hypothesis",
+        "output": {
+          "phase": "analytical_sample_preparation",
+          "phase_zh": "分析样品制备",
+          "confidence": 0.95,
+          "alternative_phases": [
+            {
+              "phase": "other_visible_lab_operation",
+              "phase_zh": "其他可见实验操作",
+              "confidence": 0.2,
+              "reason": "虽然操作规范，但本质上属于常规的液体转移和稀释操作。"
+            },
+            {
+              "phase": "reaction_setup",
+              "phase_zh": "开反应",
+              "confidence": 0.1,
+              "reason": "视频中仅涉及微量液体的混合与转移，未见典型的反应容器（如烧瓶）或加热搅拌装置。"
+            }
+          ],
+          "evidence_timestamps": [
+            "00:08",
+            "00:13",
+            "00:26",
+            "00:52"
+          ],
+          "reason": "视频主要展示了使用移液枪将安瓿瓶中的黄色液体转移至EP管，并进行震荡混合、稀释等典型的前处理步骤，符合分析样品制备的特征，且未出现TLC板、分液漏斗或柱层析装置等其他选项的关键视觉线索。"
+        },
+        "elapsed": 17.156
+      },
+      {
+        "step": "omni_action_segmentation",
+        "input": {
+          "phase": "analytical_sample_preparation",
+          "phase_confidence": 0.95,
+          "catalog_phases": [
+            "analytical_sample_preparation"
+          ]
+        },
+        "output": [
+          {
+            "start": "10.0",
+            "end": "23.0",
+            "action": "pipette_sample_solution",
+            "action_zh": "移取样品溶液",
+            "objects": [
+              "安瓿瓶",
+              "EP管",
+              "移液枪"
+            ],
+            "caption": "使用移液枪从棕色安瓿瓶中吸取黄色液体并转移至透明EP管中。",
+            "evidence_timestamps": [
+              13,
+              16,
+              20
+            ]
+          },
+          {
+            "start": "24.0",
+            "end": "45.0",
+            "action": "dissolve_sample_by_shaking",
+            "action_zh": "振荡溶解样品",
+            "objects": [
+              "EP管"
+            ],
+            "caption": "盖上EP管盖子，手持试管进行上下振荡以混合或溶解样品。",
+            "evidence_timestamps": [
+              28,
+              33,
+              40
+            ]
+          },
+          {
+            "start": "50.0",
+            "end": "67.0",
+            "action": "transfer_to_NMR_tube",
+            "action_zh": "转移至核磁管",
+            "objects": [
+              "EP管",
+              "核磁管",
+              "移液枪"
+            ],
+            "caption": "使用移液枪将EP管中的澄清液体吸取并转移至细长的玻璃核磁管中。",
+            "evidence_timestamps": [
+              54,
+              59,
+              64
+            ]
+          }
+        ],
+        "elapsed": 19.412
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 3
+        },
+        "output": {
+          "accepted": 3,
+          "filtered": 0,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 67.3,
+          "covered_seconds": 51.0,
+          "coverage_ratio": 0.758,
+          "large_gaps": [],
+          "backtrack_findings": [],
+          "suspicious_gap_count": 0,
+          "needs_review": false
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 3,
+          "phase": "analytical_sample_preparation",
+          "pipeline": "omni"
+        }
+      }
+    ]
+  }
+]

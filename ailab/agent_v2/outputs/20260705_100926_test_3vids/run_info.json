@@ -1,0 +1,94 @@
+{
+  "started_at": "2026-07-05T10:09:26.748674",
+  "split": "test",
+  "video_count": 3,
+  "video_ids": [
+    "1",
+    "4",
+    "5"
+  ],
+  "model": "qwen3.5-27b",
+  "finished_at": "2026-07-05T10:16:17.440193",
+  "total_seconds": 410.7,
+  "global_memory_summary": {
+    "video_count": 3,
+    "top_actions": [
+      [
+        "wash_filter_cake",
+        5
+      ],
+      [
+        "pour_mixture_to_filter",
+        4
+      ],
+      [
+        "prepare_filter_apparatus",
+        2
+      ],
+      [
+        "transfer_and_add_small_volume_liquid",
+        2
+      ],
+      [
+        "transfer_liquid_to_rotary_evaporator",
+        1
+      ],
+      [
+        "vacuum_dry_filter_cake",
+        1
+      ],
+      [
+        "measure_liquid_for_addition",
+        1
+      ],
+      [
+        "transfer_to_NMR_tube",
+        1
+      ]
+    ],
+    "top_objects": [
+      [
+        "布氏漏斗",
+        11
+      ],
+      [
+        "棕色试剂瓶",
+        7
+      ],
+      [
+        "抽滤瓶",
+        7
+      ],
+      [
+        "白色固体",
+        5
+      ],
+      [
+        "吸滤瓶",
+        2
+      ],
+      [
+        "滴管",
+        2
+      ],
+      [
+        "白色浑浊液体",
+        2
+      ],
+      [
+        "锥形瓶",
+        2
+      ]
+    ],
+    "top_uncertainty_patterns": [
+      [
+        "perception",
+        6
+      ],
+      [
+        "cognitive",
+        1
+      ]
+    ]
+  }
+}

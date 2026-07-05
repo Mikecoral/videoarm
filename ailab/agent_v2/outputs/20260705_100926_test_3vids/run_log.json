@@ -1,0 +1,3643 @@
+[
+  {
+    "video_id": "1",
+    "video_info": {
+      "duration": 159.9,
+      "fps": 30.0,
+      "resolution": "960x544",
+      "sampled_frames": 160
+    },
+    "steps": [
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            0.0,
+            14.5
+          ],
+          "frame_ts": [
+            0.0,
+            7.0,
+            14.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见一台正在运行的旋转蒸发仪（旋蒸仪）、一个装有白色固体的玻璃漏斗装置、棕色试剂瓶以及若干连接管路。\n2. 实验人员右手拿起并握持棕色试剂瓶，左手在左下角操作或整理物品。\n3. 视频片段内未观察到明显的液体倾倒、盖盖或状态变化过程，主要呈现为仪器的运行状态及人员的准备动作。\n4. 明确出现了专用仪器“旋蒸仪”（左侧带数字显示屏的设备）以及用于分离操作的玻璃漏斗组件。"
+        },
+        "elapsed": 2.736
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            14.5,
+            29.1
+          ],
+          "frame_ts": [
+            15.0,
+            22.0,
+            29.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见一台白色旋蒸仪（旋转蒸发仪）、一个棕色试剂瓶、一套玻璃过滤装置（含布氏漏斗或抽滤瓶）以及连接用的橡胶管。\n2. 实验人员左手持有一把金属药匙，右手拿着一只锥形瓶，正在将瓶中白色的固体粉末倒入上方的玻璃漏斗中。\n3. 随着倾倒操作，白色粉末明显落入漏斗内并堆积起来，完成了加样过程。\n4. 场景中明确出现了专用仪器**旋蒸仪**和用于分离操作的**抽滤装置**（包含漏斗与接收瓶）。"
+        },
+        "elapsed": 3.965
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            29.1,
+            43.6
+          ],
+          "frame_ts": [
+            30.0,
+            36.0,
+            43.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见布氏漏斗（Büchner funnel）、抽滤瓶、真空泵管路及白色固体物料。\n2) 实验人员双手正将盛有白色固体的容器倾斜，把物料倒入漏斗中进行过滤。\n3) 发生了明显的加料操作，白色固体从上方容器转移至漏斗内堆积。\n4) 出现了用于减压过滤的专用仪器：布氏漏斗和抽滤瓶（连接真空泵）。"
+        },
+        "elapsed": 2.015
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            43.6,
+            58.1
+          ],
+          "frame_ts": [
+            44.0,
+            51.0,
+            58.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见左侧的低温恒温槽、右侧带有压力表的旋转蒸发仪（旋蒸仪）以及实验人员手中的棕色试剂瓶和透明玻璃瓶。实验人员双手分别持握两个瓶子，随后将透明玻璃瓶中的液体倒入旋蒸仪上方的圆底烧瓶中。这一操作导致了明显的状态变化，即向旋蒸系统中添加了溶剂或样品。场景中明确出现了专用仪器：旋转蒸发仪（含冷凝管、接收瓶及真空泵管路）。"
+        },
+        "elapsed": 2.073
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            58.1,
+            72.7
+          ],
+          "frame_ts": [
+            59.0,
+            65.0,
+            72.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一台旋蒸仪（旋转蒸发仪）、棕色试剂瓶、白色塑料洗瓶及玻璃接收瓶。实验人员左手持棕色试剂瓶，右手操作旋蒸仪的加料漏斗或调节阀门。在视频过程中，未见明显的液体倾倒或状态变化发生。出现的专用仪器为旋蒸仪。"
+        },
+        "elapsed": 1.704
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            72.7,
+            87.2
+          ],
+          "frame_ts": [
+            73.0,
+            80.0,
+            87.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见棕色试剂瓶、布氏漏斗（或抽滤漏斗）、圆底烧瓶、真空泵及连接管路。\n2. 实验人员左手持棕色瓶向漏斗内倾倒液体，右手持玻璃棒在漏斗中进行搅拌或引流操作。\n3. 发生了明显的倒液状态变化，漏斗内的白色固体正在被液体浸润或洗涤。\n4. 出现了专用分离仪器“真空泵”以及配套的过滤装置（漏斗与接收瓶）。"
+        },
+        "elapsed": 1.839
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            87.2,
+            101.8
+          ],
+          "frame_ts": [
+            88.0,
+            94.0,
+            101.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见装有白色固体的玻璃漏斗、下方连接的接收瓶以及背景中的真空泵和冰槽。实验人员左手扶住漏斗，右手使用一根细长的玻璃棒或毛细管在漏斗内的固体表面进行操作（疑似点样或搅拌）。操作过程中漏斗内物质状态未见明显宏观变化，但正在进行精细的接触处理。场景中出现了真空泵等专用仪器，但未观察到TLC板、展开缸或旋蒸仪等其他特定耗材。"
+        },
+        "elapsed": 2.041
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            101.8,
+            116.3
+          ],
+          "frame_ts": [
+            102.0,
+            109.0,
+            116.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色固体的玻璃烧杯、棕色试剂瓶、金属搅拌棒以及背景中的旋转蒸发仪。\n2) 实验人员左手持烧杯，右手先是将棕色瓶中的液体倒入烧杯，随后使用金属棒对烧杯内的混合物进行搅拌。\n3) 发生了明显的倒液和搅拌操作，固体与液体混合在一起。\n4) 出现了专用仪器：左侧背景为**旋蒸仪**（旋转蒸发仪），右侧连接着抽滤装置（含布氏漏斗）。"
+        },
+        "elapsed": 2.263
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            116.3,
+            130.8
+          ],
+          "frame_ts": [
+            117.0,
+            124.0,
+            130.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一台旋蒸仪（左侧带数字显示屏的仪器）、一个装有白色固体的玻璃烧杯、以及连接在旋蒸仪上的冷凝管和接收瓶。\n2) 实验人员左手扶住烧杯，右手持一根细长的玻璃棒或滴管伸入烧杯内，似乎正在搅拌或转移其中的白色物质。\n3) 未观察到明显的液体倾倒或状态突变，主要动作集中在对烧杯内物质的处理上。\n4) 明确出现了**旋蒸仪**这一专用分析/分离仪器。"
+        },
+        "elapsed": 2.327
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            130.8,
+            145.4
+          ],
+          "frame_ts": [
+            131.0,
+            138.0,
+            145.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见一台正在运行的旋蒸仪（旋转蒸发仪），其圆底烧瓶内盛有白色固体或浑浊液体，旁边放置着棕色试剂瓶、塑料瓶及连接管路。\n2. 实验人员左手扶住旋蒸仪的冷凝管/接收端接口，右手持一根细长的玻璃棒伸入烧瓶内部进行搅拌操作。\n3. 随着搅拌动作，烧瓶内的白色物质状态保持相对稳定，未见明显的倾倒或相分离变化。\n4. 明确出现了专用仪器**旋蒸仪**。"
+        },
+        "elapsed": 2.134
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            145.4,
+            159.9
+          ],
+          "frame_ts": [
+            146.0,
+            153.0,
+            159.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见一台带有数字显示屏的真空泵、一套玻璃过滤装置（包含漏斗和抽滤瓶）、白色粉末状固体以及连接用的橡胶管。\n2. 实验人员双手正在操作，将装有白色固体的玻璃漏斗旋紧并安装到下方的抽滤瓶上。\n3. 随着装置组装完成，可以看到白色固体在真空作用下开始向下沉降，表明系统已连通并开始工作。\n4. 明确出现了专用仪器：真空泵和用于分离操作的抽滤装置（含布氏漏斗或类似过滤组件）。"
+        },
+        "elapsed": 2.339
+      },
+      {
+        "step": "phase_hypothesis",
+        "output": {
+          "phase": "filtration",
+          "phase_zh": "过滤与抽滤",
+          "confidence": 0.92,
+          "alternative_phases": [
+            {
+              "phase": "reaction_setup",
+              "phase_zh": "开反应",
+              "confidence": 0.45,
+              "reason": "视频中包含向烧瓶加液和搅拌操作，但核心流程围绕固液分离装置展开。"
+            },
+            {
+              "phase": "rotary_evaporation",
+              "phase_zh": "旋转蒸发",
+              "confidence": 0.35,
+              "reason": "旋蒸仪在背景中频繁出现且被操作，但主要动作是向其中加料或作为辅助，未展示完整的溶剂去除过程。"
+            }
+          ],
+          "evidence_timestamps": [
+            14,
+            29,
+            73,
+            145
+          ],
+          "reason": "视频多次明确展示了布氏漏斗、抽滤瓶及真空泵的组装与使用（如 14-29s 加样入漏斗、73-87s 液体洗涤固体、145-160s 安装并启动真空抽滤），符合过滤阶段的核心视觉特征。"
+        },
+        "elapsed": 4.389
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.92,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": 14,
+            "end": 29,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "锥形瓶",
+              "金属药匙",
+              "玻璃漏斗",
+              "白色固体粉末"
+            ],
+            "caption": "实验人员使用药匙辅助，将锥形瓶中的白色固体粉末倒入上方的玻璃漏斗中。",
+            "evidence_timestamps": [
+              18,
+              22,
+              26
+            ]
+          },
+          {
+            "start": 29,
+            "end": 44,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "布氏漏斗",
+              "抽滤瓶",
+              "容器",
+              "白色固体"
+            ],
+            "caption": "实验人员将盛有白色固体的容器倾斜，把物料倒入布氏漏斗中进行加料。",
+            "evidence_timestamps": [
+              32,
+              36,
+              40
+            ]
+          },
+          {
+            "start": 73,
+            "end": 87,
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "棕色试剂瓶",
+              "布氏漏斗",
+              "玻璃棒",
+              "白色固体",
+              "真空泵"
+            ],
+            "caption": "实验人员向漏斗内的白色固体倾倒液体进行浸润或洗涤，并用玻璃棒搅拌引流。",
+            "evidence_timestamps": [
+              76,
+              80,
+              84
+            ]
+          },
+          {
+            "start": 87,
+            "end": 102,
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "玻璃漏斗",
+              "接收瓶",
+              "玻璃棒",
+              "白色固体",
+              "真空泵"
+            ],
+            "caption": "实验人员使用细长玻璃棒在漏斗内的固体表面进行精细的接触处理或搅拌操作。",
+            "evidence_timestamps": [
+              90,
+              95,
+              100
+            ]
+          },
+          {
+            "start": 145,
+            "end": 160,
+            "action": "prepare_filter_apparatus",
+            "action_zh": "准备过滤装置",
+            "objects": [
+              "玻璃漏斗",
+              "抽滤瓶",
+              "真空泵",
+              "橡胶管",
+              "白色固体"
+            ],
+            "caption": "实验人员将装有白色固体的玻璃漏斗旋紧并安装到下方的抽滤瓶上，连通真空系统开始工作。",
+            "evidence_timestamps": [
+              148,
+              152,
+              156
+            ]
+          }
+        ],
+        "elapsed": 8.737
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            14.0,
+            19.0
+          ],
+          "frame_ts": [
+            14.0,
+            16.0,
+            17.0,
+            19.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一台旋蒸仪（旋转蒸发仪）、一个棕色试剂瓶、一套抽滤装置（含布氏漏斗和吸滤瓶）以及铁架台。\n2) 实验人员左手持棕色试剂瓶，右手拿着一把药匙，同时另一只手正将白色固体从烧杯倒入抽滤装置的漏斗中。\n3) 发生了明显的倒料操作，白色粉末状固体正在被转移至过滤设备内。\n4) 出现了专用仪器：左侧为旋蒸仪，右侧正在进行固液分离操作的装置包含布氏漏斗和吸滤瓶。"
+        },
+        "elapsed": 4.324
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            19.0,
+            24.0
+          ],
+          "frame_ts": [
+            19.0,
+            21.0,
+            22.0,
+            24.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一台旋转蒸发仪（左侧）、一套抽滤装置（含布氏漏斗、抽滤瓶及真空泵管路），以及棕色试剂瓶和白色塑料瓶。\n2) 实验人员右手持白色塑料瓶，正在向抽滤装置的玻璃漏斗内倾倒白色浑浊液体；左手在左下角操作棕色试剂瓶的瓶盖。\n3) 发生了明显的倒液状态变化，漏斗内的固体物质被液体浸润并混合。\n4) 出现了专用仪器：旋转蒸发仪和抽滤装置（包含布氏漏斗与抽滤瓶）。"
+        },
+        "elapsed": 6.612
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            24.0,
+            29.0
+          ],
+          "frame_ts": [
+            24.0,
+            26.0,
+            27.0,
+            29.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见旋转蒸发仪（含冷凝管、接收瓶）、烧杯、锥形瓶及真空泵管路。\n2) 实验人员右手持锥形瓶，正在向旋转蒸发仪的圆底烧瓶中倾倒白色浑浊液体。\n3) 发生了明显的倒液操作，烧瓶内液体的体积随倾倒过程逐渐增加。\n4) 出现了专用仪器“旋蒸仪”（旋转蒸发仪）。"
+        },
+        "elapsed": 2.447
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.92,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": 14,
+            "end": 19,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "烧杯",
+              "药匙",
+              "布氏漏斗",
+              "吸滤瓶",
+              "白色固体"
+            ],
+            "caption": "实验人员使用药匙辅助，将烧杯中的白色固体粉末转移并倒入抽滤装置的布氏漏斗中。",
+            "evidence_timestamps": [
+              15,
+              17,
+              18
+            ]
+          },
+          {
+            "start": 19,
+            "end": 24,
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "白色塑料瓶",
+              "布氏漏斗",
+              "吸滤瓶",
+              "白色浑浊液体"
+            ],
+            "caption": "实验人员手持白色塑料瓶，向布氏漏斗内的固体物质倾倒液体进行浸润和洗涤。",
+            "evidence_timestamps": [
+              20,
+              22,
+              23
+            ]
+          },
+          {
+            "start": 24,
+            "end": 29,
+            "action": "transfer_liquid_to_rotary_evaporator",
+            "action_zh": "将液体转移至旋转蒸发仪",
+            "objects": [
+              "锥形瓶",
+              "旋转蒸发仪",
+              "圆底烧瓶",
+              "白色浑浊液体"
+            ],
+            "caption": "实验人员将锥形瓶中的白色浑浊液体倒入旋转蒸发仪的圆底烧瓶中。",
+            "evidence_timestamps": [
+              25,
+              26,
+              28
+            ]
+          }
+        ],
+        "elapsed": 5.693
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            14.0,
+            29.0
+          ]
+        },
+        "output": {
+          "sub_segments": 3
+        }
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            29.0,
+            34.0
+          ],
+          "frame_ts": [
+            29.0,
+            31.0,
+            32.0,
+            34.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见布氏漏斗（或砂芯漏斗）、抽滤瓶、真空泵（左侧白色设备）以及盛有乳白色液体的塑料量杯。\n2) 实验人员右手持量杯，正将乳白色液体缓慢倒入漏斗中进行过滤；左手在后期出现并靠近漏斗颈部。\n3) 发生了明显的倒液操作，漏斗内的液位随倾倒过程逐渐上升。\n4) 出现了专用仪器：真空泵和用于固液分离的抽滤装置（含漏斗与抽滤瓶）。"
+        },
+        "elapsed": 2.65
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            34.0,
+            39.0
+          ],
+          "frame_ts": [
+            34.0,
+            36.0,
+            37.0,
+            39.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见布氏漏斗、抽滤瓶、真空泵（左侧白色设备）以及连接管路。\n2) 实验人员双手正拿着一个装有白色固体的塑料容器，将其中的物质倒入布氏漏斗中进行过滤。\n3) 发生了明显的倒料操作，白色固体正在从容器中转移至漏斗内。\n4) 出现了专用分离仪器：真空泵和用于减压过滤的装置（布氏漏斗与抽滤瓶组合）。"
+        },
+        "elapsed": 1.984
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            39.0,
+            44.0
+          ],
+          "frame_ts": [
+            39.0,
+            41.0,
+            42.0,
+            44.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见布氏漏斗、抽滤瓶（连接真空泵）、白色固体物料以及一个塑料量杯。\n2) 实验人员双手正手持塑料量杯，将其中的白色粉末状物质倒入上方的布氏漏斗中进行加样。\n3) 发生了明显的倒料操作，白色固体从量杯转移至漏斗内堆积。\n4) 出现了专用分离仪器：由布氏漏斗和抽滤瓶组成的**减压过滤装置**（或称真空抽滤系统）。"
+        },
+        "elapsed": 2.282
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.92,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": 29,
+            "end": 34,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "布氏漏斗",
+              "抽滤瓶",
+              "真空泵",
+              "塑料量杯",
+              "乳白色液体"
+            ],
+            "caption": "实验人员手持塑料量杯，将乳白色液体缓慢倒入布氏漏斗中进行过滤。",
+            "evidence_timestamps": [
+              30,
+              31,
+              32,
+              33
+            ]
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "布氏漏斗",
+              "抽滤瓶",
+              "真空泵",
+              "塑料容器",
+              "白色固体"
+            ],
+            "caption": "实验人员双手持装有白色固体的塑料容器，将其中的物质倒入布氏漏斗中。",
+            "evidence_timestamps": [
+              35,
+              36,
+              37,
+              38
+            ]
+          },
+          {
+            "start": 39,
+            "end": 44,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "布氏漏斗",
+              "抽滤瓶",
+              "真空泵",
+              "塑料量杯",
+              "白色粉末"
+            ],
+            "caption": "实验人员手持塑料量杯，将白色粉末状物质倒入上方的布氏漏斗中进行加样。",
+            "evidence_timestamps": [
+              40,
+              41,
+              42,
+              43
+            ]
+          }
+        ],
+        "elapsed": 5.428
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            29.0,
+            44.0
+          ]
+        },
+        "output": {
+          "sub_segments": 3
+        }
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            73.0,
+            77.7
+          ],
+          "frame_ts": [
+            73.0,
+            75.0,
+            76.0,
+            77.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见棕色试剂瓶、布氏漏斗（Büchner funnel）、抽滤瓶、真空泵及连接管路。\n2. 实验人员左手将液体从棕色瓶中倒入漏斗，随后右手持玻璃棒在漏斗内搅拌或引流。\n3. 发生了明显的倒液操作，漏斗内的白色固体与液体混合状态发生变化。\n4. 出现了专用分离仪器：真空泵和用于减压过滤的布氏漏斗装置。"
+        },
+        "elapsed": 2.173
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            77.7,
+            82.3
+          ],
+          "frame_ts": [
+            78.0,
+            79.0,
+            81.0,
+            82.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个带有红色手掌标识的玻璃烧杯、一根玻璃搅拌棒以及背景中的白色仪器（疑似旋转蒸发仪或真空泵）。\n2) 实验人员左手持握烧杯，右手使用玻璃棒在烧杯内部进行持续的搅拌操作。\n3) 烧杯内的液体状态未发生明显改变，主要动作是物理混合。\n4) 背景左侧出现了一台大型白色分析/分离仪器（外观特征符合旋转蒸发仪或真空系统），未见TLC板或分液漏斗等耗材。"
+        },
+        "elapsed": 2.323
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            82.3,
+            87.0
+          ],
+          "frame_ts": [
+            83.0,
+            84.0,
+            85.0,
+            87.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见装有白色固体的玻璃烧杯、连接着抽滤瓶的布氏漏斗（或砂芯漏斗）、以及一个盛有黄色液体的棕色试剂瓶。\n2. 实验人员左手扶住烧杯，右手持玻璃棒在杯中搅拌固体，随后拿起试剂瓶向烧杯内倾倒液体。\n3. 发生了明显的倒液操作，黄色溶剂被加入烧杯与固体混合，同时左侧真空泵设备处于开启状态。\n4. 出现了专用分离仪器和耗材：真空泵、抽滤装置（含抽滤瓶和漏斗）。"
+        },
+        "elapsed": 3.742
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.92,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": 73,
+            "end": 78,
+            "action": "pour_mixture_to_filter",
+            "action_zh": "将混合物倒入过滤装置",
+            "objects": [
+              "棕色试剂瓶",
+              "布氏漏斗",
+              "玻璃棒",
+              "抽滤瓶"
+            ],
+            "caption": "实验人员将液体从棕色试剂瓶倒入布氏漏斗，并用玻璃棒辅助引流或搅拌。",
+            "evidence_timestamps": [
+              74,
+              76,
+              77
+            ]
+          },
+          {
+            "start": 82,
+            "end": 87,
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "烧杯",
+              "白色固体",
+              "玻璃棒",
+              "棕色试剂瓶",
+              "黄色液体"
+            ],
+            "caption": "实验人员在烧杯中搅拌白色固体，随后加入黄色溶剂进行混合洗涤。",
+            "evidence_timestamps": [
+              83,
+              85,
+              86
+            ]
+          }
+        ],
+        "elapsed": 4.009
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            73.0,
+            87.0
+          ]
+        },
+        "output": {
+          "sub_segments": 2
+        }
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            87.0,
+            92.0
+          ],
+          "frame_ts": [
+            87.0,
+            89.0,
+            90.0,
+            92.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见装有白色固体的玻璃漏斗、下方的接收瓶以及左侧的真空泵装置。实验人员左手持棕色试剂瓶向漏斗内倾倒液体，右手使用玻璃棒在漏斗中进行搅拌操作。随着液体的加入，漏斗内的固体混合物状态发生改变，似乎正在溶解或混合。场景中明确出现了用于减压过滤或抽滤的专用仪器：真空泵和配套的玻璃漏斗组件。"
+        },
+        "elapsed": 2.099
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            92.0,
+            97.0
+          ],
+          "frame_ts": [
+            92.0,
+            94.0,
+            95.0,
+            97.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色固体的玻璃漏斗（布氏漏斗）、抽滤瓶、真空泵及连接用的橡胶管。\n2) 实验人员左手扶住漏斗与抽滤瓶的连接处，右手正在操作并调整连接在侧管的橡胶软管。\n3) 未见明显的液体倾倒或状态变化，主要是在进行真空过滤装置的管路连接或气密性检查。\n4) 出现了专用仪器：真空泵和用于减压过滤的布氏漏斗及抽滤瓶。"
+        },
+        "elapsed": 2.314
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            97.0,
+            102.0
+          ],
+          "frame_ts": [
+            97.0,
+            99.0,
+            100.0,
+            102.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见装有白色粉末的布氏漏斗、下方的抽滤瓶以及左侧的真空泵装置。实验人员双手正握住漏斗颈部，似乎在进行旋紧或调整连接的操作。整个过程中未见明显的液体倾倒或状态变化。出现的专用仪器包括布氏漏斗和真空泵。"
+        },
+        "elapsed": 3.057
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.92,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": 87,
+            "end": 92,
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "布氏漏斗",
+              "白色固体",
+              "棕色试剂瓶",
+              "玻璃棒",
+              "抽滤瓶"
+            ],
+            "caption": "实验人员向装有白色固体的布氏漏斗中倾倒液体，并使用玻璃棒搅拌以洗涤或混合滤饼。",
+            "evidence_timestamps": [
+              87,
+              89,
+              91
+            ]
+          },
+          {
+            "start": 92,
+            "end": 97,
+            "action": "prepare_filter_apparatus",
+            "action_zh": "准备过滤装置",
+            "objects": [
+              "布氏漏斗",
+              "抽滤瓶",
+              "真空泵",
+              "橡胶管"
+            ],
+            "caption": "实验人员调整连接在抽滤瓶侧管的橡胶软管，进行真空过滤装置的管路连接或气密性检查。",
+            "evidence_timestamps": [
+              93,
+              95,
+              96
+            ]
+          },
+          {
+            "start": 97,
+            "end": 102,
+            "action": "prepare_filter_apparatus",
+            "action_zh": "准备过滤装置",
+            "objects": [
+              "布氏漏斗",
+              "抽滤瓶",
+              "真空泵"
+            ],
+            "caption": "实验人员双手握住漏斗颈部，旋紧或调整布氏漏斗与抽滤瓶的连接以确保密封。",
+            "evidence_timestamps": [
+              98,
+              100,
+              101
+            ]
+          }
+        ],
+        "elapsed": 5.58
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            87.0,
+            102.0
+          ]
+        },
+        "output": {
+          "sub_segments": 3
+        }
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            145.0,
+            150.0
+          ],
+          "frame_ts": [
+            145.0,
+            147.0,
+            148.0,
+            150.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色固体的玻璃漏斗、下方连接的圆底烧瓶、真空泵（左侧大型设备）、以及连接管路和塑料洗瓶。\n2) 实验人员双手正在操作漏斗下方的旋塞，并调整连接在侧口的抽气管路。\n3) 漏斗内的白色固体保持静止状态，未见明显的液体倾倒或转移动作。\n4) 出现了专用仪器：真空泵（用于减压过滤）及配套的过滤装置（布氏漏斗/砂芯漏斗）。"
+        },
+        "elapsed": 2.459
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            150.0,
+            154.9
+          ],
+          "frame_ts": [
+            150.0,
+            152.0,
+            153.0,
+            154.0
+          ]
+        },
+        "output": {
+          "summary": "1. 画面中可见装有白色粉末的玻璃漏斗（或布氏漏斗）、下方的抽滤瓶、连接真空泵的橡胶管以及一个塑料洗瓶。\n2. 实验人员左手扶住漏斗与抽滤瓶的连接处，右手持洗瓶向漏斗内的固体粉末喷洒液体进行洗涤。\n3. 随着液体的加入，漏斗内的白色粉末表面明显变湿，发生了润湿状态的变化。\n4. 背景中出现了正在运行的真空泵（专用分离仪器），配合漏斗和抽滤瓶构成了减压过滤装置。"
+        },
+        "elapsed": 3.573
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            154.9,
+            159.9
+          ],
+          "frame_ts": [
+            155.0,
+            157.0,
+            158.0,
+            159.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色固体的玻璃漏斗（带有红色标志）、下方的圆底烧瓶、连接管路以及背景中的真空泵和冰槽。\n2) 实验人员双手正在调整漏斗与下方烧瓶的连接处，随后松开手离开画面。\n3) 漏斗内的白色固体未见明显流动或状态变化，装置处于静止待命状态。\n4) 出现了专用仪器：左侧为真空泵，右侧背景有冰槽，整体装置疑似用于减压过滤或抽滤操作。"
+        },
+        "elapsed": 2.948
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "filtration",
+          "phase_confidence": 0.92,
+          "catalog_phases": [
+            "filtration"
+          ]
+        },
+        "output": [
+          {
+            "start": 145,
+            "end": 150,
+            "action": "vacuum_dry_filter_cake",
+            "action_zh": "抽滤并抽干滤饼",
+            "objects": [
+              "布氏漏斗",
+              "圆底烧瓶",
+              "真空泵",
+              "橡胶管",
+              "白色固体"
+            ],
+            "caption": "实验人员操作漏斗下方的旋塞并调整连接真空泵的管路，对漏斗内的白色固体进行减压抽干。",
+            "evidence_timestamps": [
+              146,
+              148,
+              149
+            ]
+          },
+          {
+            "start": 150,
+            "end": 155,
+            "action": "wash_filter_cake",
+            "action_zh": "洗涤滤饼",
+            "objects": [
+              "布氏漏斗",
+              "洗瓶",
+              "白色粉末",
+              "抽滤瓶",
+              "真空泵"
+            ],
+            "caption": "实验人员手持洗瓶向漏斗内的白色粉末喷洒液体，对滤饼进行洗涤。",
+            "evidence_timestamps": [
+              151,
+              152,
+              153
+            ]
+          }
+        ],
+        "elapsed": 5.429
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            145.0,
+            159.9
+          ]
+        },
+        "output": {
+          "sub_segments": 2
+        }
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            14.0,
+            19.0
+          ],
+          "action": "pour_mixture_to_filter"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "布氏漏斗",
+            "吸滤瓶",
+            "白色固体"
+          ],
+          "objects_missing": [
+            "烧杯",
+            "药匙"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，使用滴管吸取液体，准备向装有白色固体的抽滤装置中滴加。",
+          "missing_evidence": [
+            "画面中未出现标注所述的'烧杯'",
+            "画面中未出现标注所述的'药匙'，实际使用的是滴管",
+            "动作并非将混合物倒入漏斗，而是用滴管操作"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "标注中的关键器具（烧杯、药匙）与画面严重不符，且核心动作描述错误，建议人工修正为滴加操作。",
+          "confidence": 0.95,
+          "note": "画面显示的是使用滴管从棕色瓶中取液的操作，而非使用药匙从烧杯中倒出固体。"
+        },
+        "elapsed": 4.557
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            14.0,
+            19.0
+          ],
+          "action": "pour_mixture_to_filter",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            12.0,
+            21.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 14.0,
+          "end": 19.0,
+          "action": "wash_filter_cake",
+          "action_zh": "洗涤滤饼",
+          "objects": [
+            "布氏漏斗",
+            "吸滤瓶",
+            "白色固体",
+            "棕色试剂瓶",
+            "滴管"
+          ],
+          "caption": "实验人员手持棕色试剂瓶，使用滴管吸取液体，向装有白色固体的抽滤装置中滴加进行洗涤。",
+          "evidence_timestamps": [
+            14.5,
+            16.0,
+            17.5
+          ],
+          "repair_reason": "原假设动作描述为'将混合物倒入过滤装置'与画面不符，画面显示的是用滴管从棕色瓶中取液滴入已有固体的漏斗中，符合'洗涤滤饼'的操作特征；修正了动作类型和描述以匹配视觉证据。"
+        },
+        "elapsed": 4.313
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            14.0,
+            19.0
+          ],
+          "action": "wash_filter_cake"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "吸滤瓶",
+            "白色固体",
+            "棕色试剂瓶",
+            "滴管"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持棕色试剂瓶，使用滴管吸取液体，向装有白色固体的抽滤装置中滴加进行洗涤。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了从棕色瓶中用滴管取液并滴入含白色固体的抽滤装置的完整过程，与标注完全一致。"
+        },
+        "elapsed": 2.68
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            19.0,
+            24.0
+          ],
+          "action": "wash_filter_cake"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "白色塑料瓶",
+            "布氏漏斗",
+            "吸滤瓶",
+            "白色浑浊液体"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持白色塑料瓶，向布氏漏斗内的固体物质倾倒液体进行浸润和洗涤。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了从白色塑料瓶向布氏漏斗倾倒液体的过程，与标注描述完全一致。"
+        },
+        "elapsed": 2.717
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            24.0,
+            29.0
+          ],
+          "action": "transfer_liquid_to_rotary_evaporator"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "锥形瓶",
+            "旋转蒸发仪",
+            "圆底烧瓶",
+            "白色浑浊液体"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员将锥形瓶中的白色浑浊液体倒入旋转蒸发仪的圆底烧瓶中。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.98,
+          "note": "画面清晰展示了手持锥形瓶向旋转蒸发仪圆底烧瓶倾倒白色液体的过程，与标注完全一致。"
+        },
+        "elapsed": 2.611
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            29.0,
+            34.0
+          ],
+          "action": "pour_mixture_to_filter"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "抽滤瓶",
+            "塑料量杯",
+            "乳白色液体"
+          ],
+          "objects_missing": [
+            "真空泵"
+          ],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持塑料量杯，将乳白色液体缓慢倒入布氏漏斗中进行过滤。",
+          "missing_evidence": [
+            "画面中未直接显示真空泵本体（仅可见连接管路）"
+          ],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "核心动作与物体清晰可见，真空泵虽在标注列表中但画面未直接展示设备主体，不影响操作判断。"
+        },
+        "elapsed": 3.117
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            34.0,
+            39.0
+          ],
+          "action": "pour_mixture_to_filter"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "抽滤瓶",
+            "塑料容器",
+            "白色固体"
+          ],
+          "objects_missing": [
+            "真空泵"
+          ],
+          "caption_ok": true,
+          "corrected_caption": "实验人员双手持装有白色固体的塑料容器，将其中的物质倒入布氏漏斗中。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了将白色固体从塑料容器倒入布氏漏斗的过程，操作与描述一致；虽然标注提及真空泵，但画面仅可见其连接的管路和抽滤装置主体，未直接展示泵体本身，但不影响核心动作判断。"
+        },
+        "elapsed": 2.847
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            39.0,
+            44.0
+          ],
+          "action": "pour_mixture_to_filter"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "抽滤瓶",
+            "真空泵",
+            "塑料量杯"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持塑料量杯，将白色粉末状物质倒入上方的布氏漏斗中进行加样。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了向布氏漏斗中倾倒白色固体的过程，标注与视觉证据高度一致。"
+        },
+        "elapsed": 2.48
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            73.0,
+            78.0
+          ],
+          "action": "pour_mixture_to_filter"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": true,
+          "objects_present": [
+            "棕色试剂瓶",
+            "布氏漏斗",
+            "抽滤瓶"
+          ],
+          "objects_missing": [
+            "玻璃棒"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员将液体从棕色试剂瓶倒入布氏漏斗，并用金属刮勺辅助搅拌或引流。",
+          "missing_evidence": [
+            "画面中未见玻璃棒，实际使用的工具为金属刮勺（spatula）"
+          ],
+          "uncertainty_level": "cognitive",
+          "review_suggestion": "请修正关键物体名称：画面中使用的是金属刮勺而非玻璃棒。",
+          "confidence": 0.95,
+          "note": "核心动作（倾倒、过滤）正确，但标注中的'玻璃棒'与画面中的'金属刮勺'不符，属于明显的物体识别错误。"
+        },
+        "elapsed": 3.142
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            82.0,
+            87.0
+          ],
+          "action": "wash_filter_cake"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "烧杯",
+            "白色固体",
+            "玻璃棒",
+            "棕色试剂瓶",
+            "黄色液体"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员在烧杯中搅拌白色固体，随后加入黄色溶剂进行混合洗涤。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了在烧杯中搅拌白色固体并加入黄色液体的过程，与标注描述完全一致。"
+        },
+        "elapsed": 2.408
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            87.0,
+            92.0
+          ],
+          "action": "wash_filter_cake"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "白色固体",
+            "棕色试剂瓶",
+            "玻璃棒",
+            "抽滤瓶"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员向装有白色固体的布氏漏斗中倾倒液体，并使用玻璃棒搅拌以洗涤或混合滤饼。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了从棕色瓶中倒出液体至漏斗并用玻璃棒搅拌的过程，与标注完全一致。"
+        },
+        "elapsed": 4.005
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            92.0,
+            97.0
+          ],
+          "action": "prepare_filter_apparatus"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "抽滤瓶",
+            "橡胶管"
+          ],
+          "objects_missing": [
+            "真空泵"
+          ],
+          "caption_ok": true,
+          "corrected_caption": "实验人员调整连接在抽滤瓶侧管的橡胶软管，进行真空过滤装置的管路连接或气密性检查。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了双手操作橡胶管与抽滤瓶侧管的连接过程，动作与描述完全一致；虽然真空泵本体未在画面中直接出现，但作为管路连接的逻辑对象，不影响对当前操作行为的判断。"
+        },
+        "elapsed": 2.939
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            97.0,
+            102.0
+          ],
+          "action": "prepare_filter_apparatus"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "抽滤瓶"
+          ],
+          "objects_missing": [
+            "真空泵"
+          ],
+          "caption_ok": true,
+          "corrected_caption": "实验人员双手握住漏斗颈部，旋紧或调整布氏漏斗与抽滤瓶的连接以确保密封。",
+          "missing_evidence": [
+            "画面中未直接显示真空泵本体（仅可见连接管路）"
+          ],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了双手操作布氏漏斗与抽滤瓶接口进行组装/紧固的动作，与标注描述一致；虽然真空泵本体未在画面中出现，但作为背景设备提及不影响核心动作判断。"
+        },
+        "elapsed": 3.05
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            145.0,
+            150.0
+          ],
+          "action": "vacuum_dry_filter_cake"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "圆底烧瓶",
+            "真空泵",
+            "橡胶管",
+            "白色固体"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员操作漏斗下方的旋塞并调整连接真空泵的管路，对漏斗内的白色固体进行减压抽干。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了双手调节旋塞和管路的操作，且装置内可见白色固体，与标注描述完全一致。"
+        },
+        "elapsed": 2.796
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            150.0,
+            155.0
+          ],
+          "action": "wash_filter_cake"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": false,
+          "objects_present": [
+            "布氏漏斗",
+            "白色粉末",
+            "抽滤瓶"
+          ],
+          "objects_missing": [
+            "洗瓶",
+            "真空泵"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持滴管向漏斗内的白色粉末滴加液体，对滤饼进行洗涤。",
+          "missing_evidence": [
+            "画面中未出现标注提到的'洗瓶'，实际使用的是滴管/移液管",
+            "真空泵在画面外不可见"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "请修正关键物体名称：操作工具为滴管而非洗瓶；确认是否需补充背景设备（真空泵）的可见性描述。",
+          "confidence": 0.85,
+          "note": "核心动作（洗涤）正确，但关键工具识别错误（滴管误标为洗瓶），且部分背景设备未在画面中出现。"
+        },
+        "elapsed": 17.574
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            150.0,
+            155.0
+          ],
+          "action": "wash_filter_cake",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            148.0,
+            157.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 150.0,
+          "end": 154.0,
+          "action": "wash_filter_cake",
+          "action_zh": "洗涤滤饼",
+          "objects": [
+            "布氏漏斗",
+            "白色粉末",
+            "滴管"
+          ],
+          "caption": "实验人员手持滴管向布氏漏斗内的白色粉末滴加液体，对滤饼进行洗涤。",
+          "evidence_timestamps": [
+            150.0,
+            151.0,
+            152.0,
+            153.0
+          ],
+          "repair_reason": "修正了上一轮关于工具的识别错误，画面中实际使用的是滴管而非洗瓶；同时移除了画面外不可见的真空泵等物体描述，保留核心洗涤动作。"
+        },
+        "elapsed": 3.828
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            150.0,
+            154.0
+          ],
+          "action": "wash_filter_cake"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "布氏漏斗",
+            "白色粉末"
+          ],
+          "objects_missing": [
+            "滴管"
+          ],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持洗瓶向布氏漏斗内的白色粉末挤压液体，对滤饼进行洗涤。",
+          "missing_evidence": [
+            "画面中未出现标注所述的'滴管'，实际使用的是洗瓶（wash bottle）"
+          ],
+          "uncertainty_level": "perception",
+          "review_suggestion": "请确认操作器具名称，画面显示为洗瓶而非滴管。",
+          "confidence": 0.95,
+          "note": "核心动作（洗涤滤饼）与画面一致，但关键物体识别有误（将洗瓶误标为滴管）。"
+        },
+        "elapsed": 3.316
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 13
+        },
+        "output": {
+          "accepted": 13,
+          "filtered": 0,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 159.9,
+          "covered_seconds": 64.0,
+          "coverage_ratio": 0.4,
+          "large_gaps": [
+            {
+              "start": 102.0,
+              "end": 145.0,
+              "duration": 43.0
+            }
+          ],
+          "backtrack_findings": [
+            {
+              "gap": {
+                "start": 102.0,
+                "end": 145.0,
+                "duration": 43.0
+              },
+              "suspicious": true,
+              "reason": "clip_memory in this gap describes possible substantive operations",
+              "evidence": [
+                {
+                  "window": [
+                    101.8,
+                    116.3
+                  ],
+                  "frame_ts": [
+                    102.0,
+                    109.0,
+                    116.0
+                  ],
+                  "summary": "1) 画面中可见装有白色固体的玻璃烧杯、棕色试剂瓶、金属搅拌棒以及背景中的旋转蒸发仪。\n2) 实验人员左手持烧杯，右手先是将棕色瓶中的液体倒入烧杯，随后使用金属棒对烧杯内的混合物进行搅拌。\n3) 发生了明显的倒液和搅拌操作，固体与液体混合在一起。\n4) 出现了专用仪器：左侧背景为**旋蒸仪**（旋转蒸发仪），右侧连接着抽滤装置（含布氏漏斗）。"
+                },
+                {
+                  "window": [
+                    116.3,
+                    130.8
+                  ],
+                  "frame_ts": [
+                    117.0,
+                    124.0,
+                    130.0
+                  ],
+                  "summary": "1) 画面中可见一台旋蒸仪（左侧带数字显示屏的仪器）、一个装有白色固体的玻璃烧杯、以及连接在旋蒸仪上的冷凝管和接收瓶。\n2) 实验人员左手扶住烧杯，右手持一根细长的玻璃棒或滴管伸入烧杯内，似乎正在搅拌或转移其中的白色物质。\n3) 未观察到明显的液体倾倒或状态突变，主要动作集中在对烧杯内物质的处理上。\n4) 明确出现了**旋蒸仪**这一专用分析/分离仪器。"
+                },
+                {
+                  "window": [
+                    130.8,
+                    145.4
+                  ],
+                  "frame_ts": [
+                    131.0,
+                    138.0,
+                    145.0
+                  ],
+                  "summary": "1. 画面中可见一台正在运行的旋蒸仪（旋转蒸发仪），其圆底烧瓶内盛有白色固体或浑浊液体，旁边放置着棕色试剂瓶、塑料瓶及连接管路。\n2. 实验人员左手扶住旋蒸仪的冷凝管/接收端接口，右手持一根细长的玻璃棒伸入烧瓶内部进行搅拌操作。\n3. 随着搅拌动作，烧瓶内的白色物质状态保持相对稳定，未见明显的倾倒或相分离变化。\n4. 明确出现了专用仪器**旋蒸仪**。"
+                }
+              ]
+            }
+          ],
+          "suspicious_gap_count": 1,
+          "needs_review": true
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 13,
+          "raw_segments": 13,
+          "processed_segments": 13,
+          "phase": "filtration"
+        }
+      }
+    ]
+  },
+  {
+    "video_id": "4",
+    "video_info": {
+      "duration": 135.6,
+      "fps": 30.0,
+      "resolution": "960x544",
+      "sampled_frames": 136
+    },
+    "steps": [
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            0.0,
+            15.1
+          ],
+          "frame_ts": [
+            0.0,
+            8.0,
+            15.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色液体的烧杯（置于磁力搅拌器上）、漏斗、棕色试剂瓶及铁架台等器具。\n2) 实验人员双手拿起一个标有“WACKER”字样的棕色试剂瓶，将其从桌面移至镜头前方。\n3) 烧杯内的液体在持续搅拌下保持液态，未发生明显的倒液或相变状态变化。\n4) 出现了磁力搅拌器这一专用仪器，但未观察到TLC板、旋蒸仪或分液漏斗等其他特定设备。"
+        },
+        "elapsed": 2.958
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            15.1,
+            30.1
+          ],
+          "frame_ts": [
+            16.0,
+            23.0,
+            30.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有白色固体残留物的玻璃漏斗、下方的锥形瓶、正在磁力搅拌的烧杯以及一瓶棕色试剂瓶。\n2) 实验人员左手扶住棕色试剂瓶，右手正将瓶盖旋开或调整位置。\n3) 此时尚未发生明显的液体倾倒或状态变化，主要处于准备取用试剂的阶段。\n4) 未出现TLC板、展开缸、过柱机、天平、旋蒸仪等专用分析或分离仪器。"
+        },
+        "elapsed": 2.206
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            30.1,
+            45.2
+          ],
+          "frame_ts": [
+            31.0,
+            38.0,
+            45.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一个装有滤纸的漏斗架在锥形瓶上，旁边有一个置于磁力搅拌器上的冰水浴烧杯（内含回流冷凝管），以及一瓶棕色试剂瓶。实验人员左手扶着棕色试剂瓶，右手持移液枪正在向冰水浴中的反应体系内加样。此过程中未观察到明显的状态变化（如颜色改变或沉淀生成）。图中出现的专用仪器包括：磁力搅拌器、回流冷凝管和移液枪。"
+        },
+        "elapsed": 2.156
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            45.2,
+            60.3
+          ],
+          "frame_ts": [
+            46.0,
+            53.0,
+            60.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个置于烧瓶上的布氏漏斗（内衬滤纸）、一个装有冰水浴的三口烧瓶（连接冷凝管及滴液漏斗）以及一个棕色试剂瓶。\n2) 实验人员双手正握持并倾斜该棕色试剂瓶，将其中的液体倒入左侧的布氏漏斗中进行过滤操作。\n3) 明显的状态变化为试剂瓶内的液体正在被倾倒转移至过滤装置中。\n4) 未出现TLC板、旋蒸仪或分液漏斗等专用分析仪器，主要使用的是常规玻璃仪器和过滤耗材。"
+        },
+        "elapsed": 5.011
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            60.3,
+            75.4
+          ],
+          "frame_ts": [
+            61.0,
+            68.0,
+            75.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个置于锥形瓶上的大漏斗（内衬滤纸）、一只棕色试剂瓶、以及背景中的冰浴装置和磁力搅拌器。\n2) 实验人员左手正握持并倾斜棕色试剂瓶，对准漏斗口准备进行倾倒操作。\n3) 目前尚未观察到液体流出或发生明显的状态变化，处于倒液前的准备阶段。\n4) 出现了磁力搅拌器（含搅拌子）和冰浴装置，未见其他专用分析仪器。"
+        },
+        "elapsed": 1.9
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            75.4,
+            90.4
+          ],
+          "frame_ts": [
+            76.0,
+            83.0,
+            90.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色固体的玻璃漏斗、下方承接液体的锥形瓶、棕色试剂瓶以及背景中的冰浴装置。\n2) 实验人员左手持棕色试剂瓶，右手拿着一根连接着管路的细长导管（疑似加液管或滴管）。\n3) 导管口正对试剂瓶口，似乎正在进行向瓶内转移液体或气体的操作，但未见明显的倾倒动作。\n4) 未出现TLC板、旋蒸仪、分液漏斗等专用分析仪器，主要使用的是常规玻璃器皿和管路系统。"
+        },
+        "elapsed": 3.463
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            90.4,
+            105.5
+          ],
+          "frame_ts": [
+            91.0,
+            98.0,
+            105.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有白色滤纸的漏斗、下方承接液体的锥形瓶，以及操作者手持的一个棕色试剂瓶。\n2) 实验人员双手正拿着打开瓶盖的棕色试剂瓶，将其倾斜对准下方的漏斗口。\n3) 发生了明显的倒液操作，液体从试剂瓶中流出并经过漏斗过滤进入锥形瓶。\n4) 未出现TLC板、旋蒸仪或分液漏斗等专用分析仪器，仅使用了基础的玻璃器皿和磁力搅拌器（背景）。"
+        },
+        "elapsed": 2.336
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            105.5,
+            120.6
+          ],
+          "frame_ts": [
+            106.0,
+            113.0,
+            120.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有白色固体的漏斗、一个盛有深色液体的圆底烧瓶、一个棕色试剂瓶以及背景中的旋转蒸发仪（含冷凝管和加热浴）。\n2) 实验人员双手正持握棕色试剂瓶，将其倾斜对准下方的圆底烧瓶。\n3) 发生了明显的倒液操作，液体正从棕色瓶中倒入烧瓶内。\n4) 出现了专用仪器“旋蒸仪”（或旋转蒸发仪），且使用了漏斗和圆底烧瓶等玻璃器皿。"
+        },
+        "elapsed": 2.013
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            120.6,
+            135.6
+          ],
+          "frame_ts": [
+            121.0,
+            128.0,
+            135.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色固体的玻璃漏斗、盛有深褐色液体的圆底烧瓶、正在磁力搅拌器上搅拌的三口烧瓶（内含淡黄色液体及固体）、以及一个棕色试剂瓶。\n2) 实验人员左手持棕色试剂瓶，右手短暂伸向搅拌中的三口烧瓶附近，随后双手离开画面。\n3) 未观察到明显的倒液或盖盖操作，但三口烧瓶内的混合物在持续搅拌下保持动态混合状态。\n4) 出现了专用仪器：磁力搅拌器（用于加热/搅拌）和圆底烧瓶（作为反应容器）。"
+        },
+        "elapsed": 2.212
+      },
+      {
+        "step": "phase_hypothesis",
+        "output": {
+          "phase": "reaction_setup",
+          "phase_zh": "开反应",
+          "confidence": 0.85,
+          "alternative_phases": [
+            {
+              "phase": "filtration",
+              "phase_zh": "过滤与抽滤",
+              "confidence": 0.65,
+              "reason": "视频中多次出现将液体倒入漏斗的操作，但结合背景中的回流冷凝管和搅拌体系，这更像是反应过程中的固液分离或加料步骤，而非独立的纯化过滤阶段。"
+            },
+            {
+              "phase": "other_visible_lab_operation",
+              "phase_zh": "其他可见实验操作",
+              "confidence": 0.4,
+              "reason": "虽然包含倒液和过滤动作，但整体场景围绕反应容器（三口烧瓶、冷凝管）构建，属于广义的反应操作范畴。"
+            }
+          ],
+          "evidence_timestamps": [
+            30,
+            45,
+            106,
+            121
+          ],
+          "reason": "画面中明确出现了连接回流冷凝管的三口烧瓶置于磁力搅拌器上（[30-45s], [121-136s]），且实验人员向该体系或相关容器中滴加/倾倒试剂（[30-45s], [106-121s]），符合 reaction_setup 中“建立反应体系、加入物料、设置搅拌/加热”的视觉区分线索。"
+        },
+        "elapsed": 4.467
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "reaction_setup",
+          "phase_confidence": 0.85,
+          "catalog_phases": [
+            "reaction_setup"
+          ]
+        },
+        "output": [
+          {
+            "start": 30,
+            "end": 45,
+            "action": "transfer_and_add_small_volume_liquid",
+            "action_zh": "小体积移取并加入液体",
+            "objects": [
+              "棕色试剂瓶",
+              "移液枪",
+              "三口烧瓶",
+              "冰水浴",
+              "回流冷凝管"
+            ],
+            "caption": "实验人员使用移液枪从棕色试剂瓶中吸取液体，并向置于冰水浴中的反应体系内加样。",
+            "evidence_timestamps": [
+              32,
+              38,
+              42
+            ]
+          },
+          {
+            "start": 45,
+            "end": 60,
+            "action": "add_liquid_to_reaction",
+            "action_zh": "向反应体系加入液体",
+            "objects": [
+              "棕色试剂瓶",
+              "布氏漏斗",
+              "锥形瓶",
+              "滤纸"
+            ],
+            "caption": "实验人员将棕色试剂瓶中的液体倾倒至装有滤纸的布氏漏斗中进行过滤转移。",
+            "evidence_timestamps": [
+              48,
+              52,
+              56
+            ]
+          },
+          {
+            "start": 90,
+            "end": 106,
+            "action": "add_liquid_to_reaction",
+            "action_zh": "向反应体系加入液体",
+            "objects": [
+              "棕色试剂瓶",
+              "玻璃漏斗",
+              "锥形瓶",
+              "滤纸"
+            ],
+            "caption": "实验人员再次将棕色试剂瓶中的液体通过漏斗过滤倒入下方的锥形瓶中。",
+            "evidence_timestamps": [
+              92,
+              98,
+              102
+            ]
+          },
+          {
+            "start": 106,
+            "end": 121,
+            "action": "add_liquid_to_reaction",
+            "action_zh": "向反应体系加入液体",
+            "objects": [
+              "棕色试剂瓶",
+              "圆底烧瓶",
+              "旋转蒸发仪"
+            ],
+            "caption": "实验人员将棕色试剂瓶中的液体直接倒入圆底烧瓶内。",
+            "evidence_timestamps": [
+              108,
+              114,
+              118
+            ]
+          }
+        ],
+        "elapsed": 11.864
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            30.0,
+            35.0
+          ],
+          "frame_ts": [
+            30.0,
+            32.0,
+            33.0,
+            35.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一个装有滤纸的漏斗架在锥形瓶上，旁边有一个盛有冰块的烧杯和一个棕色试剂瓶。实验人员左手扶着棕色试剂瓶，右手持移液管正在从烧杯中吸取液体。此时间段内未观察到明显的状态变化（如倒液或盖盖）。出现的专用仪器包括用于过滤的漏斗和锥形瓶，以及用于低温操作的冰浴装置。"
+        },
+        "elapsed": 2.406
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            35.0,
+            40.0
+          ],
+          "frame_ts": [
+            35.0,
+            37.0,
+            38.0,
+            40.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有滤纸的漏斗架在锥形瓶上，旁边有一个盛有冰块的烧杯（置于磁力搅拌器上）以及一个棕色试剂瓶。\n2) 实验人员左手扶着棕色试剂瓶，右手持移液枪正在向烧杯内的液体中添加红色试剂。\n3) 发生了明显的加样操作，但未见液体倾倒或状态剧烈变化。\n4) 出现了磁力搅拌器作为专用仪器，未观察到TLC板、旋蒸仪或分液漏斗等其他特定设备。"
+        },
+        "elapsed": 2.483
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            40.0,
+            45.0
+          ],
+          "frame_ts": [
+            40.0,
+            42.0,
+            43.0,
+            45.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一个装有滤纸的漏斗置于锥形瓶上，以及一个正在磁力搅拌器上进行冰浴反应的烧杯。实验人员左手扶着一个棕色试剂瓶，右手持移液管（或滴管）向反应烧杯中滴加液体。操作过程中发生了明显的液体转移状态变化。未观察到TLC板、旋蒸仪或分液漏斗等专用分析分离仪器。"
+        },
+        "elapsed": 2.018
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "reaction_setup",
+          "phase_confidence": 0.85,
+          "catalog_phases": [
+            "reaction_setup"
+          ]
+        },
+        "output": [
+          {
+            "start": 30,
+            "end": 35,
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "移液管",
+              "烧杯",
+              "冰块",
+              "棕色试剂瓶"
+            ],
+            "caption": "实验人员使用移液管从盛有冰块的烧杯中吸取液体，为后续加样做准备。",
+            "evidence_timestamps": [
+              31,
+              33,
+              34
+            ]
+          },
+          {
+            "start": 35,
+            "end": 40,
+            "action": "transfer_and_add_small_volume_liquid",
+            "action_zh": "小体积移取并加入液体",
+            "objects": [
+              "移液枪",
+              "棕色试剂瓶",
+              "烧杯",
+              "磁力搅拌器"
+            ],
+            "caption": "实验人员手持移液枪，将红色试剂从棕色试剂瓶中移取并加入正在磁力搅拌的冰浴烧杯中。",
+            "evidence_timestamps": [
+              36,
+              38,
+              39
+            ]
+          },
+          {
+            "start": 40,
+            "end": 45,
+            "action": "transfer_and_add_small_volume_liquid",
+            "action_zh": "小体积移取并加入液体",
+            "objects": [
+              "移液管",
+              "滴管",
+              "棕色试剂瓶",
+              "烧杯",
+              "磁力搅拌器"
+            ],
+            "caption": "实验人员使用移液管或滴管，向进行冰浴反应的烧杯中滴加液体。",
+            "evidence_timestamps": [
+              41,
+              42,
+              44
+            ]
+          }
+        ],
+        "elapsed": 5.769
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            30.0,
+            45.0
+          ]
+        },
+        "output": {
+          "sub_segments": 3
+        }
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            45.0,
+            50.0
+          ],
+          "frame_ts": [
+            45.0,
+            47.0,
+            48.0,
+            50.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有白色滤纸的布氏漏斗（或玻璃漏斗）连接在抽滤瓶上，右侧有一个置于磁力搅拌器上的冰水浴烧杯，以及实验人员手持的一个棕色试剂瓶。\n2) 实验人员左手正握持该棕色试剂瓶，似乎准备进行倾倒操作，而背景中的反应装置正在持续搅拌。\n3) 在此时间窗口内，未观察到明显的液体倾倒、状态改变或仪器开关动作，整体处于操作前的静止或预备阶段。\n4) 出现了用于固液分离的**抽滤装置**（漏斗与抽滤瓶组合）以及用于控温反应的**磁力搅拌器**。"
+        },
+        "elapsed": 3.0
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            50.0,
+            55.0
+          ],
+          "frame_ts": [
+            50.0,
+            52.0,
+            53.0,
+            55.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有滤纸的漏斗置于锥形瓶上，背景有一台正在搅拌的磁力搅拌器（含烧杯和冰浴），以及一个棕色试剂瓶。\n2) 实验人员左手扶住棕色试剂瓶，右手持一根白色滴管或导管伸入瓶口内吸取液体。\n3) 此时尚未发生明显的倒液动作，主要处于准备从瓶中取样的阶段。\n4) 出现了磁力搅拌器作为专用仪器，未见TLC板、旋蒸仪等其他特定分离设备。"
+        },
+        "elapsed": 2.63
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            55.0,
+            60.0
+          ],
+          "frame_ts": [
+            55.0,
+            57.0,
+            58.0,
+            60.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个棕色试剂瓶、一个装有白色滤纸的漏斗以及下方的锥形瓶。\n2) 实验人员左手扶住棕色试剂瓶，右手正在操作连接在瓶口的抽气管（或移液管）。\n3) 此时并未发生明显的液体倾倒动作，处于准备转移液体的状态。\n4) 未出现TLC板、旋蒸仪等专用分析仪器，仅使用了基础的玻璃器皿和过滤装置。"
+        },
+        "elapsed": 2.257
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "reaction_setup",
+          "phase_confidence": 0.85,
+          "catalog_phases": [
+            "reaction_setup"
+          ]
+        },
+        "output": [
+          {
+            "start": 50,
+            "end": 60,
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "棕色试剂瓶",
+              "滴管",
+              "抽气管"
+            ],
+            "caption": "实验人员手持棕色试剂瓶，使用滴管或导管伸入瓶口吸取液体，处于准备转移液体的量取阶段。",
+            "evidence_timestamps": [
+              52,
+              55,
+              58
+            ]
+          }
+        ],
+        "elapsed": 3.088
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            90.0,
+            95.3
+          ],
+          "frame_ts": [
+            90.0,
+            92.0,
+            94.0,
+            95.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一个装有棕色液体的锥形瓶（上方插有漏斗）、一个盛有冰块的烧杯以及一个被手持的棕色试剂瓶。实验人员左手握住棕色试剂瓶，右手持一根白色塑料管（类似移液管或滴管）伸入瓶口进行操作。操作过程中，液体正通过管子从瓶中转移出来，未见明显的化学反应状态变化。未观察到TLC板、旋蒸仪或分液漏斗等专用分析分离仪器。"
+        },
+        "elapsed": 3.695
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            95.3,
+            100.7
+          ],
+          "frame_ts": [
+            96.0,
+            97.0,
+            99.0,
+            100.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一个装有白色固体的漏斗、下方的锥形瓶以及右侧正在搅拌的烧杯装置。实验人员左手扶住棕色试剂瓶，右手持漏斗，似乎正准备进行过滤或转移操作。在此期间，烧杯内的磁力搅拌子持续旋转，使内部液体保持剧烈搅动状态。场景中包含明显的专用仪器：用于混合的磁力搅拌器（含搅拌子）和用于分离的漏斗与锥形瓶组合。"
+        },
+        "elapsed": 3.491
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            100.7,
+            106.0
+          ],
+          "frame_ts": [
+            101.0,
+            102.0,
+            104.0,
+            106.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见一个装有白色固体的玻璃漏斗置于圆底烧瓶上，背景有一台正在运行的旋转蒸发仪（含冷凝管、水浴锅和接收瓶）。实验人员左手持有一个棕色试剂瓶，右手似乎正扶着下方的圆底烧瓶。在此期间未观察到明显的倒液或状态变化操作，仅呈现静态准备场景。出现的专用仪器为旋转蒸发仪。"
+        },
+        "elapsed": 2.158
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "reaction_setup",
+          "phase_confidence": 0.85,
+          "catalog_phases": [
+            "reaction_setup"
+          ]
+        },
+        "output": [
+          {
+            "start": 90,
+            "end": 95,
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "棕色试剂瓶",
+              "白色塑料管",
+              "锥形瓶",
+              "漏斗"
+            ],
+            "caption": "实验人员使用白色塑料管从棕色试剂瓶中吸取液体，进行量取操作。",
+            "evidence_timestamps": [
+              91,
+              93,
+              94
+            ]
+          },
+          {
+            "start": 95,
+            "end": 101,
+            "action": "reaction_condition_setup",
+            "action_zh": "反应体系状态建立",
+            "objects": [
+              "烧杯",
+              "磁力搅拌器",
+              "搅拌子",
+              "漏斗",
+              "锥形瓶"
+            ],
+            "caption": "右侧烧杯内的磁力搅拌子持续旋转，维持液体剧烈搅动状态，同时实验人员在旁准备过滤或转移操作。",
+            "evidence_timestamps": [
+              96,
+              98,
+              100
+            ]
+          }
+        ],
+        "elapsed": 4.304
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            90.0,
+            106.0
+          ]
+        },
+        "output": {
+          "sub_segments": 2
+        }
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            106.0,
+            111.0
+          ],
+          "frame_ts": [
+            106.0,
+            108.0,
+            109.0,
+            111.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见装有白色滤纸的漏斗、下方承接液体的圆底烧瓶、置于磁力搅拌器上的冰浴三口烧瓶以及一个棕色试剂瓶。\n2) 实验人员左手扶住棕色试剂瓶，右手持移液枪从瓶中吸取液体。\n3) 发生了明显的取样操作，即利用移液枪将试剂瓶内的液体转移至枪头内。\n4) 出现了磁力搅拌器（含搅拌子）和移液枪等仪器耗材。"
+        },
+        "elapsed": 2.051
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            111.0,
+            116.0
+          ],
+          "frame_ts": [
+            111.0,
+            113.0,
+            114.0,
+            116.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有白色滤纸的布氏漏斗（或玻璃漏斗）连接在抽滤瓶上，旁边有一个盛有冰水浴的烧杯、棕色试剂瓶以及一个六孔试管架。\n2) 实验人员左手扶住棕色试剂瓶，右手持移液管正在向该瓶中吸取或滴加液体。\n3) 发生了明显的操作状态变化：试剂瓶盖被打开，且正在进行液体的转移操作。\n4) 出现了专用分离仪器和耗材，包括用于固液分离的**布氏漏斗**（或过滤装置）、**抽滤瓶**以及**移液管**。"
+        },
+        "elapsed": 3.561
+      },
+      {
+        "step": "dense_snapper",
+        "input": {
+          "window": [
+            116.0,
+            121.0
+          ],
+          "frame_ts": [
+            116.0,
+            118.0,
+            119.0,
+            121.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见一个装有白色固体的玻璃漏斗、下方承接的棕色锥形瓶、右侧带有磁力搅拌子的圆底烧瓶（置于冰浴和加热板上）、以及实验人员手持的一个棕色试剂瓶。\n2) 实验人员左手正扶着下方的棕色锥形瓶，右手拿着棕色试剂瓶靠近漏斗口，似乎准备进行倾倒或添加操作。\n3) 在此时间窗口内，画面处于相对静止状态，尚未观察到明显的液体流动或物质转移等动态变化。\n4) 出现了用于反应控制的磁力搅拌器（加热板）及配套的圆底烧瓶，但未出现TLC板、旋蒸仪或分液漏斗等其他专用仪器。"
+        },
+        "elapsed": 2.895
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "reaction_setup",
+          "phase_confidence": 0.85,
+          "catalog_phases": [
+            "reaction_setup"
+          ]
+        },
+        "output": [
+          {
+            "start": 106,
+            "end": 111,
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "移液枪",
+              "棕色试剂瓶"
+            ],
+            "caption": "实验人员使用移液枪从棕色试剂瓶中吸取液体。",
+            "evidence_timestamps": [
+              107,
+              109,
+              110
+            ]
+          },
+          {
+            "start": 111,
+            "end": 116,
+            "action": "measure_liquid_for_addition",
+            "action_zh": "量取液体",
+            "objects": [
+              "移液管",
+              "棕色试剂瓶"
+            ],
+            "caption": "实验人员打开瓶盖，使用移液管向棕色试剂瓶内吸取或滴加液体。",
+            "evidence_timestamps": [
+              112,
+              114,
+              115
+            ]
+          }
+        ],
+        "elapsed": 4.607
+      },
+      {
+        "step": "dense_split",
+        "input": {
+          "original": [
+            106.0,
+            121.0
+          ]
+        },
+        "output": {
+          "sub_segments": 2
+        }
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            30.0,
+            35.0
+          ],
+          "action": "measure_liquid_for_addition"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "移液管",
+            "烧杯",
+            "冰块",
+            "棕色试剂瓶"
+          ],
+          "objects_missing": [],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，使用移液管从盛有冰块的烧杯中吸取液体。",
+          "missing_evidence": [
+            "画面为静态帧序列，无法确认'量取'动作的完整起止过程（如是否完成吸取）",
+            "无法通过单帧判断后续是否有'加样'操作"
+          ],
+          "uncertainty_level": "cognitive",
+          "review_suggestion": "建议检查原视频30s-35s内是否有明显的吸液或放液动态变化，以确认动作类型；同时核实标注中的意图描述是否过度推断。",
+          "confidence": 0.6,
+          "note": "关键物体可见且位置正确，但标注描述中包含了画面无法证实的'为后续加样做准备'这一主观意图，且静态画面难以确证'量取'动作的动态发生。"
+        },
+        "elapsed": 4.212
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            30.0,
+            35.0
+          ],
+          "action": "measure_liquid_for_addition",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            28.0,
+            37.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 30.0,
+          "end": 35.0,
+          "action": "dropwise_add_under_reaction",
+          "action_zh": "反应中滴加",
+          "objects": [
+            "移液枪",
+            "试剂瓶",
+            "烧杯",
+            "冰块",
+            "圆底烧瓶"
+          ],
+          "caption": "实验人员手持棕色试剂瓶，使用移液枪向盛有冰块的烧杯中滴加液体。",
+          "evidence_timestamps": [
+            30.0,
+            31.0,
+            32.0,
+            33.0,
+            34.0
+          ],
+          "repair_reason": "原假设将'移液枪'误识别为'移液管'，且描述中包含主观意图；根据画面修正物体名称，并将动作调整为更准确的'反应中滴加'（dropwise_add_under_reaction），去除了无法证实的后续操作描述。"
+        },
+        "elapsed": 4.039
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            30.0,
+            35.0
+          ],
+          "action": "dropwise_add_under_reaction"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "试剂瓶",
+            "冰块",
+            "圆底烧瓶"
+          ],
+          "objects_missing": [
+            "移液枪",
+            "烧杯"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，画面中可见漏斗、盛有冰块的容器及圆底烧瓶，未观察到使用移液枪滴加液体的动作。",
+          "missing_evidence": [
+            "画面中未见移液枪",
+            "未见向烧杯中滴加液体的动作",
+            "液体转移过程不可见"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "标注描述的动作（移液枪滴加）与画面完全不符，建议重新核对视频或修正标注。",
+          "confidence": 0.1,
+          "note": "标注声称使用移液枪滴加，但画面中仅显示手持试剂瓶的静态场景，且接收容器为漏斗而非烧杯。"
+        },
+        "elapsed": 3.688
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            35.0,
+            40.0
+          ],
+          "action": "transfer_and_add_small_volume_liquid"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "移液枪",
+            "棕色试剂瓶",
+            "磁力搅拌器"
+          ],
+          "objects_missing": [
+            "烧杯"
+          ],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持移液枪，将红色试剂从棕色试剂瓶中移取并加入正在磁力搅拌的冰浴容器中。",
+          "missing_evidence": [
+            "画面中接收液体的容器为玻璃结晶皿或培养皿（Petri dish/Crystallizing dish），并非标注中的'烧杯'。"
+          ],
+          "uncertainty_level": "perception",
+          "review_suggestion": "请确认接收容器的具体类型，建议修正为'容器'或'结晶皿'。",
+          "confidence": 0.85,
+          "note": "核心动作（移液、加样）与画面一致，但关键物体'烧杯'的命名不准确，实际为浅底容器。"
+        },
+        "elapsed": 3.572
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            40.0,
+            45.0
+          ],
+          "action": "transfer_and_add_small_volume_liquid"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "棕色试剂瓶",
+            "烧杯",
+            "磁力搅拌器"
+          ],
+          "objects_missing": [
+            "移液管",
+            "滴管"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，旁边放置有漏斗和进行冰浴反应的烧杯。",
+          "missing_evidence": [
+            "画面中未出现移液管或滴管",
+            "未观察到液体转移或滴加的动作",
+            "提供的帧均为静态持握状态，无动作发生"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "标注描述为'使用移液管/滴管滴加'，但画面显示为手持试剂瓶且无滴加动作，建议核实该时间段是否截取错误或操作类型标注错误。",
+          "confidence": 0.1,
+          "note": "画面仅展示手持试剂瓶的静态场景，完全缺失标注中描述的移液工具和滴加动作。"
+        },
+        "elapsed": 3.666
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            40.0,
+            45.0
+          ],
+          "action": "transfer_and_add_small_volume_liquid",
+          "status": "rejected",
+          "confidence": 0.1,
+          "context": [
+            38.0,
+            47.0
+          ]
+        },
+        "output": {
+          "delete": true,
+          "start": null,
+          "end": null,
+          "action": "",
+          "action_zh": "",
+          "objects": [],
+          "caption": "画面中实验人员仅手持棕色试剂瓶，未观察到任何移液工具（如滴管、移液枪）或液体转移/滴加动作，原假设描述的'小体积移取并加入液体'缺乏视觉证据支持。",
+          "evidence_timestamps": [
+            40.0,
+            41.0,
+            42.0,
+            43.0,
+            44.0
+          ],
+          "repair_reason": "原假设为幻觉，画面仅为静态持握试剂瓶，无实际移液操作发生。"
+        },
+        "elapsed": 12.24
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            45.0,
+            60.0
+          ],
+          "action": "add_liquid_to_reaction"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "棕色试剂瓶",
+            "布氏漏斗",
+            "锥形瓶"
+          ],
+          "objects_missing": [
+            "滤纸"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，将其置于装有白色固体的布氏漏斗旁，画面中未显示倾倒或过滤操作。",
+          "missing_evidence": [
+            "画面为静态持握状态，未见液体流出或转移动作",
+            "无法确认漏斗内是否有滤纸（被固体遮挡）"
+          ],
+          "uncertainty_level": "temporal",
+          "review_suggestion": "请检查45s-60s时间段内是否包含实际的倾倒动作，当前帧仅显示准备阶段。",
+          "confidence": 0.9,
+          "note": "关键动作（倾倒/过滤）在提供的帧中并未发生，仅为持瓶待命状态。"
+        },
+        "elapsed": 3.87
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            45.0,
+            60.0
+          ],
+          "action": "add_liquid_to_reaction",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            43.0,
+            62.0
+          ]
+        },
+        "output": {
+          "delete": true,
+          "start": null,
+          "end": null,
+          "action": "",
+          "action_zh": "",
+          "objects": [],
+          "caption": "画面中实验人员手持棕色试剂瓶，但并未发生倾倒或加入液体的动作，仅为持瓶待命状态，无法确认关键操作。",
+          "evidence_timestamps": [
+            45.0,
+            46.0,
+            47.0,
+            48.0,
+            49.0
+          ],
+          "repair_reason": "原假设描述的动作（add_liquid_to_reaction）在提供的帧序列中未实际发生，缺乏液体流出或转移的视觉证据，属于无效片段。"
+        },
+        "elapsed": 3.353
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            90.0,
+            95.0
+          ],
+          "action": "measure_liquid_for_addition"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "棕色试剂瓶",
+            "白色塑料管",
+            "锥形瓶",
+            "漏斗"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员使用白色塑料管从棕色试剂瓶中吸取液体，进行量取操作。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了手持棕色试剂瓶并使用白色塑料管（移液管）吸取液体的过程，所有关键物体可见且动作描述准确。"
+        },
+        "elapsed": 2.626
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            95.0,
+            101.0
+          ],
+          "action": "reaction_condition_setup"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": false,
+          "objects_present": [
+            "漏斗",
+            "锥形瓶",
+            "烧杯"
+          ],
+          "objects_missing": [
+            "磁力搅拌器",
+            "搅拌子"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "右侧烧杯内的液体处于剧烈沸腾或回流状态（可见大量气泡），实验人员手持棕色试剂瓶，旁边放置有装有液体的漏斗和锥形瓶。",
+          "missing_evidence": [
+            "画面中无法看到磁力搅拌器底座及搅拌子，仅能看到烧杯内液体的剧烈运动",
+            "原描述称'准备过滤或转移操作'属于意图推测，画面中主要动作为手持试剂瓶"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "建议修正物体列表（移除不可见的搅拌器/子）并调整描述以匹配实际观察到的沸腾现象及手持动作。",
+          "confidence": 0.85,
+          "note": "核心错误在于将'沸腾/回流'误判为'磁力搅拌'，且未观察到搅拌子实体；同时忽略了手持试剂瓶这一显著动作。"
+        },
+        "elapsed": 4.286
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            95.0,
+            101.0
+          ],
+          "action": "reaction_condition_setup",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            93.0,
+            103.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 95.0,
+          "end": 101.0,
+          "action": "reaction_condition_setup",
+          "action_zh": "反应体系状态建立",
+          "objects": [
+            "烧杯",
+            "磁力搅拌器",
+            "冷凝管",
+            "试剂瓶",
+            "漏斗",
+            "锥形瓶"
+          ],
+          "caption": "右侧烧杯内的液体在磁力搅拌器上剧烈沸腾回流（可见大量气泡及内部搅拌子），上方连接冷凝管；实验人员手持棕色试剂瓶，旁边放置有装有液体的漏斗和锥形瓶。",
+          "evidence_timestamps": [
+            96.0,
+            98.0,
+            100.0
+          ],
+          "repair_reason": "修正了上一轮关于'未观察到搅拌子'的错误判断，画面中清晰可见烧杯内正在旋转的搅拌子以及底部的磁力搅拌器底座，确认该操作为加热回流条件下的反应体系状态建立；同时保留了原描述中关于手持试剂瓶和旁置器具的观察。"
+        },
+        "elapsed": 4.503
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            95.0,
+            101.0
+          ],
+          "action": "reaction_condition_setup"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "烧杯",
+            "磁力搅拌器",
+            "冷凝管",
+            "试剂瓶",
+            "漏斗",
+            "锥形瓶"
+          ],
+          "objects_missing": [],
+          "caption_ok": false,
+          "corrected_caption": "右侧烧杯内的液体在磁力搅拌器上处于低温搅拌状态（可见大量碎冰），上方连接冷凝管；实验人员手持棕色试剂瓶，旁边放置有装有液体的漏斗和锥形瓶。",
+          "missing_evidence": [
+            "画面中明显为碎冰冷却环境，不支持'剧烈沸腾回流'的描述"
+          ],
+          "uncertainty_level": "cognitive",
+          "review_suggestion": "请修正描述中的反应状态：画面显示为冰浴冷却而非加热回流。",
+          "confidence": 0.95,
+          "note": "关键视觉证据（大量碎冰）与标注描述的物理状态（沸腾回流）完全矛盾。"
+        },
+        "elapsed": 3.473
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            106.0,
+            111.0
+          ],
+          "action": "measure_liquid_for_addition"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": false,
+          "objects_present": [
+            "棕色试剂瓶"
+          ],
+          "objects_missing": [
+            "移液枪"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员使用滴管从棕色试剂瓶中吸取液体。",
+          "missing_evidence": [
+            "画面中未出现标注所述的'移液枪'，实际使用的是玻璃或塑料滴管"
+          ],
+          "uncertainty_level": "perception",
+          "review_suggestion": "请确认操作器具名称，画面显示为滴管而非移液枪。",
+          "confidence": 0.95,
+          "note": "关键物体识别错误：画面清晰显示手持滴管操作，而非移液枪。"
+        },
+        "elapsed": 3.023
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            106.0,
+            111.0
+          ],
+          "action": "measure_liquid_for_addition",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            104.0,
+            113.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 106.0,
+          "end": 111.0,
+          "action": "transfer_and_add_small_volume_liquid",
+          "action_zh": "小体积移取并加入液体",
+          "objects": [
+            "棕色试剂瓶",
+            "滴管"
+          ],
+          "caption": "实验人员手持棕色试剂瓶，使用滴管从瓶中吸取少量液体。",
+          "evidence_timestamps": [
+            109.0
+          ],
+          "repair_reason": "修正了关键物体识别错误（将移液枪更正为滴管），并根据画面中“手持滴管吸取液体”的实际操作，将动作分类从量取液体调整为小体积移取并加入液体。"
+        },
+        "elapsed": 8.332
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            106.0,
+            111.0
+          ],
+          "action": "transfer_and_add_small_volume_liquid"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "棕色试剂瓶",
+            "滴管"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持棕色试剂瓶，使用滴管从瓶中吸取少量液体。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了左手持棕色试剂瓶、右手持滴管伸入瓶口进行吸取液体的操作，与标注描述完全一致。"
+        },
+        "elapsed": 2.3
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            111.0,
+            116.0
+          ],
+          "action": "measure_liquid_for_addition"
+        },
+        "output": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": false,
+          "objects_present": [
+            "棕色试剂瓶"
+          ],
+          "objects_missing": [
+            "移液管"
+          ],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，瓶口敞开，旁边放置有漏斗和烧瓶。",
+          "missing_evidence": [
+            "画面中未出现移液管",
+            "未观察到液体吸取或滴加的动作"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "标注中的关键物体'移液管'在画面中不可见，且未发生描述中的量取/滴加动作，建议修正操作类型及物体列表。",
+          "confidence": 0.95,
+          "note": "画面仅显示手持棕色试剂瓶的状态，并未进行移液操作，也未出现移液管。"
+        },
+        "elapsed": 3.304
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            111.0,
+            116.0
+          ],
+          "action": "measure_liquid_for_addition",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            109.0,
+            118.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 111.0,
+          "end": 116.0,
+          "action": "add_liquid_to_reaction",
+          "action_zh": "向反应体系加入液体",
+          "objects": [
+            "棕色试剂瓶",
+            "漏斗",
+            "圆底烧瓶"
+          ],
+          "caption": "实验人员手持棕色试剂瓶，将液体倒入插有漏斗的圆底烧瓶中。",
+          "evidence_timestamps": [
+            113.0,
+            114.0,
+            115.0
+          ],
+          "repair_reason": "原假设为'量取液体'被驳回是因为未观察到移液操作；根据画面（特别是第3-5帧），实验人员实际上是将试剂瓶中的液体直接倾倒进漏斗和烧瓶中，属于大体积液体的转移与加入，符合本体中'add_liquid_to_reaction'的定义。"
+        },
+        "elapsed": 7.223
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            111.0,
+            116.0
+          ],
+          "action": "add_liquid_to_reaction"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "棕色试剂瓶",
+            "漏斗",
+            "圆底烧瓶"
+          ],
+          "objects_missing": [],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持棕色试剂瓶，将液体倒入旁边的容器（看似为冰浴中的反应瓶）中。",
+          "missing_evidence": [
+            "画面显示液体并未倒入插有漏斗的圆底烧瓶中，而是倒向了右侧背景处的另一个容器"
+          ],
+          "uncertainty_level": "cognitive",
+          "review_suggestion": "标注描述的操作对象错误，实际是向右侧冰浴容器加液，而非左侧带漏斗的烧瓶。",
+          "confidence": 0.95,
+          "note": "关键物体均可见，但操作流向与标注描述严重不符，属于明显的认知/事实性错误。"
+        },
+        "elapsed": 4.331
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 6
+        },
+        "output": {
+          "accepted": 3,
+          "filtered": 3,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 135.6,
+          "covered_seconds": 15.0,
+          "coverage_ratio": 0.111,
+          "large_gaps": [
+            {
+              "start": 0.0,
+              "end": 35.0,
+              "duration": 35.0
+            },
+            {
+              "start": 40.0,
+              "end": 90.0,
+              "duration": 50.0
+            }
+          ],
+          "backtrack_findings": [
+            {
+              "gap": {
+                "start": 0.0,
+                "end": 35.0,
+                "duration": 35.0
+              },
+              "suspicious": true,
+              "reason": "clip_memory in this gap describes possible substantive operations",
+              "evidence": [
+                {
+                  "window": [
+                    0.0,
+                    15.1
+                  ],
+                  "frame_ts": [
+                    0.0,
+                    8.0,
+                    15.0
+                  ],
+                  "summary": "1) 画面中可见装有白色液体的烧杯（置于磁力搅拌器上）、漏斗、棕色试剂瓶及铁架台等器具。\n2) 实验人员双手拿起一个标有“WACKER”字样的棕色试剂瓶，将其从桌面移至镜头前方。\n3) 烧杯内的液体在持续搅拌下保持液态，未发生明显的倒液或相变状态变化。\n4) 出现了磁力搅拌器这一专用仪器，但未观察到TLC板、旋蒸仪或分液漏斗等其他特定设备。"
+                },
+                {
+                  "window": [
+                    15.1,
+                    30.1
+                  ],
+                  "frame_ts": [
+                    16.0,
+                    23.0,
+                    30.0
+                  ],
+                  "summary": "1) 画面中可见一个装有白色固体残留物的玻璃漏斗、下方的锥形瓶、正在磁力搅拌的烧杯以及一瓶棕色试剂瓶。\n2) 实验人员左手扶住棕色试剂瓶，右手正将瓶盖旋开或调整位置。\n3) 此时尚未发生明显的液体倾倒或状态变化，主要处于准备取用试剂的阶段。\n4) 未出现TLC板、展开缸、过柱机、天平、旋蒸仪等专用分析或分离仪器。"
+                },
+                {
+                  "window": [
+                    30.1,
+                    45.2
+                  ],
+                  "frame_ts": [
+                    31.0,
+                    38.0,
+                    45.0
+                  ],
+                  "summary": "画面中可见一个装有滤纸的漏斗架在锥形瓶上，旁边有一个置于磁力搅拌器上的冰水浴烧杯（内含回流冷凝管），以及一瓶棕色试剂瓶。实验人员左手扶着棕色试剂瓶，右手持移液枪正在向冰水浴中的反应体系内加样。此过程中未观察到明显的状态变化（如颜色改变或沉淀生成）。图中出现的专用仪器包括：磁力搅拌器、回流冷凝管和移液枪。"
+                }
+              ]
+            },
+            {
+              "gap": {
+                "start": 40.0,
+                "end": 90.0,
+                "duration": 50.0
+              },
+              "suspicious": true,
+              "reason": "clip_memory in this gap describes possible substantive operations",
+              "evidence": [
+                {
+                  "window": [
+                    30.1,
+                    45.2
+                  ],
+                  "frame_ts": [
+                    31.0,
+                    38.0,
+                    45.0
+                  ],
+                  "summary": "画面中可见一个装有滤纸的漏斗架在锥形瓶上，旁边有一个置于磁力搅拌器上的冰水浴烧杯（内含回流冷凝管），以及一瓶棕色试剂瓶。实验人员左手扶着棕色试剂瓶，右手持移液枪正在向冰水浴中的反应体系内加样。此过程中未观察到明显的状态变化（如颜色改变或沉淀生成）。图中出现的专用仪器包括：磁力搅拌器、回流冷凝管和移液枪。"
+                },
+                {
+                  "window": [
+                    45.2,
+                    60.3
+                  ],
+                  "frame_ts": [
+                    46.0,
+                    53.0,
+                    60.0
+                  ],
+                  "summary": "1) 画面中可见一个置于烧瓶上的布氏漏斗（内衬滤纸）、一个装有冰水浴的三口烧瓶（连接冷凝管及滴液漏斗）以及一个棕色试剂瓶。\n2) 实验人员双手正握持并倾斜该棕色试剂瓶，将其中的液体倒入左侧的布氏漏斗中进行过滤操作。\n3) 明显的状态变化为试剂瓶内的液体正在被倾倒转移至过滤装置中。\n4) 未出现TLC板、旋蒸仪或分液漏斗等专用分析仪器，主要使用的是常规玻璃仪器和过滤耗材。"
+                },
+                {
+                  "window": [
+                    60.3,
+                    75.4
+                  ],
+                  "frame_ts": [
+                    61.0,
+                    68.0,
+                    75.0
+                  ],
+                  "summary": "1) 画面中可见一个置于锥形瓶上的大漏斗（内衬滤纸）、一只棕色试剂瓶、以及背景中的冰浴装置和磁力搅拌器。\n2) 实验人员左手正握持并倾斜棕色试剂瓶，对准漏斗口准备进行倾倒操作。\n3) 目前尚未观察到液体流出或发生明显的状态变化，处于倒液前的准备阶段。\n4) 出现了磁力搅拌器（含搅拌子）和冰浴装置，未见其他专用分析仪器。"
+                },
+                {
+                  "window": [
+                    75.4,
+                    90.4
+                  ],
+                  "frame_ts": [
+                    76.0,
+                    83.0,
+                    90.0
+                  ],
+                  "summary": "1) 画面中可见装有白色固体的玻璃漏斗、下方承接液体的锥形瓶、棕色试剂瓶以及背景中的冰浴装置。\n2) 实验人员左手持棕色试剂瓶，右手拿着一根连接着管路的细长导管（疑似加液管或滴管）。\n3) 导管口正对试剂瓶口，似乎正在进行向瓶内转移液体或气体的操作，但未见明显的倾倒动作。\n4) 未出现TLC板、旋蒸仪、分液漏斗等专用分析仪器，主要使用的是常规玻璃器皿和管路系统。"
+                }
+              ]
+            }
+          ],
+          "suspicious_gap_count": 2,
+          "needs_review": true
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 3,
+          "raw_segments": 8,
+          "processed_segments": 6,
+          "phase": "reaction_setup"
+        }
+      }
+    ]
+  },
+  {
+    "video_id": "5",
+    "video_info": {
+      "duration": 67.3,
+      "fps": 30.0,
+      "resolution": "1280x720",
+      "sampled_frames": 68
+    },
+    "steps": [
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            0.0,
+            11.2
+          ],
+          "frame_ts": [
+            0.0,
+            6.0,
+            11.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见棕色小试剂瓶、白色塑料移液枪头（或微量加样器）、橙色圆形支架、金属针状物以及背景中的红色试管架和装有黄色液体的圆底烧瓶。\n2) 实验人员左手持握棕色小瓶，右手拿取并操作一个白色的塑料枪头，似乎准备进行取样或转移液体。\n3) 发生了明显的动作变化，即从单纯手持瓶子转变为配合使用移液工具，但尚未看到液体被实际倒出或注入。\n4) 未出现TLC板、展开缸、旋蒸仪等专用大型分析仪器，仅观察到基础的玻璃器皿和微量加样耗材。"
+        },
+        "elapsed": 2.761
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            11.2,
+            22.4
+          ],
+          "frame_ts": [
+            12.0,
+            17.0,
+            22.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见左手持有一支装有黄色液体的NMR管（核磁共振管）及一个透明塑料小袋，桌面上放置有红色试管架、棕色圆环支架和金属细棒。\n2) 实验人员右手操作移液枪吸取液体，随后将NMR管放置在桌面上。\n3) 发生了明显的状态变化：移液枪向桌面滴加了一滴绿色液体，且NMR管从手持状态变为放置状态。\n4) 出现了专用耗材与仪器：NMR管、移液枪以及用于盛放样品的试管架。"
+        },
+        "elapsed": 4.01
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            22.4,
+            33.6
+          ],
+          "frame_ts": [
+            23.0,
+            28.0,
+            33.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见双手持有一个透明塑料离心管（或微量反应管），背景有装有黄色液体的圆底烧瓶、金属针状物及红色试管架。\n2) 实验人员左手捏住管身，右手正在拧开或旋紧该离心管的盖子。\n3) 发生了明显的“开盖”或“关盖”操作动作，未见液体倾倒或状态改变。\n4) 未出现TLC板、展开缸、紫外灯、过柱机、天平、旋蒸仪、分液漏斗或真空泵等专用分析/分离仪器。"
+        },
+        "elapsed": 2.216
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            33.6,
+            44.9
+          ],
+          "frame_ts": [
+            34.0,
+            39.0,
+            44.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见双手、一个透明小塑料瓶（或离心管）、一根细金属针、两个木质圆环支架、红色试管架及若干试管。\n2) 实验人员右手持握该透明小容器，左手在旁辅助，似乎正在检查容器状态或准备进行下一步操作。\n3) 此时间段内未观察到明显的液体倾倒、盖盖或书写等剧烈状态变化，主要是手持容器的静态展示。\n4) 出现了用于点样或转移液体的**毛细管**（左侧台面上）以及盛放样品的**试管**和**试管架**，未见其他大型专用仪器。"
+        },
+        "elapsed": 2.354
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            44.9,
+            56.1
+          ],
+          "frame_ts": [
+            45.0,
+            50.0,
+            56.0
+          ]
+        },
+        "output": {
+          "summary": "1) 画面中可见棕色软木塞、金属针、装有黄色液体的圆底烧瓶（置于另一软木塞上）、红色试管架及数支试管、以及一支白色移液枪。\n2) 实验人员双手正在操作，先是将金属针穿过软木塞中心孔洞进行固定或调整，随后手持移液枪准备吸取液体。\n3) 明显的状态变化为金属针被插入并固定在软木塞上，且移液枪被拿起进入待用状态。\n4) 出现了专用耗材/仪器：移液枪（Pipette）和试管架；未见TLC板、展开缸、旋蒸仪等其他大型分离分析设备。"
+        },
+        "elapsed": 2.564
+      },
+      {
+        "step": "scene_snapper",
+        "input": {
+          "window": [
+            56.1,
+            67.3
+          ],
+          "frame_ts": [
+            57.0,
+            62.0,
+            67.0
+          ]
+        },
+        "output": {
+          "summary": "画面中可见实验台、装有黄色液体的圆底烧瓶（置于木塞上）、红色试管架及若干样品管。实验人员左手持一支透明塑料离心管，右手拿着一根细长的金属针状物（疑似毛细管或点样针）正在对管内进行操作。操作过程中未见明显的液体倾倒或状态突变，动作集中在手持器具的精细调整。未观察到TLC板、展开缸、紫外灯、过柱机、旋蒸仪、分液漏斗或真空泵等专用分析/分离仪器。"
+        },
+        "elapsed": 2.066
+      },
+      {
+        "step": "phase_hypothesis",
+        "output": {
+          "phase": "analytical_sample_preparation",
+          "phase_zh": "分析样品制备",
+          "confidence": 0.95,
+          "alternative_phases": [
+            {
+              "phase": "TLC_analysis",
+              "phase_zh": "薄层色谱分析",
+              "confidence": 0.3,
+              "reason": "虽然出现了毛细管，但全程未观察到 TLC 板、展开缸或紫外灯等关键特征。"
+            },
+            {
+              "phase": "labeling_storage",
+              "phase_zh": "标记与暂存",
+              "confidence": 0.2,
+              "reason": "包含盖盖和放置动作，但核心操作涉及移液枪取样和精细转移，超出了单纯暂存的范畴。"
+            }
+          ],
+          "evidence_timestamps": [
+            11,
+            22,
+            45,
+            60
+          ],
+          "reason": "视频核心操作为使用移液枪向 NMR 管和离心管中转移液体并进行封管，且明确出现了 NMR 管这一专用分析耗材，符合'主要使用移液枪+EP 管/核磁管，无 TLC 板和过柱机'的视觉区分线索。"
+        },
+        "elapsed": 6.175
+      },
+      {
+        "step": "action_segmentation",
+        "input": {
+          "phase": "analytical_sample_preparation",
+          "phase_confidence": 0.95,
+          "catalog_phases": [
+            "analytical_sample_preparation"
+          ]
+        },
+        "output": [
+          {
+            "start": 11,
+            "end": 22,
+            "action": "transfer_to_NMR_tube",
+            "action_zh": "转移至核磁管",
+            "objects": [
+              "移液枪",
+              "NMR 管",
+              "样品溶液"
+            ],
+            "caption": "实验人员使用移液枪吸取液体并操作，将样品转移至 NMR 管中。",
+            "evidence_timestamps": [
+              13,
+              16,
+              19
+            ]
+          },
+          {
+            "start": 22,
+            "end": 34,
+            "action": "finish_sample_container",
+            "action_zh": "封闭并标记样品容器",
+            "objects": [
+              "离心管",
+              "盖子"
+            ],
+            "caption": "实验人员双手操作，旋紧透明塑料离心管的盖子以封闭容器。",
+            "evidence_timestamps": [
+              24,
+              28,
+              32
+            ]
+          }
+        ],
+        "elapsed": 5.607
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            11.0,
+            22.0
+          ],
+          "action": "transfer_to_NMR_tube"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "移液枪",
+            "NMR 管",
+            "样品溶液"
+          ],
+          "objects_missing": [],
+          "caption_ok": false,
+          "corrected_caption": "实验人员手持 NMR 管和装有液体的吸头，另一只手操作移液枪准备吸取液体。",
+          "missing_evidence": [
+            "画面中未展示将液体注入 NMR 管的动作",
+            "移液枪并未对准 NMR 管口"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "标注声称'转移至核磁管'，但画面仅显示准备阶段（手持管子、移液枪在旁），未见实际注入动作。建议核实该时间段是否包含后续注入帧，或修正为'准备转移'。",
+          "confidence": 0.6,
+          "note": "关键物体可见，但核心动作'转移'在提供的帧中未发生，属于过度推断。"
+        },
+        "elapsed": 3.517
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            11.0,
+            22.0
+          ],
+          "action": "transfer_to_NMR_tube",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            9.0,
+            24.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 12.0,
+          "end": 18.0,
+          "action": "transfer_to_NMR_tube",
+          "action_zh": "转移至核磁管",
+          "objects": [
+            "移液枪",
+            "NMR 管",
+            "样品溶液"
+          ],
+          "caption": "实验人员手持 NMR 管，使用移液枪将液体注入管内。",
+          "evidence_timestamps": [
+            13.0,
+            14.0,
+            15.0,
+            16.0
+          ],
+          "repair_reason": "原假设时间段（11-22s）内包含了准备动作，导致置信度低；根据画面证据，实际注液操作发生在 12s-18s 之间，修正时间范围后核心动作'转移'清晰可见且符合本体定义。"
+        },
+        "elapsed": 4.313
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            12.0,
+            18.0
+          ],
+          "action": "transfer_to_NMR_tube"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "objects_present": [
+            "移液枪",
+            "NMR 管",
+            "样品溶液"
+          ],
+          "objects_missing": [],
+          "caption_ok": true,
+          "corrected_caption": "实验人员手持 NMR 管，使用移液枪将液体注入管内。",
+          "missing_evidence": [],
+          "uncertainty_level": "none",
+          "review_suggestion": "",
+          "confidence": 0.95,
+          "note": "画面清晰展示了手持核磁管并使用移液枪进行加样的过程，关键物体和动作均与标注一致。"
+        },
+        "elapsed": 2.383
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            22.0,
+            34.0
+          ],
+          "action": "finish_sample_container"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "离心管",
+            "盖子"
+          ],
+          "objects_missing": [],
+          "caption_ok": false,
+          "corrected_caption": "实验人员双手操作，将透明塑料离心管的盖子套在管口上（未旋紧）。",
+          "missing_evidence": [
+            "画面中仅展示了盖子的放置动作，未见旋紧或标记的动作"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "建议检查后续帧是否有旋紧动作，当前片段仅为加盖。",
+          "confidence": 0.85,
+          "note": "画面显示的是将盖子套在离心管上的过程，并未完成标注所述的'旋紧'和'标记'步骤。"
+        },
+        "elapsed": 3.361
+      },
+      {
+        "step": "repair_segment",
+        "input": {
+          "segment": [
+            22.0,
+            34.0
+          ],
+          "action": "finish_sample_container",
+          "status": "rejected",
+          "confidence": 0.4,
+          "context": [
+            20.0,
+            36.0
+          ]
+        },
+        "output": {
+          "delete": false,
+          "start": 22.0,
+          "end": 34.0,
+          "action": "finish_sample_container",
+          "action_zh": "封闭并标记样品容器",
+          "objects": [
+            "离心管",
+            "盖子"
+          ],
+          "caption": "实验人员双手操作，将透明塑料离心管的盖子套在管口上。",
+          "evidence_timestamps": [
+            22.0,
+            26.0,
+            30.0
+          ],
+          "repair_reason": "原假设中描述的'旋紧'和'标记'步骤在画面中未发生，属于幻觉；根据画面实际内容，仅保留了'盖盖子'这一动作，修正了描述以符合事实。"
+        },
+        "elapsed": 4.071
+      },
+      {
+        "step": "verify_segment",
+        "input": {
+          "segment": [
+            22.0,
+            34.0
+          ],
+          "action": "finish_sample_container"
+        },
+        "output": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": false,
+          "objects_present": [
+            "离心管",
+            "盖子"
+          ],
+          "objects_missing": [],
+          "caption_ok": false,
+          "corrected_caption": "实验人员双手操作，将透明塑料离心管的盖子从管口取下（或打开）。",
+          "missing_evidence": [
+            "画面显示的是开盖动作，与标注的封闭动作相反"
+          ],
+          "uncertainty_level": "mixed",
+          "review_suggestion": "请检查视频时间轴方向或确认该片段是否为倒放/剪辑错误，画面清晰显示为开盖而非封盖。",
+          "confidence": 0.95,
+          "note": "关键物体可见，但核心动作方向（开 vs 关）与标注完全相反。"
+        },
+        "elapsed": 4.727
+      },
+      {
+        "step": "writer_gate",
+        "input": {
+          "total_segments": 2
+        },
+        "output": {
+          "accepted": 1,
+          "filtered": 1,
+          "fallback_used": false
+        }
+      },
+      {
+        "step": "coverage_audit",
+        "output": {
+          "video_duration": 67.3,
+          "covered_seconds": 6.0,
+          "coverage_ratio": 0.089,
+          "large_gaps": [
+            {
+              "start": 18.0,
+              "end": 67.3,
+              "duration": 49.3
+            }
+          ],
+          "backtrack_findings": [
+            {
+              "gap": {
+                "start": 18.0,
+                "end": 67.3,
+                "duration": 49.3
+              },
+              "suspicious": true,
+              "reason": "clip_memory in this gap describes possible substantive operations",
+              "evidence": [
+                {
+                  "window": [
+                    11.2,
+                    22.4
+                  ],
+                  "frame_ts": [
+                    12.0,
+                    17.0,
+                    22.0
+                  ],
+                  "summary": "1) 画面中可见左手持有一支装有黄色液体的NMR管（核磁共振管）及一个透明塑料小袋，桌面上放置有红色试管架、棕色圆环支架和金属细棒。\n2) 实验人员右手操作移液枪吸取液体，随后将NMR管放置在桌面上。\n3) 发生了明显的状态变化：移液枪向桌面滴加了一滴绿色液体，且NMR管从手持状态变为放置状态。\n4) 出现了专用耗材与仪器：NMR管、移液枪以及用于盛放样品的试管架。"
+                },
+                {
+                  "window": [
+                    22.4,
+                    33.6
+                  ],
+                  "frame_ts": [
+                    23.0,
+                    28.0,
+                    33.0
+                  ],
+                  "summary": "1) 画面中可见双手持有一个透明塑料离心管（或微量反应管），背景有装有黄色液体的圆底烧瓶、金属针状物及红色试管架。\n2) 实验人员左手捏住管身，右手正在拧开或旋紧该离心管的盖子。\n3) 发生了明显的“开盖”或“关盖”操作动作，未见液体倾倒或状态改变。\n4) 未出现TLC板、展开缸、紫外灯、过柱机、天平、旋蒸仪、分液漏斗或真空泵等专用分析/分离仪器。"
+                },
+                {
+                  "window": [
+                    33.6,
+                    44.9
+                  ],
+                  "frame_ts": [
+                    34.0,
+                    39.0,
+                    44.0
+                  ],
+                  "summary": "1) 画面中可见双手、一个透明小塑料瓶（或离心管）、一根细金属针、两个木质圆环支架、红色试管架及若干试管。\n2) 实验人员右手持握该透明小容器，左手在旁辅助，似乎正在检查容器状态或准备进行下一步操作。\n3) 此时间段内未观察到明显的液体倾倒、盖盖或书写等剧烈状态变化，主要是手持容器的静态展示。\n4) 出现了用于点样或转移液体的**毛细管**（左侧台面上）以及盛放样品的**试管**和**试管架**，未见其他大型专用仪器。"
+                },
+                {
+                  "window": [
+                    44.9,
+                    56.1
+                  ],
+                  "frame_ts": [
+                    45.0,
+                    50.0,
+                    56.0
+                  ],
+                  "summary": "1) 画面中可见棕色软木塞、金属针、装有黄色液体的圆底烧瓶（置于另一软木塞上）、红色试管架及数支试管、以及一支白色移液枪。\n2) 实验人员双手正在操作，先是将金属针穿过软木塞中心孔洞进行固定或调整，随后手持移液枪准备吸取液体。\n3) 明显的状态变化为金属针被插入并固定在软木塞上，且移液枪被拿起进入待用状态。\n4) 出现了专用耗材/仪器：移液枪（Pipette）和试管架；未见TLC板、展开缸、旋蒸仪等其他大型分离分析设备。"
+                },
+                {
+                  "window": [
+                    56.1,
+                    67.3
+                  ],
+                  "frame_ts": [
+                    57.0,
+                    62.0,
+                    67.0
+                  ],
+                  "summary": "画面中可见实验台、装有黄色液体的圆底烧瓶（置于木塞上）、红色试管架及若干样品管。实验人员左手持一支透明塑料离心管，右手拿着一根细长的金属针状物（疑似毛细管或点样针）正在对管内进行操作。操作过程中未见明显的液体倾倒或状态突变，动作集中在手持器具的精细调整。未观察到TLC板、展开缸、紫外灯、过柱机、旋蒸仪、分液漏斗或真空泵等专用分析/分离仪器。"
+                }
+              ]
+            }
+          ],
+          "suspicious_gap_count": 1,
+          "needs_review": true
+        }
+      },
+      {
+        "step": "write_prediction",
+        "output": {
+          "num_segments": 1,
+          "raw_segments": 2,
+          "processed_segments": 2,
+          "phase": "analytical_sample_preparation"
+        }
+      }
+    ]
+  }
+]
