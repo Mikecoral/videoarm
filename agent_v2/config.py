@@ -60,6 +60,11 @@ CONTROLLER_MODEL = _env("LABARM_CONTROLLER_MODEL", DEFAULT_MODEL)
 VISION_MODEL = _env("LABARM_VISION_MODEL", DEFAULT_MODEL)
 STRUCTURED_MODEL = _env("LABARM_STRUCTURED_MODEL", DEFAULT_MODEL)
 
+# Omni model for direct whole-video understanding (no frame extraction).
+OMNI_MODEL = _env("LABARM_OMNI_MODEL", "qwen3.5-omni-plus")
+# Frame sampling rate passed to the Omni model (frames per second).
+OMNI_FPS = float(_env("LABARM_OMNI_FPS", "1"))
+
 # DashScope Qwen3 exposes a `thinking` switch.  This task wants short, stable,
 # parseable output, so thinking is disabled by default (see api_client).
 ENABLE_THINKING = _env("LABARM_ENABLE_THINKING", "0") == "1"

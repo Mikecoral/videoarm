@@ -9,15 +9,33 @@ patterns across processed videos.
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Iterable, List
+from typing import Any, Dict, Iterable, List, Tuple
 
 
 MEMORY_VERSION = 1
 MAX_EXAMPLES_PER_KEY = 8
 MAX_VIDEOS_PER_KEY = 20
+
+REVIEW_CUES = ("复核", "不确定", "低置信", "人工", "uncertain", "review", "需要复核")
+
+SYNONYM_GROUPS = (
+    ("倒液", "倾倒", "倒入", "倒", "pour", "倾倒液体", "转移液体"),
+    ("转移", "移入", "移出", "转运", "transfer"),
+    ("移液", "吸取", "加液", "滴加", "取样", "加样", "pipette", "移取"),
+    ("过滤", "抽滤", "滤过", "滤液", "滤饼", "filter", "filtration"),
+    ("点样", "TLC", "薄层", "薄层色谱", "展开", "显色"),
+    ("称量", "称重", "天平", "weigh"),
+    ("搅拌", "混合", "摇晃", "振荡", "mix", "stir"),
+    ("洗涤", "润洗", "冲洗", "rinse", "wash"),
+    ("加热", "升温", "热板", "水浴", "heat"),
+    ("冷却", "降温", "冰浴", "cool"),
+    ("连接", "组装", "固定", "安装", "调节", "装置"),
+    ("读数", "观察", "记录", "标记", "书写"),
+)
 
 
 def _write_json(path: Path, obj: Any) -> None:
@@ -45,6 +63,13 @@ def _dedupe_keep_order(items: Iterable[str]) -> List[str]:
     return out
 
 
+def _as_float(value: Any, default: float = 0.0) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def _frame_path(frame_cache_root: Path, video_id: str, timestamp: float) -> str:
     frame_idx = int(round(float(timestamp)))
     return str(frame_cache_root / video_id / f"{frame_idx:06d}.jpg")
@@ -70,6 +95,103 @@ def _keywords_for_segment(seg: Dict[str, Any]) -> List[str]:
     except (TypeError, ValueError):
         pass
     return _dedupe_keep_order(words)
+
+
+def _expand_query_terms(question: str) -> List[str]:
+    terms = [question]
+    for group in SYNONYM_GROUPS:
+        if any(term and term in question for term in group):
+            terms.extend(group)
+    return _dedupe_keep_order(terms)
+
+
+def _video_duration(video_memory: Dict[str, Any]) -> float:
+    info = video_memory.get("video_info", {})
+    duration = _as_float(info.get("duration"), 0.0)
+    if duration > 0:
+        return duration
+    ends = []
+    for key in ("clip_memory", "segment_memory"):
+        for item in video_memory.get(key, []):
+            ends.append(_as_float(item.get("end"), 0.0))
+    return max(ends) if ends else 0.0
+
+
+def _parse_time_ranges(question: str, video_memory: Dict[str, Any]) -> List[Tuple[float, float]]:
+    """Extract coarse time constraints such as 前30秒 / 1分钟左右 / 最后阶段."""
+    text = str(question)
+    duration = _video_duration(video_memory)
+    ranges: List[Tuple[float, float]] = []
+
+    def add(start: float, end: float) -> None:
+        if duration > 0:
+            start = max(0.0, min(duration, start))
+            end = max(0.0, min(duration, end))
+        if end > start:
+            ranges.append((round(start, 1), round(end, 1)))
+
+    for match in re.finditer(r"前\s*(\d+(?:\.\d+)?)\s*(秒|s|分钟|分|min)?", text, re.I):
+        value = float(match.group(1))
+        unit = match.group(2) or "秒"
+        seconds = value * 60 if unit in {"分钟", "分", "min"} else value
+        add(0.0, seconds)
+
+    for match in re.finditer(r"(\d+(?:\.\d+)?)\s*(秒|s|分钟|分|min)\s*(?:左右|附近|前后|上下|的时候|时)?", text, re.I):
+        if match.start() > 0 and text[match.start() - 1] == "前":
+            continue
+        value = float(match.group(1))
+        unit = match.group(2)
+        seconds = value * 60 if unit in {"分钟", "分", "min"} else value
+        add(seconds - 15.0, seconds + 15.0)
+
+    for match in re.finditer(
+        r"(\d+(?:\.\d+)?)\s*(秒|s|分钟|分|min)\s*(?:-|到|至|~)\s*(\d+(?:\.\d+)?)\s*(秒|s|分钟|分|min)?",
+        text,
+        re.I,
+    ):
+        start = float(match.group(1))
+        start_unit = match.group(2)
+        end = float(match.group(3))
+        end_unit = match.group(4) or start_unit
+        if start_unit in {"分钟", "分", "min"}:
+            start *= 60
+        if end_unit in {"分钟", "分", "min"}:
+            end *= 60
+        add(start, end)
+
+    if any(cue in text for cue in ("开头", "开始", "最开始", "一开始", "前半段")):
+        add(0.0, duration * 0.5 if "前半段" in text and duration > 0 else min(30.0, duration or 30.0))
+    if duration > 0 and any(cue in text for cue in ("最后", "末尾", "结尾", "后半段", "后面")):
+        start = duration * 0.5 if "后半段" in text else max(0.0, duration - 30.0)
+        add(start, duration)
+    if duration > 0 and any(cue in text for cue in ("中间", "中段", "中部")):
+        mid = duration / 2.0
+        add(mid - 20.0, mid + 20.0)
+
+    return ranges
+
+
+def _overlaps(item: Dict[str, Any], ranges: List[Tuple[float, float]]) -> bool:
+    if not ranges:
+        return False
+    start = _as_float(item.get("start"), 0.0)
+    end = _as_float(item.get("end"), start)
+    return any(start < r_end and end > r_start for r_start, r_end in ranges)
+
+
+def _timeline_sample(video_memory: Dict[str, Any], max_items: int = 6) -> List[Dict[str, Any]]:
+    clips = list(video_memory.get("clip_memory", []))
+    if not clips:
+        return []
+    if len(clips) <= max_items:
+        return clips
+    # Evenly sample the full clip timeline so fallback still covers beginning,
+    # middle, and end rather than only high-confidence action segments.
+    indexes = []
+    for i in range(max_items):
+        pos = round(i * (len(clips) - 1) / max(1, max_items - 1))
+        indexes.append(pos)
+    return [clips[i] for i in sorted(set(indexes))]
 
 
 def _index_add(index: Dict[str, Dict[str, List[str]]], group: str,
@@ -341,23 +463,34 @@ def retrieve_context(question: str, video_memory: Dict[str, Any],
     text = str(question)
     index = video_memory.get("retrieval_index", {})
     hits: List[str] = []
+    query_terms = _expand_query_terms(text)
+    time_ranges = _parse_time_ranges(text, video_memory)
+
+    for item in video_memory.get("segment_memory", []) + video_memory.get("clip_memory", []):
+        if _overlaps(item, time_ranges):
+            hits.append(str(item.get("memory_id", "")))
+
     for group in ("actions", "objects", "keywords", "time_bins"):
         for key, memory_ids in index.get(group, {}).items():
-            if key and key in text:
+            if key and any(key in term or term in key for term in query_terms):
                 hits.extend(memory_ids)
-    _REVIEW_CUES = ("复核", "不确定", "低置信", "人工", "uncertain", "review", "需要复核")
-    if any(cue in text for cue in _REVIEW_CUES):
+
+    if any(cue in text for cue in REVIEW_CUES):
         for memory_ids in index.get("review", {}).values():
             hits.extend(memory_ids)
 
     if not hits:
-        # Fallback: surface the most confident structured segments, then clips.
+        # Fallback: surface reliable structured segments plus a sampled global
+        # timeline, so broad questions still get whole-video context.
         segments = sorted(
             video_memory.get("segment_memory", []),
-            key=lambda x: float(x.get("confidence") or 0),
+            key=lambda x: _as_float(x.get("confidence"), 0.0),
             reverse=True,
         )
-        hits.extend(str(s.get("memory_id", "")) for s in segments[:max_items])
+        hits.extend(str(s.get("memory_id", "")) for s in segments[: max(1, max_items // 2)])
+        hits.extend(str(c.get("memory_id", "")) for c in _timeline_sample(
+            video_memory, max_items=max(1, max_items - len(hits))
+        ))
 
     by_id = _memory_by_id(video_memory)
     selected = []
@@ -386,11 +519,59 @@ def retrieve_context(question: str, video_memory: Dict[str, Any],
                     global_memory["uncertainty_patterns"][uncertainty]
                 )
 
+    needs_review_query = any(cue in text for cue in REVIEW_CUES)
     return {
         "question": question,
         "video_id": video_memory.get("video_id"),
         "selected_memory": selected,
         "cross_video_hints": cross_video_hints,
+        "review_suggestions": (
+            get_review_suggestions(video_memory) if needs_review_query else None
+        ),
+        "retrieval_debug": {
+            "query_terms": query_terms,
+            "time_ranges": time_ranges,
+            "hit_count": len(_dedupe_keep_order(hits)),
+        },
+    }
+
+
+def get_review_suggestions(video_memory: Dict[str, Any],
+                           include_all_uncertain: bool = True) -> Dict[str, Any]:
+    """Return a deterministic human-review checklist for one video."""
+    items = []
+    for seg in video_memory.get("segment_memory", []):
+        conf = _as_float(seg.get("confidence"), 0.0)
+        needs_review = bool(seg.get("needs_human_review"))
+        uncertain = str(seg.get("uncertainty_type", "none") or "none") != "none"
+        if not needs_review and not (include_all_uncertain and uncertain):
+            continue
+        suggestion = str(seg.get("review_suggestion", "")).strip()
+        if not suggestion:
+            if conf < 0.55:
+                suggestion = "人工复核动作类别、关键物体和起止边界"
+            elif uncertain:
+                suggestion = "人工抽查该片段的不确定性来源是否成立"
+            else:
+                suggestion = "人工抽查该片段标注是否与画面一致"
+        items.append({
+            "segment_id": seg.get("memory_id"),
+            "start": seg.get("start"),
+            "end": seg.get("end"),
+            "action": seg.get("action"),
+            "action_zh": seg.get("action_zh"),
+            "confidence": seg.get("confidence"),
+            "verification_status": seg.get("verification_status"),
+            "uncertainty_type": seg.get("uncertainty_type", "none"),
+            "uncertainty_reason": seg.get("uncertainty_reason", ""),
+            "review_suggestion": suggestion,
+        })
+
+    items.sort(key=lambda x: (_as_float(x.get("confidence"), 0.0), _as_float(x.get("start"), 0.0)))
+    return {
+        "video_id": video_memory.get("video_id"),
+        "needs_review_count": len(items),
+        "items": items,
     }
 
 
@@ -433,7 +614,14 @@ def answer_question(question: str, context: Dict[str, Any], *,
             caption = item.get("caption", "")
             conf = item.get("confidence", "")
             flag = " ⚠需复核" if item.get("needs_human_review") else ""
-            seg_lines.append(f"[{start}-{end}s] {action_zh}(conf={conf}){flag}: {caption}")
+            review = str(item.get("review_suggestion", "")).strip()
+            reason = str(item.get("uncertainty_reason", "")).strip()
+            extra = ""
+            if flag and review:
+                extra += f" 复核建议: {review}"
+            if reason:
+                extra += f" 不确定性: {reason[:120]}"
+            seg_lines.append(f"[{start}-{end}s] {action_zh}(conf={conf}){flag}: {caption}{extra}")
         else:
             summary = str(item.get("summary", ""))[:150]
             seg_lines.append(f"[{start}-{end}s] 场景: {summary}")

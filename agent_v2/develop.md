@@ -4,6 +4,19 @@
 
 ## 当前状态（2026-07-05）
 
+**最新：Omni pipeline（qwen3.5-omni-plus 整视频直接理解）接入完成。**
+
+- 新增 `pipeline_omni.py` + `run_omni.py`：不抽帧，直接用 dashscope 原生 SDK + `file:///` 路径把本地视频发给模型。
+- 技术路径：`dashscope.MultiModalConversation.call(model="qwen3.5-omni-plus", content=[{"video": "file://..."}])` — OpenAI 兼容端点不支持本地文件，fileid:// 也不适用，官方 dashscope SDK 的原生 API 才是正确姿势。
+- 配置：`OMNI_MODEL`（默认 `qwen3.5-omni-plus`）、`OMNI_FPS`（默认 1fps）均可通过环境变量覆盖。
+- 输出：与帧pipeline完全相同 schema（predictions.json + run_log.json + run_info.json），存到 `outputs/` 的带 `_omni_` 标签的 run 目录。
+- 测试结果：
+  - 视频 1（22MB 160s）：phase=filtration(0.98)，11段，84s完成。
+  - 视频 5（14MB 67s）：phase=analytical_sample_preparation(0.95)，3段，37s完成。
+  - 结果质量明显优于帧pipeline：caption 更详细，segment 粒度合理。
+- 入口：`python -m agent_v2.run_omni --video_id 1`（单视频）或 `--split test`（批量）。
+
+
 **最新：dev 评测 + 三轮优化完成。**
 
 - 跑完 dev 5 个视频（3/7/8/0061/0068）基线评测：phase 3/5，tIoU@0.5 F1=0.18。

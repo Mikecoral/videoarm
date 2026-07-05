@@ -5,6 +5,7 @@
 __pycache__/
 *.pyc
 *.pyo
+.DS_Store
 
 # frame cache (large binary blobs, regenerated on demand)
 outputs/frames_cache/

@@ -5,6 +5,9 @@ Responsibilities:
 - retry transient failures with exponential back-off,
 - accept text-or-image content and return plain text,
 - parse a JSON object out of a (possibly fenced) model reply.
+
+For whole-video understanding (Omni pipeline), the native dashscope SDK is used
+with ``file:///absolute/path`` URIs so local videos are never uploaded.
 """
 
 from __future__ import annotations
@@ -12,8 +15,11 @@ from __future__ import annotations
 import json
 import re
 import time
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import dashscope
+from dashscope import MultiModalConversation
 from openai import OpenAI
 
 from . import config
@@ -111,6 +117,72 @@ def parse_json(text: str) -> Any:
             except json.JSONDecodeError:
                 continue
     raise ValueError(f"could not parse JSON from model reply: {text[:200]}")
+
+
+def _dashscope_video_text(content: Any) -> str:
+    """Extract plain text from a dashscope MultiModalConversation response content."""
+    if isinstance(content, str):
+        return content.strip()
+    if isinstance(content, list):
+        parts = [item.get("text", "") for item in content if isinstance(item, dict)]
+        return " ".join(p for p in parts if p).strip()
+    return str(content).strip()
+
+
+def ask_video(prompt: str, video_path: Path, *, model: Optional[str] = None,
+              fps: float = 1.0, max_tokens: int = 4000,
+              system: Optional[str] = None) -> str:
+    """Send a whole-video understanding request via the native dashscope SDK.
+
+    Uses ``file:///absolute/path`` so no upload is required for local files.
+    ``fps`` controls how densely the model samples frames from the video.
+    """
+    model = model or config.OMNI_MODEL
+    dashscope.api_key = config.API_KEY
+    video_uri = f"file://{video_path.resolve()}"
+
+    messages: List[Dict[str, Any]] = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({
+        "role": "user",
+        "content": [
+            {"video": video_uri, "fps": fps},
+            {"text": prompt},
+        ],
+    })
+
+    last_err: Optional[Exception] = None
+    for attempt in range(config.MAX_RETRIES):
+        try:
+            resp = MultiModalConversation.call(
+                model=model,
+                messages=messages,
+                result_format="message",
+                max_tokens=max_tokens,
+            )
+            if resp.status_code != 200:
+                raise RuntimeError(f"dashscope error {resp.status_code}: {resp.message} [{resp.code}]")
+            return _dashscope_video_text(resp.output.choices[0].message.content)
+        except Exception as e:  # noqa: BLE001
+            last_err = e
+            time.sleep(min(2 ** attempt * 2, 30))
+    raise RuntimeError(f"ask_video failed after {config.MAX_RETRIES} retries: {last_err}")
+
+
+def ask_video_json(prompt: str, video_path: Path, *, model: Optional[str] = None,
+                   fps: float = 1.0, max_tokens: int = 4000,
+                   system: Optional[str] = None) -> Any:
+    """Ask an Omni model for JSON output given a whole video."""
+    reply = ask_video(prompt, video_path, model=model, fps=fps,
+                      max_tokens=max_tokens, system=system)
+    try:
+        return parse_json(reply)
+    except ValueError:
+        strict = prompt + "\n\n只输出合法 JSON，不要任何解释或 markdown 代码块。"
+        reply = ask_video(strict, video_path, model=model, fps=fps,
+                          max_tokens=max_tokens, system=system)
+        return parse_json(reply)
 
 
 def ask_json(prompt: str, *, model: Optional[str] = None, vision_images: Optional[List[str]] = None,

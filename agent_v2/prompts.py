@@ -169,3 +169,83 @@ REPAIR_SEGMENT = """你在修复一条未通过核验或低置信的实验操作
   "repair_reason": "<一句话说明如何修复或为何删除>"
 }}
 只输出 JSON。"""
+
+# ====================================================================
+# Omni whole-video prompts (qwen3.5-omni-plus, no frame extraction)
+# ====================================================================
+
+OMNI_PHASE_HYPOTHESIS = """你在观看一段第一视角化学实验视频（完整视频，总时长约 {duration:.0f} 秒）。
+
+候选实验阶段（参考本体，非封闭集合）：
+{phase_catalog}
+
+【视觉区分关键线索 — 优先用以下特征区分，不要仅靠移液/倒液动作来判断】
+- TLC_analysis：画面中出现 TLC 薄板（白色/铝基薄片）、毛细管点样、展开缸、铅笔划线、紫外灯；
+  不以移液枪为主要器具；板上可见斑点。
+- column_chromatography_setup：出现自动过柱机（大型仪器主机）、装样柱/样品筒（短粗柱）、
+  管路连接；操作以安装、插入、启动仪器为主。
+- analytical_sample_preparation：主要使用移液枪+EP管/离心管/核磁管，无 TLC 板和过柱机，
+  核心操作是稀释/转移/封管/标记。
+- extraction：出现分液漏斗（梨形/筒形玻璃漏斗+活塞），含振摇排气、放出下层、加萃取溶剂。
+- reaction_setup：出现烧瓶/圆底瓶+磁力搅拌/加热台，或注射器加液进烧瓶体系。
+- weighing：出现天平台面和称量纸/称量舟，动作以加减固体和读数为主。
+
+请认真观看整段视频，输出 JSON：
+{{
+  "phase": "<最匹配的 phase_id>",
+  "phase_zh": "<该阶段中文名>",
+  "confidence": <0-1>,
+  "alternative_phases": [
+    {{"phase": "<第二候选 phase_id>", "phase_zh": "<中文名>", "confidence": <0-1>, "reason": "<一句话>"}},
+    {{"phase": "<第三候选 phase_id>", "phase_zh": "<中文名>", "confidence": <0-1>, "reason": "<一句话>"}}
+  ],
+  "evidence_timestamps": [<支持该判断的秒数, 3-5个>],
+  "reason": "<一句话理由，必须引用至少一个视觉区分线索>"
+}}
+只输出 JSON。"""
+
+OMNI_ACTION_SEGMENTATION = """你在观看一段第一视角化学实验视频（完整视频，总时长约 {duration:.0f} 秒）。
+该视频的实验阶段：{phase_id}（{phase_zh}）。
+
+候选动作本体（先优先使用主阶段动作；若观察与其他阶段动作更符合，可选择更贴切的 action_id）：
+{action_catalog}
+
+要求：
+- 观看完整视频，输出时间上从前到后、不重叠的关键操作片段；
+- 凡视频中出现实质性操作（如倒液、移液、搅拌、抽滤、转移、洗涤、点样等）都必须输出对应片段；
+  仅纯粹的静止等待或画面不变的段落可跳过；
+- 【粒度规则】同一类动作若在视频中重复出现多次（如多次用注射器逐次加液、多次移液），
+  每次独立操作应单独输出一个片段，不要合并为一大段；
+- 每段选择最贴切的 action_id（尽量用本体中的；确实不在本体内可自拟并注明）；
+- objects 写该片段中出现的关键实验器具和材料；
+- caption 用一句中文客观描述该片段发生了什么；
+- evidence_timestamps 给出该片段内最能佐证的 2-4 个秒数。
+
+【易混动作区分线索】
+- measure_liquid_for_addition vs add_liquid_to_reaction：
+  measure = 将液体从试剂瓶吸入注射器/量筒（吸取阶段）；
+  add = 将注射器/量筒中的液体推入/倒入反应容器（注入阶段）。
+- rinse_container vs transfer_liquid_to_sep_funnel：
+  rinse = 用少量液体润洗容器内壁，随后将液体倒出丢弃；
+  transfer = 将液体从一个容器直接倒入另一个容器（目的是转移，不是润洗）。
+- transfer_liquid_to_sep_funnel vs add_liquid_to_reaction：
+  transfer_to_sep_funnel = 将液体倒入分液漏斗（目标容器是分液漏斗）；
+  add_to_reaction = 向反应容器中加液（目标是反应瓶，不是分液漏斗）。
+- mix_and_vent_sep_funnel vs add_extraction_solvent：
+  mix/vent = 分液漏斗盖好后倒置振摇并开活塞排气；
+  add = 从外部试剂瓶向分液漏斗内倒入液体。
+- prepare_TLC_plate vs spot_TLC_plate：
+  prepare = 用铅笔在 TLC 板上划线、标记位置；
+  spot = 用毛细管蘸取样品并将液滴点到 TLC 板指定位置。
+
+输出 JSON 数组，每个元素：
+{{
+  "start": <秒>,
+  "end": <秒>,
+  "action": "<action_id>",
+  "action_zh": "<动作中文名>",
+  "objects": ["..."],
+  "caption": "...",
+  "evidence_timestamps": [<秒>, ...]
+}}
+只输出 JSON 数组。"""
