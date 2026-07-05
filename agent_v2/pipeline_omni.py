@@ -19,12 +19,14 @@ from . import api_client, config, ontology, prompts
 from .media import VideoInfo
 from .ontology import Phase
 from .pipeline import (
+    _action_catalog_for_repair,
+    _clip_final_overlaps,
+    _combined_action_catalog,
+    _coverage_audit,
     _normalize_segments,
     _phase_candidates,
-    _combined_action_catalog,
+    _verify_and_maybe_repair,
     _writer_gate,
-    _clip_final_overlaps,
-    _coverage_audit,
 )
 from .runlog import RunLog
 
@@ -101,9 +103,19 @@ def process_video_omni(video_id: str, video: VideoInfo, phases: List[Phase],
     phase_res = hypothesize_phase_omni(video, phases, log)
     segments = segment_actions_omni(video, phases, phase_res, log)
 
-    segments = [_default_unverified(s) for s in segments]
+    # Real verification when frames are available, otherwise unverified defaults
+    if video.frames:
+        repair_catalog = _action_catalog_for_repair(phases, phase_res)
+        processed: List[Dict[str, Any]] = []
+        for seg in segments:
+            result = _verify_and_maybe_repair(video, seg, repair_catalog, log)
+            if result is not None:
+                processed.append(result)
+        segments = processed
+    else:
+        segments = [_default_unverified(s) for s in segments]
 
-    final_segments = _writer_gate(segments, log)
+    final_segments = _writer_gate(segments, log, keep_rejected=True)
     final_segments = _clip_final_overlaps(final_segments)
     coverage = _coverage_audit(final_segments, video.duration, [], log)
 

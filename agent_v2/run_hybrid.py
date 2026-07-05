@@ -1,12 +1,12 @@
-"""Batch entry point.
+"""Hybrid hxa batch entry point.
 
-    python -m agent_v2.run --split test
-    python -m agent_v2.run --split dev
-    python -m agent_v2.run --video_id 0061
+Examples:
+    python -m agent_v2.run_hybrid --split test
+    python -m agent_v2.run_hybrid --split dev
+    python -m agent_v2.run_hybrid --video_id 0061
 
-Each run auto-creates a timestamped subdirectory under outputs/ and writes a
-run_info.json alongside predictions.json and run_log.json so runs are easy
-to distinguish later.  Pass --out_dir to override the parent directory.
+The output schema is compatible with ``run.py`` and stored in timestamped
+``outputs/*_hybrid_*`` directories.
 """
 
 from __future__ import annotations
@@ -19,7 +19,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
-from . import config, media, memory, ontology, pipeline
+from . import config, media, memory, ontology
+from . import pipeline_hybrid as pipeline
 from .runlog import RunLog
 
 
@@ -35,7 +36,6 @@ def _write_json(path: Path, obj: Any) -> None:
 
 
 def _make_run_dir(base: Path, tag: str) -> Path:
-    """Create a timestamped run subdirectory, e.g. outputs/20260704_153022_test_all15/"""
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_dir = base / f"{ts}_{tag}"
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -43,7 +43,7 @@ def _make_run_dir(base: Path, tag: str) -> Path:
 
 
 def main(argv: List[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="LabARM-HV batch video parser")
+    ap = argparse.ArgumentParser(description="LabARM-HV hxa hybrid video parser")
     ap.add_argument("--split", choices=["dev", "test", "all"], default="test")
     ap.add_argument("--video_id", help="process a single video id (overrides --split)")
     ap.add_argument("--out_dir", default=str(config.OUTPUT_DIR),
@@ -52,7 +52,6 @@ def main(argv: List[str] | None = None) -> int:
     ap.add_argument("--limit", type=int, default=0, help="max videos (0 = all)")
     args = ap.parse_args(argv)
 
-    # resolve the video work list
     if args.video_id:
         videos = [{"video_id": args.video_id, "video_path": f"videos/{args.video_id}.mp4"}]
         split_tag = f"single_{args.video_id}"
@@ -66,23 +65,22 @@ def main(argv: List[str] | None = None) -> int:
         videos = videos[: args.limit]
 
     video_ids = [str(v["video_id"]) for v in videos]
-    tag = f"{split_tag}_{len(video_ids)}vids"
-    run_dir = _make_run_dir(Path(args.out_dir), tag)
-
+    run_dir = _make_run_dir(Path(args.out_dir), f"hybrid_{split_tag}_{len(video_ids)}vids")
     pred_path = run_dir / "predictions.json"
     log_path = run_dir / "run_log.json"
     info_path = run_dir / "run_info.json"
-    cache_root = config.FRAME_CACHE_DIR  # outside the deliverable package
+    cache_root = Path(args.out_dir) / "frames_cache"
     global_memory_path = Path(args.out_dir) / "global_memory.json"
     global_snapshot_path = run_dir / "global_memory_snapshot.json"
 
-    run_start = datetime.now().isoformat()
     run_info: Dict[str, Any] = {
-        "started_at": run_start,
+        "started_at": datetime.now().isoformat(),
         "split": split_tag,
+        "pipeline": "hybrid_hxa",
+        "mllm_model": config.VISION_MODEL,
+        "llm_model": config.STRUCTURED_MODEL,
         "video_count": len(video_ids),
         "video_ids": video_ids,
-        "model": config.DEFAULT_MODEL,
         "finished_at": None,
         "total_seconds": None,
     }
@@ -101,11 +99,13 @@ def main(argv: List[str] | None = None) -> int:
         except json.JSONDecodeError:
             pass
     global_memory = memory.load_global_memory(global_memory_path)
-
     phases = ontology.load_ontology()
-    print(f"[labarm] run dir : {run_dir}")
-    print(f"[labarm] split   : {split_tag}  videos: {len(video_ids)}  ids: {video_ids}")
-    print(f"[labarm] ontology: {len(phases)} phases")
+
+    print(f"[hybrid] run dir : {run_dir}")
+    print(f"[hybrid] split   : {split_tag}  videos: {len(video_ids)}  ids: {video_ids}")
+    print(f"[hybrid] mllm    : {config.VISION_MODEL}")
+    print(f"[hybrid] llm     : {config.STRUCTURED_MODEL}")
+    print(f"[hybrid] ontology: {len(phases)} phases")
 
     wall_start = time.time()
     for i, entry in enumerate(videos, 1):
@@ -114,13 +114,16 @@ def main(argv: List[str] | None = None) -> int:
             print(f"[{i}/{len(videos)}] {vid} already done, skip")
             continue
         video_path = config.DATA_ROOT / entry["video_path"]
+        frame_dir = config.DATA_ROOT / "frames" / vid
         print(f"[{i}/{len(videos)}] {vid} loading frames ...", flush=True)
         t0 = time.time()
         try:
-            video = media.load_video(vid, video_path, cache_root=cache_root)
-            print(f"    {len(video.frames)} frames, {video.duration:.0f}s -> processing", flush=True)
-            pred = pipeline.process_video(vid, video, phases, run_log)
-        except Exception as e:  # noqa: BLE001 - never let one video kill the batch
+            video = media.load_video(
+                vid, video_path, cache_root=cache_root, release_frame_dir=frame_dir
+            )
+            print(f"    {len(video.frames)} frames, {video.duration:.0f}s -> hybrid processing", flush=True)
+            pred = pipeline.process_video_hybrid(vid, video, phases, run_log)
+        except Exception as e:  # noqa: BLE001
             print(f"    ERROR on {vid}: {e}", file=sys.stderr)
             pred = {"video_id": vid, "video_path": entry["video_path"],
                     "segments": [], "processing_note": f"error: {e}"}
@@ -129,25 +132,24 @@ def main(argv: List[str] | None = None) -> int:
         if pred.get("segments") or pred.get("clip_memory"):
             video_memory = memory.build_video_memory(pred, video_log, cache_root)
             video_memory_path = memory.save_video_memory(run_dir, video_memory)
-            global_memory = memory.update_global_memory(global_memory, video_memory,
-                                                        memory_path=video_memory_path)
+            global_memory = memory.update_global_memory(
+                global_memory, video_memory, memory_path=video_memory_path
+            )
             memory.save_global_memory(global_memory_path, global_memory)
             memory.save_global_memory(global_snapshot_path, global_memory)
             run_info["global_memory_summary"] = memory.build_global_summary(global_memory)
         _write_json(pred_path, predictions)
         _write_json(log_path, run_log.as_list())
         _write_json(info_path, run_info)
-        elapsed = time.time() - t0
-        segs = len(pred.get("segments", []))
-        print(f"    done in {elapsed:.1f}s, {segs} segments")
+        print(f"    done in {time.time() - t0:.1f}s, {len(pred.get('segments', []))} segments")
 
     total = time.time() - wall_start
     run_info["finished_at"] = datetime.now().isoformat()
     run_info["total_seconds"] = round(total, 1)
     _write_json(info_path, run_info)
 
-    print(f"[labarm] finished in {total:.0f}s")
-    print(f"[labarm] results  -> {run_dir}")
+    print(f"[hybrid] finished in {total:.0f}s")
+    print(f"[hybrid] results  -> {run_dir}")
     return 0
 
 

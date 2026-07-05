@@ -1,13 +1,12 @@
 """LabARM-HV configuration.
 
-Backend is the official Aliyun DashScope OpenAI-compatible endpoint, following
-`VideoHV-Agent/video_hv/config.py`.  The model `qwen3.5-27b` is multimodal:
-it accepts both text and images, so a single model id serves the controller,
-the vision tools, and the structured-output calls.
+The hxa branch separates model routing by capability:
+
+- MLLM / vision calls use DashScope + ``qwen3.5-27b`` by default.
+- Pure text / structured reasoning calls use DeepSeek by default.
 
 All values can be overridden with environment variables (``LABARM_*``), which
-keeps the checked-in defaults out of the way of graders who supply their own
-credentials.
+keeps checked-in source free of credentials.
 """
 
 from __future__ import annotations
@@ -17,8 +16,6 @@ from pathlib import Path
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 REPO_ROOT = PACKAGE_ROOT.parent
-DATA_ROOT = REPO_ROOT / "hackathon_release"
-OUTPUT_DIR = PACKAGE_ROOT / "outputs"
 
 
 def _env(name: str, default: str) -> str:
@@ -45,20 +42,38 @@ def _load_dotenv() -> None:
 
 _load_dotenv()
 
+DATA_ROOT = Path(_env("LABARM_DATA_ROOT", str(REPO_ROOT / "hackathon_release"))).expanduser()
+OUTPUT_DIR = Path(_env("LABARM_OUTPUT_DIR", str(PACKAGE_ROOT / "outputs"))).expanduser()
+
+# Frame cache lives outside the agent package so it is never shipped.
+# Each video gets a subdirectory named by video_id under this path.
+FRAME_CACHE_DIR = Path(_env("LABARM_FRAME_CACHE_DIR", str(REPO_ROOT / "frame_cache"))).expanduser()
+
 # ---------------------------------------------------------------- endpoint --
-DEFAULT_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+DEFAULT_MLLM_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+DEFAULT_LLM_BASE_URL = "https://api.deepseek.com"
 
-BASE_URL = _env("LABARM_BASE_URL", DEFAULT_BASE_URL)
-# Provide the key via env var LABARM_API_KEY / DASHSCOPE_API_KEY, or agent_v2/.env
-# (see .env.example). Never commit the real key.
-API_KEY = _env("LABARM_API_KEY", os.environ.get("DASHSCOPE_API_KEY", ""))
+# Backward-compatible aliases: old LABARM_BASE_URL/API_KEY/MODEL map to the
+# multimodal route.  New code should prefer LABARM_MLLM_* and LABARM_LLM_*.
+MLLM_BASE_URL = _env("LABARM_MLLM_BASE_URL", _env("LABARM_BASE_URL", DEFAULT_MLLM_BASE_URL))
+MLLM_API_KEY = _env(
+    "LABARM_MLLM_API_KEY",
+    _env("LABARM_API_KEY", os.environ.get("DASHSCOPE_API_KEY", "")),
+)
+MLLM_MODEL = _env("LABARM_MLLM_MODEL", _env("LABARM_MODEL", "qwen3.5-27b"))
 
-# One multimodal model for every role (per project decision).  The three names
-# are kept separate so a grader can point a role at a different model later.
-DEFAULT_MODEL = _env("LABARM_MODEL", "qwen3.5-27b")
-CONTROLLER_MODEL = _env("LABARM_CONTROLLER_MODEL", DEFAULT_MODEL)
-VISION_MODEL = _env("LABARM_VISION_MODEL", DEFAULT_MODEL)
-STRUCTURED_MODEL = _env("LABARM_STRUCTURED_MODEL", DEFAULT_MODEL)
+LLM_BASE_URL = _env("LABARM_LLM_BASE_URL", DEFAULT_LLM_BASE_URL)
+LLM_API_KEY = _env("LABARM_LLM_API_KEY", os.environ.get("DEEPSEEK_API_KEY", ""))
+LLM_MODEL = _env("LABARM_LLM_MODEL", "deepseek-chat")
+
+# Compatibility names used by existing pipeline code.
+DEFAULT_BASE_URL = MLLM_BASE_URL
+BASE_URL = MLLM_BASE_URL
+API_KEY = MLLM_API_KEY
+DEFAULT_MODEL = MLLM_MODEL
+VISION_MODEL = _env("LABARM_VISION_MODEL", MLLM_MODEL)
+CONTROLLER_MODEL = _env("LABARM_CONTROLLER_MODEL", LLM_MODEL)
+STRUCTURED_MODEL = _env("LABARM_STRUCTURED_MODEL", LLM_MODEL)
 
 # Omni model for direct whole-video understanding (no frame extraction).
 OMNI_MODEL = _env("LABARM_OMNI_MODEL", "qwen3.5-omni-plus")
@@ -114,6 +129,14 @@ DENSE_ENABLED = _env("LABARM_DENSE", "1") == "1"
 DENSE_MIN_DURATION = float(_env("LABARM_DENSE_MIN_DURATION", "14.0"))
 DENSE_SUBWINDOW = float(_env("LABARM_DENSE_SUBWINDOW", "5.0"))
 DENSE_FRAMES = int(_env("LABARM_DENSE_FRAMES", "4"))
+
+# Hybrid hxa pipeline: MLLM local evidence agents + DeepSeek text audit.
+HYBRID_OBJECT_ENABLED = _env("LABARM_HYBRID_OBJECT", "1") == "1"
+HYBRID_OBJECT_FRAMES = int(_env("LABARM_HYBRID_OBJECT_FRAMES", "4"))
+HYBRID_BOUNDARY_ENABLED = _env("LABARM_HYBRID_BOUNDARY", "1") == "1"
+HYBRID_BOUNDARY_CONTEXT_SECONDS = float(_env("LABARM_HYBRID_BOUNDARY_CONTEXT", "3.0"))
+HYBRID_BOUNDARY_FRAMES = int(_env("LABARM_HYBRID_BOUNDARY_FRAMES", "7"))
+HYBRID_TEXT_AUDIT_ENABLED = _env("LABARM_HYBRID_TEXT_AUDIT", "1") == "1"
 
 REQUEST_TIMEOUT = float(_env("LABARM_TIMEOUT", "120"))
 MAX_RETRIES = int(_env("LABARM_MAX_RETRIES", "4"))

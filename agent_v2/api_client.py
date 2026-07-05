@@ -1,7 +1,9 @@
-"""Thin OpenAI-compatible chat wrapper for DashScope.
+"""Thin OpenAI-compatible chat wrappers for LabARM-HV.
 
 Responsibilities:
-- inject ``enable_thinking=False`` via ``extra_body`` (DashScope Qwen3 switch),
+- route pure text calls to the configured LLM provider (DeepSeek by default),
+- route multimodal image calls to the configured MLLM provider (Qwen by default),
+- inject ``enable_thinking=False`` via ``extra_body`` when a provider supports it,
 - retry transient failures with exponential back-off,
 - accept text-or-image content and return plain text,
 - parse a JSON object out of a (possibly fenced) model reply.
@@ -24,26 +26,46 @@ from openai import OpenAI
 
 from . import config
 
-_client: Optional[OpenAI] = None
+_llm_client: Optional[OpenAI] = None
+_mllm_client: Optional[OpenAI] = None
+
+
+def llm_client() -> OpenAI:
+    global _llm_client
+    if _llm_client is None:
+        _llm_client = OpenAI(base_url=config.LLM_BASE_URL, api_key=config.LLM_API_KEY,
+                             timeout=config.REQUEST_TIMEOUT)
+    return _llm_client
+
+
+def mllm_client() -> OpenAI:
+    global _mllm_client
+    if _mllm_client is None:
+        _mllm_client = OpenAI(base_url=config.MLLM_BASE_URL, api_key=config.MLLM_API_KEY,
+                              timeout=config.REQUEST_TIMEOUT)
+    return _mllm_client
 
 
 def client() -> OpenAI:
-    global _client
-    if _client is None:
-        _client = OpenAI(base_url=config.BASE_URL, api_key=config.API_KEY,
-                         timeout=config.REQUEST_TIMEOUT)
-    return _client
+    """Backward-compatible default client for older imports."""
+    return mllm_client()
 
 
 def chat(messages: List[Dict[str, Any]], *, model: Optional[str] = None,
-         temperature: float = 0.2, max_tokens: int = 1200) -> str:
+         temperature: float = 0.2, max_tokens: int = 1200,
+         provider: str = "llm") -> str:
     """Run one chat completion and return the assistant text."""
-    model = model or config.CONTROLLER_MODEL
+    if provider == "mllm":
+        openai_client = mllm_client()
+        model = model or config.VISION_MODEL
+    else:
+        openai_client = llm_client()
+        model = model or config.CONTROLLER_MODEL
     extra_body = {"enable_thinking": config.ENABLE_THINKING}
     last_err: Optional[Exception] = None
     for attempt in range(config.MAX_RETRIES):
         try:
-            resp = client().chat.completions.create(
+            resp = openai_client.chat.completions.create(
                 model=model,
                 messages=messages,
                 temperature=temperature,
@@ -80,7 +102,8 @@ def ask_text(prompt: str, *, model: Optional[str] = None,
     if system:
         messages.append({"role": "system", "content": system})
     messages.append(user_text(prompt))
-    return chat(messages, model=model, temperature=temperature, max_tokens=max_tokens)
+    return chat(messages, model=model, temperature=temperature, max_tokens=max_tokens,
+                provider="llm")
 
 
 def ask_vision(prompt: str, image_urls: List[str], *, model: Optional[str] = None,
@@ -91,7 +114,7 @@ def ask_vision(prompt: str, image_urls: List[str], *, model: Optional[str] = Non
         messages.append({"role": "system", "content": system})
     messages.append(user_multimodal(prompt, image_urls))
     return chat(messages, model=model or config.VISION_MODEL,
-                temperature=temperature, max_tokens=max_tokens)
+                temperature=temperature, max_tokens=max_tokens, provider="mllm")
 
 
 _JSON_FENCE = re.compile(r"```(?:json)?\s*(.*?)```", re.DOTALL)
@@ -138,7 +161,7 @@ def ask_video(prompt: str, video_path: Path, *, model: Optional[str] = None,
     ``fps`` controls how densely the model samples frames from the video.
     """
     model = model or config.OMNI_MODEL
-    dashscope.api_key = config.API_KEY
+    dashscope.api_key = config.MLLM_API_KEY
     video_uri = f"file://{video_path.resolve()}"
 
     messages: List[Dict[str, Any]] = []

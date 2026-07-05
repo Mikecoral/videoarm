@@ -209,3 +209,4 @@ __marimo__/
 # LabARM-HV local artifacts
 agent_v2/outputs/
 agent_v2/.env
+frame_cache/

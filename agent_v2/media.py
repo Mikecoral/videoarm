@@ -1,17 +1,16 @@
 """Frame sampling and encoding.
 
-Frames are sampled at a fixed fps with OpenCV, down-scaled to keep base64
-payloads small, and cached to disk so re-runs are cheap.  When the release
-already ships 1-fps frames (dev split), those are reused directly.
+Frames are always extracted fresh from the source video at a fixed fps with
+OpenCV, down-scaled to keep base64 payloads small, and cached to disk so
+re-runs are cheap.  Pre-extracted release frames are never reused.
 """
 
 from __future__ import annotations
 
 import base64
-import io
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 import cv2
 from PIL import Image
@@ -77,29 +76,16 @@ def _extract_with_opencv(video_path: Path, cache_dir: Path, fps_target: float) -
     return frames
 
 
-def _reuse_release_frames(frame_dir: Path, cache_dir: Path) -> List[Frame]:
-    """Reuse shipped 1-fps frames (dev split); re-encode down-scaled copies."""
-    frames: List[Frame] = []
-    for src in sorted(frame_dir.glob("*.jpg")):
-        try:
-            ts = int(src.stem)
-        except ValueError:
-            continue
-        out_path = cache_dir / f"{ts:06d}.jpg"
-        if not out_path.exists():
-            _save_resized(Image.open(src), out_path)
-        frames.append(Frame(timestamp=float(ts), path=out_path))
-    return frames
 
+def load_video(video_id: str, video_path: Path, *, cache_root: Path) -> VideoInfo:
+    """Probe video metadata and extract frames at FRAME_FPS via OpenCV.
 
-def load_video(video_id: str, video_path: Path, *, cache_root: Path,
-               release_frame_dir: Optional[Path] = None) -> VideoInfo:
+    Frames are always extracted fresh from the source video — pre-extracted
+    release frames are never reused, so every run observes the same stream.
+    """
     duration, fps, w, h = probe(video_path)
     cache_dir = cache_root / video_id
-    if release_frame_dir and release_frame_dir.exists() and any(release_frame_dir.glob("*.jpg")):
-        frames = _reuse_release_frames(release_frame_dir, cache_dir)
-    else:
-        frames = _extract_with_opencv(video_path, cache_dir, config.FRAME_FPS)
+    frames = _extract_with_opencv(video_path, cache_dir, config.FRAME_FPS)
     return VideoInfo(video_id=video_id, path=video_path, duration=duration,
                      fps=fps, width=w, height=h, frames=frames)
 

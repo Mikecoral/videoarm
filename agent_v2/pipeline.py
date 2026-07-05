@@ -539,7 +539,8 @@ def _verify_and_maybe_repair(video: VideoInfo, seg: Dict[str, Any],
     return repaired
 
 
-def _writer_gate(segments: List[Dict[str, Any]], log: RunLog) -> List[Dict[str, Any]]:
+def _writer_gate(segments: List[Dict[str, Any]], log: RunLog,
+                 keep_rejected: bool = False) -> List[Dict[str, Any]]:
     def conf_value(seg: Dict[str, Any]) -> float:
         try:
             return float(seg.get("confidence", 0) or 0)
@@ -549,6 +550,9 @@ def _writer_gate(segments: List[Dict[str, Any]], log: RunLog) -> List[Dict[str, 
     allowed = {"verified", "partial"}
     if not config.VERIFY_ENABLED:
         allowed.add("unverified")
+    if keep_rejected:
+        allowed.add("rejected")
+
     accepted = [s for s in segments
                 if s.get("verification_status") in allowed]
     rejected = [s for s in segments

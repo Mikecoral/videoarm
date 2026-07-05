@@ -10,13 +10,21 @@
 pip install -r requirements.txt
 ```
 
-后端使用阿里云百炼 DashScope 的 OpenAI 兼容端点，统一模型 `qwen3.5-27b`（多模态，
-同时处理文本与图像）。默认凭据写在 `config.py`，可用环境变量覆盖：
+后端在 `hxa` 分支中按能力分路：
+
+- MLLM / 视觉调用：DashScope OpenAI 兼容端点，默认 `qwen3.5-27b`；
+- 纯文本 / 结构化推理：DeepSeek OpenAI 兼容端点，默认 `deepseek-chat`。
+
+密钥通过环境变量或本地 `.env` 提供，不写入源码：
 
 ```bash
-export LABARM_API_KEY=sk-...          # DashScope key
-export LABARM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-export LABARM_MODEL=qwen3.5-27b
+export LABARM_MLLM_API_KEY=sk-...       # DashScope key
+export LABARM_MLLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+export LABARM_MLLM_MODEL=qwen3.5-27b
+
+export LABARM_LLM_API_KEY=sk-...        # DeepSeek key
+export LABARM_LLM_BASE_URL=https://api.deepseek.com
+export LABARM_LLM_MODEL=deepseek-chat
 ```
 
 ## 统一入口
@@ -34,6 +42,28 @@ python -m agent_v2.run --video_id 0061
 # 断点续跑（跳过已完成视频）
 python -m agent_v2.run --split test --resume
 ```
+
+## hxa Hybrid 入口
+
+`hxa` 分支新增一条 hybrid pipeline：先用帧级 clip memory 生成候选，再由独立的对象确认、
+边界精修、视觉核验/修复和文本审计 agent 逐步收紧结果。
+
+```bash
+# 单个视频
+python -m agent_v2.run_hybrid --video_id 0061
+
+# dev / test 批处理
+python -m agent_v2.run_hybrid --split dev
+python -m agent_v2.run_hybrid --split test
+```
+
+当前三条 pipeline 的定位：
+
+| 入口 | 模型输入 | 优点 | 不足 |
+|---|---|---|---|
+| `run.py` | 抽帧窗口 + 局部帧核验 | 有 verify/repair 闭环 | 全局理解依赖窗口摘要 |
+| `run_omni.py` | 完整视频 | 全局理解强，不抽帧 | 无逐段核验，默认 partial |
+| `run_hybrid.py` | 抽帧窗口 + 局部证据 + 文本审计 | 兼顾候选生成、证据核验、边界/对象收紧 | 调用次数更多 |
 
 输出写到 `agent_v2/outputs/`：
 
@@ -78,6 +108,11 @@ python -m agent_v2.run --split test --resume
 | `LABARM_FRAMES_PER_WINDOW` | 3 | 每个窗口送入视觉的帧数 |
 | `LABARM_VERIFY` | 1 | 是否开启逐片段视觉核验 |
 | `LABARM_ENABLE_THINKING` | 0 | 是否开启 Qwen thinking |
+| `LABARM_MLLM_MODEL` | qwen3.5-27b | 视觉/多模态模型 |
+| `LABARM_LLM_MODEL` | deepseek-chat | 纯文本结构化模型 |
+| `LABARM_HYBRID_OBJECT` | 1 | hybrid 是否开启对象确认 agent |
+| `LABARM_HYBRID_BOUNDARY` | 1 | hybrid 是否开启边界精修 agent |
+| `LABARM_HYBRID_TEXT_AUDIT` | 1 | hybrid 是否开启 DeepSeek 文本审计 |
 
 ## 输出字段
 
