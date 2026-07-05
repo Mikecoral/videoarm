@@ -21,9 +21,9 @@ OUT_PATH = _HERE / "outputs" / "omni_batch" / "vqa_output.json"
 CONCURRENCY = 100
 
 # Build SegmentContext per segment
-from vqa_generation.types import SegmentContext, KeyframeContext
-from vqa_generation.generator import TemplateVQAGenerator, MLLMVQAGenerator
-from vqa_generation.io_utils import write_json
+from agent_v2.vqa.types import SegmentContext, KeyframeContext
+from agent_v2.vqa.generator import TemplateVQAGenerator, MLLMVQAGenerator
+from agent_v2.vqa.io_utils import write_json
 
 predictions = json.loads(PRED_PATH.read_text())
 generator = TemplateVQAGenerator()  # template-based

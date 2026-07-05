@@ -56,11 +56,11 @@ def _generate_vqa_for_segments(
 ) -> List[Dict[str, Any]]:
     """Extract one keyframe per segment, run MLLM hand recognition, and generate VQA."""
     try:
-        from vqa_generation.generator import TemplateVQAGenerator
-        from vqa_generation.keyframes import extract_video_frame
-        from vqa_generation.types import KeyframeContext, SegmentContext
+        from agent_v2.vqa.generator import TemplateVQAGenerator
+        from agent_v2.vqa.keyframes import extract_video_frame
+        from agent_v2.vqa.types import KeyframeContext, SegmentContext
     except ImportError:
-        print("  [unified] vqa_generation not available, skipping VQA")
+        print("  [unified] vqa not available, skipping VQA")
         return []
 
     generator = TemplateVQAGenerator()

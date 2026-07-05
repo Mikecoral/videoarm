@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video 1 — Omni Segmentation</title>
+<style>
+:root { --bg:#f5f6f8; --panel:#fff; --line:#e2e5ea; --text:#1a1d23; --muted:#6b7280; --accent:#2563eb; --accent-soft:#eef3ff; --ok:#16a34a; --ok-soft:#eaf7ee; --warn:#ea580c; }
+* { box-sizing:border-box; margin:0; padding:0 }
+body { font:14px/1.5 -apple-system,"Segoe UI","Noto Sans SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text) }
+header { padding:16px 24px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; align-items:center; gap:16px; flex-wrap:wrap }
+h1 { font-size:18px; white-space:nowrap }
+.badge { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:600 }
+.badge-phase { background:var(--accent-soft); color:var(--accent) }
+.badge-count { background:var(--ok-soft); color:var(--ok) }
+.summary-box { padding:10px 24px; background:var(--accent-soft); border-bottom:1px solid var(--line); font-size:13px; line-height:1.6 }
+main { display:grid; grid-template-columns:minmax(0,1fr) 440px; height:calc(100vh - 100px) }
+.panel { background:var(--panel); overflow:auto }
+.video-panel { border-right:1px solid var(--line); display:flex; flex-direction:column }
+.video-wrap { position:sticky; top:0; background:#000; z-index:2 }
+.video-wrap video { width:100%; display:block; max-height:55vh; object-fit:contain }
+.timeline { padding:16px 20px; flex:1; overflow:auto }
+.timeline h2, .seg-panel h2 { font-size:14px; color:var(--muted); margin-bottom:12px; text-transform:uppercase; letter-spacing:.5px }
+.track { position:relative; height:36px; background:var(--bg); border-radius:6px; margin-bottom:8px; cursor:pointer; overflow:hidden }
+.track-bar { position:absolute; top:0; height:100%; border-radius:4px; opacity:.75; transition:opacity .15s }
+.track-bar:hover { opacity:1 }
+.track-bar.active { opacity:1; outline:2px solid #000; outline-offset:1px; z-index:2 }
+.time-ruler { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); padding:0 2px }
+.seg-panel { border-left:1px solid var(--line); padding:16px 20px; overflow:auto; max-height:calc(100vh - 100px) }
+.seg-card { padding:12px 14px; border:1px solid var(--line); border-radius:8px; margin-bottom:10px; cursor:pointer; transition:background .1s }
+.seg-card:hover { background:var(--accent-soft) }
+.seg-card.selected { border-color:var(--accent); background:var(--accent-soft) }
+.seg-card .time { font-size:12px; color:var(--muted) }
+.seg-card .time strong { color:var(--text); font-size:15px }
+.seg-card .action { font-weight:600; margin:4px 0 2px }
+.seg-card .action .tag { display:inline-block; padding:1px 8px; border-radius:10px; font-size:11px; margin-right:6px; color:#fff }
+.seg-card .caption { font-size:13px; color:var(--muted); margin:2px 0 }
+.seg-card .meta { font-size:12px; color:var(--muted); margin-top:4px; display:flex; gap:12px; flex-wrap:wrap }
+.seg-card .meta span { white-space:nowrap }
+.seg-card .objects { color:var(--accent) }
+.seg-card .evidence { color:var(--ok) }
+.seg-card .verif { font-weight:600 }
+.seg-card .verif.verified { color:var(--ok) }
+.seg-card .verif.partial { color:var(--warn) }
+.seg-card .verif.rejected { color:#dc2626 }
+.seg-card .verif.unverified { color:var(--muted) }
+.empty-note { font-size:13px; color:var(--muted); font-style:italic; padding:8px 0 }
+.toolbar { padding:8px 20px; border-bottom:1px solid var(--line); display:flex; gap:8px; flex-wrap:wrap; align-items:center }
+.toolbar label { font-size:12px; color:var(--muted) }
+.toolbar input { width:140px; padding:4px 8px; border:1px solid var(--line); border-radius:6px }
+.btn { padding:4px 12px; border:1px solid var(--line); border-radius:6px; background:#fff; cursor:pointer; font-size:12px }
+.btn:hover { background:var(--accent-soft) }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔬 Video 1 — Omni Segmentation</h1>
+  <span class="badge badge-phase">过滤与抽滤 (conf=0.98)</span>
+  <span class="badge badge-count" id="count-badge">22 segments</span>
+  <span style="font-size:12px;color:var(--muted)">qwen3.5-omni-plus | 160s</span>
+</header>
+<div class="summary-box"><strong>📝 视频概括：</strong>该视频展示了抽滤操作的核心流程：首先将反应液和白色固体依次倒入布氏漏斗中，随后用少量液体润洗锥形瓶并将润洗液也倒入漏斗；接着多次加入洗涤液并用金属药匙搅拌滤饼，同时通过调整橡胶管进行抽滤，最终完成滤饼的洗涤与干燥。</div>
+<div class="toolbar">
+  <label>🔍 <input type="text" id="search" placeholder="caption / action / object…"></label>
+  <button class="btn" id="btn-play">▶ 从头播放</button>
+  <span style="font-size:12px;color:var(--muted);margin-left:auto" id="hover-info"></span>
+</div>
+<main>
+  <div class="panel video-panel">
+    <div class="video-wrap"><video id="video" controls preload="metadata" src="/home/huangxuanao/meta/AI_Lab/视频解析智能体数据包/hackathon_release/videos/1.mp4"></video></div>
+    <div class="timeline"><h2>⏱ 时间轴（点击跳转）</h2><div id="timeline-track"></div></div>
+  </div>
+  <div class="seg-panel" id="seg-list"><h2>📋 操作片段</h2><div id="segments"></div></div>
+</main>
+<script>
+const DATA = {"video_id": "1", "video_path": "/home/huangxuanao/meta/AI_Lab/视频解析智能体数据包/hackathon_release/videos/1.mp4", "duration": 159.9, "fps": 0, "width": 0, "height": 0, "omni_model": "qwen3.5-omni-plus", "phase": "filtration", "phase_zh": "过滤与抽滤", "phase_confidence": 0.98, "video_summary": "该视频展示了抽滤操作的核心流程：首先将反应液和白色固体依次倒入布氏漏斗中，随后用少量液体润洗锥形瓶并将润洗液也倒入漏斗；接着多次加入洗涤液并用金属药匙搅拌滤饼，同时通过调整橡胶管进行抽滤，最终完成滤饼的洗涤与干燥。", "segments": [{"segment_id": "1_s001", "start": 0.0, "end": 5.0, "action": "prepare_filter_apparatus", "action_zh": "准备过滤装置", "objects": ["布氏漏斗", "抽滤瓶", "铁架台"], "caption": "画面展示已组装好的抽滤装置，实验人员检查装置状态。", "evidence_timestamps": [1, 3], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "布氏漏斗", "present": true}, {"object": "抽滤瓶", "present": true}, {"object": "铁架台", "present": true}]}, {"segment_id": "1_s002", "start": 5.0, "end": 12.0, "action": "add_liquid_to_reaction", "action_zh": "加入液体至反应容器", "objects": ["棕色试剂瓶", "布氏漏斗"], "caption": "拿起棕色试剂瓶，将瓶中液体倒入布氏漏斗中。", "evidence_timestamps": [6, 9], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s003", "start": 12.0, "end": 14.0, "action": "place_container", "action_zh": "放置容器", "objects": ["棕色试剂瓶", "实验台"], "caption": "将棕色试剂瓶放回实验台上。", "evidence_timestamps": [13], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "实验台", "present": true}]}, {"segment_id": "1_s004", "start": 14.0, "end": 17.0, "action": "pick_up_tool", "action_zh": "拿起工具", "objects": ["药匙"], "caption": "拿起一把金属药匙。", "evidence_timestamps": [15], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "药匙", "present": true}]}, {"segment_id": "1_s005", "start": 17.0, "end": 22.0, "action": "add_solid_to_reaction", "action_zh": "加入固体至反应容器", "objects": ["锥形瓶", "白色固体", "布氏漏斗"], "caption": "用药匙从锥形瓶中取白色固体并加入布氏漏斗中。", "evidence_timestamps": [18, 20], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "锥形瓶", "present": true}, {"object": "白色固体", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s006", "start": 22.0, "end": 44.0, "action": "pour_mixture_to_filter", "action_zh": "将混合物倒入过滤装置", "objects": ["锥形瓶", "悬浊液", "布氏漏斗"], "caption": "拿起装有白色悬浊液的锥形瓶，将其中的混合物倒入布氏漏斗中。", "evidence_timestamps": [25, 30, 35], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "锥形瓶", "present": true}, {"object": "悬浊液", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s007", "start": 44.0, "end": 46.0, "action": "place_container", "action_zh": "放置容器", "objects": ["锥形瓶", "实验台"], "caption": "将空的锥形瓶放回实验台上。", "evidence_timestamps": [45], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "锥形瓶", "present": true}, {"object": "实验台", "present": true}]}, {"segment_id": "1_s008", "start": 46.0, "end": 52.0, "action": "rinse_container", "action_zh": "润洗容器", "objects": ["棕色试剂瓶", "锥形瓶"], "caption": "向锥形瓶中倒入少量液体进行润洗。", "evidence_timestamps": [48, 50], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "锥形瓶", "present": true}]}, {"segment_id": "1_s009", "start": 52.0, "end": 62.0, "action": "pour_mixture_to_filter", "action_zh": "将混合物倒入过滤装置", "objects": ["锥形瓶", "润洗液", "布氏漏斗"], "caption": "将锥形瓶中的润洗液倒入布氏漏斗中。", "evidence_timestamps": [55, 58], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "锥形瓶", "present": true}, {"object": "润洗液", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s010", "start": 62.0, "end": 64.0, "action": "place_container", "action_zh": "放置容器", "objects": ["锥形瓶", "实验台"], "caption": "将锥形瓶放回实验台上。", "evidence_timestamps": [63], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "锥形瓶", "present": true}, {"object": "实验台", "present": true}]}, {"segment_id": "1_s011", "start": 64.0, "end": 71.0, "action": "stir_filter_cake", "action_zh": "搅拌滤饼", "objects": ["药匙", "布氏漏斗", "滤饼"], "caption": "用药匙在布氏漏斗中搅拌和摊开滤饼。", "evidence_timestamps": [66, 69], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "药匙", "present": true}, {"object": "布氏漏斗", "present": true}, {"object": "滤饼", "present": true}]}, {"segment_id": "1_s012", "start": 71.0, "end": 77.0, "action": "wash_filter_cake", "action_zh": "洗涤滤饼", "objects": ["棕色试剂瓶", "布氏漏斗"], "caption": "向布氏漏斗中加入洗涤液。", "evidence_timestamps": [73, 75], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s013", "start": 77.0, "end": 85.0, "action": "stir_filter_cake", "action_zh": "搅拌滤饼", "objects": ["药匙", "布氏漏斗", "滤饼"], "caption": "用药匙搅拌漏斗内的滤饼和洗涤液。", "evidence_timestamps": [79, 82], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "药匙", "present": true}, {"object": "布氏漏斗", "present": true}, {"object": "滤饼", "present": true}]}, {"segment_id": "1_s014", "start": 85.0, "end": 91.0, "action": "wash_filter_cake", "action_zh": "洗涤滤饼", "objects": ["棕色试剂瓶", "布氏漏斗"], "caption": "再次向布氏漏斗中加入洗涤液。", "evidence_timestamps": [87, 89], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s015", "start": 91.0, "end": 93.0, "action": "place_container", "action_zh": "放置容器", "objects": ["棕色试剂瓶", "实验台"], "caption": "将棕色试剂瓶放回实验台上。", "evidence_timestamps": [92], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "实验台", "present": true}]}, {"segment_id": "1_s016", "start": 93.0, "end": 104.0, "action": "vacuum_dry_filter_cake", "action_zh": "抽滤并抽干滤饼", "objects": ["橡胶管", "抽滤瓶", "真空接口"], "caption": "调整连接抽滤瓶的橡胶管，进行抽滤操作。", "evidence_timestamps": [95, 100], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "橡胶管", "present": true}, {"object": "抽滤瓶", "present": true}, {"object": "真空接口", "present": true}]}, {"segment_id": "1_s017", "start": 104.0, "end": 110.0, "action": "wash_filter_cake", "action_zh": "洗涤滤饼", "objects": ["棕色试剂瓶", "布氏漏斗"], "caption": "向布氏漏斗中加入洗涤液。", "evidence_timestamps": [106, 108], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s018", "start": 110.0, "end": 122.0, "action": "stir_filter_cake", "action_zh": "搅拌滤饼", "objects": ["药匙", "布氏漏斗", "滤饼"], "caption": "用药匙搅拌漏斗内的滤饼和洗涤液。", "evidence_timestamps": [114, 118], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "药匙", "present": true}, {"object": "布氏漏斗", "present": true}, {"object": "滤饼", "present": true}]}, {"segment_id": "1_s019", "start": 122.0, "end": 132.0, "action": "vacuum_dry_filter_cake", "action_zh": "抽滤并抽干滤饼", "objects": ["橡胶管", "抽滤瓶", "真空接口"], "caption": "调整连接抽滤瓶的橡胶管，继续进行抽滤。", "evidence_timestamps": [125, 129], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "橡胶管", "present": true}, {"object": "抽滤瓶", "present": true}, {"object": "真空接口", "present": true}]}, {"segment_id": "1_s020", "start": 132.0, "end": 138.0, "action": "wash_filter_cake", "action_zh": "洗涤滤饼", "objects": ["棕色试剂瓶", "布氏漏斗"], "caption": "向布氏漏斗中加入洗涤液。", "evidence_timestamps": [134, 136], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "棕色试剂瓶", "present": true}, {"object": "布氏漏斗", "present": true}]}, {"segment_id": "1_s021", "start": 138.0, "end": 146.0, "action": "stir_filter_cake", "action_zh": "搅拌滤饼", "objects": ["药匙", "布氏漏斗", "滤饼"], "caption": "用药匙搅拌漏斗内的滤饼和洗涤液。", "evidence_timestamps": [141, 144], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "药匙", "present": true}, {"object": "布氏漏斗", "present": true}, {"object": "滤饼", "present": true}]}, {"segment_id": "1_s022", "start": 146.0, "end": 159.9, "action": "vacuum_dry_filter_cake", "action_zh": "抽滤并抽干滤饼", "objects": ["橡胶管", "抽滤瓶", "真空接口"], "caption": "调整连接抽滤瓶的橡胶管，进行最后的抽滤干燥。", "evidence_timestamps": [150, 155], "confidence": 0.5, "verification_status": "partial", "uncertainty_reason": "未做逐帧视觉核验", "needs_human_review": true, "uncertainty_type": "mixed", "review_suggestion": "人工复核", "evidence_diagnosis": {}, "object_evidence": [{"object": "橡胶管", "present": true}, {"object": "抽滤瓶", "present": true}, {"object": "真空接口", "present": true}]}]};
+const PALETTE = ['#6366f1','#0891b2','#ca8a04','#dc2626','#7c3aed','#059669','#d946ef','#0d9488','#ea580c','#4f46e5','#0284c7'];
+const video = document.getElementById('video');
+const segs = DATA.segments;
+const dur = DATA.duration;
+const actionSet = [...new Set(segs.map(s => s.action))];
+const actionColor = {};
+actionSet.forEach((a,i) => actionColor[a] = PALETTE[i % PALETTE.length]);
+
+document.getElementById('timeline-track').innerHTML =
+  '<div class="track" id="track-bar-container">' +
+  segs.map((s,i) => '<div class="track-bar" id="bar-' + i + '" style="left:' + (s.start/dur*100) + '%;width:' + ((s.end-s.start)/dur*100) + '%;background:' + actionColor[s.action] + '" title="[' + s.start.toFixed(0) + '-' + s.end.toFixed(0) + 's] ' + s.action_zh + '"></div>').join('') + '</div>' +
+  '<div class="time-ruler"><span>0s</span><span>' + Math.round(dur/4) + 's</span><span>' + Math.round(dur/2) + 's</span><span>' + Math.round(dur*3/4) + 's</span><span>' + dur.toFixed(0) + 's</span></div>';
+
+function renderSegments(filter) {
+  let items = segs.map((s,i) => ({...s, _i:i}));
+  if (filter) { const q = filter.toLowerCase(); items = items.filter(s => (s.action||'').toLowerCase().includes(q) || (s.action_zh||'').includes(q) || (s.caption||'').includes(q) || (s.objects||[]).some(o => o.includes(q))); }
+  document.getElementById('count-badge').textContent = items.length + '/' + segs.length + ' segments';
+  if (!items.length) { document.getElementById('segments').innerHTML = '<div class="empty-note">无匹配片段</div>'; return; }
+  document.getElementById('segments').innerHTML = items.map(s => {
+    const vstat = s.verification_status || 'unverified';
+    return '<div class="seg-card" id="card-' + s._i + '" onclick="seek(' + s.start + ',' + s._i + ')">' +
+      '<div class="time"><strong>' + s.start.toFixed(0) + 's – ' + s.end.toFixed(0) + 's</strong> (' + (s.end-s.start).toFixed(0) + 's)</div>' +
+      '<div class="action"><span class="tag" style="background:' + (actionColor[s.action]||PALETTE[0]) + '">' + (s.action_zh || s.action) + '</span> ' + (s.action||'') + '</div>' +
+      '<div class="caption">' + (s.caption||'') + '</div>' +
+      '<div class="meta">' +
+        '<span class="objects">📦 ' + (s.objects||[]).join(', ') + '</span>' +
+        '<span class="verif ' + vstat + '">' + (vstat==='verified'?'✅':vstat==='partial'?'⚠️':vstat==='rejected'?'❌':'❓') + ' ' + vstat + ' conf=' + (typeof s.confidence==='number'?s.confidence.toFixed(2):s.confidence) + '</span>' +
+        ((s.evidence_timestamps||[]).length ? '<span class="evidence">📍 ' + (s.evidence_timestamps||[]).join('s, ') + 's</span>' : '') +
+        (s.needs_human_review ? '<span style="color:var(--warn)">🛑 需人工复核</span>' : '') +
+      '</div></div>';
+  }).join('');
+}
+renderSegments();
+
+let sel = -1;
+function seek(t, i) {
+  const doSeek = () => { video.currentTime = t; video.play().catch(()=>{}); };
+  if (video.readyState >= 2) doSeek(); else video.addEventListener('loadedmetadata', doSeek, {once:true});
+  document.querySelectorAll('.seg-card.selected,.track-bar.active').forEach(e=>e.classList.remove('selected','active'));
+  if (i>=0) { document.getElementById('card-'+i)?.classList.add('selected'); document.getElementById('card-'+i)?.scrollIntoView({behavior:'smooth',block:'center'}); document.getElementById('bar-'+i)?.classList.add('active'); }
+  sel = i;
+}
+document.getElementById('track-bar-container').addEventListener('click', e => {
+  const pct = (e.clientX - e.currentTarget.getBoundingClientRect().left) / e.currentTarget.offsetWidth;
+  let best=0, bd=Infinity;
+  segs.forEach((s,i)=>{ const m=(s.start+s.end)/2; if(Math.abs(m-pct*dur)<bd){bd=Math.abs(m-pct*dur);best=i;} });
+  seek(segs[best].start, best);
+});
+document.getElementById('btn-play').addEventListener('click', ()=>{ video.currentTime=0; video.play().catch(()=>{}); });
+document.getElementById('search').addEventListener('input', e => renderSegments(e.target.value||null));
+document.addEventListener('keydown', e => {
+  if (e.key==='ArrowDown'||e.key==='j') { e.preventDefault(); seek(segs[Math.min(sel+1,segs.length-1)].start, Math.min(sel+1,segs.length-1)); }
+  else if (e.key==='ArrowUp'||e.key==='k') { e.preventDefault(); seek(segs[Math.max(sel-1,0)].start, Math.max(sel-1,0)); }
+  else if (e.key===' ') { e.preventDefault(); video.paused?video.play():video.pause(); }
+});
+segs.forEach((s,i) => document.getElementById('bar-'+i)?.addEventListener('mouseenter', ()=>document.getElementById('hover-info').textContent='['+s.start.toFixed(0)+'-'+s.end.toFixed(0)+'s] '+s.action_zh));
+document.getElementById('track-bar-container')?.addEventListener('mouseleave', ()=>document.getElementById('hover-info').textContent='');
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+flowchart TD
+    A[输入数据<br/>temporal JSON / spatial JSON / captions / videos / frames] --> B[构造 SegmentContext<br/>视频分段、前后片段、候选图片文本]
+    B --> C[选择视觉载体候选<br/>video segment 或 image keyframe]
+    C --> D[Caption-only Prompt<br/>不上传图片/视频给模型<br/>要求 L1/L2、category、visual_modality]
+    D --> E[DeepSeek V4 Pro 并发生成<br/>OpenAI-compatible API<br/>concurrency >= 16, max_tokens = 8192]
+    E --> F[解析模型输出<br/>过滤 thinking 块、Markdown fence、非 JSON 文本]
+    F --> G[题面合规过滤<br/>禁止 caption / 关键帧 / 时间戳 / frame / 答案 / 具体秒数<br/>过滤低价值时间定位和泛化模板题]
+    G --> H[构造两种题目形式<br/>开放式问答 ground truth<br/>四选一选择题 distractors + ground truth]
+    H --> I[物料落盘<br/>video 题裁剪 mp4 clip<br/>image 题绑定关键帧图片]
+    I --> J[输出 VQA JSON<br/>level、category、visual_modality、visual、QA、MC、evidence]
+    J --> K[规则硬筛<br/>泄漏词、低价值题、媒体缺失、非法 label]
+    K --> L[LLM Judge 筛选<br/>中文自然度、实验相关性、L2 多跳性、干扰项合理性]
+    L --> M{单题是否合格?}
+    M -- 否 --> R[直接丢弃该 VQA<br/>不补生成，不回到生成模型]
+    M -- 是 --> N[保留 VQA]
+    N --> O[正式结果<br/>vqa_output_dev_mllm.json<br/>vqa_quality_final.json]
+    O --> P[构建网页 viewer<br/>答题视图展示图片/clip<br/>标注视图展示 GT 与证据]
