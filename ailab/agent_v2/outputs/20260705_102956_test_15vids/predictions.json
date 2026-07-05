@@ -1574,5 +1574,1074 @@
       }
     ],
     "processing_note": "coverage_audit: long gaps or low coverage, review recommended"
+  },
+  {
+    "video_id": "9",
+    "video_path": "videos/9.mp4",
+    "phase": "weighing",
+    "phase_zh": "称量",
+    "phase_confidence": 0.99,
+    "alternative_phases": [
+      {
+        "phase": "analytical_sample_preparation",
+        "phase_zh": "分析样品制备",
+        "confidence": 0.15,
+        "reason": "虽然涉及离心管，但核心操作是固体称量而非稀释或转移液体至核磁管。"
+      },
+      {
+        "phase": "reaction_setup",
+        "phase_zh": "开反应",
+        "confidence": 0.1,
+        "reason": "称量通常是反应准备的前置步骤，但视频未展示将物料加入反应容器或设置搅拌加热等反应体系建立动作。"
+      }
+    ],
+    "segments": [
+      {
+        "segment_id": "9_s001",
+        "start": 5.0,
+        "end": 14.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "滤纸",
+          "手套"
+        ],
+        "caption": "实验人员手持白色滤纸并将其折叠成锥形漏斗状，为放置于天平做准备。",
+        "evidence_timestamps": [
+          6,
+          10,
+          13
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "滤纸",
+            "手套"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了戴手套的双手正在折叠滤纸，背景可见电子天平，与标注描述完全一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "滤纸",
+            "present": true
+          },
+          {
+            "object": "手套",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s002",
+        "start": 14.0,
+        "end": 29.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "滤纸",
+          "镊子"
+        ],
+        "caption": "实验人员将折叠好的滤纸放入天平秤盘，进行去皮归零操作，随后拿起一个粉色盖子的容器准备取样。",
+        "evidence_timestamps": [
+          15,
+          20,
+          25,
+          28
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "核心动作（放滤纸、去皮）与画面一致，但关键物体'棕色试剂瓶'在提供的帧中不可见，且出现了颜色不符的容器；缺失证据：画面中未出现标注提到的'棕色试剂瓶'，实际为粉色盖子容器；无法确认是否为试剂瓶",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "请核对原视频14s-29s内是否确实使用了棕色试剂瓶，或修正物体描述为'带粉色盖子的容器'",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "滤纸",
+            "镊子"
+          ],
+          "objects_missing": [
+            "棕色试剂瓶"
+          ],
+          "missing_evidence": [
+            "画面中未出现标注提到的'棕色试剂瓶'，实际为粉色盖子容器；无法确认是否为试剂瓶"
+          ],
+          "note": "核心动作（放滤纸、去皮）与画面一致，但关键物体'棕色试剂瓶'在提供的帧中不可见，且出现了颜色不符的容器"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "滤纸",
+            "present": true
+          },
+          {
+            "object": "镊子",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": false
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s003",
+        "start": 29.0,
+        "end": 34.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙"
+        ],
+        "caption": "实验人员使用金属药匙从棕色试剂瓶中取用微量固体，天平读数在零点附近发生微小波动。",
+        "evidence_timestamps": [
+          29,
+          31,
+          33
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "金属药匙"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了药匙伸入棕色瓶内操作的过程，且天平读数随操作产生微小变化（-0.0002g -> 0.0007g），与标注描述完全一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s004",
+        "start": 34.0,
+        "end": 38.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙"
+        ],
+        "caption": "实验人员继续用药匙向天平上的容器中加入黄色固体粉末，天平读数显著增加至0.1016g。",
+        "evidence_timestamps": [
+          34,
+          35,
+          37
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "金属药匙"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了从0.0007g到0.1016g的称量过程，物体与动作描述完全一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s005",
+        "start": 38.0,
+        "end": 43.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙"
+        ],
+        "caption": "实验人员戴着手套持续进行取样操作，调整加入的黄色固体量，天平读数在0.1021g至0.1067g之间波动。",
+        "evidence_timestamps": [
+          38,
+          40,
+          42
+        ],
+        "confidence": 0.98,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "金属药匙"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了称量过程，天平读数变化（0.1016g -> 0.1023g -> 0.1067g）与描述中的数值范围完全吻合，且物体特征明显。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s006",
+        "start": 48.0,
+        "end": 53.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙",
+          "称量纸"
+        ],
+        "caption": "实验人员手持装有固体的棕色试剂瓶，使用金属药匙在瓶口处操作（疑似取粉或整理），此时天平上放置有称量纸，读数从0.1067g增加至0.1086g。",
+        "evidence_timestamps": [
+          48,
+          49,
+          50,
+          51,
+          52
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "金属药匙",
+            "称量纸"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了天平读数随时间递增的过程（0.1067 -> 0.1068 -> 0.1086），且关键物体和操作动作均与标注一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          },
+          {
+            "object": "称量纸",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s007",
+        "start": 63.0,
+        "end": 67.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "滤纸"
+        ],
+        "caption": "实验人员将折叠好的滤纸放置于电子天平秤盘上，天平显示读数约为0.289g。",
+        "evidence_timestamps": [
+          64,
+          65
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "核心动作'放置滤纸'与画面一致，但描述中的'天平读数归零'与画面显示的约0.29g读数明显矛盾。；缺失证据：画面中未展示天平归零（Tare）的操作过程或结果",
+        "needs_human_review": false,
+        "uncertainty_type": "cognitive",
+        "review_suggestion": "请核实该时间段内是否包含去皮/归零操作，当前画面仅显示放置滤纸后的非零读数。",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "滤纸"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [
+            "画面中未展示天平归零（Tare）的操作过程或结果"
+          ],
+          "note": "核心动作'放置滤纸'与画面一致，但描述中的'天平读数归零'与画面显示的约0.29g读数明显矛盾。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "滤纸",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s008",
+        "start": 67.0,
+        "end": 72.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "称量纸",
+          "试剂瓶"
+        ],
+        "caption": "实验人员打开棕色试剂瓶盖准备取样，此时电子天平显示归零状态。",
+        "evidence_timestamps": [
+          68,
+          69,
+          70
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "关键物体均可见，但标注描述的'操作按键完成去皮'在提供的帧中未见发生（画面直接呈现为已归零状态），且动作顺序与画面显示的'先开盖后归零'或'同时'存在逻辑偏差。；缺失证据：画面中未捕捉到操作天平按键的动作过程，仅展示了按键后的结果（归零）",
+        "needs_human_review": true,
+        "uncertainty_type": "temporal",
+        "review_suggestion": "建议检查67s-72s的完整视频流，确认是否有按压按键的动作；若仅有开盖动作，需修正描述中的时序逻辑。",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "称量纸",
+            "试剂瓶"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [
+            "画面中未捕捉到操作天平按键的动作过程，仅展示了按键后的结果（归零）"
+          ],
+          "note": "关键物体均可见，但标注描述的'操作按键完成去皮'在提供的帧中未见发生（画面直接呈现为已归零状态），且动作顺序与画面显示的'先开盖后归零'或'同时'存在逻辑偏差。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "称量纸",
+            "present": true
+          },
+          {
+            "object": "试剂瓶",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s009",
+        "start": 72.0,
+        "end": 81.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶"
+        ],
+        "caption": "实验人员手持棕色试剂瓶，使用金属药勺从瓶中取出黄色固体样品。画面中可见天平读数始终为0.0000g，未见读数变化。",
+        "evidence_timestamps": [
+          72,
+          75,
+          78,
+          81
+        ],
+        "confidence": 0.4,
+        "verification_status": "partial",
+        "uncertainty_reason": "核心动作（取样）与画面相符，但描述中的关键结果（天平读数变化）在提供的画面证据中完全缺失，且药勺仅在部分帧边缘可见。；缺失证据：提供的帧中未显示天平读数变为0.0896g的过程；所有帧中天平读数均为0.0000g",
+        "needs_human_review": true,
+        "uncertainty_type": "mixed",
+        "review_suggestion": "请检查72s-81s时间段内是否有天平读数变化的画面，当前抽取帧均显示读数为0。",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": false,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶"
+          ],
+          "objects_missing": [
+            "金属药勺"
+          ],
+          "missing_evidence": [
+            "提供的帧中未显示天平读数变为0.0896g的过程",
+            "所有帧中天平读数均为0.0000g"
+          ],
+          "note": "核心动作（取样）与画面相符，但描述中的关键结果（天平读数变化）在提供的画面证据中完全缺失，且药勺仅在部分帧边缘可见。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药勺",
+            "present": false
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s010",
+        "start": 81.0,
+        "end": 86.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属药匙",
+          "黄色固体"
+        ],
+        "caption": "实验人员使用金属药匙向放置在天平上的试剂瓶中转移固体物质，天平读数从0.086g逐渐增加至0.118g，正在进行固体的称量加料操作。",
+        "evidence_timestamps": [
+          82,
+          84,
+          85
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "金属药匙",
+            "黄色固体"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了天平读数随加料过程递增（0.0896g -> 0.1118g），且所有关键物体均可见，标注与画面高度一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属药匙",
+            "present": true
+          },
+          {
+            "object": "黄色固体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s011",
+        "start": 96.0,
+        "end": 101.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "胶带"
+        ],
+        "caption": "实验人员手持棕色试剂瓶，天平读数显示约0.1g（可能为去皮后的皮重或残留物），随后将试剂瓶移开画面，伸手拿取桌面上的胶带。",
+        "evidence_timestamps": [
+          97,
+          99,
+          100
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "关键时序矛盾：标注称'移开试剂瓶后读数显著变化'，但画面显示读数从2.1787g变为0.1063g时，手仍握着瓶子；直到第三帧瓶子才离开画面，此时读数基本稳定在0.1062g。；缺失证据：无法确认天平读数变化是否由'移开试剂瓶'直接导致（第一帧读数2.1787g时手正持瓶，第二帧读数0.1063g时仍持瓶，第三帧读数0.1062g时瓶已不在画面中）",
+        "needs_human_review": true,
+        "uncertainty_type": "temporal",
+        "review_suggestion": "请核实天平读数变化的具体时间点与操作动作的对应关系，特别是'移开试剂瓶'这一动作发生的时间点。",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "胶带"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [
+            "无法确认天平读数变化是否由'移开试剂瓶'直接导致（第一帧读数2.1787g时手正持瓶，第二帧读数0.1063g时仍持瓶，第三帧读数0.1062g时瓶已不在画面中）"
+          ],
+          "note": "关键时序矛盾：标注称'移开试剂瓶后读数显著变化'，但画面显示读数从2.1787g变为0.1063g时，手仍握着瓶子；直到第三帧瓶子才离开画面，此时读数基本稳定在0.1062g。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "胶带",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s012",
+        "start": 106.0,
+        "end": 110.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "滤纸",
+          "手套"
+        ],
+        "caption": "实验人员将折叠的滤纸放置在天平托盘上，并按下按键进行去皮归零操作。",
+        "evidence_timestamps": [
+          107,
+          108,
+          109
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "滤纸",
+            "手套"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了从放置滤纸（读数变化）到按下按键归零（读数变为0.0005g）的完整过程，与标注完全一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "滤纸",
+            "present": true
+          },
+          {
+            "object": "手套",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s013",
+        "start": 110.0,
+        "end": 115.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "药勺",
+          "滤纸"
+        ],
+        "caption": "实验人员旋开试剂瓶盖，使用药勺从瓶中取用固体粉末准备加入天平上的容器。",
+        "evidence_timestamps": [
+          111,
+          112,
+          113
+        ],
+        "confidence": 0.95,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "药勺",
+            "滤纸"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了旋盖、持瓶及用药勺伸入取样的连续动作，与标注描述完全一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "药勺",
+            "present": true
+          },
+          {
+            "object": "滤纸",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s014",
+        "start": 115.0,
+        "end": 130.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色试剂瓶",
+          "金属工具"
+        ],
+        "caption": "实验人员使用金属工具在试剂瓶内操作（疑似搅拌或取样），天平读数从零增加至 0.0955g。",
+        "evidence_timestamps": [
+          118,
+          124,
+          128
+        ],
+        "confidence": 1.0,
+        "verification_status": "verified",
+        "uncertainty_reason": "",
+        "needs_human_review": false,
+        "uncertainty_type": "none",
+        "review_suggestion": "",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "棕色试剂瓶",
+            "金属工具"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [],
+          "note": "画面清晰展示了天平读数从0.0000g逐步增加到0.0955g的过程，且手持试剂瓶配合金属工具的操作与称量动作一致。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色试剂瓶",
+            "present": true
+          },
+          {
+            "object": "金属工具",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s015",
+        "start": 130.0,
+        "end": 135.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "棕色小试剂瓶",
+          "黄色固体"
+        ],
+        "caption": "实验人员操作装有黄色固体的试剂瓶，天平读数从 0.0955g 增加至 0.2203g，正在进行固体样品的称量。",
+        "evidence_timestamps": [
+          130,
+          132,
+          134
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "核心动作和物体识别正确，但描述中的终点数值（0.45g）与提供的最后一帧画面（0.2203g）不符，存在数据偏差。；缺失证据：画面中未显示最终达到 0.45g 的读数",
+        "needs_human_review": true,
+        "uncertainty_type": "temporal",
+        "review_suggestion": "请核对视频后续帧，确认是否真的达到了 0.45g，当前提供的帧仅显示到 0.22g。",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "棕色小试剂瓶",
+            "黄色固体"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [
+            "画面中未显示最终达到 0.45g 的读数"
+          ],
+          "note": "核心动作和物体识别正确，但描述中的终点数值（0.45g）与提供的最后一帧画面（0.2203g）不符，存在数据偏差。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "棕色小试剂瓶",
+            "present": true
+          },
+          {
+            "object": "黄色固体",
+            "present": true
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s016",
+        "start": 135.0,
+        "end": 139.0,
+        "action": "weigh_solid_sample",
+        "action_zh": "称取固体样品",
+        "objects": [
+          "电子天平",
+          "小玻璃瓶",
+          "棕色固体"
+        ],
+        "caption": "实验人员手持玻璃瓶向天平上的容器内倾倒棕色固体，天平读数发生明显变化，处于调整称量状态。",
+        "evidence_timestamps": [
+          135,
+          137,
+          138
+        ],
+        "confidence": 0.7,
+        "verification_status": "partial",
+        "uncertainty_reason": "核心动作（称量、读数变化）与画面一致，但标注列出的关键物体中有两项在提供的帧中完全不可见。；缺失证据：画面中未出现标注提到的'药勺'和'不锈钢网篮'",
+        "needs_human_review": false,
+        "uncertainty_type": "perception",
+        "review_suggestion": "请确认'药勺'和'不锈钢网篮'是否确实在该时间段内出现过但被遮挡，或是否为标注错误（如将其他物体误标）。",
+        "evidence_diagnosis": {
+          "perception_ok": false,
+          "temporal_ok": true,
+          "action_ok": true,
+          "caption_ok": true,
+          "objects_present": [
+            "电子天平",
+            "小玻璃瓶",
+            "棕色固体"
+          ],
+          "objects_missing": [
+            "药勺",
+            "不锈钢网篮"
+          ],
+          "missing_evidence": [
+            "画面中未出现标注提到的'药勺'和'不锈钢网篮'"
+          ],
+          "note": "核心动作（称量、读数变化）与画面一致，但标注列出的关键物体中有两项在提供的帧中完全不可见。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "小玻璃瓶",
+            "present": true
+          },
+          {
+            "object": "棕色固体",
+            "present": true
+          },
+          {
+            "object": "药勺",
+            "present": false
+          },
+          {
+            "object": "不锈钢网篮",
+            "present": false
+          }
+        ]
+      },
+      {
+        "segment_id": "9_s017",
+        "start": 144.0,
+        "end": 158.0,
+        "action": "prepare_balance_for_weighing",
+        "action_zh": "准备天平称量",
+        "objects": [
+          "电子天平",
+          "胶带卷",
+          "玻璃试管"
+        ],
+        "caption": "实验人员手持棕色试剂瓶和玻璃试管，随后将一卷胶带放置于天平托盘上，读数显示为负值（-0.2895 g）。",
+        "evidence_timestamps": [
+          146,
+          147,
+          152
+        ],
+        "confidence": 0.6,
+        "verification_status": "partial",
+        "uncertainty_reason": "画面清晰展示了手持试管、放置胶带以及天平显示负值的完整过程，物体识别无误，主要问题在于对'负值'这一结果的描述是否符合常规实验逻辑的解读。；缺失证据：无法确认操作起始前是否已去皮归零",
+        "needs_human_review": false,
+        "uncertainty_type": "cognitive",
+        "review_suggestion": "建议核实'读数显示为负值'这一描述在标注语境下的准确性，虽然画面确实显示了负数，但通常称量准备阶段应关注去皮后的正数读数或归零状态。",
+        "evidence_diagnosis": {
+          "perception_ok": true,
+          "temporal_ok": false,
+          "action_ok": true,
+          "caption_ok": false,
+          "objects_present": [
+            "电子天平",
+            "胶带卷",
+            "玻璃试管"
+          ],
+          "objects_missing": [],
+          "missing_evidence": [
+            "无法确认操作起始前是否已去皮归零"
+          ],
+          "note": "画面清晰展示了手持试管、放置胶带以及天平显示负值的完整过程，物体识别无误，主要问题在于对'负值'这一结果的描述是否符合常规实验逻辑的解读。"
+        },
+        "object_evidence": [
+          {
+            "object": "电子天平",
+            "present": true
+          },
+          {
+            "object": "胶带卷",
+            "present": true
+          },
+          {
+            "object": "玻璃试管",
+            "present": true
+          }
+        ]
+      }
+    ],
+    "clip_memory": [
+      {
+        "start": 0.0,
+        "end": 14.4,
+        "frame_ts": [
+          0.0,
+          7.0,
+          14.0
+        ],
+        "summary": "1. 画面中可见电子天平（显示读数-0.2987）、玻璃防风罩、白色称量纸以及戴蓝色手套的双手。\n2. 实验人员双手正在折叠或整理一张白色的称量纸，准备进行称量操作。\n3. 此时尚未发生倒液或混合等状态变化，主要处于称量前的准备工作阶段。\n4. 明确出现了专用分析仪器“天平”。"
+      },
+      {
+        "start": 14.4,
+        "end": 28.8,
+        "frame_ts": [
+          15.0,
+          22.0,
+          28.0
+        ],
+        "summary": "1) 画面中可见一台电子天平（显示读数）、一张白色滤纸或称量纸、一把金属药匙以及背景中的棕色干燥器。\n2) 实验人员戴蓝色手套的双手先是将纸张折叠放置在天平上，随后使用金属药匙进行取样或转移操作。\n3) 发生了明显的状态变化：天平读数从有数值变为归零（去皮），表明正在进行称量前的准备或调零步骤。\n4) 出现了专用仪器**天平**，未见其他如TLC板或旋蒸仪等设备。"
+      },
+      {
+        "start": 28.8,
+        "end": 43.2,
+        "frame_ts": [
+          29.0,
+          36.0,
+          43.0
+        ],
+        "summary": "画面中出现一台梅特勒-托利多（Mettler Toledo）电子天平、一个棕色试剂瓶以及一把金属药勺。实验人员戴着手套，一手扶住试剂瓶，另一手用药勺从瓶中取用固体粉末。随着操作进行，天平读数从接近零变为0.1067g，显示发生了明显的称量状态变化。该场景中明确出现了专用分析仪器：天平。"
+      },
+      {
+        "start": 43.2,
+        "end": 57.6,
+        "frame_ts": [
+          44.0,
+          50.0,
+          57.0
+        ],
+        "summary": "画面中出现了一台电子天平（Mettler Toledo）、一个棕色试剂瓶、一个透明离心管以及盛放玻璃棒的笔筒。实验人员左手持棕色试剂瓶，右手使用玻璃棒从瓶中蘸取或转移物质，随后将装有白色固体的离心管放置在天平托盘上进行称量。随着操作进行，天平读数发生了明显变化，显示数值从0.1067g增加至0.1569g。该场景主要使用了电子天平这一专用分析仪器，未见其他分离设备。"
+      },
+      {
+        "start": 57.6,
+        "end": 72.0,
+        "frame_ts": [
+          58.0,
+          65.0,
+          72.0
+        ],
+        "summary": "1) 画面中可见一台电子天平（Mettler Toledo）、一个置于秤盘上的白色小容器、一只棕色试剂瓶以及戴蓝色手套的双手。\n2) 实验人员先是用右手持透明离心管在秤旁操作，随后双手配合打开棕色试剂瓶的红色瓶盖。\n3) 发生了明显的状态变化：天平读数从约0.289g变为归零（0.0000），且试剂瓶被开启。\n4) 出现了专用仪器**天平**。"
+      },
+      {
+        "start": 72.0,
+        "end": 86.4,
+        "frame_ts": [
+          72.0,
+          79.0,
+          86.0
+        ],
+        "summary": "画面中出现了一台电子天平（Mettler Toledo）、一个棕色试剂瓶、一根金属药勺以及一卷胶带。实验人员左手持棕色试剂瓶，右手使用金属药勺从瓶中取用黄色固体粉末。随着操作进行，天平读数从零开始增加至0.118g，表明正在进行称量操作。除电子天平外，未观察到其他专用分析或分离仪器。"
+      },
+      {
+        "start": 86.4,
+        "end": 100.8,
+        "frame_ts": [
+          87.0,
+          94.0,
+          100.0
+        ],
+        "summary": "1. 画面中可见一台梅特勒-托利多（Mettler Toledo）电子天平、一个装有黄色液体的棕色试剂瓶以及戴蓝色手套的双手。\n2. 实验人员左手持握试剂瓶，右手在旁辅助，似乎正在进行称量前的准备或读数确认操作。\n3. 天平显示屏上的数值从0.1118g逐渐减少至0.1063g，显示发生了明显的重量变化状态。\n4. 明确出现了专用分析仪器“天平”，未见其他如TLC板或分液漏斗等耗材。"
+      },
+      {
+        "start": 100.8,
+        "end": 115.2,
+        "frame_ts": [
+          101.0,
+          108.0,
+          115.0
+        ],
+        "summary": "1) 画面中可见一台梅特勒托利多（Mettler Toledo）电子天平、称量纸、棕色试剂瓶、药勺以及盛放工具的笔筒。\n2) 实验人员戴着手套，先是将装有样品的称量纸放在天平上读数，随后将天平归零，并手持棕色试剂瓶用金属药勺从中取料。\n3) 发生了明显的状态变化：天平读数从0.1062g变为-0.2894g（去皮或倒扣状态），最后显示为0.0000g（已清零）。\n4) 出现了专用分析仪器“天平”，未观察到TLC板、旋蒸仪等其他分离设备。"
+      },
+      {
+        "start": 115.2,
+        "end": 129.5,
+        "frame_ts": [
+          116.0,
+          122.0,
+          129.0
+        ],
+        "summary": "画面中出现一台梅特勒托利多（Mettler Toledo）电子天平、一个盛有棕黄色液体的棕色试剂瓶以及戴蓝色手套的双手。实验人员左手持握试剂瓶，右手使用金属工具在瓶内进行操作（疑似搅拌或取样）。随着操作进行，天平读数从0.0000g逐渐增加至0.0955g，显示发生了明显的称重状态变化。场景中明确出现了专用分析仪器“天平”。"
+      },
+      {
+        "start": 129.5,
+        "end": 143.9,
+        "frame_ts": [
+          130.0,
+          137.0,
+          143.0
+        ],
+        "summary": "1. 画面中出现一台梅特勒-托利多（Mettler Toledo）电子天平、一个装有黄色固体的棕色小试剂瓶以及一卷胶带。\n2. 戴蓝色手套的人员手持该试剂瓶，将其置于天平旁或正在准备进行称量操作。\n3. 天平显示屏上的读数在0.0955g至0.1114g之间波动，显示数值处于不稳定状态，未见明显的倒液或盖盖动作。\n4. 明确出现了专用分析仪器：电子天平。"
+      },
+      {
+        "start": 143.9,
+        "end": 158.3,
+        "frame_ts": [
+          144.0,
+          151.0,
+          158.0
+        ],
+        "summary": "1. 画面中可见一台Mettler Toledo电子天平、一个棕色试剂瓶、一支透明玻璃试管以及一卷标签纸。\n2. 实验人员戴蓝色手套，先手持棕色试剂瓶，随后拿起玻璃试管，最后将一白色小容器放置于天平托盘上。\n3. 发生了明显的称量操作，天平读数从0.1076g变化至-0.2895g（去皮或负值状态），显示正在进行物质称重。\n4. 出现了专用分析仪器：电子天平。"
+      }
+    ],
+    "processing_note": ""
   }
 ]

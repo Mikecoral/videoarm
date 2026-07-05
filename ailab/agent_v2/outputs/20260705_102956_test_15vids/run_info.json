@@ -23,8 +23,12 @@
   "finished_at": null,
   "total_seconds": null,
   "global_memory_summary": {
-    "video_count": 3,
+    "video_count": 4,
     "top_actions": [
+      [
+        "weigh_solid_sample",
+        10
+      ],
       [
         "pour_mixture_to_filter",
         9
@@ -32,6 +36,10 @@
       [
         "wash_filter_cake",
         8
+      ],
+      [
+        "prepare_balance_for_weighing",
+        7
       ],
       [
         "transfer_and_add_small_volume_liquid",
@@ -48,24 +56,20 @@
       [
         "transfer_to_NMR_tube",
         2
-      ],
-      [
-        "transfer_liquid_to_container",
-        2
-      ],
-      [
-        "add_liquid_to_reaction",
-        2
       ]
     ],
     "top_objects": [
+      [
+        "棕色试剂瓶",
+        24
+      ],
       [
         "布氏漏斗",
         20
       ],
       [
-        "棕色试剂瓶",
-        15
+        "电子天平",
+        17
       ],
       [
         "抽滤瓶",
@@ -86,28 +90,24 @@
       [
         "真空泵",
         5
-      ],
-      [
-        "白色浑浊液体",
-        4
       ]
     ],
     "top_uncertainty_patterns": [
       [
         "perception",
-        14
+        15
       ],
       [
         "mixed",
-        3
+        5
       ],
       [
         "cognitive",
-        2
+        4
       ],
       [
         "temporal",
-        1
+        4
       ]
     ]
   }
