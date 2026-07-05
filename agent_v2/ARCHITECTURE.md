@@ -35,6 +35,7 @@ agent_v2/
   ontology.py     # 解析 ontology.md → 10 个 phase + 各自动作/候选器具
   prompts.py      # 各步骤提示词模板
   runlog.py       # 运行轨迹记录器 → run_log.json
+  memory.py       # per-video memory bundle + bounded cross-video memory
   pipeline.py     # 单视频主流程（本系统核心）
   run.py          # 批处理入口 + 增量落盘 + 断点续跑
   outputs/        # predictions.json / run_log.json / frames_cache/
@@ -160,6 +161,17 @@ DashScope 1–2s 稳定返回）。单视频（~140s）总视觉调用 ≈ 窗�
 
 step 类型：`scene_snapper`(建记忆) / `phase_hypothesis` / `action_segmentation` /
 `verify_segment` / `write_prediction`。
+
+### 4.4 持久记忆文件
+
+本系统不复刻完整 VideoARM HM3 数据库，而是保留其分层记忆思想，落成更适合比赛 Demo 的
+轻量持久记忆：
+
+- `memory/{video_id}.json`：单视频记忆包，包含 frame index、clip memory、segment memory、
+  evidence memory 和 retrieval index。交互式问答 Demo 先检索这里，再给模型相关片段、证据帧和时间戳。
+- `global_memory.json`：跨视频经验库，累计 action/object/uncertainty pattern 的统计和少量例子。
+  该文件用于开放问答的经验提示和 self-evolving 叙事，不参与自动覆盖当前视频标注。
+- `global_memory_snapshot.json`：当前 run 的跨视频记忆快照，方便报告和复盘。
 
 ---
 

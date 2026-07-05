@@ -19,7 +19,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
-from . import config, media, ontology, pipeline
+from . import config, media, memory, ontology, pipeline
 from .runlog import RunLog
 
 
@@ -73,6 +73,8 @@ def main(argv: List[str] | None = None) -> int:
     log_path = run_dir / "run_log.json"
     info_path = run_dir / "run_info.json"
     cache_root = Path(args.out_dir) / "frames_cache"  # shared cache across runs
+    global_memory_path = Path(args.out_dir) / "global_memory.json"
+    global_snapshot_path = run_dir / "global_memory_snapshot.json"
 
     run_start = datetime.now().isoformat()
     run_info: Dict[str, Any] = {
@@ -98,6 +100,7 @@ def main(argv: List[str] | None = None) -> int:
             run_log.videos = json.loads(log_path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             pass
+    global_memory = memory.load_global_memory(global_memory_path)
 
     phases = ontology.load_ontology()
     print(f"[labarm] run dir : {run_dir}")
@@ -124,8 +127,18 @@ def main(argv: List[str] | None = None) -> int:
             pred = {"video_id": vid, "video_path": entry["video_path"],
                     "segments": [], "processing_note": f"error: {e}"}
         predictions.append(pred)
+        video_log = run_log.videos[-1] if run_log.videos else {}
+        if pred.get("segments") or pred.get("clip_memory"):
+            video_memory = memory.build_video_memory(pred, video_log, cache_root)
+            video_memory_path = memory.save_video_memory(run_dir, video_memory)
+            global_memory = memory.update_global_memory(global_memory, video_memory,
+                                                        memory_path=video_memory_path)
+            memory.save_global_memory(global_memory_path, global_memory)
+            memory.save_global_memory(global_snapshot_path, global_memory)
+            run_info["global_memory_summary"] = memory.build_global_summary(global_memory)
         _write_json(pred_path, predictions)
         _write_json(log_path, run_log.as_list())
+        _write_json(info_path, run_info)
         elapsed = time.time() - t0
         segs = len(pred.get("segments", []))
         print(f"    done in {elapsed:.1f}s, {segs} segments")

@@ -112,8 +112,11 @@ def _phase_candidates(phases: List[Phase], phase_res: Dict[str, Any]) -> List[Ph
 def _combined_action_catalog(phases: List[Phase], candidates: List[Phase],
                              phase_res: Dict[str, Any]) -> tuple[str, List[str]]:
     selected = candidates[:]
-    low_conf = _phase_confidence(phase_res) < config.PHASE_FALLBACK_CONFIDENCE
-    if low_conf and len(selected) < 2:
+    conf = _phase_confidence(phase_res)
+    if conf >= config.PHASE_HIGH_CONF_THRESHOLD:
+        # High confidence: use only primary phase to prevent alternative actions leaking in.
+        selected = candidates[:1]
+    elif conf < config.PHASE_FALLBACK_CONFIDENCE and len(selected) < 2:
         selected = phases
 
     blocks = []
@@ -183,6 +186,50 @@ def _normalize_segments(raw: List[Dict[str, Any]], duration: float) -> List[Dict
     return [s for s in clean if s["end"] - s["start"] >= 0.5]
 
 
+# ------------------------------------------------- dense boundary sampling ---
+def _dense_resample_and_split(video: VideoInfo, seg: Dict[str, Any],
+                              phases: List[Phase], phase_res: Dict[str, Any],
+                              log: RunLog) -> List[Dict[str, Any]]:
+    """Re-sample a long segment with dense sub-windows and locally re-segment.
+
+    Replaces one coarse segment with multiple finer ones when the dense
+    scene_snapper reveals distinct sub-operations (e.g. repeated injections).
+    Returns the original segment unchanged if no improvement is found.
+    """
+    start, end = float(seg["start"]), float(seg["end"])
+    duration = end - start
+    n = max(3, int(round(duration / config.DENSE_SUBWINDOW)))
+    step = duration / n
+
+    sub_summaries: List[Dict[str, Any]] = []
+    for i in range(n):
+        ws = round(start + i * step, 1)
+        we = round(start + (i + 1) * step, 1)
+        frames = media.frames_in_window(video.frames, ws, we, config.DENSE_FRAMES)
+        if not frames:
+            continue
+        prompt = prompts.SCENE_SNAPPER.format(start=ws, end=we)
+        with log.timed("dense_snapper",
+                       inputs={"window": [ws, we],
+                               "frame_ts": [f.timestamp for f in frames]}) as h:
+            text = api_client.ask_vision(prompt, _urls(frames))
+            h["output"] = {"summary": text}
+        sub_summaries.append({"start": ws, "end": we,
+                               "frame_ts": [f.timestamp for f in frames],
+                               "summary": text})
+
+    if len(sub_summaries) < 3:
+        return [seg]
+
+    local_segs = segment_actions(video, phases, phase_res, sub_summaries, log)
+    if len(local_segs) <= 1:
+        return [seg]
+
+    log.add("dense_split", inputs={"original": [start, end]},
+            output={"sub_segments": len(local_segs)})
+    return local_segs
+
+
 # ------------------------------------------------------------- verify -------
 def verify_segment(video: VideoInfo, seg: Dict[str, Any], log: RunLog) -> Dict[str, Any]:
     frames = media.frames_in_window(video.frames, seg["start"], seg["end"], config.VERIFY_FRAMES)
@@ -203,47 +250,156 @@ def verify_segment(video: VideoInfo, seg: Dict[str, Any], log: RunLog) -> Dict[s
     return result if isinstance(result, dict) else {}
 
 
+def _as_bool(value: Any, default: bool = True) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        lowered = value.strip().lower()
+        if lowered in {"true", "yes", "1", "是", "对", "正确"}:
+            return True
+        if lowered in {"false", "no", "0", "否", "不", "错误"}:
+            return False
+    return default
+
+
+def _str_list(value: Any) -> List[str]:
+    if not isinstance(value, list):
+        return []
+    return [str(x).strip() for x in value if str(x).strip()]
+
+
+def _uncertainty_type(raw: Any, reasons: List[str]) -> str:
+    text = str(raw or "").strip().lower()
+    if reasons and text in {"", "none", "no"}:
+        return "mixed" if len(set(reasons)) > 1 else reasons[0]
+    aliases = {
+        "none": "none",
+        "no": "none",
+        "perception": "perception",
+        "perceptive": "perception",
+        "visual": "perception",
+        "temporal": "temporal",
+        "time": "temporal",
+        "cognitive": "cognitive",
+        "caption": "cognitive",
+        "reasoning": "cognitive",
+        "mixed": "mixed",
+        "multiple": "mixed",
+    }
+    if text in aliases:
+        return aliases[text]
+    if len(set(reasons)) > 1:
+        return "mixed"
+    return reasons[0] if reasons else "none"
+
+
 def _apply_verification(seg: Dict[str, Any], v: Dict[str, Any]) -> Dict[str, Any]:
     conf = v.get("confidence")
-    conf = float(conf) if isinstance(conf, (int, float)) else 0.5
-    action_ok = bool(v.get("action_ok", True))
-    caption_ok = bool(v.get("caption_ok", True))
-    # Keep confidence consistent with the check: a mismatched action cannot be
-    # "high confidence correct", regardless of the number the model volunteered.
+    try:
+        conf = float(conf)
+    except (TypeError, ValueError):
+        conf = 0.5
+    conf = max(0.0, min(1.0, conf))
+
+    objects_missing = _str_list(v.get("objects_missing"))
+    present = _str_list(v.get("objects_present"))
+    perception_ok = _as_bool(v.get("perception_ok"), default=not objects_missing)
+    temporal_ok = _as_bool(v.get("temporal_ok"), default=_as_bool(v.get("action_ok"), True))
+    action_ok = _as_bool(v.get("action_ok"), temporal_ok)
+    caption_ok = _as_bool(v.get("caption_ok"), True)
+    missing_evidence = _str_list(v.get("missing_evidence"))
+    uncertainty_reasons: List[str] = []
+
+    # Layered Dr.V-style confidence guards.  The model may volunteer a high
+    # score, but unsupported perception/temporal/cognitive evidence caps it.
+    #
+    # action_ok=False means the wrong operation type was identified — hard cap.
+    # temporal_ok=False covers boundary/ordering uncertainty which is common
+    # when only 3 frames are sampled; use a softer cap so segments survive as
+    # "partial" rather than being mass-rejected.
+    if objects_missing or not perception_ok:
+        conf = min(conf, 0.7)
+        uncertainty_reasons.append("perception")
     if not action_ok:
         conf = min(conf, 0.4)
-    elif not caption_ok:
+        uncertainty_reasons.append("temporal")
+    elif not temporal_ok:
         conf = min(conf, 0.6)
+        uncertainty_reasons.append("temporal")
+    elif missing_evidence and any(
+        cue in " ".join(missing_evidence)
+        for cue in ("边界", "顺序", "先后", "起止", "持续", "方向")
+    ):
+        conf = min(conf, 0.65)
+        uncertainty_reasons.append("temporal")
+    if not caption_ok:
+        conf = min(conf, 0.6)
+        uncertainty_reasons.append("cognitive")
 
-    present = [o for o in (v.get("objects_present") or []) if isinstance(o, str)]
+    uncertainty_type = _uncertainty_type(v.get("uncertainty_level"), uncertainty_reasons)
     if present:  # keep only visually confirmed objects when the check ran
         seg["objects"] = present
     if caption_ok is False and v.get("corrected_caption"):
         seg["caption"] = str(v["corrected_caption"]).strip()
 
-    if action_ok and caption_ok and conf >= 0.6:
+    if perception_ok and temporal_ok and action_ok and caption_ok and conf >= 0.6:
         status = "verified"
-    elif action_ok or caption_ok or conf >= 0.45:
+    elif not action_ok and conf <= 0.4:
+        status = "rejected"
+    elif perception_ok or temporal_ok or action_ok or caption_ok or conf >= 0.45:
         # conf >= 0.45 with some evidence: treat as partial rather than hard reject
         status = "partial"
     else:
         status = "rejected"
 
     note = str(v.get("note", "")).strip()
+    review_suggestion = str(v.get("review_suggestion", "")).strip()
+    evidence_diagnosis = {
+        "perception_ok": perception_ok,
+        "temporal_ok": temporal_ok,
+        "action_ok": action_ok,
+        "caption_ok": caption_ok,
+        "objects_present": present,
+        "objects_missing": objects_missing,
+        "missing_evidence": missing_evidence,
+        "note": note,
+    }
+    reason_parts = []
+    if note:
+        reason_parts.append(note)
+    if missing_evidence:
+        reason_parts.append("缺失证据：" + "；".join(missing_evidence))
+
     if conf >= 0.80 and status == "verified":
         uncertainty, human = "", False
     elif conf >= 0.55 and status != "rejected":
-        uncertainty = note or "视觉证据部分可见，建议抽查"
-        human = False
+        uncertainty = "；".join(reason_parts) or "视觉证据部分可见，建议抽查"
+        human = uncertainty_type in {"temporal", "mixed"} and conf < 0.70
     else:
-        uncertainty = note or "关键动作/物体证据不足"
+        uncertainty = "；".join(reason_parts) or "关键动作/物体证据不足"
         human = True
+    if uncertainty_type != "none" and not review_suggestion:
+        if uncertainty_type == "perception":
+            review_suggestion = "人工复核关键物体是否可见及命名是否正确"
+        elif uncertainty_type == "temporal":
+            review_suggestion = "人工复核动作类别、方向和起止边界"
+        elif uncertainty_type == "cognitive":
+            review_suggestion = "人工复核 caption 是否包含画面不支持的推理"
+        else:
+            review_suggestion = "人工复核该片段的物体、动作边界和 caption"
 
-    seg["object_evidence"] = [{"object": o, "present": True} for o in seg["objects"]]
+    object_names = list(dict.fromkeys(seg.get("objects", []) + objects_missing))
+    seg["object_evidence"] = [
+        {"object": o, "present": o not in objects_missing}
+        for o in object_names
+    ]
     seg["confidence"] = round(conf, 2)
     seg["verification_status"] = status
     seg["uncertainty_reason"] = uncertainty
     seg["needs_human_review"] = human
+    seg["uncertainty_type"] = uncertainty_type
+    seg["review_suggestion"] = review_suggestion
+    seg["evidence_diagnosis"] = evidence_diagnosis
     return seg
 
 
@@ -253,6 +409,18 @@ def _default_fields(seg: Dict[str, Any]) -> Dict[str, Any]:
     seg.setdefault("verification_status", "unverified")
     seg.setdefault("uncertainty_reason", "未做视觉复核")
     seg.setdefault("needs_human_review", True)
+    seg.setdefault("uncertainty_type", "mixed")
+    seg.setdefault("review_suggestion", "人工复核该片段的动作、物体和边界")
+    seg.setdefault("evidence_diagnosis", {
+        "perception_ok": False,
+        "temporal_ok": False,
+        "action_ok": False,
+        "caption_ok": False,
+        "objects_present": [],
+        "objects_missing": seg.get("objects", []),
+        "missing_evidence": ["未做视觉复核"],
+        "note": "未做视觉复核",
+    })
     return seg
 
 
@@ -513,6 +681,17 @@ def process_video(video_id: str, video: VideoInfo, phases: List[Phase],
     summaries = build_clip_memory(video, log)
     phase_res = hypothesize_phase(video, phases, summaries, log)
     segments = segment_actions(video, phases, phase_res, summaries, log)
+
+    if config.DENSE_ENABLED:
+        expanded: List[Dict[str, Any]] = []
+        for seg in segments:
+            if seg["end"] - seg["start"] >= config.DENSE_MIN_DURATION:
+                expanded.extend(_dense_resample_and_split(
+                    video, seg, phases, phase_res, log))
+            else:
+                expanded.append(seg)
+        segments = _normalize_segments(expanded, video.duration)
+
     repair_catalog = _action_catalog_for_repair(phases, phase_res)
 
     processed_segments: List[Dict[str, Any]] = []
@@ -542,6 +721,9 @@ def process_video(video_id: str, video: VideoInfo, phases: List[Phase],
              "confidence": s["confidence"], "verification_status": s["verification_status"],
              "uncertainty_reason": s["uncertainty_reason"],
              "needs_human_review": s["needs_human_review"],
+             "uncertainty_type": s.get("uncertainty_type", "none"),
+             "review_suggestion": s.get("review_suggestion", ""),
+             "evidence_diagnosis": s.get("evidence_diagnosis", {}),
              "object_evidence": s["object_evidence"]}
             for s in final_segments
         ],

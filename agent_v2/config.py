@@ -99,6 +99,16 @@ COVERAGE_BACKTRACK_ENABLED = _env("LABARM_COVERAGE_BACKTRACK", "1") == "1"
 # context so one mistaken phase does not force all actions into the wrong menu.
 PHASE_FALLBACK_CONFIDENCE = float(_env("LABARM_PHASE_FALLBACK_CONFIDENCE", "0.65"))
 MAX_PHASE_CANDIDATES = int(_env("LABARM_MAX_PHASE_CANDIDATES", "3"))
+# When phase confidence is this high, use only the primary phase's actions to
+# prevent alternative phase actions from leaking into the catalog.
+PHASE_HIGH_CONF_THRESHOLD = float(_env("LABARM_PHASE_HIGH_CONF", "0.85"))
+
+# Dense boundary resampling: long proposed segments are broken into smaller
+# sub-windows and locally re-segmented to detect repeated short actions.
+DENSE_ENABLED = _env("LABARM_DENSE", "1") == "1"
+DENSE_MIN_DURATION = float(_env("LABARM_DENSE_MIN_DURATION", "14.0"))
+DENSE_SUBWINDOW = float(_env("LABARM_DENSE_SUBWINDOW", "5.0"))
+DENSE_FRAMES = int(_env("LABARM_DENSE_FRAMES", "4"))
 
 REQUEST_TIMEOUT = float(_env("LABARM_TIMEOUT", "120"))
 MAX_RETRIES = int(_env("LABARM_MAX_RETRIES", "4"))

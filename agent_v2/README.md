@@ -39,6 +39,8 @@ python -m agent_v2.run --split test --resume
 
 - `predictions.json` — 每个视频的结构化解析结果；
 - `run_log.json` — 每个视频的完整运行轨迹（工具调用、输入、输出、耗时）；
+- `memory/{video_id}.json` — 单视频持久记忆包，供交互式 Demo 检索问答；
+- `global_memory_snapshot.json` / `global_memory.json` — 跨视频经验库快照/累计库；
 - `frames_cache/` — 抽帧缓存（1 fps、缩放后）。
 
 批量处理不对任何单条视频做人工干预；结果每处理完一个视频即增量落盘。
@@ -52,6 +54,19 @@ python -m agent_v2.run --split test --resume
 5. **Verify** — 对每个片段回看少量帧做视觉核验，产出置信度、修正 objects/caption、
    不确定性原因与人工复核建议。
 6. **Write** — 组装 `predictions.json` 条目并记录轨迹。
+7. **Persist Memory** — 将 `clip_memory`、片段标注、证据帧、核验诊断写成 per-video
+   memory bundle，并把高置信动作/物体/不确定性模式累计到 bounded cross-video memory。
+
+## 记忆机制
+
+`agent_v2` 使用轻量版 VideoARM-style 记忆，不做不可控的跨视频自动改写：
+
+- **Per-video memory**：`memory/{video_id}.json` 保存当前视频的 frame index、clip summaries、
+  segment memory、verification evidence 和 lexical retrieval index。交互式 Demo 可以先检索该文件，
+  再把相关时间段、caption、证据帧路径交给模型回答。
+- **Cross-video memory**：`global_memory.json` 累计已处理视频中的 action/object/uncertainty pattern
+  统计和少量例子，用于 Demo 的“经验提示”和报告里的 self-evolving 叙事。它只提供参考上下文，
+  不会覆盖当前视频的结构化标注。
 
 ## 关键配置（环境变量）
 

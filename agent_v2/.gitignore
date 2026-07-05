@@ -11,7 +11,11 @@ outputs/frames_cache/
 
 # intermediate / scratch runs
 outputs_v2/
+outputs_layered_eval/
 
 # root-level outputs (superseded by timestamped subdirs)
 outputs/predictions.json
 outputs/run_log.json
+outputs/global_memory.json
+outputs/*/memory/
+outputs/*/global_memory_snapshot.json
